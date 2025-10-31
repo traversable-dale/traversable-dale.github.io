@@ -24,4 +24,10 @@ theme = "hugo-theme-console"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
     

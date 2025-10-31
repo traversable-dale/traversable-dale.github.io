@@ -4,6 +4,13 @@
     
         
         <url>
+            <loc>http://localhost:60761/projects/</loc>
+            <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
             <loc>http://localhost:60761/about/</loc>
             <lastmod>2025-10-31T00:00:00+00:00</lastmod>
         </url>
@@ -61,13 +68,6 @@
         
         <url>
             <loc>http://localhost:60761/projects/project-template-v2/</loc>
-            <lastmod>2025-10-31T00:00:00+00:00</lastmod>
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://localhost:60761/projects/</loc>
             <lastmod>2025-10-31T00:00:00+00:00</lastmod>
         </url>
         

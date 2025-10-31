@@ -4,7 +4,7 @@ date: 2025-10-31
 draft: false
 ---
 
-![John Syzonenko](/images/john-photo.jpg)
+![John Syzonenko](/images/about/john-photo.png)
 
 ## Hi! I'm John.
 
