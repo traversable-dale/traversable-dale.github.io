@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Oct 2025 09:28:51 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Fri, 31 Oct 2025 09:28:51 -0400</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Project Template</title>
+      <link>http://localhost:1313/posts/project-template-v2/</link>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/project-template-v2/</guid>
+      <description>&lt;h2 id=&#34;project-metadata-option-1-table-format---compact&#34;&gt;Project Metadata (Option 1: Table Format - Compact)&lt;/h2&gt; &lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Role&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Creative Technologist&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Client&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://clientwebsite.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Client Name&lt;/a&gt; &lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Associated&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://studiowebsite.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Studio Name&lt;/a&gt; &lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Team&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Person 1, Person 2, Person 3&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Location&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;City, State/Country&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Month Year&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt; &lt;p&gt;&amp;ldquo;[Optional quote or description from client/event organizer]&amp;rdquo; - [Source]&lt;/p&gt;&#xA;&lt;p&gt;[Brief introduction paragraph describing the project and your role]&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/projects/project-name/placeholder-1.jpg&#34; alt=&#34;Project Hero Image&#34; class=&#34;img-responsive&#34;&gt; &#xA;&lt;em&gt;Caption describing the main project image&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt; &lt;p&gt;[Main paragraph(s) describing what was created, the goals, and the approach]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Template</title>
+      <link>http://localhost:1313/posts/project-template/</link>
+      <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/project-template/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Role:&lt;/strong&gt; [Your Role - e.g., Creative Technologist, Designer, Developer]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Client:&lt;/strong&gt; [Client Name with optional link]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Associated:&lt;/strong&gt; [Associated Studio/Company with optional link]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Team:&lt;/strong&gt; [Team Member 1, Team Member 2, Team Member 3]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; [City, State/Country]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; [Month Year]&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt; &lt;p&gt;&amp;ldquo;[Optional quote or description from client/event organizer]&amp;rdquo; - [Source]&lt;/p&gt;&#xA;&lt;p&gt;[Brief introduction paragraph describing the project and your role]&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt; &lt;p&gt;[Main paragraph(s) describing what was created, the goals, and the approach]&lt;/p&gt;&#xA;&lt;p&gt;[Additional paragraphs with more details about the process, technology used, challenges overcome, etc.]&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

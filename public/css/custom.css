@@ -1,0 +1,187 @@
+/* ============================================
+   DARK THEME WITH SMALLER TEXT
+   Overall site styling with black background
+   ============================================ */
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.9em; /* MAKE EVERYTHING SMALLER - adjust this number to make text bigger/smaller */
+}
+
+/* ============================================
+   FORCE ALL TEXT TO BE WHITE
+   Makes sure everything is readable on black
+   ============================================ */
+
+body, p, div, span, li, td, th, h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+
+/* ============================================
+   OVERRIDE THEME'S GRAY COLOR
+   Force terminal elements to be pure white
+   ============================================ */
+
+.terminal blockquote, 
+.terminal h1, 
+.terminal h2, 
+.terminal h3, 
+.terminal h4, 
+.terminal h5, 
+.terminal h6, 
+.terminal strong, 
+.terminal .logo,
+.terminal table td {
+  color: #ffffff !important; /* PURE WHITE INSTEAD OF THEME'S GRAY */
+}
+
+
+
+/* ============================================
+   NEON ORANGE HYPERLINKS
+   All clickable links are bright orange
+   ============================================ */
+
+a {
+  color: #ff6600 !important; /* CHANGE THIS COLOR - try #ff0000 for red, #00ff00 for green */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8833 !important; /* LIGHTER ORANGE ON HOVER */
+  text-decoration: underline;
+}
+
+/* ============================================
+   PROJECT METADATA TABLE STYLING
+   Makes the Role/Client/Team table compact
+   ============================================ */
+
+article table,
+table {
+  font-size: 0.85em; /* TABLE TEXT SIZE - smaller than body text */
+  line-height: 1.3; /* SPACING BETWEEN LINES - lower = tighter */
+  margin-bottom: 2em; /* SPACE BELOW THE TABLE */
+  border-color: #333 !important; /* DARK GRAY TABLE BORDERS */
+}
+
+article table td,
+table td,
+article table th,
+table th {
+  padding: 0.3em 0.5em !important; /* SPACE INSIDE TABLE CELLS */
+  border-color: #333 !important;
+  color: #ffffff !important; /* FORCE ALL TABLE CELLS TO BE WHITE */
+}
+
+/* TABLE LABELS (Role, Client, Team, etc.) - LEFT COLUMN */
+article table td:first-child,
+table td:first-child {
+  font-weight: 600 !important; /* MAKE LABELS BOLD */
+  color: #ffffff !important; /* BRIGHT WHITE FOR LABELS */
+  white-space: nowrap; /* PREVENTS LABELS FROM WRAPPING TO MULTIPLE LINES */
+}
+
+/* TABLE VALUES (Your actual content) - RIGHT COLUMN */
+article table td:nth-child(2),
+table td:nth-child(2) {
+  color: #ffffff !important; /* BRIGHT WHITE FOR VALUES TOO */
+}
+
+/* ============================================
+   IMAGE CAPTIONS
+   The italic text below images
+   ============================================ */
+
+article img + em,
+img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.85em; /* CAPTION TEXT SIZE */
+  color: #ffffff !important; /* BRIGHT WHITE FOR CAPTIONS */
+  margin-top: 0.5em; /* SPACE ABOVE CAPTION */
+  margin-bottom: 2em; /* SPACE BELOW CAPTION */
+}
+
+/* ============================================
+   HEADING SIZES AND SPACING
+   Controls h2 and h3 header sizes
+   ============================================ */
+
+article h2,
+h2 {
+  margin-top: 2em; /* SPACE ABOVE H2 HEADERS */
+  margin-bottom: 0.5em; /* SPACE BELOW H2 HEADERS */
+  font-size: 1.4em; /* H2 SIZE - bigger number = bigger header */
+}
+
+article h3,
+h3 {
+  margin-top: 1.5em; /* SPACE ABOVE H3 HEADERS */
+  margin-bottom: 0.5em; /* SPACE BELOW H3 HEADERS */
+  font-size: 1.1em; /* H3 SIZE - smaller than h2 */
+}
+
+/* ============================================
+   HEADER/NAVIGATION BAR
+   The top menu area
+   ============================================ */
+
+.terminal-nav {
+  background-color: #000000; /* BLACK BACKGROUND FOR NAV */
+}
+
+.terminal-logo, .terminal-prompt {
+  color: #ffffff !important; /* WHITE TEXT IN HEADER */
+}
+
+/* ============================================
+   FOOTER STYLING
+   The bottom of the page
+   ============================================ */
+
+.footer {
+  color: #ffffff !important; /* BRIGHT WHITE FOOTER TEXT */
+  font-size: 0.85em; /* SMALLER FOOTER TEXT */
+}
+
+/* ============================================
+   CODE BLOCKS
+   Any code snippets on the page
+   ============================================ */
+
+pre, code {
+  background-color: #1a1a1a; /* VERY DARK GRAY FOR CODE BACKGROUND */
+  border-color: #333; /* DARK BORDER AROUND CODE */
+}
+
+/* ============================================
+   QUICK REFERENCE FOR COLORS
+   ============================================
+   
+   Black: #000000
+   White: #ffffff
+   Dark Gray: #333333
+   Medium Gray: #666666
+   Light Gray: #999999
+   Neon Orange: #ff6600
+   Bright Red: #ff0000
+   Bright Green: #00ff00
+   Bright Blue: #0099ff
+   Bright Purple: #9933ff
+   Bright Yellow: #ffff00
+   
+   ============================================ */
+
+/* ============================================
+   HOW TO ADJUST THINGS:
+   
+   - Make all text bigger: Change body font-size to 1em or 1.1em
+   - Make all text smaller: Change body font-size to 0.8em or 0.75em
+   - Change link color: Change the #ff6600 values in the hyperlinks section
+   - Adjust table spacing: Change the padding values in table td
+   - Make headings bigger: Increase the font-size in h2 and h3
+   
+   ============================================ */
