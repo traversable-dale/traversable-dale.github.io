@@ -29,5 +29,19 @@
       <guid>http://localhost:1313/posts/project-template/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Role:&lt;/strong&gt; [Your Role - e.g., Creative Technologist, Designer, Developer]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Client:&lt;/strong&gt; [Client Name with optional link]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Associated:&lt;/strong&gt; [Associated Studio/Company with optional link]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Team:&lt;/strong&gt; [Team Member 1, Team Member 2, Team Member 3]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; [City, State/Country]&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; [Month Year]&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt; &lt;p&gt;&amp;ldquo;[Optional quote or description from client/event organizer]&amp;rdquo; - [Source]&lt;/p&gt;&#xA;&lt;p&gt;[Brief introduction paragraph describing the project and your role]&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt; &lt;p&gt;[Main paragraph(s) describing what was created, the goals, and the approach]&lt;/p&gt;&#xA;&lt;p&gt;[Additional paragraphs with more details about the process, technology used, challenges overcome, etc.]&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Introduction</title>
+      <link>http://localhost:1313/posts/what-is-hugo/</link>
+      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/what-is-hugo/</guid>
+      <description>&lt;p&gt;Hugo is an open-source project and lives by the work of its contributors. There are plenty of open issues, and we need your help to make Hugo even more awesome. You don&amp;rsquo;t need to be a Go guru to contribute to the project&amp;rsquo;s development.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is Hugo</title>
+      <link>http://localhost:1313/posts/introduction/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/introduction/</guid>
+      <description>&lt;p&gt;Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
