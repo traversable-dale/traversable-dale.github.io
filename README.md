@@ -2,7 +2,7 @@
 
 ### WARNING :warning: WORK IN PROGRESS
 
-Welcome to my simple, lightweight portfolio website made with Hugo and GitHub Pages. I am in the process of migrating all of my content over from my [webflow](www.johnsyzonenko.com) site.
+Welcome to my simple, lightweight portfolio website made with Hugo and GitHub Pages. I am in the process of migrating all of my content over from my [webflow](https://www.johnsyzonenko.com) site.
 
 Source and Console Theme: <br>
 https://github.com/gohugoio/hugo <br>
