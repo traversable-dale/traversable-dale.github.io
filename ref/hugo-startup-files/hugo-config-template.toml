@@ -1,0 +1,24 @@
+baseURL = 'https://yourusername.github.io/'
+languageCode = 'en-us'
+title = 'Your Name'
+theme = "hugo-theme-console"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Your professional tagline or description"
+
+[[params.navlinks]]
+  name = "Home"
+  url = "/"
+
+[[params.navlinks]]
+  name = "About"
+  url = "/about/"
+
+[[params.navlinks]]
+  name = "Work"
+  url = "/work/"

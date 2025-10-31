@@ -1,0 +1,134 @@
+/* Hugo Theme Customization - Text Size and Spacing */
+/* Add this to your theme's custom CSS file */
+
+/* ===================================
+   PROJECT METADATA TABLE STYLING
+   =================================== */
+
+/* Compact table styling for project metadata */
+article table {
+  font-size: 0.85em;        /* Smaller text */
+  line-height: 1.3;         /* Tighter line spacing */
+  margin-bottom: 2em;       /* Space below table */
+}
+
+article table td {
+  padding: 0.3em 0.5em;     /* Tighter cell padding */
+}
+
+/* Make the labels (first column) bold and slightly smaller */
+article table td:first-child {
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* ===================================
+   PROJECT METADATA - ALTERNATIVE STYLING
+   =================================== */
+
+/* If using the <div> approach instead of table */
+.project-meta {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 2em;
+  padding: 1em;
+  background-color: #f8f8f8;
+  border-left: 3px solid #333;
+}
+
+/* ===================================
+   IMAGE CAPTIONS
+   =================================== */
+
+/* Style for image captions (the *text* after images) */
+article img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+/* ===================================
+   GENERAL PROJECT PAGE ADJUSTMENTS
+   =================================== */
+
+/* Tighter spacing for project pages */
+.project-page h2 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+}
+
+.project-page h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+/* Adjust paragraph spacing */
+.project-page p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+/* List spacing */
+.project-page ul, .project-page ol {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+.project-page li {
+  margin-bottom: 0.5em;
+}
+
+/* ===================================
+   RESPONSIVE ADJUSTMENTS
+   =================================== */
+
+/* On smaller screens, adjust table layout */
+@media (max-width: 768px) {
+  article table {
+    font-size: 0.8em;
+  }
+  
+  article table td {
+    display: block;
+    padding: 0.2em 0;
+  }
+  
+  article table td:first-child {
+    font-weight: 700;
+    margin-top: 0.5em;
+  }
+}
+
+/* ===================================
+   HOW TO USE THIS CSS
+   =================================== */
+
+/*
+OPTION 1: Add to theme's custom CSS file
+Most Hugo themes have a way to add custom CSS. Check your theme's documentation.
+Common locations:
+- assets/css/custom.css
+- static/css/custom.css
+- layouts/partials/custom-head.html
+
+OPTION 2: Add directly in hugo.toml
+Some themes allow inline CSS in the config:
+
+[params]
+  customCSS = ["css/custom.css"]
+
+Then create: static/css/custom.css with this content
+
+OPTION 3: Theme-specific customization
+For hugo-theme-console specifically:
+1. Create: assets/css/custom.css
+2. Add this CSS
+3. Theme will automatically pick it up
+
+*/
