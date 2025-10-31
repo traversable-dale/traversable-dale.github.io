@@ -1,79 +1,25 @@
-+++
-date = "2016-11-05T21:05:33+05:30"
-title = "About"
-+++
+---
+title: "About"
+date: 2025-10-31
+draft: false
+---
 
-A minimal and responsive Hugo theme inspired by the system console, crafted for optimal performance with an average page load time of under one second.
+![John Syzonenko](/images/john-photo.jpg)
 
-Theme is based on a modern and minimal [Terminal CSS](https://terminalcss.xyz/) framework. 
+## Hi! I'm John.
 
-![Console](https://github.com/mrmierzejewski/hugo-theme-console/blob/master/images/preview.png?raw=true)
+I am a Creative Technologist based in NYC, specializing in immersive installations, multimedia playback systems, and interactive visuals.
 
-## Live demo
+Coming from a background in environmental science, documentary filmmaking, and motion graphics, I have developed a unique passion for TouchDesigner and Interactive Technology.
 
-* [https://mrmierzejewski.com/hugo-theme-console/](https://mrmierzejewski.com/hugo-theme-console/)
+If you'd like to get in touch, I'd love to hear from you!
 
-## Installation
+**JOHN@JOHNSYZONENKO.COM**
 
-From the root of your Hugo site, clone the theme into ```themes/hugo-theme-console``` by running :
+---
 
-```
-$ git submodule add https://github.com/mrmierzejewski/hugo-theme-console.git hugo-theme-console
-```
-    
-See the [Hugo documentation](https://gohugo.io/hugo-modules/theme-components/) for more information.
+## My Skills
 
-## Configuration
+[TouchDesigner](https://derivative.ca/) • [After Effects](https://www.adobe.com/products/aftereffects.html) • [Blender](https://www.blender.org/) • [Unreal Engine](https://www.unrealengine.com/) • [Premiere Pro](https://www.adobe.com/products/premiere.html) • [Ableton](https://www.ableton.com/) • [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) • [Photoshop](https://www.adobe.com/products/photoshop.html) • [Webflow](https://webflow.com/) • Git • Python • Arduino
 
-Set theme parameter in your config file:
-
-```
-theme = "hugo-theme-console"
-```
-
-## Quick start
-
-After installation, take a look in the `exampleSite` folder at. This directory contains an example config file and the content for the demo.
-
-```
-  exampleSite
-  ├── config.toml
-  ├── content
-  │   ├── about
-  │   │   └── index.md
-  │   └── photos
-  │   │   └── arizona-us
-  │   │       ├── arizona-us.jpg
-  │   │       └── index.md
-  │   └── posts
-  │       └── introduction
-  │           └── index.md
-  ├── layouts
-  │
-  └── static
-```
-
-Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary.
-
-Hugo includes a development server, so you can view your changes as you go -
-very handy. Spin it up with the following command:
-
-```
-hugo serve
-```
-
-Now you can go to [http://localhost:1313](http://localhost:1313) and the theme should be visible.
-
-## Example Site
-
-To run the example site, please type the following command.
-
-```
-make hugo-server
-```
-
-## License
-
-Copyright © 2024 [Marcin Mierzejewski](https://mrmierzejewski.com/)
-
-The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
+**Specializations:** TouchDesigner • Immersive Installations • Motion Graphics • Interactive Media • Pre-visualization • Video Engineering • Video Production • Documentary Film 

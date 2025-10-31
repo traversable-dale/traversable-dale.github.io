@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Traversable Dale</title>
+    <title>Posts on John Syzonenko</title>
     <link>http://localhost:60761/posts/</link>
-    <description>Recent content in Posts on Traversable Dale</description>
+    <description>Recent content in Posts on John Syzonenko</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Oct 2025 09:28:51 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 31 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:60761/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:60761/posts/my-first-post/</link>
-      <pubDate>Fri, 31 Oct 2025 09:28:51 -0400</pubDate>
-      <guid>http://localhost:60761/posts/my-first-post/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Project Template</title>
       <link>http://localhost:60761/posts/project-template-v2/</link>
       <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:60761/posts/project-template-v2/</guid>
       <description>&lt;h2 id=&#34;project-metadata-option-1-table-format---compact&#34;&gt;Project Metadata (Option 1: Table Format - Compact)&lt;/h2&gt; &lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Role&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Creative Technologist&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Client&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://clientwebsite.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Client Name&lt;/a&gt; &lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Associated&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://studiowebsite.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Studio Name&lt;/a&gt; &lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Team&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Person 1, Person 2, Person 3&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Location&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;City, State/Country&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Month Year&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt; &lt;p&gt;&amp;ldquo;[Optional quote or description from client/event organizer]&amp;rdquo; - [Source]&lt;/p&gt;&#xA;&lt;p&gt;[Brief introduction paragraph describing the project and your role]&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:60761/images/projects/project-name/placeholder-1.jpg&#34; alt=&#34;Project Hero Image&#34; class=&#34;img-responsive&#34;&gt; &#xA;&lt;em&gt;Caption describing the main project image&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-description&#34;&gt;Project Description&lt;/h2&gt; &lt;p&gt;[Main paragraph(s) describing what was created, the goals, and the approach]&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Introduction</title>
-      <link>http://localhost:60761/posts/what-is-hugo/</link>
-      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60761/posts/what-is-hugo/</guid>
-      <description>&lt;p&gt;Hugo is an open-source project and lives by the work of its contributors. There are plenty of open issues, and we need your help to make Hugo even more awesome. You don&amp;rsquo;t need to be a Go guru to contribute to the project&amp;rsquo;s development.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>What is Hugo</title>
-      <link>http://localhost:60761/posts/introduction/</link>
-      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60761/posts/introduction/</guid>
-      <description>&lt;p&gt;Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

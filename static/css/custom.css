@@ -157,6 +157,61 @@ pre, code {
   border-color: #333; /* DARK BORDER AROUND CODE */
 }
 
+
+/* ============================================
+   PROJECT GRID ON HOME PAGE
+   Creates a 2x3 grid for project thumbnails
+   ============================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 COLUMNS */
+  gap: 2em; /* SPACE BETWEEN PROJECTS */
+  margin: 2em 0;
+}
+
+.project-item {
+  text-align: center;
+}
+
+.project-item a {
+  text-decoration: none;
+  display: block;
+}
+
+.projects-grid img {
+  width: 100%; /* FILL THE GRID CELL */
+  max-width: 500px; /* MAX SIZE - ADJUST THIS NUMBER */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5em auto;
+  border: 2px solid #333; /* BORDER AROUND IMAGES */
+  transition: border-color 0.3s ease;
+}
+
+.projects-grid img:hover {
+  border-color: #ff6600; /* ORANGE BORDER ON HOVER */
+}
+
+/* PROJECT TITLES BELOW IMAGES */
+.project-item strong {
+  display: block;
+  color: #ffffff !important;
+  margin-top: 0.5em;
+}
+
+/* RESPONSIVE: STACK ON MOBILE */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 COLUMN ON MOBILE */
+  }
+  
+  .projects-grid img {
+    max-width: 100%; /* FULL WIDTH ON MOBILE */
+  }
+}
+
+
 /* ============================================
    QUICK REFERENCE FOR COLORS
    ============================================

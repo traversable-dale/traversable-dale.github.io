@@ -1,7 +1,27 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://traversable-dale.github.io/'
 languageCode = 'en-us'
-title = 'Traversable Dale'
+title = 'John Syzonenko'
 theme = "hugo-theme-console"
 
 [params]
-    customCSS = ["css/custom.css"]
+  description = "Creative Technologist specializing in immersive installations"
+  customCSS = ["css/custom.css"]
+
+
+[[params.navlinks]]
+  name = "Home"
+  url = "/"
+
+[[params.navlinks]]
+  name = "About"
+  url = "/about/"
+
+[[params.navlinks]]
+  name = "Work"
+  url = "/work/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    
