@@ -65,3 +65,4 @@ This site was made with Hugo and GitHub pages. If you want to use this site as a
 [TD Polyrhythms](https://github.com/traversable-dale/td-polyrhythms) - Audio experiment / standalone TouchDesigner app <br>
 [TD Debug](https://github.com/traversable-dale/td-debug) - Global utility for managing textport prints in TouchDesigner <br>
 [Activity Tracker](https://github.com/traversable-dale/activity-tracker) - Desktop app for tracking mouse + keyboard activity <br>
+[Bird Board](https://github.com/traversable-dale/bird-board-2) - Headless ambient audio generator + web controller <br>
