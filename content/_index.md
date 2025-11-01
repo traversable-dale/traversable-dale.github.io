@@ -4,54 +4,64 @@ date: 2025-10-31
 draft: false
 ---
 
+<br>
+
 Creative Technologist based in NYC, specializing in immersive installations, multimedia playback systems, and interactive visuals.
+
+This site was made with Hugo and GitHub pages. If you want to use this site as a jumping point, check out my [setup guide.](https://github.com/traversable-dale/traversable-dale.github.io/blob/main/content/setup-guide.md)
+
+---
 
 ## Recent Projects
 
 <div class="projects-grid">
+<div class="project-item">
+    <a href="/projects/camata/">
+      <img src="/images/projects/camata/thumbnail.png" alt="Camata">
+      <strong>Camata</strong>
+    </a>
+  </div>
+
+<div class="project-item">
+    <a href="/projects/blue-paradox/">
+      <img src="/images/projects/blue-paradox/thumbnail.png" alt="The Blue Paradox">
+      <strong>The Blue Paradox</strong>
+    </a>
+  </div>
+
   <div class="project-item">
-    <a href="/projects/project-1/">
-      <img src="/images/projects/project-1/thumbnail.png" alt="Project 1">
-      <strong>Project 1 Title</strong>
+    <a href="/projects/yo-yo/">
+      <img src="/images/projects/yo-yo/thumbnail.png" alt="yo-yo">
+      <strong>Spiegel Im Spiegel</strong>
     </a>
   </div>
   
   <div class="project-item">
-    <a href="/projects/project-2/">
-      <img src="/images/projects/project-2/thumbnail.png" alt="Project 2">
-      <strong>Project 2 Title</strong>
+    <a href="/projects/kodansha-house/">
+      <img src="/images/projects/kodansha-house/thumbnail.png" alt="Kodansha House">
+      <strong>Kodansha House</strong>
+    </a>
+  </div>
+
+  <div class="project-item">
+    <a href="/projects/fantastic-flora/">
+      <img src="/images/projects/fantastic-flora/thumbnail.png" alt="Fantastic Flora">
+      <strong>Fantastic Flora</strong>
     </a>
   </div>
   
   <div class="project-item">
-    <a href="/projects/project-3/">
-      <img src="/images/projects/project-3/thumbnail.png" alt="Project 3">
-      <strong>Project 3 Title</strong>
-    </a>
-  </div>
-  
-  <div class="project-item">
-    <a href="/projects/project-4/">
-      <img src="/images/projects/project-4/thumbnail.png" alt="Project 4">
-      <strong>Project 4 Title</strong>
-    </a>
-  </div>
-  
-  <div class="project-item">
-    <a href="/projects/project-5/">
-      <img src="/images/projects/project-5/thumbnail.png" alt="Project 5">
-      <strong>Project 5 Title</strong>
-    </a>
-  </div>
-  
-  <div class="project-item">
-    <a href="/projects/project-6/">
-      <img src="/images/projects/project-6/thumbnail.png" alt="Project 6">
-      <strong>Project 6 Title</strong>
+    <a href="/projects/goethe-institut/">
+      <img src="/images/projects/goethe-institut/thumbnail.png" alt="Goethe Institut">
+      <strong>Goethe Institut</strong>
     </a>
   </div>
 </div>
 
 ---
 
-[View on GitHub](https://github.com/traversable-dale)
+## GitHub Projects
+
+[TD Polyrhythms](https://github.com/traversable-dale/td-polyrhythms) - Audio experiment / standalone TouchDesigner app <br>
+[TD Debug](https://github.com/traversable-dale/td-debug) - Global utility for managing textport prints in TouchDesigner <br>
+[Activity Tracker](https://github.com/traversable-dale/activity-tracker) - Desktop app for tracking mouse + keyboard activity <br>

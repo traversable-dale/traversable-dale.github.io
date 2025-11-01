@@ -6,30 +6,30 @@ draft: false
 
 ## Creative Technology
 
-[XRP Ledger Apex 2025](/projects/project-1/) - Invisible North <br>
-[Camata](/projects/project-1/) - Pierre Huyghe Studio <br>
-[Crypto Sirenas](/projects/project-1/) - The Goethe-Institut NY <br>
-[Kodansha House](/projects/project-1/) - SoHo, NYC <br>
-[Fantastic Flora](/projects/project-1/) - Shaker Mountain 2024, Upstate NY <br>
-[Elementa @ The Gallery](/projects/project-1/) - Downtown LA, CA <br>
-[The Blue Paradox](/projects/project-1/) - Chicago, IL <br>
-[Miro Canvas '24](/projects/project-1/) - SPYSCAPE, NYC <br>
-[ION Media Fan Zone](/projects/project-1/) - Vanderbilt Hall, NYC <br>
-[INTER_](/projects/project-1/) - SoHo, NYC <br>
-[Nike Air SoHo](/projects/project-1/) - Flagship store, NYC <br>
-[Ledger Op3n](/projects/project-1/) - Moonlight Studios, NYC <br>
-[Diesel Sound of The Brave](/projects/project-1/) - Elsewhere, NYC <br>
-[Laser Control ](/projects/project-1/) - Shaker Mountain 2023, Upstate NY <br>
-[Thought Patterns](/projects/project-1/) - Chemistry Creative, NYC <br>
-[Is it Okay? NFT](/projects/project-1/) - TouchDesigner, Foundation, NYC <br>
+[XRP Ledger Apex 2025](/projects/Project-0/) - Invisible North <br>
+[Camata](/projects/camata/) - Pierre Huyghe Studio <br>
+[Crypto Sirenas](/projects/goethe-institut/) - The Goethe-Institut NY <br>
+[Kodansha House](/projects/kodansha-house/) - SoHo, NYC <br>
+[Fantastic Flora](/projects/fantastic-flora/) - Shaker Mountain 2024, Upstate NY <br>
+[Elementa @ The Gallery](/projects/Project-0/) - Downtown LA, CA <br>
+[The Blue Paradox](/projects/blue-paradox/) - Chicago, IL <br>
+[Miro Canvas '24](/projects/Project-0/) - SPYSCAPE, NYC <br>
+[ION Media Fan Zone](/projects/Project-0/) - Vanderbilt Hall, NYC <br>
+[INTER_](/projects/Project-0/) - SoHo, NYC <br>
+[Nike Air SoHo](/projects/Project-0/) - Flagship store, NYC <br>
+[Ledger Op3n](/projects/Project-0/) - Moonlight Studios, NYC <br>
+[Diesel Sound of The Brave](/projects/Project-0/) - Elsewhere, NYC <br>
+[Laser Control ](/projects/Project-0/) - Shaker Mountain 2023, Upstate NY <br>
+[Thought Patterns](/projects/Project-0/) - Chemistry Creative, NYC <br>
+[Is it Okay? NFT](/projects/Project-0/) - TouchDesigner, Foundation, NYC <br>
 
 ## Film + Animation
 
-[Spiegel Im Spiegel, Yo-Yo Ma](/projects/project-1/) - Video Designer, Global <br>
-[Incarceration Nations (Series)](/projects/project-1/) - Animation + Sound Design <br>
-[Tether Tear (Short Film)](/projects/project-1/) - Virtual Production + Sound Design <br>
-[The Writing on The Wall](/projects/project-1/) - editing + motion graphics <br>
-[NEJRC: Climate Justice](/projects/project-1/) - Camera, Editing, + Animation <br>
+[Spiegel Im Spiegel, Yo-Yo Ma](/projects/Project-0/) - Video Designer, Global <br>
+[Incarceration Nations (Series)](/projects/Project-0/) - Animation + Sound Design <br>
+[Tether Tear (Short Film)](/projects/Project-0/) - Virtual Production + Sound Design <br>
+[The Writing on The Wall](/projects/Project-0/) - editing + motion graphics <br>
+[NEJRC: Climate Justice](/projects/Project-0/) - Camera, Editing, + Animation <br>
 [Boston Art Review](/projects/project-0/) - Camera, Editing, + Animation <br>
 
 ## Music Videos

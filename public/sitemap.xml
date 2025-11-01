@@ -32,41 +32,6 @@
     
         
         <url>
-            <loc>http://localhost:1313/projects/project-2/</loc>
-            <lastmod>2025-10-31T00:00:00+00:00</lastmod>
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://localhost:1313/projects/project-3/</loc>
-            <lastmod>2025-10-31T00:00:00+00:00</lastmod>
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://localhost:1313/projects/project-4/</loc>
-            <lastmod>2025-10-31T00:00:00+00:00</lastmod>
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://localhost:1313/projects/project-5/</loc>
-            <lastmod>2025-10-31T00:00:00+00:00</lastmod>
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://localhost:1313/projects/project-6/</loc>
-            <lastmod>2025-10-31T00:00:00+00:00</lastmod>
-        </url>
-        
-    
-        
-        <url>
             <loc>http://localhost:1313/projects/project-template-v2/</loc>
             <lastmod>2025-10-31T00:00:00+00:00</lastmod>
         </url>
@@ -83,6 +48,48 @@
         <url>
             <loc>http://localhost:1313/work/</loc>
             <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:1313/projects/goethe-institut/</loc>
+            <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:1313/projects/kodansha-house/</loc>
+            <lastmod>2024-10-01T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:1313/projects/fantastic-flora/</loc>
+            <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:1313/projects/blue-paradox/</loc>
+            <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:1313/projects/camata/</loc>
+            <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+        </url>
+        
+    
+        
+        <url>
+            <loc>http://localhost:1313/projects/yo-yo-ma/</loc>
+            <lastmod>2022-01-01T00:00:00+00:00</lastmod>
         </url>
         
     
