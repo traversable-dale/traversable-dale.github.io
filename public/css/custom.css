@@ -19,6 +19,29 @@ body, p, div, span, li, td, th, h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+
+
+strong, b {
+  color: #747474 !important;
+}
+
+em, i {
+  color: #ffffff !important;
+}
+
+.terminal strong, .terminal b {
+  color: #ff6600 !important;
+}
+
+.terminal em, .terminal i {
+  color: #ffffff !important;
+}
+
+
+
+
+
 /* ============================================
    OVERRIDE THEME'S GRAY COLOR
    Force terminal elements to be pure white
@@ -31,7 +54,6 @@ body, p, div, span, li, td, th, h1, h2, h3, h4, h5, h6 {
 .terminal h4, 
 .terminal h5, 
 .terminal h6, 
-.terminal strong, 
 .terminal .logo,
 .terminal table td {
   color: #ffffff !important; /* PURE WHITE INSTEAD OF THEME'S GRAY */
@@ -240,3 +262,57 @@ pre, code {
    - Make headings bigger: Increase the font-size in h2 and h3
    
    ============================================ */
+
+
+
+/* Three-column intro text */
+.intro-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 COLUMNS */
+  gap: 2em;
+  margin: 2em 0;
+}
+
+@media (max-width: 768px) {
+  .intro-columns {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+
+
+/* Link hover - change text to black instead of lighter orange */
+a:hover {
+  color: #000000 !important; /* BLACK TEXT ON HOVER */
+  background-color: #ff6600 !important; /* ORANGE BACKGROUND */
+  text-decoration: none;
+  padding: 0 0.2em; /* Small padding for background */
+}
+
+
+/* Change text selection color (blue highlight) */
+::selection {
+  background-color: #ff6600; /* ORANGE BACKGROUND */
+  color: #000000; /* BLACK TEXT */
+}
+
+::-moz-selection {
+  background-color: #ff6600;
+  color: #000000;
+}
+
+
+/* Change blinking cursor color */
+.terminal-prompt::after {
+  color: #ff6600 !important; /* ORANGE CURSOR */
+}
+
+/* Or if that doesn't work, try this more specific selector */
+.logo .terminal-prompt::after {
+  color: #ff6600 !important;
+}
+
+/* Change cursor character */
+.terminal-prompt::after {
+  content: "▮" !important; /* Change to your preferred character */
+  color: #ff6600 !important;
+}

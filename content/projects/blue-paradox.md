@@ -7,41 +7,45 @@ draft: false
 | | |
 |---|---|
 | **Role** | Creative Technologist |
-| **Client** | [Griffin Museum of Science and Industry](https://www.msichicago.org/explore/whats-here/exhibits/blue-paradox/) |
-| **Team** | Sean Leo, Cam Vokey, Dave Tennent, Trevor Grove |
-| **Location** | Museum of Science and Industry, Chicago |
-| **Date** | March-July 2023, Ongoing |
+| **Client** | [Radical Media](https://www.radicalmedia.com/) |
+| **Team** | [Sean Leo](https://www.seanbyrumleo.com/), [Cam Vokey](https://www.vacationland.club/cam-vokey), [Dave Tennent](https://studiodave.io/), [Trevor Grove](https://trevorgrove.com/about) |
+| **Location** | [Griffin Museum of Science and Industry](https://www.griffinmsi.org/exhibits/blue-paradox) |
+| **Date** | March-July 2023, July 2024, September 2025, Ongoing |
 
 ---
 
 ## Overview
 
-The Blue Paradox is an immersive exhibition at the [Griffin Museum of Science and Industry](https://www.msichicago.org/explore/whats-here/exhibits/blue-paradox/) in Chicago, IL.
+The Blue Paradox is an immersive exhibition at the [Griffin Museum of Science and Industry](https://www.griffinmsi.org/) in Chicago, IL.
 
-![Hero Image](/images/projects/blue-paradox/hero.jpg)
-*Blue Paradox immersive exhibition*
+Much of what's publicly available can be found on the [museum's page](https://www.msichicago.org/explore/whats-here/exhibits/blue-paradox) which provides a window into the experience.
 
-## Project Description
+![Hero Image](/images/projects/blue-paradox/bp-r01-2.png)
+*Curved LED floor + ceiling with interactive motion tracking sensors*
 
-Much of what's publicly available can be found on the [museum's page](https://www.msichicago.org/explore/whats-here/exhibits/blue-paradox), which provides a window into the experience.
+---
 
-![Installation View 1](/images/projects/blue-paradox/installation-1.jpg)
+## Tech + Skill Stack
+
+- Interactive content programming (Figma -> AE -> TouchDesigner)
+- Show control + Back-of-house GUIs
+- Real-time device status notification system
+- Video Engineering, pixel mapping, projection mapping
+- Museum-grade installation techniques
+
+---
+
+![Installation View 1](/images/projects/blue-paradox/bp-tickers.png)
 *Exhibition installation view*
 
 The exhibition was a major collaborative effort involving designers, programmers, and production crews, and it remains one of the most memorable installations I've had the chance to work on. It was a massive team effort, and one I'm proud to have been a part of.
 
-![Installation View 2](/images/projects/blue-paradox/installation-2.jpg)
+![Installation View 2](/images/projects/blue-paradox/bp-uwall1.png)
 *Immersive environment detail*
 
-![Installation View 3](/images/projects/blue-paradox/installation-3.jpg)
+![Installation View 3](/images/projects/blue-paradox/bp-uwall2.png)
 *Interactive elements*
 
-## Technology Stack
-
-- Interactive programming
-- Immersive projection systems
-- Real-time content generation
-- Museum-grade installation techniques
 
 ## Key Features
 
@@ -50,7 +54,7 @@ The exhibition was a major collaborative effort involving designers, programmers
 - Educational ocean conservation messaging
 - Permanent museum installation
 
-![Installation View 4](/images/projects/blue-paradox/installation-4.jpg)
+![Installation View 4](/images/projects/blue-paradox/bp-r05.png)
 *Visitor interaction area*
 
 ## Outcomes

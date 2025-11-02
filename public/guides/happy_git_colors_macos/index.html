@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>John Syzonenko/guides/happy_git_colors_macos/</title>
+    <meta name="description" content="Creative Technologist specializing in immersive installations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="" />
+<meta property="og:description" content="Creative Technologist specializing in immersive installations" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/guides/happy_git_colors_macos/" />
+
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="🌈 Happy Git Colors on macOS A quick and readable guide to make Git colorful, helpful, and friendly
+on a new Mac.
+
+🧩 1. Install or Update Git Most Macs come with Apple&rsquo;s old Git. Install the latest Homebrew
+version:
+brew install git
+Check what you&rsquo;re using:
+git --version
+which git
+You want to see something like /opt/homebrew/bin/git &mdash; not
+/usr/bin/git.
+If it&rsquo;s wrong, fix your PATH:
+echo &#39;export PATH=&#34;/opt/homebrew/bin:/usr/local/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
+exec zsh -l
+
+🎨 2. Enable Color in Git Open your global Git config:"/>
+<link rel="stylesheet" href="/css/custom.css">   </head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="http://localhost:1313/" class="no-style ">John Syzonenko</a>:~# 
+              <a href='http://localhost:1313/guides'>guides</a>/<a href='http://localhost:1313/guides/happy_git_colors_macos'>happy_git_colors_macos</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/">
+                    <span property="name">Home</span></a>
+                    <meta property="position" content="1" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/about/">
+                    <span property="name">About</span></a>
+                    <meta property="position" content="2" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/work/">
+                    <span property="name">Work</span></a>
+                    <meta property="position" content="3" />
+                </li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container " >
+        
+<h1></h1>
+<h1 id="-happy-git-colors-on-macos">🌈 Happy Git Colors on macOS</h1> <p>A quick and readable guide to make Git colorful, helpful, and friendly
+on a new Mac.</p>
+<hr>
+<h2 id="-1-install-or-update-git">🧩 1. Install or Update Git</h2> <p>Most Macs come with Apple&rsquo;s old Git. Install the latest Homebrew
+version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git
+</span></span></code></pre></div><p>Check what you&rsquo;re using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span><span style="display:flex;"><span>which git
+</span></span></code></pre></div><p>You want to see something like <code>/opt/homebrew/bin/git</code> &mdash; not
+<code>/usr/bin/git</code>.<br>
+If it&rsquo;s wrong, fix your PATH:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export PATH=&#34;/opt/homebrew/bin:/usr/local/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span>exec zsh -l
+</span></span></code></pre></div><hr>
+<h2 id="-2-enable-color-in-git">🎨 2. Enable Color in Git</h2> <p>Open your global Git config:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global --edit
+</span></span></code></pre></div><p>Or manually edit <code>~/.gitconfig</code>. Add the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[color]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ui</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">auto</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[color &#34;branch&#34;]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">magenta bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    local = yellow
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    remote = cyan
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    upstream = blue bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    plain = white</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[color &#34;diff&#34;]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">meta</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">yellow bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    frag = magenta bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    old = red bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    new = green bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    commit = yellow bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    whitespace = red reverse</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[color &#34;status&#34;]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">added</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">green bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    changed = yellow
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    untracked = red bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    branch = magenta bold</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[color &#34;interactive&#34;]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">prompt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">yellow
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    header = magenta
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    help = cyan
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    error = red</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[color &#34;grep&#34;]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">match</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">yellow bold
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    filename = cyan
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    linenumber = magenta</span>
+</span></span></code></pre></div><hr>
+<h2 id="-3-fix-missing-colors-in-less">⚙️ 3. Fix Missing Colors in <code>less</code></h2> <p>By default, <code>less</code> can strip color codes. Fix it with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global core.pager <span style="color:#e6db74">&#34;less -FRX&#34;</span>
+</span></span></code></pre></div><p>This ensures Git passes colors through properly.</p>
+<hr>
+<h2 id="-4-test-your-setup">🧪 4. Test Your Setup</h2> <p>Go inside any Git repo and run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Should show green/yellow/cyan</span>
+</span></span><span style="display:flex;"><span>git status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Should show red/green diffs</span>
+</span></span><span style="display:flex;"><span>git diff
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Should show pretty colored graph</span>
+</span></span><span style="display:flex;"><span>git log --oneline --decorate --graph --color
+</span></span></code></pre></div><hr>
+<h2 id="-5-add-color-friendly-aliases">💡 5. Add Color-Friendly Aliases</h2> <p>Optional, but super useful:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global alias.lg <span style="color:#e6db74">&#34;log --graph --oneline --decorate --color&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global alias.st <span style="color:#e6db74">&#34;status -sb&#34;</span>
+</span></span></code></pre></div><p>Now you can use <code>git lg</code> for quick colorful logs.</p>
+<hr>
+<h2 id="-6-troubleshooting">🧯 6. Troubleshooting</h2> <p>If something still looks plain:</p>
+<ul>
+<li>
+<p>Make sure you&rsquo;re <strong>inside a repo</strong> (<code>git status</code> should work).</p>
+</li>
+<li>
+<p>Verify terminal type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo $TERM
+</span></span></code></pre></div><p>It should say <code>xterm-256color</code>.</p>
+</li>
+<li>
+<p>Use a theme that supports ANSI colors (like <strong>Pro</strong>, <strong>Homebrew</strong>,
+or <strong>Tango</strong> in Terminal).</p>
+</li>
+<li>
+<p>If piping Git output, force color manually:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git -c color.ui<span style="color:#f92672">=</span>always diff | less -R
+</span></span></code></pre></div></li>
+</ul>
+<hr>
+<h2 id="-7-where-to-find-gitconfig">✅ 7. Where to Find <code>.gitconfig</code></h2> <ul>
+<li>Global file: <code>~/.gitconfig</code></li>
+<li>System-wide file (less used): <code>/opt/homebrew/etc/gitconfig</code></li>
+<li>Local (per repo): <code>.git/config</code> in the project root</li>
+</ul>
+<p>You can open your global file anytime with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global --edit
+</span></span></code></pre></div><hr>
+<p>✨ Enjoy your <strong>happy Git colors</strong> &mdash; life&rsquo;s too short for gray diffs!</p>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo</a> with
+    <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>. 
+</div>
+
+    </div>
+  </body>
+</html>

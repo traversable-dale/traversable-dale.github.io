@@ -6,6 +6,19 @@ theme = "hugo-theme-console"
 [params]
   description = "Creative Technologist specializing in immersive installations"
   customCSS = ["css/custom.css"]
+  
+  # Change the cursor character
+  cursor = "●"  # Dot
+  
+  # Or try these alternatives:
+  # cursor = "▮"  # Tall block
+  # cursor = "▯"  # Hollow block
+  # cursor = "_"  # Underscore
+  # cursor = "|"  # Pipe
+  # cursor = "█"  # Block cursor (default)
+  # cursor = "●"  # Dot
+  # cursor = "►"  # Triangle
+  # cursor = "»"  # Double angle
 
 
 [[params.navlinks]]
@@ -30,4 +43,5 @@ theme = "hugo-theme-console"
   tag = "tags"
   category = "categories"
 
-    
+
+  

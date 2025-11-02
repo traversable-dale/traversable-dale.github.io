@@ -6,9 +6,29 @@ draft: false
 
 <br>
 
-Creative Technologist based in NYC, specializing in immersive installations, multimedia playback systems, and interactive visuals.
+Creative Technologist based in NYC. <br>
 
-This site was made with Hugo and GitHub pages. If you want to use this site as a jumping point, check out my [setup guide.](https://github.com/traversable-dale/traversable-dale.github.io/blob/main/content/setup-guide.md)
+<div class="intro-columns">
+  <div>
+    <strong>TouchDesigner</strong> <br>
+    <strong>Motion Graphics</strong> <br>
+    <strong>Editing + Animation</strong>
+  </div>
+  
+  <div>
+    <strong>Immersive installations</strong> <br>
+    <strong>Multimedia playback systems</strong> <br>
+    <strong>Interactive visuals</strong>
+  </div>
+  
+  <div>
+    <strong>Pre-vizualisations</strong> <br>
+    <strong>Back-of-house GUIs</strong> <br>
+    <strong>Show Control</strong>
+  </div>
+</div>
+
+Also a big fan of ardunios,  ~AI~, contraptions, blinky things, and thingamabobs. <br>
 
 ---
 
@@ -66,3 +86,5 @@ This site was made with Hugo and GitHub pages. If you want to use this site as a
 [TD Debug](https://github.com/traversable-dale/td-debug) - Global utility for managing textport prints in TouchDesigner <br>
 [Activity Tracker](https://github.com/traversable-dale/activity-tracker) - Desktop app for tracking mouse + keyboard activity <br>
 [Bird Board](https://github.com/traversable-dale/bird-board-2) - Headless ambient audio generator + web controller <br>
+
+This site was made with Hugo and GitHub pages. If you want to make your own, you can use this site as a jumping point. Check out my [setup guide.](https://github.com/traversable-dale/traversable-dale.github.io/blob/main/content/guides/setup-guide.md)

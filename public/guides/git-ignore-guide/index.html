@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>John Syzonenko/guides/git-ignore-guide/</title>
+    <meta name="description" content="Creative Technologist specializing in immersive installations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="" />
+<meta property="og:description" content="Creative Technologist specializing in immersive installations" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/guides/git-ignore-guide/" />
+
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Git Ignore &amp; File Tracking Guide A quick reference for managing .gitignore, viewing tracked files, and handling large assets in Git.
+Common .gitignore Issues Issue 1: File Named Incorrectly Problem: Your gitignore file is named .gitignore.txt instead of .gitignore, so Git doesn&rsquo;t recognize it.
+Solution:
+mv .gitignore.txt .gitignore
+Note: The file must be named exactly .gitignore with no extension. Mac Finder and some text editors may add .txt automatically.
+Issue 2: .gitignore File Missing Problem: You&rsquo;re in a Git repository but there&rsquo;s no .gitignore file at all."/>
+<link rel="stylesheet" href="/css/custom.css">   </head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="http://localhost:1313/" class="no-style ">John Syzonenko</a>:~# 
+              <a href='http://localhost:1313/guides'>guides</a>/<a href='http://localhost:1313/guides/git-ignore-guide'>git-ignore-guide</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/">
+                    <span property="name">Home</span></a>
+                    <meta property="position" content="1" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/about/">
+                    <span property="name">About</span></a>
+                    <meta property="position" content="2" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/work/">
+                    <span property="name">Work</span></a>
+                    <meta property="position" content="3" />
+                </li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container " >
+        
+<h1></h1>
+<h1 id="git-ignore--file-tracking-guide">Git Ignore &amp; File Tracking Guide</h1> <p>A quick reference for managing <code>.gitignore</code>, viewing tracked files, and handling large assets in Git.</p>
+<h2 id="common-gitignore-issues">Common .gitignore Issues</h2> <h3 id="issue-1-file-named-incorrectly">Issue 1: File Named Incorrectly</h3> <p><strong>Problem:</strong> Your gitignore file is named <code>.gitignore.txt</code> instead of <code>.gitignore</code>, so Git doesn&rsquo;t recognize it.</p>
+<p><strong>Solution:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv .gitignore.txt .gitignore
+</span></span></code></pre></div><p><strong>Note:</strong> The file must be named exactly <code>.gitignore</code> with no extension. Mac Finder and some text editors may add <code>.txt</code> automatically.</p>
+<h3 id="issue-2-gitignore-file-missing">Issue 2: .gitignore File Missing</h3> <p><strong>Problem:</strong> You&rsquo;re in a Git repository but there&rsquo;s no <code>.gitignore</code> file at all.</p>
+<p><strong>Solution:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create a new .gitignore file</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;assets/&#34;</span> &gt; .gitignore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify it was created</span>
+</span></span><span style="display:flex;"><span>cat .gitignore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add and commit it so it&#39;s shared with your team</span>
+</span></span><span style="display:flex;"><span>git add .gitignore
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add .gitignore to exclude assets folder&#34;</span>
+</span></span></code></pre></div><h3 id="issue-3-wrong-directory">Issue 3: Wrong Directory</h3> <p><strong>Problem:</strong> You created <code>.gitignore</code> in the wrong Git repository or directory.</p>
+<p><strong>Solution:</strong> Make sure you&rsquo;re in the root of the correct repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check which repo you&#39;re in</span>
+</span></span><span style="display:flex;"><span>pwd
+</span></span><span style="display:flex;"><span>git remote -v
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Navigate to the correct repo if needed</span>
+</span></span><span style="display:flex;"><span>cd /path/to/correct/repo
+</span></span></code></pre></div><h2 id="setting-up-gitignore">Setting Up .gitignore</h2> <h3 id="location">Location</h3> <p>The <code>.gitignore</code> file should be in the root of your Git repository (same directory as the <code>.git</code> folder).</p>
+<h3 id="basic-syntax">Basic Syntax</h3> <pre tabindex="0"><code># Ignore entire folder
+assets/
+
+# Ignore specific file type
+*.log
+
+# Ignore specific file
+config.env
+</code></pre><p><strong>Tip:</strong> You only need one line to ignore an entire directory and all its contents. For example, <code>assets/</code> ignores everything in that folder - no need for <code>assets/*</code>, <code>assets/subfolder/*</code>, etc.</p>
+<h2 id="removing-already-tracked-files">Removing Already-Tracked Files</h2> <h3 id="problem">Problem</h3> <p><code>.gitignore</code> only prevents <em>new</em> files from being tracked. If files were already tracked before you added them to <code>.gitignore</code>, they&rsquo;ll still be tracked.</p>
+<h3 id="solution">Solution</h3> <p>Remove the files from Git&rsquo;s tracking (but keep them on your disk):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Remove a specific folder</span>
+</span></span><span style="display:flex;"><span>git rm -r --cached assets/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove a specific file</span>
+</span></span><span style="display:flex;"><span>git rm --cached file.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Commit the change</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Remove assets from Git tracking&#34;</span>
+</span></span></code></pre></div><p>The <code>--cached</code> flag is crucial - it removes files from Git&rsquo;s index but keeps them on your filesystem.</p>
+<h2 id="viewing-tracked-files">Viewing Tracked Files</h2> <h3 id="list-all-tracked-files">List all tracked files</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git ls-files
+</span></span></code></pre></div><h3 id="list-tracked-files-with-more-detail">List tracked files with more detail</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git ls-tree -r HEAD --name-only
+</span></span></code></pre></div><h3 id="list-tracked-files-with-their-status">List tracked files with their status</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git ls-files -t
+</span></span></code></pre></div><h3 id="count-tracked-files">Count tracked files</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git ls-files | wc -l
+</span></span></code></pre></div><h3 id="search-for-specific-tracked-files">Search for specific tracked files</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git ls-files | grep <span style="color:#e6db74">&#34;pattern&#34;</span>
+</span></span></code></pre></div><h3 id="page-through-tracked-files">Page through tracked files</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git ls-files | less
+</span></span></code></pre></div><h2 id="troubleshooting-gitignore">Troubleshooting .gitignore</h2> <p>If <code>.gitignore</code> isn&rsquo;t working, check for:</p>
+<ol>
+<li><strong>Wrong filename:</strong> Must be <code>.gitignore</code> (not <code>.gitignore.txt</code>)</li>
+<li><strong>Wrong location:</strong> Must be in repository root</li>
+<li><strong>Trailing spaces:</strong> Make sure there are no spaces after entries</li>
+<li><strong>Files already tracked:</strong> Use <code>git rm --cached</code> to untrack them first</li>
+<li><strong>Encoding issues:</strong> Recreate the file if needed:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;assets/&#34;</span> &gt; .gitignore
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="quick-reference">Quick Reference</h2> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check gitignore file exists and location</span>
+</span></span><span style="display:flex;"><span>ls -la .gitignore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># View gitignore contents</span>
+</span></span><span style="display:flex;"><span>cat .gitignore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check Git status</span>
+</span></span><span style="display:flex;"><span>git status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># List all tracked files</span>
+</span></span><span style="display:flex;"><span>git ls-files
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove folder from tracking (keep files locally)</span>
+</span></span><span style="display:flex;"><span>git rm -r --cached folder/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Commit the removal</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Update tracked files&#34;</span>
+</span></span></code></pre></div><h2 id="useful-gitignore-patterns">Useful .gitignore Patterns</h2> <pre tabindex="0"><code># Dependencies
+node_modules/
+vendor/
+
+# Environment variables
+.env
+.env.local
+
+# Build outputs
+dist/
+build/
+*.min.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Media/Assets (if large)
+assets/
+uploads/
+</code></pre><hr>
+<p><strong>Pro Tip:</strong> You can find <code>.gitignore</code> templates for different languages and frameworks at <a href="https://www.toptal.com/developers/gitignore" target="_blank" rel="noopener">gitignore.io</a>  or <a href="https://github.com/github/gitignore" target="_blank" rel="noopener">GitHub&rsquo;s gitignore repository</a> .</p>
+<h2 id="tracking-large-assets-with-git-lfs">Tracking Large Assets with Git LFS</h2> <h3 id="what-is-git-lfs">What is Git LFS?</h3> <p><strong>Git LFS (Large File Storage)</strong> is a Git extension that handles large files (audio, video, images, datasets) more efficiently. Instead of storing large binary files directly in your Git repository, LFS stores them separately and keeps only small pointer files in Git. This keeps your repo fast and clone times short.</p>
+<h3 id="when-to-use-git-lfs">When to Use Git LFS</h3> <p><strong>Use LFS for:</strong></p>
+<ul>
+<li>Audio files (<code>.mp3</code>, <code>.wav</code>, <code>.flac</code>)</li>
+<li>Video files (<code>.mp4</code>, <code>.mov</code>, <code>.avi</code>)</li>
+<li>Large images (<code>.psd</code>, <code>.ai</code>, high-res photos)</li>
+<li>3D models and game assets</li>
+<li>Datasets and databases</li>
+<li>Any file over ~5MB that changes frequently</li>
+</ul>
+<p><strong>Don&rsquo;t use LFS for:</strong></p>
+<ul>
+<li>Small text files or code</li>
+<li>Files that don&rsquo;t change often</li>
+<li>Files you don&rsquo;t need in version control (use <code>.gitignore</code> instead)</li>
+</ul>
+<h3 id="setting-up-git-lfs-from-scratch">Setting Up Git LFS from Scratch</h3> <p><strong>1. Install Git LFS:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># macOS</span>
+</span></span><span style="display:flex;"><span>brew install git-lfs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Windows</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download from https://git-lfs.github.com/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Linux (Debian/Ubuntu)</span>
+</span></span><span style="display:flex;"><span>sudo apt-get install git-lfs
+</span></span></code></pre></div><p><strong>2. Initialize Git LFS in your repository:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd your-repo
+</span></span><span style="display:flex;"><span>git lfs install
+</span></span></code></pre></div><p><strong>3. Track file types with LFS:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Track specific file extensions</span>
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;*.mp3&#34;</span>
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;*.wav&#34;</span>
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;*.psd&#34;</span>
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;*.mp4&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Track all files in a folder</span>
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;assets/audio/**&#34;</span>
+</span></span></code></pre></div><p>This creates a <code>.gitattributes</code> file that tells Git which files to handle with LFS.</p>
+<p><strong>4. Verify <code>.gitattributes</code> was created:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat .gitattributes
+</span></span></code></pre></div><p>Should show something like:</p>
+<pre tabindex="0"><code>*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+</code></pre><p><strong>5. Add and commit the <code>.gitattributes</code> file:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .gitattributes
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Configure Git LFS for audio files&#34;</span>
+</span></span></code></pre></div><p><strong>6. Now add your large files:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add assets/
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add audio assets via Git LFS&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><h3 id="important-notes-about-gitattributes">Important Notes About .gitattributes</h3> <ul>
+<li>The file must be named exactly <code>.gitattributes</code> (no <code>.txt</code> extension!)</li>
+<li>It should be in the root of your repository</li>
+<li>It needs to be committed before adding the large files</li>
+<li><strong>Conflict with .gitignore:</strong> If a folder is in <code>.gitignore</code>, it won&rsquo;t be tracked even if it&rsquo;s in <code>.gitattributes</code>. Choose one approach or the other.</li>
+</ul>
+<h3 id="checking-whats-tracked-by-lfs">Checking What&rsquo;s Tracked by LFS</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># See which files are tracked by LFS</span>
+</span></span><span style="display:flex;"><span>git lfs ls-files
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># See LFS tracking patterns</span>
+</span></span><span style="display:flex;"><span>git lfs track
+</span></span></code></pre></div><h3 id="migrating-existing-files-to-lfs">Migrating Existing Files to LFS</h3> <p>If you already committed large files and want to move them to LFS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Track the file type</span>
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;*.mp3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Migrate existing files in history</span>
+</span></span><span style="display:flex;"><span>git lfs migrate import --include<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.mp3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Push the changes</span>
+</span></span><span style="display:flex;"><span>git push --force
+</span></span></code></pre></div><p><strong>Warning:</strong> This rewrites Git history, so coordinate with your team first!</p>
+<h3 id="removing-lfs-if-you-change-your-mind">Removing LFS (If You Change Your Mind)</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Untrack all LFS patterns</span>
+</span></span><span style="display:flex;"><span>git lfs untrack <span style="color:#e6db74">&#34;*.mp3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove .gitattributes entries</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (Edit .gitattributes manually or delete it)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Uninstall LFS from the repo</span>
+</span></span><span style="display:flex;"><span>git lfs uninstall
+</span></span></code></pre></div><p>Then use <code>.gitignore</code> to ignore the large files instead.</p>
+<h3 id="git-lfs-vs-gitignore-decision-guide">Git LFS vs .gitignore: Decision Guide</h3> <table>
+  <thead>
+      <tr>
+          <th>Scenario</th>
+          <th>Use This</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Large files needed in repo, team needs them</td>
+          <td><strong>Git LFS</strong></td>
+      </tr>
+      <tr>
+          <td>Large files are build outputs or temporary</td>
+          <td><strong><code>.gitignore</code></strong></td>
+      </tr>
+      <tr>
+          <td>Files are user-specific (API keys, local config)</td>
+          <td><strong><code>.gitignore</code></strong></td>
+      </tr>
+      <tr>
+          <td>Files are too large even for LFS (&gt;2GB)</td>
+          <td><strong><code>.gitignore</code></strong> + external storage</td>
+      </tr>
+      <tr>
+          <td>Team doesn&rsquo;t have LFS set up</td>
+          <td><strong><code>.gitignore</code></strong> for now</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="example-audio-project-setup">Example: Audio Project Setup</h3> <p><strong>With Git LFS (team needs the audio files):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git lfs install
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;*.mp3&#34;</span>
+</span></span><span style="display:flex;"><span>git lfs track <span style="color:#e6db74">&#34;*.wav&#34;</span>
+</span></span><span style="display:flex;"><span>git add .gitattributes
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Configure Git LFS&#34;</span>
+</span></span><span style="display:flex;"><span>git add assets/
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add audio assets&#34;</span>
+</span></span></code></pre></div><p><strong>Without Git LFS (ignore audio files):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;assets/&#34;</span> &gt; .gitignore
+</span></span><span style="display:flex;"><span>git add .gitignore
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Ignore assets folder&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Store audio files in Dropbox, Google Drive, or AWS S3 instead</span>
+</span></span></code></pre></div><hr>
+<p><strong>Additional Resources:</strong></p>
+<ul>
+<li><a href="https://git-lfs.github.com/" target="_blank" rel="noopener">Git LFS Official Documentation</a> </li>
+<li><a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files" target="_blank" rel="noopener">GitHub&rsquo;s guide to Git LFS</a> </li>
+</ul>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo</a> with
+    <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>. 
+</div>
+
+    </div>
+  </body>
+</html>
