@@ -23,7 +23,7 @@ This project was an immersive installation made for the very last edition of [Sh
 
 ## Project Description
 
-I was involved in technical direction, integration, and installation of this project, working directly with designer + lead fabricator [Shreya Patel.](https://barkframeworks.com/employee-owner-spotlight-shreya-patel/)
+I was involved in technical direction, integration, and installation of this project, working directly with designer + lead fabricator [Shreya Patel.](https://www.behance.net/shreyapatel119)
 
 This project began with a question "what would you want to see at a music festival?" Shreya imagined something that people could sit underneath and enjoy a moment of peace within a hectic festival atmosphere.
 
@@ -61,4 +61,4 @@ The installation provided a unique moment of tranquility and wonder at the final
 
 ## Acknowledgments
 
-Special thanks to [Andrew Giugno](https://www.linkedin.com/in/andrewgiugno) / [Lowres](https://lowres.co/), and [Nikki Cohen](https://www.nikki-cohen.com/about) for throwing such a legendary party in the woods! Huge appreciation to [Shreya Patel](https://barkframeworks.com/employee-owner-spotlight-shreya-patel/) for the incredible design and fabrication work.
+Special thanks to [Andrew Giugno](https://www.linkedin.com/in/andrewgiugno) / [Lowres](https://lowres.co/), and [Nikki Cohen](https://www.nikki-cohen.com/about) for throwing such a legendary party in the woods! Huge appreciation to [Shreya Patel](https://www.behance.net/shreyapatel119) for the incredible design and fabrication work.
