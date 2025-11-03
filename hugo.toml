@@ -2,6 +2,7 @@ baseURL = 'https://traversable-dale.github.io/'
 languageCode = 'en-us'
 title = 'John Syzonenko'
 theme = "hugo-theme-console"
+enableEmoji = true
 
 [params]
   description = "Creative Technologist specializing in immersive installations"
