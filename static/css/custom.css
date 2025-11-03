@@ -312,21 +312,7 @@ a:hover {
 }
 
 
-/* Change blinking cursor color */
-.terminal-prompt::after {
-  color: #ff6600 !important; /* ORANGE CURSOR */
-}
 
-/* Or if that doesn't work, try this more specific selector */
-.logo .terminal-prompt::after {
-  color: #ff6600 !important;
-}
-
-/* Change cursor character */
-.terminal-prompt::after {
-  content: "▮" !important; /* Change to your preferred character */
-  color: #ff6600 !important;
-}
 
 
 

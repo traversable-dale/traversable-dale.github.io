@@ -1,4 +1,5 @@
-// tiltStrength
+// tiltStrength | line 156
+
 
 
 
@@ -153,7 +154,7 @@ function initTilt() {
       const centerY = rect.height / 2;
       
       // ADJUST THESE VALUES to change tilt intensity
-      const tiltStrength = 30; // Lower = less tilt, Higher = more tilt
+      const tiltStrength = 0; // Lower = less tilt, Higher = more tilt
       const rotateX = ((y - centerY) / centerY) * -tiltStrength;
       const rotateY = ((x - centerX) / centerX) * tiltStrength;
       
