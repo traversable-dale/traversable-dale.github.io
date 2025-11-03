@@ -114,6 +114,12 @@
     
         
         <url>
+            <loc>http://localhost:1313/guides/mouse-fx-setup/</loc>
+        </url>
+        
+    
+        
+        <url>
             <loc>http://localhost:1313/categories/</loc>
         </url>
         

@@ -16,9 +16,9 @@ Creative Technologist based in NYC. <br>
   </div>
   
   <div>
-    <strong>Immersive installations</strong> <br>
-    <strong>Multimedia playback systems</strong> <br>
-    <strong>Interactive visuals</strong>
+    <strong>Immersive Installations</strong> <br>
+    <strong>Playback Systems</strong> <br>
+    <strong>Interactive Visuals</strong>
   </div>
   
   <div>
