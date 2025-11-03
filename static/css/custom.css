@@ -3,6 +3,10 @@
    Overall site styling with black background
    ============================================ */
 
+:root {
+  --transition-speed: 3s; /* GLOBAL TRANSITION SPEED - change this to affect all effects */
+}
+
 body {
   background-color: #000000;
   color: #ffffff;
@@ -23,7 +27,8 @@ body, p, div, span, li, td, th, h1, h2, h3, h4, h5, h6 {
 
 
 strong, b {
-  color: #747474 !important;
+  color: #ff6600 !important; /* Default ORANGE, turns white on hover */
+  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out;
 }
 
 em, i {
@@ -317,3 +322,209 @@ a:hover {
   color: #ff6600 !important;
 }
 
+
+
+
+/* ============================================
+   INTERACTIVE MOUSE EFFECTS
+   Card glow, spotlight, ripples, 3D tilt, bold text glow
+   ============================================ */
+
+/* RIPPLE EFFECT ON CLICK */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 102, 0, 0.6); /* ORANGE RIPPLES */
+  width: 20px;
+  height: 20px;
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Alternative ripple colors - uncomment to use */
+/* .ripple { background: rgba(255, 255, 255, 0.5); } */ /* WHITE RIPPLES */
+/* .ripple { background: rgba(0, 153, 255, 0.6); } */ /* BLUE RIPPLES */
+
+/* SPOTLIGHT EFFECT */
+.spotlight-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9997;
+  background: radial-gradient(
+    circle 1000px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease-in-out;
+}
+
+.spotlight-overlay.active {
+  opacity: 1;
+}
+
+/* CARD GLOW EFFECT FOR PROJECT ITEMS */
+.project-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle, 
+    rgba(255, 102, 0, 0.3), /* ORANGE GLOW */
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease-in-out;
+  transform: translate(-50%, -50%);
+  left: var(--glow-x, 50%);
+  top: var(--glow-y, 50%);
+  z-index: 1;
+}
+
+.project-item:hover::before {
+  opacity: 1;
+}
+
+/* Make sure content stays above glow */
+.project-item > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 3D TILT EFFECT FOR PROJECT ITEMS */
+.project-item {
+  transform-style: preserve-3d;
+  transition: transform var(--transition-speed) ease-out;
+}
+
+/* Ensure images don't break during tilt */
+.projects-grid img {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* BOLD TEXT PROXIMITY GLOW */
+strong, b {
+  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-out;
+  position: relative;
+  display: inline-block; /* Required for transform to work */
+  transform-origin: center center;
+}
+
+/* Make sure character spans inherit orange by default */
+strong span, b span {
+  color: #ff6600 !important; /* Default ORANGE */
+  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out;
+}
+
+/* Active state - added by JavaScript when mouse is near */
+strong.mouse-near, b.mouse-near {
+  color: #ffffff !important; /* BRIGHT WHITE when mouse is near */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+/* Make sure character spans inherit the white color and glow from parent */
+strong.mouse-near span, b.mouse-near span {
+  color: #ffffff !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+/* Terminal bold text gets special treatment */
+.terminal strong.mouse-near, .terminal b.mouse-near {
+  color: #ffffff !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+.terminal strong.mouse-near span, .terminal b.mouse-near span {
+  color: #ffffff !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+/* Terminal bold text also needs inline-block for physics */
+.terminal strong, .terminal b {
+  display: inline-block;
+  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-out;
+}
+
+.terminal strong span, .terminal b span {
+  color: #ff6600 !important; /* Default ORANGE for terminal too */
+  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out;
+}
+
+/* Ensure images don't break during tilt */
+.projects-grid img {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* ============================================
+   CONFIGURATION OPTIONS
+   Adjust these values to customize effects
+   ============================================ */
+
+/* GLOBAL TRANSITION SPEED CONTROL */
+/* Change --transition-speed at the top of this file in :root { }
+   This controls ALL effect transitions:
+   - Spotlight fade in/out
+   - Card glow fade in/out
+   - Bold text color change
+   - Bold text magnetic movement
+   - 3D tilt speed
+   
+   Recommended values:
+   - 0.3s = Fast/snappy
+   - 0.5s = Quick but smooth
+   - 1s = Current setting (balanced)
+   - 1.5s = Slow/dramatic
+   - 2s = Very slow/floaty
+*/
+
+/* TRANSITION SPEED CONTROLS */
+/* All effects now use the global --transition-speed variable */
+
+/* RIPPLE CUSTOMIZATION */
+/* Change ripple size: increase the 4 in scale(4) for bigger ripples */
+/* Change ripple speed: increase 0.6s for slower, decrease for faster */
+/* Change ripple color: modify the rgba() color values above */
+
+/* SPOTLIGHT CUSTOMIZATION */
+/* Change spotlight size: modify 1000px in the radial-gradient */
+/* Change darkness: modify 0.7 in rgba(0, 0, 0, 0.7) - higher = darker */
+/* Change fade speed: controlled by --transition-speed */
+
+/* GLOW CUSTOMIZATION */
+/* Change glow size: modify 300px width/height */
+/* Change glow color: modify rgba(255, 102, 0, 0.3) */
+/* Change glow intensity: modify the 0.3 alpha value - higher = brighter */
+/* Change fade speed: controlled by --transition-speed */
+
+/* TILT CUSTOMIZATION */
+/* Change tilt speed: controlled by --transition-speed */
+/* Change tilt amount: see JavaScript section below */
+
+/* BOLD TEXT GLOW CUSTOMIZATION */
+/* Change glow color: modify #ffffff in strong.mouse-near span */
+/* Change glow intensity: modify the rgba values in text-shadow */
+/* Change magnetic range: modify magneticRange in JavaScript (default: 30px) */
+/* Change magnetic strength: modify magneticStrength in JavaScript (default: 1.5) */
+/* Change transition speed: controlled by --transition-speed */
