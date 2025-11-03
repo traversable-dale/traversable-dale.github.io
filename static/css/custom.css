@@ -293,6 +293,12 @@ a:hover {
   padding: 0 0.2em; /* Small padding for background */
 }
 
+/* Remove link hover background from project grid */
+.project-item a:hover {
+  background-color: transparent !important;
+  padding: 0; /* Remove padding too since there's no background */
+}
+
 
 /* Change text selection color (blue highlight) */
 ::selection {
@@ -377,10 +383,11 @@ a:hover {
 }
 
 /* CARD GLOW EFFECT FOR PROJECT ITEMS */
-.project-item {
-  position: relative;
+/* .project-item { */
+/*  position: relative;
   overflow: hidden;
-}
+} 
+*/
 
 .project-item::before {
   content: '';

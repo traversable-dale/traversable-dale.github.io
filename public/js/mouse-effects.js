@@ -1,3 +1,7 @@
+// tiltStrength
+
+
+
 // ============================================
 // MOUSE EFFECTS CONFIGURATION
 // Change true to false to disable any effect
@@ -7,7 +11,8 @@ const CONFIG = {
   rippleEffect: true,      // Click to create ripples
   glowEffect: true,        // Cards glow where you hover
   tiltEffect: true,        // Cards tilt in 3D on hover
-  boldTextGlow: true       // Bold text glows when mouse is near
+  boldTextGlow: true,      // Bold text glows when mouse is near
+  tiltStrength: 30
 };
 
 // ============================================
@@ -148,7 +153,7 @@ function initTilt() {
       const centerY = rect.height / 2;
       
       // ADJUST THESE VALUES to change tilt intensity
-      const tiltStrength = 10; // Lower = less tilt, Higher = more tilt
+      const tiltStrength = 30; // Lower = less tilt, Higher = more tilt
       const rotateX = ((y - centerY) / centerY) * -tiltStrength;
       const rotateY = ((x - centerX) / centerX) * tiltStrength;
       

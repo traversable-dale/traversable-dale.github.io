@@ -114,12 +114,33 @@ If you only want effects on the homepage, edit <code>layouts/index.html</code> a
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;spotlight-overlay&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- rest of your content --&gt;</span>
 </span></span></code></pre></div><p><strong>Note:</strong> The JavaScript will automatically create this element if it doesn&rsquo;t exist, but adding it manually ensures it&rsquo;s there from the start.</p>
-<h2 id="-configuration">⚙️ Configuration</h2> <h3 id="enablingdisabling-effects">Enabling/Disabling Effects</h3> <p>Edit the <code>CONFIG</code> object at the top of <code>mouse-effects.js</code>:</p>
+<h2 id="-configuration">⚙️ Configuration</h2> <h3 id="global-transition-speed-control-">Global Transition Speed Control 🎛️</h3> <p><strong>NEW:</strong> All effects now use a single global speed variable!</p>
+<p>At the very top of <code>custom.css</code>, you&rsquo;ll find:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>:<span style="color:#a6e22e">root</span> {
+</span></span><span style="display:flex;"><span>  --transition-speed: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">s</span>; <span style="color:#75715e">/* Change this ONE value to control ALL effects */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This controls:</p>
+<ul>
+<li>✅ Spotlight fade in/out</li>
+<li>✅ Card glow fade in/out</li>
+<li>✅ Bold text color change</li>
+<li>✅ Bold text magnetic movement</li>
+<li>✅ 3D tilt speed</li>
+</ul>
+<p><strong>Recommended values:</strong></p>
+<ul>
+<li><code>0.5s</code> = Fast/snappy</li>
+<li><code>1s</code> = Current setting (balanced) ⭐</li>
+<li><code>1.5s</code> = Slow/dramatic</li>
+<li><code>2s</code> = Very slow/floaty</li>
+</ul>
+<h3 id="enablingdisabling-effects">Enabling/Disabling Effects</h3> <p>Edit the <code>CONFIG</code> object at the top of <code>mouse-effects.js</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CONFIG</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">spotlightEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,   <span style="color:#75715e">// Set to false to disable
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">rippleEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,      <span style="color:#75715e">// Set to false to disable
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">glowEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,        <span style="color:#75715e">// Set to false to disable
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">tiltEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>         <span style="color:#75715e">// Set to false to disable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">tiltEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,        <span style="color:#75715e">// Set to false to disable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">boldTextGlow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>       <span style="color:#75715e">// Set to false to disable
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
 </span></span></code></pre></div><h3 id="customizing-effect-appearance">Customizing Effect Appearance</h3> <h4 id="ripple-effect">Ripple Effect</h4> <p>In <code>custom.css</code>, find the ripple section:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">ripple</span> {
@@ -137,17 +158,19 @@ If you only want effects on the homepage, edit <code>layouts/index.html</code> a
 <h4 id="spotlight-effect">Spotlight Effect</h4> <p>In <code>custom.css</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">spotlight-overlay</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: radial-gradient(
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">circle</span> <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span> at <span style="color:#75715e">/* 200px = spotlight size */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">circle</span> <span style="color:#ae81ff">1000</span><span style="color:#66d9ef">px</span> at <span style="color:#75715e">/* 1000px = spotlight size */</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>mouse<span style="color:#f92672">-</span>x, <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>) <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>mouse<span style="color:#f92672">-</span>y, <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>),
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transparent</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span>,
 </span></span><span style="display:flex;"><span>    rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.7</span>) <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#75715e">/* 0.7 = darkness level */</span>
 </span></span><span style="display:flex;"><span>  );
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
-<li><strong>Larger spotlight:</strong> Change <code>200px</code> to <code>300px</code> or <code>400px</code></li>
+<li><strong>Larger spotlight:</strong> Change <code>1000px</code> to <code>1500px</code> or <code>2000px</code></li>
+<li><strong>Smaller spotlight:</strong> Change <code>1000px</code> to <code>600px</code> or <code>800px</code></li>
 <li><strong>Darker background:</strong> Increase <code>0.7</code> to <code>0.9</code></li>
 <li><strong>Lighter background:</strong> Decrease <code>0.7</code> to <code>0.4</code></li>
 </ul>
+<p><strong>Note:</strong> Spotlight only appears when hovering over images and bold text!</p>
 <h4 id="card-glow">Card Glow</h4> <p>In <code>custom.css</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">project-item</span>::<span style="color:#a6e22e">before</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;  <span style="color:#75715e">/* Glow size */</span>
@@ -169,15 +192,47 @@ If you only want effects on the homepage, edit <code>layouts/index.html</code> a
 <li><strong>More dramatic tilt:</strong> Increase to <code>15</code> or <code>20</code></li>
 <li><strong>Subtle tilt:</strong> Decrease to <code>5</code> or <code>3</code></li>
 </ul>
-<h2 id="-testing">🧪 Testing</h2> <ol>
+<h4 id="bold-text-magnetic-effect">Bold Text Magnetic Effect</h4> <p>In <code>mouse-effects.js</code>, find the <code>initBoldTextGlow()</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">magneticRange</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>; <span style="color:#75715e">// Distance from cursor (pixels)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">magneticStrength</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span>; <span style="color:#75715e">// How strong the pull is
+</span></span></span></code></pre></div><p><strong>Magnetic Range:</strong></p>
+<ul>
+<li><code>20px</code> = Very close range</li>
+<li><code>30px</code> = Current setting (focused)</li>
+<li><code>50px</code> = Medium range</li>
+<li><code>100px</code> = Wide magnetic field</li>
+</ul>
+<p><strong>Magnetic Strength:</strong></p>
+<ul>
+<li><code>0.5</code> = Subtle, gentle pull</li>
+<li><code>1.5</code> = Current setting (noticeable) ⭐</li>
+<li><code>2.5</code> = Strong, dramatic pull</li>
+<li><code>4.0</code> = Very aggressive magnetic effect</li>
+</ul>
+<p><strong>Bold Text Colors:</strong></p>
+<ul>
+<li>Default: Orange (#ff6600)</li>
+<li>On hover: White (#ffffff) with white glow</li>
+</ul>
+<p>To change colors, edit <code>custom.css</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">strong</span> <span style="color:#f92672">span</span><span style="color:#f92672">,</span> <span style="color:#f92672">b</span> <span style="color:#f92672">span</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff6600</span> <span style="color:#75715e">!important</span>; <span style="color:#75715e">/* Default color */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">strong</span>.<span style="color:#a6e22e">mouse-near</span> <span style="color:#f92672">span</span><span style="color:#f92672">,</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">mouse-near</span> <span style="color:#f92672">span</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span> <span style="color:#75715e">!important</span>; <span style="color:#75715e">/* Hover color */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.6</span>); <span style="color:#75715e">/* Glow effect */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="-testing">🧪 Testing</h2> <ol>
 <li>Run your Hugo server: <code>hugo server</code></li>
 <li>Visit your homepage at <code>http://localhost:1313</code></li>
 <li>Test each effect:
 <ul>
-<li><strong>Spotlight:</strong> Move your mouse around</li>
+<li><strong>Spotlight:</strong> Move your mouse over images and bold text</li>
 <li><strong>Ripples:</strong> Click anywhere</li>
 <li><strong>Glow:</strong> Hover over project cards</li>
 <li><strong>Tilt:</strong> Move mouse over project cards slowly</li>
+<li><strong>Bold Text Magnetic:</strong> Move cursor near bold text (within 30px)</li>
 </ul>
 </li>
 </ol>
@@ -189,6 +244,7 @@ If you only want effects on the homepage, edit <code>layouts/index.html</code> a
 <h3 id="spotlight-not-appearing">Spotlight not appearing</h3> <ul>
 <li>Check if <code>.spotlight-overlay</code> div exists in your HTML</li>
 <li>Verify <code>spotlightEffect: true</code> in CONFIG</li>
+<li>Make sure you&rsquo;re hovering over images or bold text (spotlight only activates on these elements)</li>
 <li>Check if z-index conflicts with other elements</li>
 </ul>
 <h3 id="glow-not-working-on-project-cards">Glow not working on project cards</h3> <ul>
@@ -200,31 +256,75 @@ If you only want effects on the homepage, edit <code>layouts/index.html</code> a
 <li>Adjust <code>tiltStrength</code> value in <code>mouse-effects.js</code></li>
 <li>Try values between 3-20</li>
 </ul>
-<h2 id="-additional-customization-ideas">🎨 Additional Customization Ideas</h2> <h3 id="multiple-ripples-per-click">Multiple Ripples Per Click</h3> <p>In <code>mouse-effects.js</code>, uncomment these lines in <code>initRipples()</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">createRipple</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientX</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientY</span>), <span style="color:#ae81ff">100</span>);
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">createRipple</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientX</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientY</span>), <span style="color:#ae81ff">200</span>);
-</span></span></code></pre></div><h3 id="only-show-effects-on-hover">Only Show Effects on Hover</h3> <p>To make spotlight only appear when hovering project cards, modify the CSS:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">projects-grid</span>:<span style="color:#a6e22e">hover</span> <span style="color:#f92672">~</span> .<span style="color:#a6e22e">spotlight-overlay</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="different-colors-for-different-projects">Different Colors for Different Projects</h3> <p>Add custom CSS classes to specific project items and override the glow color.</p>
-<h2 id="-notes">📝 Notes</h2> <ul>
-<li>Effects are optimized for performance using <code>requestAnimationFrame</code> where appropriate</li>
-<li>All effects work on mobile, but consider disabling tilt on touch devices</li>
-<li>The JavaScript auto-initializes when the page loads</li>
-<li>Effects respect the existing dark theme styling</li>
+<h3 id="bold-text-not-turning-orangewhite">Bold text not turning orange/white</h3> <ul>
+<li>Verify the character spans are being created (check browser inspector)</li>
+<li>Make sure there are no CSS conflicts overriding the colors</li>
+<li>Check that <code>boldTextGlow: true</code> in CONFIG</li>
+</ul>
+<h3 id="bold-text-magnetic-effect-too-subtlestrong">Bold text magnetic effect too subtle/strong</h3> <ul>
+<li>Adjust <code>magneticStrength</code> in <code>mouse-effects.js</code></li>
+<li>Adjust <code>magneticRange</code> to change activation distance</li>
+</ul>
+<h3 id="all-transitions-too-fastslow">All transitions too fast/slow</h3> <ul>
+<li>Change <code>--transition-speed</code> variable at the top of <code>custom.css</code></li>
+<li>This controls all effect speeds globally</li>
+</ul>
+<h2 id="-effect-details">🎨 Effect Details</h2> <h3 id="current-configuration">Current Configuration:</h3> <ul>
+<li><strong>Spotlight:</strong> 1000px radius, only on images and bold text</li>
+<li><strong>Card Glow:</strong> Orange glow on project items</li>
+<li><strong>Click Ripples:</strong> Orange ripples matching your theme</li>
+<li><strong>3D Tilt:</strong> Cards tilt based on cursor position</li>
+<li><strong>Bold Text Magnetic:</strong> Each character individually pulled toward cursor
+<ul>
+<li>Default: Orange text</li>
+<li>Near cursor: White text with white glow</li>
+<li>Range: 30px</li>
+<li>Strength: 1.5</li>
+</ul>
+</li>
+<li><strong>Global Transition Speed:</strong> 1s for all effects</li>
+</ul>
+<h3 id="bold-text-magnetic-physics">Bold Text Magnetic Physics:</h3> <p>The magnetic effect splits each bold text element into individual character <code>&lt;span&gt;</code> elements. Each character:</p>
+<ul>
+<li>Calculates distance to your cursor</li>
+<li>Pulls toward cursor proportionally to distance</li>
+<li>Creates a wave/ripple effect as you move across words</li>
+<li>Smoothly returns to original position when cursor moves away</li>
+<li>Changes color from orange → white when within range</li>
+<li>All transitions use the global speed variable</li>
 </ul>
 <h2 id="-hugo-theme-compatibility">🔧 Hugo Theme Compatibility</h2> <p>This works with the hugo-theme-console you&rsquo;re using. The effects target:</p>
 <ul>
 <li><code>.project-item</code> - Your project grid items</li>
 <li><code>.projects-grid</code> - Your project container</li>
+<li><code>strong, b</code> - Bold text elements</li>
+<li><code>img</code> - Images</li>
 </ul>
 <p>If you change themes, you may need to update these selectors.</p>
 <h2 id="-tips">💡 Tips</h2> <ul>
 <li>Start with all effects enabled and disable ones you don&rsquo;t like</li>
-<li>The glow and tilt effects work best together</li>
-<li>Spotlight adds drama but can be distracting - try it with lower opacity first</li>
+<li>The glow and tilt effects work best together on project cards</li>
+<li>Spotlight adds drama but only appears on images and bold text to avoid distraction</li>
 <li>Orange ripples match your site&rsquo;s color scheme!</li>
+<li>Bold text magnetic effect works best with short phrases (2-10 words)</li>
+<li>Adjust <code>--transition-speed</code> to match the overall feel of your site</li>
+<li>For more dramatic effects, try <code>--transition-speed: 1.5s</code> or <code>2s</code></li>
+<li>For snappier effects, try <code>--transition-speed: 0.5s</code></li>
+</ul>
+<h2 id="-advanced-customization">📝 Advanced Customization</h2> <h3 id="multiple-ripples-per-click">Multiple Ripples Per Click</h3> <p>In <code>mouse-effects.js</code>, uncomment these lines in <code>initRipples()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">createRipple</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientX</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientY</span>), <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">createRipple</span>(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientX</span>, <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">clientY</span>), <span style="color:#ae81ff">200</span>);
+</span></span></code></pre></div><h3 id="only-show-spotlight-on-specific-elements">Only Show Spotlight on Specific Elements</h3> <p>The spotlight is already configured to only show on images and bold text. To change this, edit the <code>initSpotlight()</code> function in <code>mouse-effects.js</code>.</p>
+<h3 id="different-colors-for-different-projects">Different Colors for Different Projects</h3> <p>Add custom CSS classes to specific project items and override the glow color.</p>
+<h3 id="custom-magnetic-fields">Custom Magnetic Fields</h3> <p>You can create different magnetic strengths for different text elements by adding custom classes and JavaScript targeting.</p>
+<h2 id="-whats-new-in-this-version">🎯 What&rsquo;s New in This Version</h2> <ul>
+<li>✨ Global transition speed control via CSS variable</li>
+<li>✨ Per-character magnetic physics for bold text</li>
+<li>✨ Bold text color changes from orange → white on hover</li>
+<li>✨ Spotlight now 1000px (much larger)</li>
+<li>✨ All transitions synchronized to 1s by default</li>
+<li>✨ Improved spacing preservation in bold text</li>
+<li>✨ Better text-shadow glow effects</li>
 </ul>
 <p>Enjoy your interactive portfolio! 🎨✨</p>
 
