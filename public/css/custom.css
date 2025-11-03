@@ -316,3 +316,20 @@ a:hover {
   content: "▮" !important; /* Change to your preferred character */
   color: #ff6600 !important;
 }
+
+
+
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: ripple 0.6s ease-out;
+}
