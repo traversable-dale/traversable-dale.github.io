@@ -1,6 +1,6 @@
 # AR Hologram Greeting Card: Technical Feasibility Study
 
-**Prepared by:** Technical Director  
+**Prepared by:** John Syzonenko
 **Date:** November 15, 2025  
 **Client Request:** Interactive AR hologram experience for greeting card activation
 
@@ -8,10 +8,10 @@
 
 ## Table of Contents
 
-1. [Executive Summary](#executive-summary)
+1. [Summary](#summary)
 2. [Project Context](#project-context)
 3. [Potential Technologies & Workflows](#potential-technologies--workflows)
-4. [Technical Approach Comparison](#technical-approach-comparison)
+4. [Technical Approach](#technical-approach)
    - [Option 1: High-End Volumetric Capture](#option-1-high-end-volumetric-capture)
    - [Option 2: 2.5D Volumetric (TouchDesigner + AI Depth)](#option-2-25d-volumetric-touchdesigner--ai-depth)
    - [Option 3: 2D Green Screen Video](#option-3-2d-green-screen-video)
@@ -21,7 +21,7 @@
 
 ---
 
-## Executive Summary
+## Summary
 
 This study evaluates three technical approaches for creating an AR hologram experience activated via QR code on greeting cards. The solution must be accessible on mobile devices without app downloads, making [8th Wall](https://www.8thwall.com/) WebAR the optimal delivery platform.
 
@@ -31,7 +31,7 @@ This study evaluates three technical approaches for creating an AR hologram expe
 
 ## Project Context
 
-### Client Requirements
+### Requirements
 - AR hologram activated by scanning QR code on greeting card
 - Web-based (no app download)
 - Single talent/message for initial implementation
@@ -81,7 +81,7 @@ Computer-generated 3D assets rendered in AR. Offers full 360° viewing and inter
 
 ---
 
-## Technical Approach Comparison
+## Technical Approach
 
 ### Option 1: High-End Volumetric Capture
 
@@ -128,7 +128,7 @@ Standard camera → [TouchDesigner](https://derivative.ca/) + DepthAnything AI �
 6. Upload to 8th Wall
 
 **Proof-of-Concept Budget:** $2,500 - $4,000
-- Audio/Video sync development: $500-$800
+- Audio/Video sync: $500-$800
 - Green screen keying setup: $300-$500
 - DepthAnything processing pipeline: $800-$1,200
 - 8th Wall integration development: $600-$1,000
@@ -242,7 +242,7 @@ Green screen shoot → Adobe After Effects compositing → 8th Wall video AR
 
 The 2.5D volumetric approach represents the optimal balance of innovation, budget, and deliverability for this greeting card AR experience. While it requires an initial technical investment of approximately $3,500 more than the 2D approach, the enhanced visual quality and "hologram" effect justify the premium for a consumer-facing product.
 
-**Go/No-Go Decision Point:**  
+**Decision Points:**  
 After completion of the proof-of-concept (Week 1), a technical review will determine:
 - Depth quality from DepthAnything processing
 - 8th Wall rendering performance on target devices
@@ -254,4 +254,4 @@ If proof-of-concept results are unsatisfactory, pivot to 2D green screen workflo
 
 ---
 
-**Questions or concerns?** Contact [Technical Director]
+**Questions or concerns?** Contact John Syzonenko
