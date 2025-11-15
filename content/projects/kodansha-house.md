@@ -19,7 +19,7 @@ draft: false
 
 This project was an immersive pop-up located on Grand Street in SoHo, inspired by manga-media cult classics Akira + Attack on Titan.
 
-![Hero Image](/images/projects/kodansha-house/hero.jpg)
+![Hero Image](/images/projects/kodansha-house/hero.jpeg)
 *Kodansha House immersive pop-up*
 
 ## Project Description
@@ -28,13 +28,13 @@ Our team was asked to create 2 timeline-based video booths replicating moments f
 
 I was responsible for replicating the compositions for both booths in TouchDesigner, as well as creating 2 functional GUIs for back-of-house monitoring and control. In addition to this, I was involved in the interactive development, installation, and monitoring of this project.
 
-![Akira Slide Countdown](/images/projects/kodansha-house/akira-countdown.jpg)
+![Akira Slide Countdown](/images/projects/kodansha-house/akira-countdown.jpeg)
 *"Akira Slide" capture countdown - real-time NDI overlay*
 
-![NDI Camera](/images/projects/kodansha-house/ndi-camera.jpg)
+![NDI Camera](/images/projects/kodansha-house/ndi-camera.jpeg)
 *Embedded NDI camera for "Akira Slide" closeup*
 
-![Getaway Sequence](/images/projects/kodansha-house/getaway.jpg)
+![Getaway Sequence](/images/projects/kodansha-house/getaway.jpeg)
 *"Akira Slide" Getaway sequence*
 
 ## Technology Stack
@@ -60,33 +60,33 @@ I was responsible for replicating the compositions for both booths in TouchDesig
 - Center projection mapping
 - Interactive visitor experience
 
-![Akira Projections](/images/projects/kodansha-house/akira-projections.jpg)
+![Akira Projections](/images/projects/kodansha-house/akira-projections.jpeg)
 *"Akira Slide" center, left, right, and floor projection mapping + control*
 
-![Titan Monitor](/images/projects/kodansha-house/titan-monitor-1.jpg)
+![Titan Monitor](/images/projects/kodansha-house/titan-monitor-1.jpeg)
 *"Titan's Fury" confidence monitor + PTZ camera*
  
-![Titan Monitor](/images/projects/kodansha-house/titan-monitor-2.jpg)
+![Titan Monitor](/images/projects/kodansha-house/titan-monitor-2.jpeg)
 *"Titan's Fury" confidence monitor*
 
-![Titan NDI](/images/projects/kodansha-house/titan-ndi.jpg)
+![Titan NDI](/images/projects/kodansha-house/titan-ndi.jpeg)
 *"Titan's Fury" NDI camera*
 
-![Titan Projection](/images/projects/kodansha-house/titan-projection.jpg)
+![Titan Projection](/images/projects/kodansha-house/titan-projection.jpeg)
 *"Titan's Fury" center projection mapping + control*
 
-![Titan Experience](/images/projects/kodansha-house/titan-exp.jpg)
+![Titan Experience](/images/projects/kodansha-house/titan-exp.jpeg)
 *"Titan's Fury" user experience*
 
-![Back of House GUI](/images/projects/kodansha-house/boh-gui.jpg)
+![Back of House GUI](/images/projects/kodansha-house/boh-gui.jpeg)
 *Back-of-house GUI monitor + control surface for both installations*
 
 ## Deliverables
 
-![Titan Deliverable](/images/projects/kodansha-house/titan-deliverable.jpg)
+![Titan Deliverable](/images/projects/kodansha-house/titan-deliverable.jpeg)
 *"Titan's Fury" visitor deliverable*
 
-![Akira Deliverable](/images/projects/kodansha-house/akira-deliverable.jpg)
+![Akira Deliverable](/images/projects/kodansha-house/akira-deliverable.jpeg)
 *"Akira Slide" visitor deliverable*
 
 ## Outcomes

@@ -109,6 +109,12 @@
     
         
         <url>
+            <loc>http://localhost:1313/guides/ar_hologram_feasibility_study/</loc>
+        </url>
+        
+    
+        
+        <url>
             <loc>http://localhost:1313/guides/git-ignore-guide/</loc>
         </url>
         

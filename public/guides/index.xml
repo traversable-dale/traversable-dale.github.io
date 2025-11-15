@@ -17,6 +17,13 @@
     </item>
     <item>
       <title></title>
+      <link>http://localhost:1313/guides/ar_hologram_feasibility_study/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/ar_hologram_feasibility_study/</guid>
+      <description>&lt;h1 id=&#34;ar-hologram-greeting-card-technical-feasibility-study&#34;&gt;AR Hologram Greeting Card: Technical Feasibility Study&lt;/h1&gt; &lt;p&gt;&lt;strong&gt;Prepared by:&lt;/strong&gt; John Syzonenko&#xA;&lt;strong&gt;Date:&lt;/strong&gt; November 15, 2025&lt;br&gt;&#xA;&lt;strong&gt;Client Request:&lt;/strong&gt; Interactive AR hologram experience for greeting card activation&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt; &lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#project-context&#34;&gt;Project Context&lt;/a&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#potential-technologies--workflows&#34;&gt;Potential Technologies &amp;amp; Workflows&lt;/a&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#technical-approach&#34;&gt;Technical Approach&lt;/a&gt; &#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#option-1-high-end-volumetric-capture&#34;&gt;Option 1: High-End Volumetric Capture&lt;/a&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#option-2-25d-volumetric-touchdesigner--ai-depth&#34;&gt;Option 2: 2.5D Volumetric (TouchDesigner + AI Depth)&lt;/a&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#option-3-2d-green-screen-video&#34;&gt;Option 3: 2D Green Screen Video&lt;/a&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#budget--timeline-comparison&#34;&gt;Budget &amp;amp; Timeline Comparison&lt;/a&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#final-verdict&#34;&gt;Final Verdict&lt;/a&gt; &lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt; &lt;p&gt;This study evaluates three technical approaches for creating an AR hologram experience activated via QR code on greeting cards. The solution must be accessible on mobile devices without app downloads, making &lt;a href=&#34;https://www.8thwall.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;8th Wall&lt;/a&gt;  WebAR the optimal delivery platform.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
       <link>http://localhost:1313/guides/git-ignore-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/guides/git-ignore-guide/</guid>
