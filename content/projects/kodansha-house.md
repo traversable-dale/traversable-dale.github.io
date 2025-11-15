@@ -63,11 +63,20 @@ I was responsible for replicating the compositions for both booths in TouchDesig
 ![Akira Projections](/images/projects/kodansha-house/akira-projections.jpg)
 *"Akira Slide" center, left, right, and floor projection mapping + control*
 
-![Titan Monitor](/images/projects/kodansha-house/titan-monitor.jpg)
-*"Titan's Fury" confidence monitor + NDI PTZ camera*
+![Titan Monitor](/images/projects/kodansha-house/titan-monitor-1.jpg)
+*"Titan's Fury" confidence monitor + PTZ camera*
+ 
+![Titan Monitor](/images/projects/kodansha-house/titan-monitor-2.jpg)
+*"Titan's Fury" confidence monitor*
+
+![Titan NDI](/images/projects/kodansha-house/titan-ndi.jpg)
+*"Titan's Fury" NDI camera*
 
 ![Titan Projection](/images/projects/kodansha-house/titan-projection.jpg)
 *"Titan's Fury" center projection mapping + control*
+
+![Titan Experience](/images/projects/kodansha-house/titan-exp.jpg)
+*"Titan's Fury" user experience*
 
 ![Back of House GUI](/images/projects/kodansha-house/boh-gui.jpg)
 *Back-of-house GUI monitor + control surface for both installations*
