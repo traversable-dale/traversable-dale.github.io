@@ -23,6 +23,10 @@ draft: false
 [Thought Patterns](/projects/project-WIP) - Chemistry Creative, NYC <br>
 [Is it Okay? NFT](/projects/project-WIP) - TouchDesigner, Foundation, NYC <br>
 
+<br>
+
+#
+
 ## Film + Animation
 
 [Spiegel Im Spiegel, Yo-Yo Ma](/projects/project-WIP) - Video Designer, Global <br>
@@ -31,6 +35,10 @@ draft: false
 [The Writing on The Wall](/projects/project-WIP) - editing + motion graphics <br>
 [NEJRC: Climate Justice](/projects/project-WIP) - Camera, Editing, + Animation <br>
 [Boston Art Review](/projects/project-WIP) - Camera, Editing, + Animation <br>
+
+<br>
+
+#
 
 ## Music Videos
 

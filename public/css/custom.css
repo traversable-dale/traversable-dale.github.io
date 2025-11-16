@@ -19,12 +19,65 @@ body {
    ============================================ */
 
 /* H1 - TITLE (Large, no extra spacing) */
-h1, article h1, .terminal h1 {
-  font-size: 2.5em !important; /* LARGE */
+h1, .terminal h1 {
+  font-size: 3em !important; /* LARGE */
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  line-height: 1.2;
+  padding-top: 0 !important;
+  padding-bottom: 0em !important;
+  line-height: 1 !important;
   color: #ffffff !important;
+  display: block !important;
+}
+
+/* H1 titles on article/project pages - automatically styled larger */
+article h1 {
+  font-size: 3em !important; /* EXTRA LARGE for page titles */
+  font-weight: 700 !important; /* BOLD - try: 300 (light), 400 (normal), 700 (bold), 900 (extra bold) */
+  letter-spacing: 0.02em !important; /* LETTER SPACING - try: 0 (tight), 0.05em (loose), 0.1em (very loose) */
+  margin-top: 0 !important;
+  margin-bottom: 0.5em !important;
+  padding-bottom: 0.3em !important;
+  line-height: 1 !important;
+  text-transform: none !important; /* Try: 'uppercase' for ALL CAPS */
+  font-family: inherit !important;
+  color: #ffffff !important;
+  display: block !important;
+}
+
+/* Bold text INSIDE h1 should inherit h1 size */
+h1 strong, h1 b, 
+article h1 strong, article h1 b,
+.terminal h1 strong, .terminal h1 b {
+  font-size: inherit !important;
+  display: inline !important;
+}
+
+/* ============================================
+   PAGE TITLE - Special styling for main page titles
+   Add class="page-title" to any h1 you want styled differently
+   ============================================ */
+
+.page-title, 
+article .page-title, 
+.terminal .page-title {
+  font-size: 3em !important; /* EXTRA LARGE - adjust this! */
+  font-weight: 700 !important; /* BOLD - try: 300 (light), 400 (normal), 700 (bold), 900 (extra bold) */
+  letter-spacing: 0.02em !important; /* LETTER SPACING - try: 0 (tight), 0.05em (loose), 0.1em (very loose) */
+  margin-top: 0 !important;
+  margin-bottom: 0.5em !important;
+  padding-bottom: 0.3em !important;
+  line-height: 1 !important;
+  text-transform: none !important; /* Try: 'uppercase' for ALL CAPS */
+  font-family: inherit !important; /* Uses your default font - or specify a custom one */
+}
+
+/* Bold text inside page titles */
+.page-title strong, .page-title b,
+article .page-title strong, article .page-title b,
+.terminal .page-title strong, .terminal .page-title b {
+  font-size: inherit !important;
+  display: inline !important;
 }
 
 /* H2 - HEADING 1 (Pretty big, with spacing) */
@@ -32,8 +85,19 @@ h2, article h2, .terminal h2 {
   font-size: 1.8em !important; /* PRETTY BIG */
   margin-top: 2em !important; /* Space above */
   margin-bottom: 1em !important; /* Space below */
-  line-height: 1.3;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.3 !important;
   color: #ffffff !important;
+  display: block !important;
+}
+
+/* Bold text INSIDE h2 should inherit h2 size */
+h2 strong, h2 b,
+article h2 strong, article h2 b,
+.terminal h2 strong, .terminal h2 b {
+  font-size: inherit !important;
+  display: inline !important;
 }
 
 /* H3 - HEADING 2 (Big enough, with spacing) */
@@ -41,8 +105,19 @@ h3, article h3, .terminal h3 {
   font-size: 1.4em !important; /* BIG ENOUGH */
   margin-top: 1.5em !important; /* Space above */
   margin-bottom: 0.75em !important; /* Space below */
-  line-height: 1.3;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.3 !important;
   color: #ffffff !important;
+  display: block !important;
+}
+
+/* Bold text INSIDE h3 should inherit h3 size */
+h3 strong, h3 b,
+article h3 strong, article h3 b,
+.terminal h3 strong, .terminal h3 b {
+  font-size: inherit !important;
+  display: inline !important;
 }
 
 /* H4 - HEADING 3 (Modest, no extra spacing) */
@@ -50,8 +125,19 @@ h4, article h4, .terminal h4 {
   font-size: 1.1em !important; /* MODEST - close to base text */
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  line-height: 1.4;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.4 !important;
   color: #ffffff !important;
+  display: block !important;
+}
+
+/* Bold text INSIDE h4 should inherit h4 size */
+h4 strong, h4 b,
+article h4 strong, article h4 b,
+.terminal h4 strong, .terminal h4 b {
+  font-size: inherit !important;
+  display: inline !important;
 }
 
 /* H5 and H6 - if you need them */
@@ -59,14 +145,34 @@ h5, article h5, .terminal h5 {
   font-size: 1em !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   color: #ffffff !important;
+  display: block !important;
+}
+
+h5 strong, h5 b,
+article h5 strong, article h5 b,
+.terminal h5 strong, .terminal h5 b {
+  font-size: inherit !important;
+  display: inline !important;
 }
 
 h6, article h6, .terminal h6 {
   font-size: 0.9em !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   color: #ffffff !important;
+  display: block !important;
+}
+
+h6 strong, h6 b,
+article h6 strong, article h6 b,
+.terminal h6 strong, .terminal h6 b {
+  font-size: inherit !important;
+  display: inline !important;
 }
 
 /* ============================================
@@ -114,13 +220,16 @@ em, i {
 a {
   color: #ff6600 !important; /* CHANGE THIS COLOR - try #ff0000 for red, #00ff00 for green */
   text-decoration: none;
+  padding: 0 0.2em; /* Add padding by default (invisible) */
+  background-color: transparent; /* Transparent background by default */
+  transition: color 0.2s ease, background-color 0.2s ease; /* Smooth transition */
 }
 
 a:hover {
   color: #000000 !important; /* BLACK TEXT ON HOVER */
   background-color: #ff6600 !important; /* ORANGE BACKGROUND */
   text-decoration: none;
-  padding: 0 0.2em; /* Small padding for background */
+  /* Padding stays the same - no jitter! */
 }
 
 /* Remove link hover background from project grid */
@@ -192,6 +301,225 @@ img + em {
 .terminal-logo, .terminal-prompt {
   color: #ffffff !important; /* WHITE TEXT IN HEADER */
 }
+
+/* ============================================
+   HEADER NAVIGATION LINKS STYLING
+   Control font size, spacing, and appearance
+   ============================================ */
+
+/* Navigation links in the header */
+.terminal-menu a,
+.terminal-nav a {
+  font-size: 1em !important; /* CHANGE THIS - default size */
+  font-weight: 400 !important; /* CHANGE THIS - 400=normal, 600=semi-bold, 700=bold */
+  letter-spacing: 0.05em !important; /* CHANGE THIS - spacing between letters */
+  text-transform: none !important; /* CHANGE THIS - 'uppercase' for ALL CAPS, 'none' for normal */
+  padding: 0.5em 1em !important; /* CHANGE THIS - space around each link */
+}
+
+/* Hover state for navigation */
+.terminal-menu a:hover,
+.terminal-nav a:hover {
+  color: #000000 !important;
+  background-color: #ff6600 !important;
+}
+
+/* ============================================
+   CUSTOM FOOTER
+   Black footer with navigation and social icons
+   ============================================ */
+
+.custom-footer {
+  background-color: #000000; /* BLACK BACKGROUND */
+  border-top: none; /* Remove flat border - we'll add interactive one */
+  padding: 0; /* Remove padding, will add to content */
+  padding-top: 2em; /* Space above the border */
+  margin-top: 4em;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  position: relative;
+}
+
+/* Container for the interactive footer border */
+.footer-border-wrapper {
+  width: 100%;
+  overflow: visible;
+  padding: 20px 0;
+  margin-bottom: 2em; /* Space below border */
+}
+
+/* Animation when footer becomes visible */
+.custom-footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em 2em 2em; /* Added bottom padding */
+}
+
+/* Footer Navigation Links */
+.footer-nav {
+  display: flex;
+  gap: 2em; /* SPACE BETWEEN LINKS */
+}
+
+.footer-nav a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 0.9em; /* FOOTER LINK SIZE */
+  padding: 0 0.2em; /* Add padding by default - prevents jitter */
+  background-color: transparent; /* Transparent by default */
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #000000 !important; /* Black text on hover */
+  background-color: #ff6600 !important; /* Orange background */
+  /* Padding stays the same - no jitter! */
+}
+
+/* Footer Social Icons */
+.footer-social {
+  display: flex;
+  gap: 1.5em; /* SPACE BETWEEN ICONS */
+  align-items: center;
+}
+
+.footer-social a {
+  display: inline-block; /* Changed from block to inline-block */
+  line-height: 0; /* Removes extra spacing around images */
+  transition: opacity 0.3s ease, transform var(--transition-speed) ease-out;
+  position: relative; /* Required for transform */
+  padding: 0 !important; /* Override global link padding for icons */
+  background-color: transparent !important; /* Never show background on icons */
+}
+
+.footer-social a:hover {
+  background-color: transparent !important; /* Keep transparent */
+  padding: 0 !important; /* Keep no padding */
+  color: inherit !important; /* Don't change color */
+}
+
+/* Glow effect when mouse is near */
+.footer-social a.icon-near {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+}
+
+.footer-social img {
+  width: 25px; /* ICON SIZE - ADJUST THIS (can go as small as you want!) */
+  height: 25px;
+  display: block;
+  object-fit: contain; /* Prevents stretching/blurring */
+  image-rendering: -webkit-optimize-contrast; /* Sharper rendering */
+  image-rendering: crisp-edges;
+  filter: brightness(1); /* Base brightness */
+  transition: filter 0.3s ease;
+}
+
+/* Icons glow brighter when near mouse */
+.footer-social a.icon-near img {
+  filter: brightness(1.3);
+}
+
+/* Responsive: Stack footer on mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+  }
+  
+  .footer-nav {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+/* ============================================
+   INTERACTIVE HEADER BORDER (the === lines)
+   ============================================ */
+
+/* Hide the original CSS-generated borders when repel effect is active */
+.border-repelled::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Ensure headings with repel borders don't clip the animated characters */
+.border-repelled {
+  overflow: visible !important;
+}
+
+/* Style the new JavaScript-generated repel borders */
+.repel-border {
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 1em;
+  user-select: none;
+  pointer-events: none;
+  overflow: visible !important; /* Allow characters to move outside bounds */
+  padding: 20px 0; /* Add vertical padding to give space for movement */
+  width: 100% !important; /* Ensure full width */
+  max-width: 100% !important;
+  box-sizing: border-box;
+  display: block !important;
+}
+
+.repel-border span {
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Target the header border elements (for non-repel hover effect) */
+.terminal-nav::after,
+h1::after,
+h2::after,
+.terminal h1::after,
+.terminal h2::after {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Make header borders glow orange on hover (when not using repel effect) */
+.terminal-nav:hover::after,
+h1:hover::after,
+h2:hover::after,
+.terminal h1:hover::after,
+.terminal h2:hover::after {
+  color: #ff6600 !important;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+}
+
+/* Alternative: Animate the border on page load */
+@keyframes border-pulse {
+  0%, 100% { 
+    opacity: 0.5;
+    text-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
+  }
+  50% { 
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
+  }
+}
+
+/* Uncomment to make borders pulse constantly */
+/*
+.terminal-nav::after,
+h1::after,
+h2::after,
+.terminal h1::after,
+.terminal h2:hover::after {
+  animation: border-pulse 3s ease-in-out infinite;
+}
+*/
 
 /* ============================================
    FOOTER STYLING

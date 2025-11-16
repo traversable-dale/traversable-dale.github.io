@@ -4,6 +4,7 @@ date: 2022-01-01
 draft: false
 ---
 
+
 | | |
 |---|---|
 | **Role** | Video Designer |
@@ -12,19 +13,9 @@ draft: false
 | **Location** | Global |
 | **Date** | 2022 - Present |
 
----
 
 
-
-## Technology Stack
-
-- Video editing and timeline composition
-- Image research and curation
-- Visual sequencing for live performance
-- Location-specific content adaptation
-
----
-
+#
 
 ## Overview
 
@@ -34,7 +25,7 @@ Spiegel im Spiegel is a musical piece by Estonian composer Arvo Pärt. The name 
 *Photo credit: UN Partnerships/Pier Paolo Cito*
 
 
----
+#
 
 
 
@@ -56,7 +47,7 @@ Beyond 2023, the performance travelled all over the world (in a variety of venue
 ![Regional Imagery](/images/projects/yo-yo/local.png)
 *Photo credit: Austin Mann*
 
----
+#
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2em 0;">
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/yschtLxehA0?start=2730" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -72,7 +63,7 @@ Beyond 2023, the performance travelled all over the world (in a variety of venue
 </div>
 
 
----
+#
 
 
 ## Performance History <br>
@@ -103,7 +94,7 @@ London, UK <br>
 Reykjavík, Iceland <br>
 Stockholm, Sweden <br>
 
----
+#
 
 ## Acknowledgments
 

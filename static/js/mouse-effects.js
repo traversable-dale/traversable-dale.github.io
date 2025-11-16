@@ -13,6 +13,7 @@ const CONFIG = {
   glowEffect: true,        // Cards glow where you hover
   tiltEffect: true,        // Cards tilt in 3D on hover
   boldTextGlow: true,      // Bold text glows when mouse is near
+  borderRepel: true,       // Border characters push away from mouse
   tiltStrength: 30
 };
 
@@ -44,6 +45,10 @@ function initMouseEffects() {
   if (CONFIG.glowEffect) initGlow();
   if (CONFIG.tiltEffect) initTilt();
   if (CONFIG.boldTextGlow) initBoldTextGlow();
+  if (CONFIG.borderRepel) initBorderRepel();
+  initFooterAnimation(); // Always initialize footer animation
+  initFooterIconRepel(); // Initialize footer icon repel effect
+  initFooterBorder(); // Initialize footer interactive border
 }
 
 // ============================================
@@ -266,6 +271,405 @@ function initBoldTextGlow() {
       bold.classList.remove('mouse-near');
     });
   });
+}
+
+// ============================================
+// BORDER REPEL EFFECT
+// Make === characters scatter away from mouse
+// ============================================
+function initBorderRepel() {
+  const repelRange = 100; // Distance at which characters start to repel (pixels)
+  const repelStrength = 150; // How far characters push away (pixels)
+  
+  // Get transition speed from CSS variable
+  const transitionSpeed = getComputedStyle(document.documentElement)
+    .getPropertyValue('--transition-speed').trim() || '1s';
+  
+  // Find all headings that might have borders
+  const headings = document.querySelectorAll('h1, h2, h3, h4, .terminal h1, .terminal h2, .terminal h3, .terminal h4');
+  
+  headings.forEach(heading => {
+    // Skip if already processed
+    if (heading.classList.contains('border-repelled')) return;
+    
+    // Look for the ::after pseudo-element border by checking computed styles
+    const afterContent = window.getComputedStyle(heading, '::after').content;
+    
+    // If there's content in ::after (the border), we need to recreate it
+    if (afterContent && afterContent !== 'none' && afterContent !== '""') {
+      // Create a wrapper for the border characters
+      const borderWrapper = document.createElement('div');
+      borderWrapper.className = 'repel-border';
+      borderWrapper.style.cssText = `
+        display: block;
+        width: 100%;
+        overflow: visible;
+        white-space: nowrap;
+        line-height: 1;
+        margin-top: 0.2em;
+        position: relative;
+        left: 0;
+      `;
+      
+      // Insert after the heading first (needed for measurements)
+      heading.parentNode.insertBefore(borderWrapper, heading.nextSibling);
+      
+      // Create a temporary character to measure its actual width
+      const tempChar = document.createElement('span');
+      tempChar.textContent = '=';
+      tempChar.style.display = 'inline-block';
+      tempChar.style.visibility = 'hidden';
+      tempChar.style.position = 'absolute';
+      borderWrapper.appendChild(tempChar);
+      
+      // Measure the actual character width
+      const charWidth = tempChar.offsetWidth;
+      borderWrapper.removeChild(tempChar);
+      
+      // Use the border wrapper's own width (which is already constrained by its parent)
+      // This is more reliable than trying to calculate container width
+      const availableWidth = borderWrapper.offsetWidth;
+      const charCount = Math.floor(availableWidth / charWidth);
+      
+      for (let i = 0; i < charCount; i++) {
+        const span = document.createElement('span');
+        span.textContent = ' • ';
+        span.style.display = 'inline-block';
+        span.style.transition = `transform ${transitionSpeed} ease-out`;
+        span.style.position = 'relative';
+        borderWrapper.appendChild(span);
+      }
+      
+      // Mark as processed
+      heading.classList.add('border-repelled');
+      
+      // Store reference to border wrapper
+      heading.borderWrapper = borderWrapper;
+    }
+  });
+  
+  // Recalculate heading borders on window resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      headings.forEach(heading => {
+        const borderWrapper = heading.borderWrapper;
+        
+        if (!borderWrapper) return;
+        
+        // Clear existing characters
+        borderWrapper.innerHTML = '';
+        
+        // Measure character width again
+        const tempChar = document.createElement('span');
+        tempChar.textContent = '=';
+        tempChar.style.display = 'inline-block';
+        tempChar.style.visibility = 'hidden';
+        tempChar.style.position = 'absolute';
+        borderWrapper.appendChild(tempChar);
+        const newCharWidth = tempChar.offsetWidth;
+        borderWrapper.removeChild(tempChar);
+        
+        // Use the border wrapper's own width
+        const availableWidth = borderWrapper.offsetWidth;
+        const newCharCount = Math.floor(availableWidth / newCharWidth);
+        
+        // Recreate characters
+        for (let i = 0; i < newCharCount; i++) {
+          const span = document.createElement('span');
+          span.textContent = '•';
+          span.style.display = 'inline-block';
+          span.style.transition = `transform ${transitionSpeed} ease-out`;
+          span.style.position = 'relative';
+          borderWrapper.appendChild(span);
+        }
+      });
+    }, 250); // Debounce resize events
+  });
+  
+  // Mouse move handler for repel effect
+  // We query the characters each time to catch any newly created ones
+  document.addEventListener('mousemove', (e) => {
+    // Get all border characters (including newly created ones after resize)
+    const borderChars = document.querySelectorAll('.repel-border span');
+    
+    borderChars.forEach(span => {
+      const rect = span.getBoundingClientRect();
+      const charCenterX = rect.left + rect.width / 2;
+      const charCenterY = rect.top + rect.height / 2;
+      
+      // Calculate distance from character to mouse
+      const deltaX = charCenterX - e.clientX;
+      const deltaY = charCenterY - e.clientY;
+      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+      
+      if (distance < repelRange) {
+        // Calculate repel strength (stronger when closer)
+        const pushStrength = (1 - distance / repelRange) * repelStrength;
+        
+        // Normalize direction vector
+        const dirX = deltaX / distance;
+        const dirY = deltaY / distance;
+        
+        // Calculate how much to move the character (push AWAY from mouse)
+        const moveX = dirX * pushStrength;
+        const moveY = dirY * pushStrength;
+        
+        // Apply the repel transform
+        span.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        
+        // Optional: Make characters turn orange when repelled
+        span.style.color = '#ff6600';
+      } else {
+        // Reset position and color when mouse is far
+        span.style.transform = 'translate(0, 0)';
+        span.style.color = '';
+      }
+    });
+  });
+  
+  // Reset all characters when mouse leaves the page
+  document.addEventListener('mouseleave', () => {
+    // Re-query to catch any newly created characters
+    const borderChars = document.querySelectorAll('.repel-border span');
+    borderChars.forEach(span => {
+      span.style.transform = 'translate(0, 0)';
+      span.style.color = '';
+    });
+  });
+}
+
+// ============================================
+// FOOTER INTERACTIVE BORDER
+// Create repel border at top of footer
+// ============================================
+function initFooterBorder() {
+  const footer = document.querySelector('.custom-footer');
+  
+  if (!footer) return; // Exit if no footer found
+  
+  const repelRange = 100; // Same as your adjusted border repel
+  const repelStrength = 150; // Same as your adjusted border repel
+  
+  // Get transition speed from CSS variable
+  const transitionSpeed = getComputedStyle(document.documentElement)
+    .getPropertyValue('--transition-speed').trim() || '1s';
+  
+  // Create the border wrapper
+  const borderWrapper = document.createElement('div');
+  borderWrapper.className = 'footer-border-wrapper repel-border';
+  borderWrapper.style.cssText = `
+    display: block;
+    width: 100%;
+    overflow: visible;
+    white-space: nowrap;
+    line-height: 1;
+    position: relative;
+    left: 0;
+  `;
+  
+  // Create a temporary character to measure its actual width
+  const tempChar = document.createElement('span');
+  tempChar.textContent = '=';
+  tempChar.style.visibility = 'hidden';
+  tempChar.style.position = 'absolute';
+  borderWrapper.appendChild(tempChar);
+  footer.insertBefore(borderWrapper, footer.firstChild);
+  
+  // Measure the actual character width
+  const charWidth = tempChar.offsetWidth;
+  borderWrapper.removeChild(tempChar);
+  
+  // Calculate number of characters needed for full width
+  const footerWidth = footer.offsetWidth;
+  const charCount = Math.floor(footerWidth / charWidth);
+  
+  // Create individual span for each = character
+  for (let i = 0; i < charCount; i++) {
+    const span = document.createElement('span');
+    span.textContent = '•';
+    span.style.display = 'inline-block';
+    span.style.transition = `transform ${transitionSpeed} ease-out, color 0.3s ease-in-out`;
+    span.style.position = 'relative';
+    span.className = 'footer-border-char';
+    borderWrapper.appendChild(span);
+  }
+  
+  // Recalculate on window resize to prevent overflow
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      // Clear existing characters
+      borderWrapper.innerHTML = '';
+      
+      // Measure character width again
+      const tempChar = document.createElement('span');
+      tempChar.textContent = '=';
+      tempChar.style.visibility = 'hidden';
+      tempChar.style.position = 'absolute';
+      borderWrapper.appendChild(tempChar);
+      const newCharWidth = tempChar.offsetWidth;
+      borderWrapper.removeChild(tempChar);
+      
+      // Recalculate character count
+      const newFooterWidth = footer.offsetWidth;
+      const newCharCount = Math.floor(newFooterWidth / newCharWidth);
+      
+      // Recreate characters
+      for (let i = 0; i < newCharCount; i++) {
+        const span = document.createElement('span');
+        span.textContent = '•';
+        span.style.display = 'inline-block';
+        span.style.transition = `transform ${transitionSpeed} ease-out, color 0.3s ease-in-out`;
+        span.style.position = 'relative';
+        span.className = 'footer-border-char';
+        borderWrapper.appendChild(span);
+      }
+    }, 250); // Debounce resize events
+  });
+  
+  // Mouse move handler for repel effect
+  document.addEventListener('mousemove', (e) => {
+    // Re-query footer border characters to catch newly created ones after resize
+    const borderChars = borderWrapper.querySelectorAll('span');
+    
+    borderChars.forEach(span => {
+      const rect = span.getBoundingClientRect();
+      const charCenterX = rect.left + rect.width / 2;
+      const charCenterY = rect.top + rect.height / 2;
+      
+      // Calculate distance from character to mouse
+      const deltaX = charCenterX - e.clientX;
+      const deltaY = charCenterY - e.clientY;
+      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+      
+      if (distance < repelRange) {
+        // Calculate repel strength (stronger when closer)
+        const pushStrength = (1 - distance / repelRange) * repelStrength;
+        
+        // Normalize direction vector
+        const dirX = deltaX / distance;
+        const dirY = deltaY / distance;
+        
+        // Calculate how much to move the character (push AWAY from mouse)
+        const moveX = dirX * pushStrength;
+        const moveY = dirY * pushStrength;
+        
+        // Apply the repel transform
+        span.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        
+        // Make characters turn orange when repelled
+        span.style.color = '#ff6600';
+      } else {
+        // Reset position and color when mouse is far
+        span.style.transform = 'translate(0, 0)';
+        span.style.color = '';
+      }
+    });
+  });
+  
+  // Reset all characters when mouse leaves the page
+  document.addEventListener('mouseleave', () => {
+    // Re-query to catch newly created characters
+    const borderChars = borderWrapper.querySelectorAll('span');
+    borderChars.forEach(span => {
+      span.style.transform = 'translate(0, 0)';
+      span.style.color = '';
+    });
+  });
+}
+
+// ============================================
+// FOOTER ICON REPEL EFFECT
+// Make footer social icons push away from mouse and glow
+// Uses same values as border repel (150px range, 15px strength)
+// ============================================
+function initFooterIconRepel() {
+  const repelRange = 50; // Same as border repel
+  const repelStrength = 150; // Same as border repel
+  
+  // Get all footer icon links
+  const iconLinks = document.querySelectorAll('.footer-social a');
+  
+  if (!iconLinks.length) return; // Exit if no icons found
+  
+  // Mouse move handler for repel effect
+  document.addEventListener('mousemove', (e) => {
+    iconLinks.forEach(link => {
+      const rect = link.getBoundingClientRect();
+      const iconCenterX = rect.left + rect.width / 2;
+      const iconCenterY = rect.top + rect.height / 2;
+      
+      // Calculate distance from icon to mouse
+      const deltaX = iconCenterX - e.clientX;
+      const deltaY = iconCenterY - e.clientY;
+      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+      
+      if (distance < repelRange) {
+        // Calculate repel strength (stronger when closer)
+        const pushStrength = (1 - distance / repelRange) * repelStrength;
+        
+        // Normalize direction vector
+        const dirX = deltaX / distance;
+        const dirY = deltaY / distance;
+        
+        // Calculate how much to move the icon (push AWAY from mouse)
+        const moveX = dirX * pushStrength;
+        const moveY = dirY * pushStrength;
+        
+        // Apply the repel transform
+        link.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        
+        // Add glow class when near
+        link.classList.add('icon-near');
+      } else {
+        // Reset position and remove glow when mouse is far
+        link.style.transform = 'translate(0, 0)';
+        link.classList.remove('icon-near');
+      }
+    });
+  });
+  
+  // Reset all icons when mouse leaves the page
+  document.addEventListener('mouseleave', () => {
+    iconLinks.forEach(link => {
+      link.style.transform = 'translate(0, 0)';
+      link.classList.remove('icon-near');
+    });
+  });
+}
+
+// ============================================
+// FOOTER SCROLL ANIMATION
+// Animate footer when it comes into view
+// ============================================
+function initFooterAnimation() {
+  const footer = document.querySelector('.custom-footer');
+  
+  if (!footer) return; // Exit if no footer found
+  
+  // Create Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add visible class when footer enters viewport
+        footer.classList.add('visible');
+        // Optional: Stop observing after first animation
+        // observer.unobserve(footer);
+      } else {
+        // Remove visible class when footer leaves viewport
+        // This makes it re-animate on each scroll
+        footer.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.1 // Trigger when 10% of footer is visible
+  });
+  
+  // Start observing the footer
+  observer.observe(footer);
 }
 
 // ============================================

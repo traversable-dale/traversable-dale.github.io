@@ -4,19 +4,17 @@ date: 2025-10-31
 draft: false
 ---
 
-## **Creative** **Technologist** based in NYC <br> specializing in **interactive** **multimedia** **installations** <br> for **exhibitions** and **experiential** **spaces**.
+#
 
----
+## I am a **Creative** **Technologist** based in NYC <br> specializing in **interactive** **multimedia** **installations** <br> for **exhibitions** and **experiential** **spaces**.
+<br>
 
-## Spotlight Projects
+# 
+<br>
+
+
 
 <div class="projects-grid">
-<div class="project-item">
-    <a href="/projects/camata/">
-      <img src="/images/projects/camata/thumbnail.png" alt="Camata">
-      <strong>Camata</strong>
-    </a>
-  </div>
 
 <div class="project-item">
     <a href="/projects/blue-paradox/">
@@ -31,7 +29,14 @@ draft: false
       <strong>Spiegel Im Spiegel</strong>
     </a>
   </div>
-  
+
+  <div class="project-item">
+      <a href="/projects/camata/">
+        <img src="/images/projects/camata/thumbnail.png" alt="Camata">
+        <strong>Camata</strong>
+      </a>
+    </div>
+
   <div class="project-item">
     <a href="/projects/kodansha-house/">
       <img src="/images/projects/kodansha-house/thumbnail.png" alt="Kodansha House">
@@ -54,9 +59,9 @@ draft: false
   </div>
 </div>
 
----
+#
 
-## GitHub Projects
+## **GitHub Projects**
 
 [TD Polyrhythms](https://github.com/traversable-dale/td-polyrhythms) - Audio experiment / standalone TouchDesigner app <br>
 [TD Debug](https://github.com/traversable-dale/td-debug) - Global utility for managing textport prints in TouchDesigner <br>

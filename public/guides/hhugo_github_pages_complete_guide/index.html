@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>John Syzonenko/guides/hhugo_github_pages_complete_guide/</title>
+    <meta name="description" content="Creative Technologist specializing in immersive installations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="Setup Guide" />
+<meta property="og:description" content="Creative Technologist specializing in immersive installations" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/guides/hhugo_github_pages_complete_guide/" /><meta property="article:published_time" content="2025-10-31T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="Setup Guide"/>
+<meta name="twitter:description" content="Hugo &#43; GitHub Pages Complete Setup Guide How this website was built - A complete guide for building your own portfolio site for free
+
+Table of Contents 
+Quick Start Overview 
+Step-by-Step Setup 
+Working with Git Submodules 
+Required Files Overview 
+Troubleshooting 
+Daily Workflow 
+Key Learnings 
+
+
+Quick Start Overview What You&rsquo;ll Build 
+Professional portfolio with custom dark theme
+Home page with 2x3 project grid
+About page with bio and skills
+Work page with chronological project list
+Individual project pages using templates
+Automatic deployment via GitHub Actions
+
+Time Required 
+Initial setup: 1-2 hours
+Adding content: Ongoing as needed
+
+Cost 
+$0 - Completely free with GitHub Pages
+Optional: Custom domain ($10-15/year)
+
+
+Step-by-Step Setup 1. Install Hugo macOS:"/>
+<link rel="stylesheet" href="/css/custom.css">
+<script src="/js/mouse-effects.js"></script></head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="http://localhost:1313/" class="no-style ">John Syzonenko</a>:~# 
+              <a href='http://localhost:1313/guides'>guides</a>/<a href='http://localhost:1313/guides/hhugo_github_pages_complete_guide'>hhugo_github_pages_complete_guide</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/">
+                    <span property="name">Home</span></a>
+                    <meta property="position" content="1" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/about/">
+                    <span property="name">About</span></a>
+                    <meta property="position" content="2" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/work/">
+                    <span property="name">Work</span></a>
+                    <meta property="position" content="3" />
+                </li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container " >
+        
+<h1>Setup Guide</h1>
+<h1 id="hugo--github-pages-complete-setup-guide">Hugo + GitHub Pages Complete Setup Guide</h1> <p><strong>How this website was built - A complete guide for building your own portfolio site for free</strong></p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2> <ol>
+<li><a href="#quick-start-overview">Quick Start Overview</a> </li>
+<li><a href="#step-by-step-setup">Step-by-Step Setup</a> </li>
+<li><a href="#working-with-git-submodules">Working with Git Submodules</a> </li>
+<li><a href="#required-files-overview">Required Files Overview</a> </li>
+<li><a href="#troubleshooting">Troubleshooting</a> </li>
+<li><a href="#daily-workflow">Daily Workflow</a> </li>
+<li><a href="#key-learnings">Key Learnings</a> </li>
+</ol>
+<hr>
+<h2 id="quick-start-overview">Quick Start Overview</h2> <h3 id="what-youll-build">What You&rsquo;ll Build</h3> <ul>
+<li>Professional portfolio with custom dark theme</li>
+<li>Home page with 2x3 project grid</li>
+<li>About page with bio and skills</li>
+<li>Work page with chronological project list</li>
+<li>Individual project pages using templates</li>
+<li>Automatic deployment via GitHub Actions</li>
+</ul>
+<h3 id="time-required">Time Required</h3> <ul>
+<li>Initial setup: 1-2 hours</li>
+<li>Adding content: Ongoing as needed</li>
+</ul>
+<h3 id="cost">Cost</h3> <ul>
+<li><strong>$0</strong> - Completely free with GitHub Pages</li>
+<li>Optional: Custom domain ($10-15/year)</li>
+</ul>
+<hr>
+<h2 id="step-by-step-setup">Step-by-Step Setup</h2> <h3 id="1-install-hugo">1. Install Hugo</h3> <p><strong>macOS:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p><strong>Windows:</strong></p>
+<ul>
+<li>Download from <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener">https://github.com/gohugoio/hugo/releases</a> </li>
+<li>Or use: <code>choco install hugo-extended -y</code></li>
+</ul>
+<p><strong>Linux:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install hugo
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or</span>
+</span></span><span style="display:flex;"><span>sudo snap install hugo
+</span></span></code></pre></div><p><strong>Verify:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><hr>
+<h3 id="2-create-your-site">2. Create Your Site</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create new site</span>
+</span></span><span style="display:flex;"><span>hugo new site my-website
+</span></span><span style="display:flex;"><span>cd my-website
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Initialize Git (CRITICAL: Do this BEFORE adding theme!)</span>
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add theme as submodule</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/mrmierzejewski/hugo-theme-console.git themes/hugo-theme-console
+</span></span></code></pre></div><p><strong>Common Error:</strong> Running <code>git submodule add</code> before <code>git init</code> causes &ldquo;fatal: not a git repository&rdquo;</p>
+<hr>
+<h3 id="3-configure-your-site">3. Configure Your Site</h3> <p>Edit <code>hugo.toml</code> to include:</p>
+<ul>
+<li>Basic site info (title, baseURL, language)</li>
+<li>Theme name</li>
+<li>Markup settings to allow HTML (<code>unsafe = true</code>)</li>
+<li>Navigation links</li>
+<li>Site description</li>
+</ul>
+<p><strong>Basic hugo.toml template:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://yourusername.github.io/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;en-us&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;Your Name&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-theme-console&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;Your professional tagline&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">navlinks</span>]]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">navlinks</span>]]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">navlinks</span>]]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Work&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/work/&#34;</span>
+</span></span></code></pre></div><hr>
+<h3 id="4-create-custom-homepage-layout">4. Create Custom Homepage Layout</h3> <p><strong>Why needed:</strong> The Console theme has its own homepage layout. You need to override it.</p>
+<p>Create <code>layouts/index.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;{{ .Site.Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ .Content }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><hr>
+<h3 id="5-enable-custom-css-loading">5. Enable Custom CSS Loading</h3> <p><strong>Why needed:</strong> Console theme needs a specific file to load custom styles.</p>
+<p>Create <code>layouts/partials/header.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/custom.css&#34;</span>&gt;
+</span></span></code></pre></div><p><strong>Critical:</strong> It MUST be named <code>header.html</code> (not <code>extended_head.html</code>). The Console theme specifically looks for this file.</p>
+<hr>
+<h3 id="6-create-your-content-pages">6. Create Your Content Pages</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Main pages</span>
+</span></span><span style="display:flex;"><span>hugo new _index.md    <span style="color:#75715e"># Homepage</span>
+</span></span><span style="display:flex;"><span>hugo new about.md     <span style="color:#75715e"># About page</span>
+</span></span><span style="display:flex;"><span>hugo new work.md      <span style="color:#75715e"># Work/portfolio list page</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Project pages (create as many as you need)</span>
+</span></span><span style="display:flex;"><span>hugo new projects/project-1.md
+</span></span><span style="display:flex;"><span>hugo new projects/project-2.md
+</span></span><span style="display:flex;"><span>hugo new projects/project-3.md
+</span></span></code></pre></div><hr>
+<h3 id="7-set-up-folder-structure">7. Set Up Folder Structure</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create CSS folder</span>
+</span></span><span style="display:flex;"><span>mkdir -p static/css
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create image folders</span>
+</span></span><span style="display:flex;"><span>mkdir -p static/images/projects/project-1
+</span></span><span style="display:flex;"><span>mkdir -p static/images/projects/project-2
+</span></span></code></pre></div><p><strong>Image organization:</strong></p>
+<ul>
+<li>Your photo: <code>static/images/your-photo.jpg</code></li>
+<li>Project images: <code>static/images/projects/project-name/thumbnail.jpg</code></li>
+<li>All images MUST be in <code>static/</code> folder (not <code>content/</code>)</li>
+</ul>
+<hr>
+<h3 id="8-add-custom-styling">8. Add Custom Styling</h3> <p>Create <code>static/css/custom.css</code> with your design preferences (dark theme, colors, project grid layout, etc.).</p>
+<p><strong>Important CSS Override:</strong>
+The Console theme applies a light gray color to many elements through the <code>.terminal</code> class. Your CSS must specifically override this to get pure white text in tables and other elements.</p>
+<hr>
+<h3 id="9-test-locally">9. Test Locally</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo serve -D
+</span></span></code></pre></div><p>Open browser to: http://localhost:1313</p>
+<p>The server automatically reloads when you save changes!</p>
+<p><strong>Commands:</strong></p>
+<ul>
+<li><code>hugo serve -D</code> - Include draft posts</li>
+<li><code>hugo serve</code> - Published content only</li>
+<li><code>Ctrl+C</code> - Stop server</li>
+</ul>
+<hr>
+<h3 id="10-set-up-github-repository">10. Set Up GitHub Repository</h3> <p><strong>On GitHub.com:</strong></p>
+<ol>
+<li>Log in to GitHub</li>
+<li>Click &lsquo;+&rsquo; → New repository</li>
+<li>Name: <code>yourusername.github.io</code> (use YOUR actual username)</li>
+<li>Make it <strong>Public</strong></li>
+<li>Do NOT initialize with anything</li>
+<li>Create repository</li>
+</ol>
+<p><strong>In your terminal:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Authenticate with GitHub</span>
+</span></span><span style="display:flex;"><span>brew install gh
+</span></span><span style="display:flex;"><span>gh auth login
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Choose: HTTPS → Yes → Login with browser</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Connect and push</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/yourusername/yourusername.github.io.git
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><hr>
+<h3 id="11-set-up-automatic-deployment">11. Set Up Automatic Deployment</h3> <p>Create <code>.github/workflows/hugo.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [<span style="color:#e6db74">&#34;main&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">read</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pages</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">concurrency</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#34;pages&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cancel-in-progress</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">defaults</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">shell</span>: <span style="color:#ae81ff">bash</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">HUGO_VERSION</span>: <span style="color:#ae81ff">0.128.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          sudo dpkg -i hugo.deb</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#ae81ff">recursive</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/configure-pages@v5</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build with Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload artifact</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">github-pages</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">${{ steps.deployment.outputs.page_url }}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to GitHub Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">deployment</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/deploy-pages@v4</span>
+</span></span></code></pre></div><p><strong>Then push it:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .github/
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add GitHub Actions workflow&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><hr>
+<h3 id="12-enable-github-pages">12. Enable GitHub Pages</h3> <ol>
+<li>Go to your repository on GitHub</li>
+<li>Click <strong>Settings</strong> → <strong>Pages</strong></li>
+<li>Under &ldquo;Build and deployment&rdquo;:
+<ul>
+<li><strong>Source:</strong> Select <strong>GitHub Actions</strong></li>
+</ul>
+</li>
+<li>Done! It auto-saves.</li>
+</ol>
+<p><strong>Check deployment:</strong></p>
+<ul>
+<li>Go to <strong>Actions</strong> tab</li>
+<li>Watch for green checkmark (takes 2-3 minutes)</li>
+<li>Site will be live at: <code>https://yourusername.github.io</code></li>
+</ul>
+<hr>
+<h2 id="working-with-git-submodules">Working with Git Submodules</h2> <h3 id="what-are-submodules">What Are Submodules?</h3> <p>Git submodules allow you to keep a Git repository as a subdirectory of another Git repository. In this case, the Hugo theme is a submodule - it&rsquo;s maintained in its own repository but included in yours.</p>
+<h3 id="cloning-a-repo-with-submodules">Cloning a Repo with Submodules</h3> <p>When you clone your repository to a new computer, Git doesn&rsquo;t automatically download submodules. You&rsquo;ll see an empty <code>themes/</code> folder.</p>
+<p><strong>Option 1: Clone with submodules (Recommended)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone --recurse-submodules https://github.com/yourusername/yourusername.github.io.git
+</span></span></code></pre></div><p><strong>Option 2: Initialize submodules after cloning</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># First, clone normally</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/yourusername/yourusername.github.io.git
+</span></span><span style="display:flex;"><span>cd yourusername.github.io
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Then initialize submodules</span>
+</span></span><span style="display:flex;"><span>git submodule update --init --recursive
+</span></span></code></pre></div><h3 id="verifying-submodules-loaded">Verifying Submodules Loaded</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check that the theme folder has content</span>
+</span></span><span style="display:flex;"><span>ls themes/hugo-theme-console/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># You should see: LICENSE, README.md, layouts/, static/, etc.</span>
+</span></span></code></pre></div><h3 id="common-submodule-issues">Common Submodule Issues</h3> <p><strong>Problem:</strong> Blank white page when running <code>hugo serve -D</code></p>
+<p><strong>Error messages:</strong></p>
+<pre tabindex="0"><code>WARN  found no layout file for &#34;html&#34; for kind &#34;section&#34;
+WARN  found no layout file for &#34;html&#34; for kind &#34;page&#34;
+</code></pre><p><strong>Solution:</strong> Your theme submodule isn&rsquo;t loaded. Run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule update --init --recursive
+</span></span></code></pre></div><hr>
+<h2 id="required-files-overview">Required Files Overview</h2> <h3 id="configuration-files">Configuration Files</h3> <p><strong>hugo.toml</strong></p>
+<ul>
+<li>Main configuration file</li>
+<li>Sets site title, theme, navigation</li>
+<li>Enables HTML in markdown (<code>unsafe = true</code>)</li>
+</ul>
+<p><strong>layouts/index.html</strong></p>
+<ul>
+<li>Overrides theme&rsquo;s homepage layout</li>
+<li>Allows your <code>_index.md</code> content to display</li>
+</ul>
+<p><strong>layouts/partials/header.html</strong></p>
+<ul>
+<li>Loads your custom CSS file</li>
+<li>Console theme specifically looks for this file</li>
+</ul>
+<p><strong>.github/workflows/hugo.yml</strong></p>
+<ul>
+<li>Configures automatic deployment</li>
+<li>Builds site and publishes to GitHub Pages</li>
+<li>Triggers on every push to main branch</li>
+</ul>
+<h3 id="content-files">Content Files</h3> <p><strong>content/_index.md</strong> (Homepage)</p>
+<ul>
+<li>Short intro about you</li>
+<li>2x3 grid of project thumbnails</li>
+<li>Link to GitHub</li>
+</ul>
+<p><strong>content/about.md</strong> (About Page)</p>
+<ul>
+<li>Your photo</li>
+<li>Bio paragraph</li>
+<li>Email address</li>
+<li>Skills list with links</li>
+<li>Specializations</li>
+</ul>
+<p><strong>content/work.md</strong> (Work Page)</p>
+<ul>
+<li>Projects organized by year</li>
+<li>Links to individual project pages</li>
+<li>Brief descriptions</li>
+<li>Reverse chronological order</li>
+</ul>
+<p><strong>content/projects/[project-name].md</strong> (Project Pages)</p>
+<ul>
+<li>Metadata table (Role, Client, Team, etc.)</li>
+<li>Project overview and description</li>
+<li>Technology stack</li>
+<li>Key features</li>
+<li>Images throughout</li>
+<li>Outcomes and acknowledgments</li>
+</ul>
+<p><strong>content/projects/_index.md</strong> (Projects Index)</p>
+<ul>
+<li>Redirects to Work page</li>
+<li>Prevents auto-generated project list</li>
+</ul>
+<h3 id="style-files">Style Files</h3> <p><strong>static/css/custom.css</strong></p>
+<ul>
+<li>Dark theme (black background, white text)</li>
+<li>Neon orange hyperlinks</li>
+<li>2-column responsive project grid</li>
+<li>Compact table styling</li>
+<li>Image caption formatting</li>
+<li>Theme overrides (especially for <code>.terminal</code> class)</li>
+</ul>
+<h3 id="image-files">Image Files</h3> <p>All images must be in <code>static/images/</code> directory:</p>
+<ul>
+<li><code>your-photo.jpg</code> - For about page</li>
+<li><code>projects/project-1/thumbnail.jpg</code> - For homepage grid</li>
+<li><code>projects/project-1/hero.jpg</code> - Main project image</li>
+<li><code>projects/project-1/detail.jpg</code> - Additional project images</li>
+</ul>
+<p><strong>Image guidelines:</strong></p>
+<ul>
+<li>Thumbnails: 800-1200px wide</li>
+<li>Hero images: 1200-2000px wide</li>
+<li>Format: JPG for photos, PNG for graphics</li>
+<li>Keep under 500KB when possible</li>
+<li>Use descriptive filenames</li>
+</ul>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2> <h3 id="fatal-not-a-git-repository">&ldquo;fatal: not a git repository&rdquo;</h3> <p><strong>When:</strong> Adding theme as submodule</p>
+<p><strong>Problem:</strong> Tried to run <code>git submodule add</code> before initializing Git</p>
+<p><strong>Solution:</strong> Always run <code>git init</code> FIRST, then add the theme</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init  <span style="color:#75715e"># Do this first!</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/...
+</span></span></code></pre></div><hr>
+<h3 id="invalid-username-or-token-when-pushing-to-github">&ldquo;Invalid username or token&rdquo; when pushing to GitHub</h3> <p><strong>When:</strong> Running <code>git push</code></p>
+<p><strong>Problem:</strong> GitHub requires Personal Access Token, not password</p>
+<p><strong>Solution:</strong> Use GitHub CLI for easy authentication</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install gh
+</span></span><span style="display:flex;"><span>gh auth login
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Follow prompts: HTTPS → Yes → Login with browser</span>
+</span></span></code></pre></div><hr>
+<h3 id="homepage-shows-olddefault-theme-content">Homepage shows old/default theme content</h3> <p><strong>When:</strong> Visiting your site locally or on GitHub Pages</p>
+<p><strong>Problem:</strong> Theme&rsquo;s default homepage layout is overriding your <code>_index.md</code> content</p>
+<p><strong>Solution:</strong> Create <code>layouts/index.html</code> to override the theme</p>
+<ul>
+<li>This file tells Hugo: &ldquo;Use my content from _index.md, not the theme&rsquo;s default&rdquo;</li>
+<li>Without this file, the Console theme shows its own homepage</li>
+</ul>
+<hr>
+<h3 id="project-grid-not-showing-images-stack-vertically">Project grid not showing (images stack vertically)</h3> <p><strong>When:</strong> Homepage displays but projects are in a single column</p>
+<p><strong>Problem 1:</strong> Hugo is stripping out the HTML from your markdown</p>
+<p><strong>Solution 1:</strong> Add to <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p><strong>Problem 2:</strong> Custom CSS isn&rsquo;t loading</p>
+<p><strong>Solution 2:</strong> Verify <code>layouts/partials/header.html</code> exists and contains the CSS link</p>
+<hr>
+<h3 id="custom-css-not-loading-at-all">Custom CSS not loading at all</h3> <p><strong>When:</strong> Your styling doesn&rsquo;t appear on the site</p>
+<p><strong>Problem:</strong> Console theme needs a specific partial file to load custom CSS</p>
+<p><strong>Solution:</strong> Create <code>layouts/partials/header.html</code> with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/custom.css&#34;</span>&gt;
+</span></span></code></pre></div><p><strong>Critical notes:</strong></p>
+<ul>
+<li>Must be named <code>header.html</code> (not <code>extended_head.html</code>)</li>
+<li>Must be in <code>layouts/partials/</code> directory</li>
+<li>The Console theme specifically includes this file in its <code>&lt;head&gt;</code> section</li>
+</ul>
+<hr>
+<h3 id="table-text-appears-gray-instead-of-white">Table text appears gray instead of white</h3> <p><strong>When:</strong> Project metadata tables show gray text for labels</p>
+<p><strong>Problem:</strong> The Console theme applies a CSS class called <code>.terminal</code> to many elements. This class sets text color to <code>#eae6e6</code> (light gray) which overrides your custom CSS.</p>
+<p><strong>Detailed explanation:</strong></p>
+<ul>
+<li>The theme uses: <code>.terminal table td { color: #eae6e6; }</code></li>
+<li>Your CSS might say: <code>table td { color: #ffffff; }</code></li>
+<li>Theme&rsquo;s selector is more specific, so it wins</li>
+<li>Result: Gray text instead of white</li>
+</ul>
+<p><strong>Solution:</strong> Override the <code>.terminal</code> class specifically in your <code>custom.css</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">blockquote</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h1</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h2</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h3</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h4</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h5</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h6</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">strong</span><span style="color:#f92672">,</span> 
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> .<span style="color:#a6e22e">logo</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">table</span> <span style="color:#f92672">td</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Why this works:</strong></p>
+<ul>
+<li>Uses the same <code>.terminal</code> selector as the theme</li>
+<li>Adds <code>!important</code> to force override</li>
+<li>Now your white color beats the theme&rsquo;s gray</li>
+</ul>
+<hr>
+<h3 id="images-not-appearing-404-errors">Images not appearing (404 errors)</h3> <p><strong>When:</strong> Image placeholders show but no actual images</p>
+<p><strong>Common causes and solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Images in wrong folder</strong></p>
+<ul>
+<li>❌ <code>content/images/photo.jpg</code></li>
+<li>✅ <code>static/images/photo.jpg</code></li>
+<li>Hugo only serves files from <code>static/</code> folder</li>
+</ul>
+</li>
+<li>
+<p><strong>Wrong path in markdown</strong></p>
+<ul>
+<li>❌ <code>![Image](images/photo.jpg)</code> - missing leading slash</li>
+<li>❌ <code>![Image](static/images/photo.jpg)</code> - don&rsquo;t include &ldquo;static&rdquo;</li>
+<li>✅ <code>![Image](/images/photo.jpg)</code> - starts with /</li>
+</ul>
+</li>
+<li>
+<p><strong>Images not committed to Git</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add static/images/
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add images&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Filename case mismatch</strong></p>
+<ul>
+<li>Filenames are case-sensitive! Match exactly.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="site-shows-404-after-deployment">Site shows 404 after deployment</h3> <p><strong>When:</strong> GitHub Actions completes but site shows 404</p>
+<p><strong>Checklist:</strong></p>
+<ol>
+<li>
+<p><strong>Verify repo is Public</strong></p>
+<ul>
+<li>Settings → General → scroll to &ldquo;Danger Zone&rdquo;</li>
+<li>Must be Public for free GitHub Pages</li>
+</ul>
+</li>
+<li>
+<p><strong>Check Pages source</strong></p>
+<ul>
+<li>Settings → Pages</li>
+<li>Source should be &ldquo;GitHub Actions&rdquo;</li>
+</ul>
+</li>
+<li>
+<p><strong>Look for build errors</strong></p>
+<ul>
+<li>Go to Actions tab</li>
+<li>Click the latest workflow run</li>
+<li>Look for red X or error messages</li>
+</ul>
+</li>
+<li>
+<p><strong>Verify content has draft: false</strong></p>
+<ul>
+<li>Open your .md files</li>
+<li>Front matter must say: <code>draft: false</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Force a rebuild</strong></p>
+<ul>
+<li>Make any small change, commit and push</li>
+<li>Watch Actions tab for new build</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="blank-white-page-when-running-locally">Blank white page when running locally</h3> <p><strong>When:</strong> After cloning repo to a new computer</p>
+<p><strong>Problem:</strong> Theme submodule isn&rsquo;t loaded</p>
+<p><strong>Symptoms:</strong></p>
+<pre tabindex="0"><code>WARN  found no layout file for &#34;html&#34; for kind &#34;section&#34;
+WARN  found no layout file for &#34;html&#34; for kind &#34;page&#34;
+</code></pre><p><strong>Solution:</strong> Initialize submodules</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule update --init --recursive
+</span></span></code></pre></div><p><strong>Verify it worked:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls themes/hugo-theme-console/
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Should show: LICENSE, README.md, layouts/, static/, etc.</span>
+</span></span></code></pre></div><p><strong>Prevention:</strong> When cloning to new computers, use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone --recurse-submodules https://github.com/yourusername/yourusername.github.io.git
+</span></span></code></pre></div><hr>
+<h2 id="daily-workflow">Daily Workflow</h2> <h3 id="making-updates">Making Updates</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. Edit content files in your text editor</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Test locally</span>
+</span></span><span style="display:flex;"><span>hugo serve -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. When happy with changes, set draft: false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. Commit and push</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Description of changes&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. GitHub Actions automatically deploys (wait 2-3 minutes)</span>
+</span></span></code></pre></div><hr>
+<h3 id="adding-a-new-project">Adding a New Project</h3> <p><strong>Step-by-step:</strong></p>
+<ol>
+<li>
+<p><strong>Create project page</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new projects/new-project-name.md
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Add project images</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir static/images/projects/new-project-name
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add your images to this folder</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Fill in template</strong></p>
+<ul>
+<li>Use your project template structure</li>
+<li>Replace all placeholders</li>
+<li>Add image paths</li>
+<li>Set <code>draft: false</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Update homepage</strong></p>
+<ul>
+<li>Edit <code>content/_index.md</code></li>
+<li>Add new project to the grid HTML</li>
+</ul>
+</li>
+<li>
+<p><strong>Update work page</strong></p>
+<ul>
+<li>Edit <code>content/work.md</code></li>
+<li>Add project to appropriate year section</li>
+</ul>
+</li>
+<li>
+<p><strong>Test and deploy</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo serve -D  <span style="color:#75715e"># Check locally</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add [project name] project&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h3 id="useful-git-commands">Useful Git Commands</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git status              <span style="color:#75715e"># See what changed</span>
+</span></span><span style="display:flex;"><span>git add .               <span style="color:#75715e"># Stage all changes</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;message&#34;</span> <span style="color:#75715e"># Save with description</span>
+</span></span><span style="display:flex;"><span>git push                <span style="color:#75715e"># Upload to GitHub</span>
+</span></span><span style="display:flex;"><span>git log                 <span style="color:#75715e"># View history</span>
+</span></span><span style="display:flex;"><span>git pull                <span style="color:#75715e"># Download latest</span>
+</span></span><span style="display:flex;"><span>git submodule update --init --recursive  <span style="color:#75715e"># Load submodules</span>
+</span></span></code></pre></div><hr>
+<h2 id="key-learnings">Key Learnings</h2> <h3 id="critical-setup-steps">Critical Setup Steps</h3> <ol>
+<li>
+<p><strong>Run <code>git init</code> before adding theme</strong> - Prevents &ldquo;not a git repository&rdquo; error</p>
+</li>
+<li>
+<p><strong>Create <code>layouts/index.html</code></strong> - Overrides theme&rsquo;s default homepage</p>
+</li>
+<li>
+<p><strong>Create <code>layouts/partials/header.html</code></strong> - Console theme needs THIS specific file for custom CSS</p>
+</li>
+<li>
+<p><strong>Add <code>unsafe = true</code> to hugo.toml</strong> - Allows HTML in markdown for project grid</p>
+</li>
+<li>
+<p><strong>Images go in <code>static/</code> folder</strong> - Not in <code>content/</code> folder</p>
+</li>
+<li>
+<p><strong>Use GitHub CLI for authentication</strong> - <code>gh auth login</code> is easiest</p>
+</li>
+<li>
+<p><strong>Initialize submodules when cloning</strong> - Use <code>git clone --recurse-submodules</code> or run <code>git submodule update --init --recursive</code></p>
+</li>
+</ol>
+<hr>
+<h3 id="css-override-strategy">CSS Override Strategy</h3> <p><strong>The Problem:</strong></p>
+<ul>
+<li>Hugo themes come with their own CSS</li>
+<li>Console theme uses <code>.terminal</code> class extensively</li>
+<li>Your custom CSS might not override these styles</li>
+</ul>
+<p><strong>The Solution:</strong></p>
+<ul>
+<li>Use more specific selectors (like <code>.terminal table td</code>)</li>
+<li>Add <code>!important</code> when needed</li>
+<li>Test with browser inspector (F12) to see which styles win</li>
+</ul>
+<hr>
+<h3 id="github-pages-limitations">GitHub Pages Limitations</h3> <p><strong>Free tier:</strong></p>
+<ul>
+<li>✅ Public repos get free Pages</li>
+<li>❌ Private repos don&rsquo;t (unless GitHub Pro)</li>
+<li>✅ Custom domains supported</li>
+<li>✅ HTTPS automatically provided</li>
+<li>❌ No server-side processing (static only)</li>
+<li>✅ Unlimited bandwidth</li>
+</ul>
+<p><strong>Pro tier ($4/month):</strong></p>
+<ul>
+<li>✅ Private repo with Pages</li>
+<li>Website is still publicly accessible</li>
+<li>Only source code is hidden</li>
+</ul>
+<hr>
+<h2 id="resources">Resources</h2> <h3 id="official-documentation">Official Documentation</h3> <ul>
+<li><strong>Hugo:</strong> <a href="https://gohugo.io/documentation/" target="_blank" rel="noopener">https://gohugo.io/documentation/</a> </li>
+<li><strong>Hugo Themes:</strong> <a href="https://themes.gohugo.io/" target="_blank" rel="noopener">https://themes.gohugo.io/</a> </li>
+<li><strong>GitHub Pages:</strong> <a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">https://docs.github.com/en/pages</a> </li>
+<li><strong>Markdown Guide:</strong> <a href="https://www.markdownguide.org/" target="_blank" rel="noopener">https://www.markdownguide.org/</a> </li>
+</ul>
+<h3 id="community-support">Community Support</h3> <ul>
+<li><strong>Hugo Forum:</strong> <a href="https://discourse.gohugo.io/" target="_blank" rel="noopener">https://discourse.gohugo.io/</a> </li>
+<li><strong>Hugo GitHub:</strong> <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">https://github.com/gohugoio/hugo</a> </li>
+</ul>
+<h3 id="helpful-tools">Helpful Tools</h3> <ul>
+<li><strong>VS Code:</strong> <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a> </li>
+<li><strong>GitHub Desktop:</strong> <a href="https://desktop.github.com/" target="_blank" rel="noopener">https://desktop.github.com/</a> </li>
+<li><strong>TinyPNG:</strong> <a href="https://tinypng.com/" target="_blank" rel="noopener">https://tinypng.com/</a> </li>
+<li><strong>DNS Checker:</strong> <a href="https://dnschecker.org/" target="_blank" rel="noopener">https://dnschecker.org/</a> </li>
+</ul>
+<hr>
+<p><strong>Last Updated:</strong> October 31, 2025</p>
+
+
+        <footer class="custom-footer">
+  <div class="footer-content">
+    
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/work/">Work</a>
+    </div>
+    
+    
+    <div class="footer-social">
+      <a href="https://github.com/traversable-dale" target="_blank" rel="noopener">
+        <img src="/images/icons/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.instagram.com/traversable_dale" target="_blank" rel="noopener">
+        <img src="/images/icons/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://linkedin.com/in/john-syzonenko/" target="_blank" rel="noopener">
+        <img src="/images/icons/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: "Blue Paradox"
+title: "The Blue Paradox"
 date: 2023-03-01
 draft: false
 ---
@@ -12,7 +12,6 @@ draft: false
 | **Location** | [Griffin Museum of Science and Industry](https://www.griffinmsi.org/exhibits/blue-paradox) |
 | **Date** | March-July 2023, July 2024, September 2025, Ongoing |
 
----
 
 ## Overview
 
@@ -23,7 +22,7 @@ Much of what's publicly available can be found on the [museum's page](https://ww
 ![Hero Image](/images/projects/blue-paradox/bp-r01-2.png)
 *Curved LED floor + ceiling with interactive motion tracking sensors*
 
----
+#
 
 ## Tech + Skill Stack
 
@@ -33,7 +32,22 @@ Much of what's publicly available can be found on the [museum's page](https://ww
 - Video Engineering, pixel mapping, projection mapping
 - Museum-grade installation techniques
 
----
+<br>
+
+#
+
+## Key Features
+
+- Large-scale immersive environment
+- Interactive visitor experiences
+- Educational ocean conservation messaging
+- Permanent museum installation
+
+<br>
+
+#
+<br>
+
 
 ![Installation View 1](/images/projects/blue-paradox/bp-tickers.png)
 *Exhibition installation view*
@@ -47,12 +61,7 @@ The exhibition was a major collaborative effort involving designers, programmers
 *Interactive elements*
 
 
-## Key Features
 
-- Large-scale immersive environment
-- Interactive visitor experiences
-- Educational ocean conservation messaging
-- Permanent museum installation
 
 ![Installation View 4](/images/projects/blue-paradox/bp-r05.png)
 *Visitor interaction area*

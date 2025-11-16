@@ -13,7 +13,7 @@ draft: false
 | **Location** | [Marian Goodman Gallery](https://www.mariangoodman.com/) NYC, Global |
 | **Date** | 2023 - 2025 |
 
----
+#
 
 ## Overview
 
@@ -30,7 +30,7 @@ My role in this project was to develop the back-end system responsible for real-
 
 The system uses autonomous decision-making to create a constantly evolving film experience that responds to the presence and movement of viewers in the gallery space.
 
----
+#
 
 ## Technology Stack
 
@@ -41,6 +41,10 @@ The system uses autonomous decision-making to create a constantly evolving film 
 - Weather API integration
 - Unifi Network
 
+<br>
+
+#
+
 ## Key Features
 
 - Self-directed, autonomous film editing
@@ -48,7 +52,9 @@ The system uses autonomous decision-making to create a constantly evolving film 
 - Multi-location installation capability
 - BOH monitor + system health report
 
----
+<br>
+
+#
 
 ![Installation Venice](/images/projects/camata/venice.jpeg)
 *Installation of Camata (2024) at the [Punta della Dogana](https://www.pinaultcollection.com/palazzograssi/en/pierre-huyghe-liminal) in Venice (Ivar Hagendoorn)*
@@ -56,7 +62,7 @@ The system uses autonomous decision-making to create a constantly evolving film 
 ![Final](/images/projects/camata/final.jpeg)
 *Installation of Camata (2025) at [Marian Goodman Gallery](https://www.mariangoodman.com/) in NYC*
 
----
+#
 
 ## Exhibition History <br>
 <br>
@@ -67,7 +73,7 @@ Punta della Dogana, Venice
 **2025**
 Marian Goodman Gallery, NYC
 
---- 
+# 
 
 ## Acknowledgments
 

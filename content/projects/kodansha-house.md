@@ -13,7 +13,7 @@ draft: false
 | **Location** | 45 Grand Street, SoHo, NYC |
 | **Date** | October 2024 |
 
----
+#
 
 ## Overview
 
@@ -95,4 +95,4 @@ The pop-up successfully brought iconic anime moments to life, allowing visitors 
 
 ## Acknowledgments
 
-Special thanks to [Susan Linns](https://www.susanlinssdesign.com/), [Jeff Nash](https://www.jeffnashnyc.com/), [Cam Vokey,](https://www.vacationland.club/cam-vokey-resume) Ashur Rayis, [Dave Tennent](https://studiodave.io/), and many more who made this project happen!
+Special thanks to [Susan Linns,](https://www.susanlinssdesign.com/) [Jeff Nash,](https://www.jeffnashnyc.com/) [Cam Vokey,](https://www.vacationland.club/cam-vokey-resume) Ashur Rayis, [Dave Tennent,](https://studiodave.io/) and many more who made this project happen!

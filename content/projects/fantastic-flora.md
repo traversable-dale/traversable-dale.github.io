@@ -12,7 +12,7 @@ draft: false
 | **Location** | Lebanon Springs, NY |
 | **Date** | September 2024 |
 
----
+#
 
 ## Overview
 

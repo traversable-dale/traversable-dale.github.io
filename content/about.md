@@ -4,14 +4,28 @@ date: 2025-10-31
 draft: false
 ---
 
+
+<br>
+<br>
+
 ![John Syzonenko](/images/about/john-photo.png)
 
 ## Hi! I'm John.
+#
 
-# I am a **Creative Technologist** based in NYC, 
 <br>
 
-# I specialize in **interactive** **multimedia** **installations** for **museums**, **exhibitions**, and **experiential** **spaces**. <br>
+#### I am a **Creative Technologist** based in NYC. 
+#### I specialize in **interactive** **multimedia** **installations** <br>
+#### for **exhibitions** and **experiential** **spaces**. <br>
+<br>
+
+#### I help translate **creative** **concepts** into **working** **systems**, <br>
+#### and bridge the gap between the **creative** and the **technical**.
+
+<br>
+
+#
 
 <div class="intro-columns">
   <div>
@@ -33,22 +47,20 @@ draft: false
   </div>
 </div>
 
-# Software
-
-[TouchDesigner](https://derivative.ca/) • [After Effects](https://www.adobe.com/products/aftereffects.html) • [Blender](https://www.blender.org/) • [Unreal Engine](https://www.unrealengine.com/) • [Premiere Pro](https://www.adobe.com/products/premiere.html) • [Ableton](https://www.ableton.com/) • [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) • [Photoshop](https://www.adobe.com/products/photoshop.html) • [Webflow](https://webflow.com/) • [8th Wall](https://www.8thwall.com/) • [Git](https://github.com/traversable-dale) • [Python](https://www.python.org/) • [Arduino](https://www.arduino.cc/)
 
 
-# I help translate **creative** **concepts** into **working** **systems**, <br>
-# and bridge the gap between the **creative** and the **technical**.
+
+
+
+
 
 <br>
 
-# If you've got a project, let's talk about it!
+#### If you've got a project, let's talk about it!
 
 <br>
 
 **JOHN@JOHNSYZONENKO.COM**
 
----
 
 

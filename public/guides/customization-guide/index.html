@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>John Syzonenko/guides/customization-guide/</title>
+    <meta name="description" content="Creative Technologist specializing in immersive installations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="http://localhost:1313/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="" />
+<meta property="og:description" content="Creative Technologist specializing in immersive installations" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/guides/customization-guide/" />
+
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Website Customization Guide A quick reference for customizing your Hugo portfolio site with interactive mouse effects.
+
+Table of Contents 
+File Locations 
+Heading Styles 
+Interactive Border Effects 
+Bold Text Magnetic Effect 
+Footer Customization 
+Navigation &amp; Links 
+Mouse Effects Configuration 
+Color Scheme 
+Quick Reference Values 
+
+
+File Locations Main Files:
+
+static/css/custom.css - All styling and visual effects
+static/js/mouse-effects.js - Interactive JavaScript behaviors
+layouts/partials/header.html - Loads custom CSS and JS
+layouts/partials/footer.html - Footer HTML structure
+layouts/index.html - Homepage layout override
+
+Content Files:"/>
+<link rel="stylesheet" href="/css/custom.css">
+<script src="/js/mouse-effects.js"></script></head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="http://localhost:1313/" class="no-style ">John Syzonenko</a>:~# 
+              <a href='http://localhost:1313/guides'>guides</a>/<a href='http://localhost:1313/guides/customization-guide'>customization-guide</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/">
+                    <span property="name">Home</span></a>
+                    <meta property="position" content="1" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/about/">
+                    <span property="name">About</span></a>
+                    <meta property="position" content="2" />
+                </li>
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a property="item" typeof="WebPage" href="http://localhost:1313/work/">
+                    <span property="name">Work</span></a>
+                    <meta property="position" content="3" />
+                </li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container " >
+        
+<h1></h1>
+<h1 id="website-customization-guide">Website Customization Guide</h1> <p>A quick reference for customizing your Hugo portfolio site with interactive mouse effects.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2> <ol>
+<li><a href="#file-locations">File Locations</a> </li>
+<li><a href="#heading-styles">Heading Styles</a> </li>
+<li><a href="#interactive-border-effects">Interactive Border Effects</a> </li>
+<li><a href="#bold-text-magnetic-effect">Bold Text Magnetic Effect</a> </li>
+<li><a href="#footer-customization">Footer Customization</a> </li>
+<li><a href="#navigation--links">Navigation &amp; Links</a> </li>
+<li><a href="#mouse-effects-configuration">Mouse Effects Configuration</a> </li>
+<li><a href="#color-scheme">Color Scheme</a> </li>
+<li><a href="#quick-reference-values">Quick Reference Values</a> </li>
+</ol>
+<hr>
+<h2 id="file-locations">File Locations</h2> <p><strong>Main Files:</strong></p>
+<ul>
+<li><code>static/css/custom.css</code> - All styling and visual effects</li>
+<li><code>static/js/mouse-effects.js</code> - Interactive JavaScript behaviors</li>
+<li><code>layouts/partials/header.html</code> - Loads custom CSS and JS</li>
+<li><code>layouts/partials/footer.html</code> - Footer HTML structure</li>
+<li><code>layouts/index.html</code> - Homepage layout override</li>
+</ul>
+<p><strong>Content Files:</strong></p>
+<ul>
+<li><code>content/_index.md</code> - Homepage content</li>
+<li><code>content/about.md</code> - About page</li>
+<li><code>content/work.md</code> - Work/projects list</li>
+<li><code>content/projects/[name].md</code> - Individual project pages</li>
+</ul>
+<hr>
+<h2 id="heading-styles">Heading Styles</h2> <h3 id="location-customcss-lines-25-115">Location: <code>custom.css</code> (Lines ~25-115)</h3> <h3 id="h1---regular-titles">H1 - Regular Titles</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">h1</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h1</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li><code>font-size: 1.5em</code> → Try: <code>1.2em</code> (smaller), <code>2em</code> (larger)</li>
+<li><code>padding-bottom: 1em</code> → Try: <code>0.5em</code> (tighter), <code>1.5em</code> (more space)</li>
+</ul>
+<h3 id="h1---articleproject-page-titles">H1 - Article/Project Page Titles</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">article</span> <span style="color:#f92672">h1</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">700</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">letter-spacing</span>: <span style="color:#ae81ff">0.02</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">text-transform</span>: <span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li><code>font-size: 3em</code> → Try: <code>2.5em</code> (smaller), <code>4em</code> (huge)</li>
+<li><code>font-weight: 700</code> → Try: <code>300</code> (light), <code>400</code> (normal), <code>900</code> (extra bold)</li>
+<li><code>letter-spacing: 0.02em</code> → Try: <code>0</code> (tight), <code>0.1em</code> (spacious)</li>
+<li><code>text-transform: none</code> → Try: <code>uppercase</code> for ALL CAPS</li>
+</ul>
+<h3 id="h2---main-headings">H2 - Main Headings</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">h2</span><span style="color:#f92672">,</span> <span style="color:#f92672">article</span> <span style="color:#f92672">h2</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h2</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.8</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li><code>font-size: 1.8em</code> → Try: <code>1.5em</code> (smaller), <code>2.2em</code> (larger)</li>
+<li><code>margin-top: 2em</code> → Space above heading</li>
+<li><code>margin-bottom: 1em</code> → Space below heading</li>
+</ul>
+<h3 id="h3---section-headings">H3 - Section Headings</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">h3</span><span style="color:#f92672">,</span> <span style="color:#f92672">article</span> <span style="color:#f92672">h3</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h3</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.4</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">0.75</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="h4---minor-headings">H4 - Minor Headings</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">h4</span><span style="color:#f92672">,</span> <span style="color:#f92672">article</span> <span style="color:#f92672">h4</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">terminal</span> <span style="color:#f92672">h4</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.1</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">0</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">margin-bottom</span>: <span style="color:#ae81ff">0</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="interactive-border-effects">Interactive Border Effects</h2> <h3 id="location-mouse-effectsjs-lines-280-390">Location: <code>mouse-effects.js</code> (Lines ~280-390)</h3> <h3 id="border-repel-settings">Border Repel Settings</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initBorderRepel</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repelRange</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;      <span style="color:#75715e">// Distance for effect trigger (pixels)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repelStrength</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">150</span>;   <span style="color:#75715e">// How far characters push away (pixels)
+</span></span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li><strong>Subtle effect:</strong> <code>repelRange: 50</code>, <code>repelStrength: 5</code></li>
+<li><strong>Current (dramatic):</strong> <code>repelRange: 100</code>, <code>repelStrength: 150</code></li>
+<li><strong>Very dramatic:</strong> <code>repelRange: 200</code>, <code>repelStrength: 250</code></li>
+</ul>
+<h3 id="border-characters">Border Characters</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;=&#39;</span>;  <span style="color:#75715e">// Line 337 (approximately)
+</span></span></span></code></pre></div><p><strong>Change character:</strong></p>
+<ul>
+<li><code>'='</code> - Current (equals signs)</li>
+<li><code>'─'</code> - Longer horizontal lines</li>
+<li><code>'━'</code> - Thick horizontal lines</li>
+<li><code>'-'</code> - Regular dashes</li>
+<li><code>'~'</code> - Wavy lines</li>
+<li><code>'•'</code> - Dots</li>
+</ul>
+<h3 id="border-color-on-hover">Border Color on Hover</h3> <p><strong>Location:</strong> <code>custom.css</code> (Line ~300)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">footer-social</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">icon-near</span> <span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">filter</span>: brightness(<span style="color:#ae81ff">1.3</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Inside the repel effect JavaScript, characters turn orange:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">span</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#ff6600&#39;</span>;  <span style="color:#75715e">// Change this color
+</span></span></span></code></pre></div><hr>
+<h2 id="bold-text-magnetic-effect">Bold Text Magnetic Effect</h2> <h3 id="location-mouse-effectsjs-lines-195-265">Location: <code>mouse-effects.js</code> (Lines ~195-265)</h3> <h3 id="magnetic-settings">Magnetic Settings</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initBoldTextGlow</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">magneticRange</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;      <span style="color:#75715e">// Distance for effect (pixels)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">magneticStrength</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;    <span style="color:#75715e">// Pull strength
+</span></span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li><strong>Subtle:</strong> <code>magneticRange: 10</code>, <code>magneticStrength: 1</code></li>
+<li><strong>Current:</strong> <code>magneticRange: 20</code>, <code>magneticStrength: 3</code></li>
+<li><strong>Dramatic:</strong> <code>magneticRange: 50</code>, <code>magneticStrength: 8</code></li>
+</ul>
+<h3 id="bold-text-colors">Bold Text Colors</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~145-180)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* Default orange */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">strong</span><span style="color:#f92672">,</span> <span style="color:#f92672">b</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff6600</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* White when mouse is near */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">strong</span>.<span style="color:#a6e22e">mouse-near</span><span style="color:#f92672">,</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">mouse-near</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">text-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.6</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Default color: Change <code>#ff6600</code> to any hex color</li>
+<li>Hover color: Change <code>#ffffff</code> to any hex color</li>
+<li>Glow intensity: Change <code>0.6</code> to <code>0.3</code> (subtle) or <code>1.0</code> (bright)</li>
+</ul>
+<hr>
+<h2 id="footer-customization">Footer Customization</h2> <h3 id="footer-border">Footer Border</h3> <p><strong>Location:</strong> <code>mouse-effects.js</code> (Lines ~378-475)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initFooterBorder</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repelRange</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;       <span style="color:#75715e">// Same as heading borders
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repelStrength</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;     <span style="color:#75715e">// Same as heading borders
+</span></span></span></code></pre></div><h3 id="footer-icon-settings">Footer Icon Settings</h3> <p><strong>Location:</strong> <code>mouse-effects.js</code> (Lines ~477-540)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initFooterIconRepel</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repelRange</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">150</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repelStrength</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>;
+</span></span></code></pre></div><h3 id="footer-icon-size">Footer Icon Size</h3> <p><strong>Location:</strong> <code>custom.css</code> (Line ~398)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">footer-social</span> <span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;   <span style="color:#75715e">/* ADJUST SIZE HERE */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">25</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Smaller icons: <code>15px</code> - <code>20px</code></li>
+<li>Current: <code>25px</code></li>
+<li>Larger icons: <code>30px</code> - <code>40px</code></li>
+</ul>
+<h3 id="footer-icon-glow">Footer Icon Glow</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~383-387)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">footer-social</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">icon-near</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">filter</span>: drop-shadow(<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.8</span>)) 
+</span></span><span style="display:flex;"><span>          drop-shadow(<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.4</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Inner glow: <code>0.8</code> → Try <code>0.5</code> (subtle) or <code>1.0</code> (bright)</li>
+<li>Outer glow: <code>0.4</code> → Try <code>0.2</code> (subtle) or <code>0.6</code> (bright)</li>
+<li>Glow color: Change <code>255, 255, 255</code> (white) to RGB values</li>
+</ul>
+<h3 id="footer-animation">Footer Animation</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~335-338)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">custom-footer</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">transform</span>: translateY(<span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">opacity</span> <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-out</span>, <span style="color:#66d9ef">transform</span> <span style="color:#ae81ff">0.8</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-out</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Slide distance: <code>translateY(30px)</code> → Try <code>50px</code> (more) or <code>15px</code> (less)</li>
+<li>Animation speed: <code>0.8s</code> → Try <code>0.5s</code> (faster) or <code>1.2s</code> (slower)</li>
+</ul>
+<h3 id="footer-links--social-icons-setup">Footer Links &amp; Social Icons Setup</h3> <p><strong>Location:</strong> <code>layouts/partials/footer.html</code></p>
+<p>Update your social media URLs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/yourusername&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://instagram.com/yourusername&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://linkedin.com/in/yourusername&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener&#34;</span>&gt;
+</span></span></code></pre></div><p>Icon files go in: <code>static/images/icons/</code></p>
+<ul>
+<li><code>github.png</code></li>
+<li><code>instagram.png</code></li>
+<li><code>linkedin.png</code></li>
+</ul>
+<p><strong>Tip:</strong> Use white PNG icons (25x25px or larger for best quality)</p>
+<hr>
+<h2 id="navigation--links">Navigation &amp; Links</h2> <h3 id="header-navigation-style">Header Navigation Style</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~308-322)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal-menu</span> <span style="color:#f92672">a</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">terminal-nav</span> <span style="color:#f92672">a</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-weight</span>: <span style="color:#ae81ff">400</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">letter-spacing</span>: <span style="color:#ae81ff">0.05</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">text-transform</span>: <span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#75715e">!important</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li><code>font-size: 1em</code> → Try <code>0.9em</code> (smaller) or <code>1.1em</code> (larger)</li>
+<li><code>font-weight: 400</code> → Try <code>300</code> (light), <code>600</code> (semi-bold), <code>700</code> (bold)</li>
+<li><code>letter-spacing: 0.05em</code> → Try <code>0</code> (tight) or <code>0.1em</code> (wide)</li>
+<li><code>text-transform: none</code> → Try <code>uppercase</code> for ALL CAPS</li>
+</ul>
+<h3 id="link-colors--hover">Link Colors &amp; Hover</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~225-240)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">a</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff6600</span> <span style="color:#75715e">!important</span>;          <span style="color:#75715e">/* Default orange */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">em</span>;                   <span style="color:#75715e">/* Padding (prevents jitter) */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">transparent</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">color</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>, <span style="color:#66d9ef">background-color</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#000000</span> <span style="color:#75715e">!important</span>;          <span style="color:#75715e">/* Black text */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ff6600</span> <span style="color:#75715e">!important</span>; <span style="color:#75715e">/* Orange background */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Default link color: Change <code>#ff6600</code></li>
+<li>Hover text color: Change <code>#000000</code></li>
+<li>Hover background: Change second <code>#ff6600</code></li>
+<li>Transition speed: Change <code>0.2s</code> → Try <code>0.3s</code> (slower) or <code>0.1s</code> (faster)</li>
+</ul>
+<hr>
+<h2 id="mouse-effects-configuration">Mouse Effects Configuration</h2> <h3 id="location-mouse-effectsjs-lines-13-20">Location: <code>mouse-effects.js</code> (Lines ~13-20)</h3> <h3 id="enabledisable-effects">Enable/Disable Effects</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CONFIG</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">spotlightEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,   <span style="color:#75715e">// Dims page except where mouse is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">rippleEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,      <span style="color:#75715e">// Click to create ripples
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">glowEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,        <span style="color:#75715e">// Cards glow on hover
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">tiltEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,        <span style="color:#75715e">// Cards tilt in 3D
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">boldTextGlow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,      <span style="color:#75715e">// Bold text magnetic effect
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">borderRepel</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,       <span style="color:#75715e">// Border characters repel
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">tiltStrength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>         <span style="color:#75715e">// 3D tilt intensity
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></code></pre></div><p><strong>To disable an effect:</strong> Change <code>true</code> to <code>false</code></p>
+<h3 id="global-transition-speed">Global Transition Speed</h3> <p><strong>Location:</strong> <code>custom.css</code> (Line ~11)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>:<span style="color:#a6e22e">root</span> {
+</span></span><span style="display:flex;"><span>  --transition-speed: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">s</span>; <span style="color:#75715e">/* Controls ALL effects */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Fast/snappy: <code>0.3s</code> - <code>0.5s</code></li>
+<li>Balanced: <code>1s</code></li>
+<li>Current (slow/dramatic): <code>3s</code></li>
+<li>Very slow/floaty: <code>5s</code></li>
+</ul>
+<p>This affects:</p>
+<ul>
+<li>Spotlight fade</li>
+<li>Card glow</li>
+<li>Bold text color change</li>
+<li>Bold text magnetic movement</li>
+<li>3D tilt speed</li>
+<li>Border character movement</li>
+</ul>
+<h3 id="spotlight-effect">Spotlight Effect</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~685-695)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">spotlight-overlay</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: radial-gradient(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">circle</span> <span style="color:#ae81ff">1000</span><span style="color:#66d9ef">px</span> at <span style="color:#75715e">/* Spotlight size */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>mouse<span style="color:#f92672">-</span>x, <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>) <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>mouse<span style="color:#f92672">-</span>y, <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transparent</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span>,
+</span></span><span style="display:flex;"><span>    rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.7</span>) <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span> <span style="color:#75715e">/* Darkness: 0.7 */</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Spotlight size: <code>1000px</code> → Try <code>600px</code> (smaller) or <code>1500px</code> (larger)</li>
+<li>Darkness: <code>0.7</code> → Try <code>0.4</code> (lighter) or <code>0.9</code> (darker)</li>
+</ul>
+<h3 id="click-ripple-effect">Click Ripple Effect</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~670-683)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">ripple</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.6</span>); <span style="color:#75715e">/* Orange */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">animation</span>: ripple <span style="color:#ae81ff">0.6</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease-out</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">ripple</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">to</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transform</span>: scale(<span style="color:#ae81ff">4</span>);  <span style="color:#75715e">/* Size multiplier */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Ripple color: <code>rgba(255, 102, 0, 0.6)</code> → Try <code>rgba(255, 255, 255, 0.5)</code> (white)</li>
+<li>Size: <code>scale(4)</code> → Try <code>scale(2)</code> (smaller) or <code>scale(6)</code> (larger)</li>
+<li>Speed: <code>0.6s</code> → Try <code>0.4s</code> (faster) or <code>1s</code> (slower)</li>
+</ul>
+<h3 id="card-glow-effect">Card Glow Effect</h3> <p><strong>Location:</strong> <code>custom.css</code> (Lines ~708-725)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">project-item</span>::<span style="color:#a6e22e">before</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background</span>: radial-gradient(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">circle</span>, 
+</span></span><span style="display:flex;"><span>    rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.3</span>), <span style="color:#75715e">/* Orange glow at 30% opacity */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">transparent</span> <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Adjust:</strong></p>
+<ul>
+<li>Glow size: <code>300px</code> → Try <code>200px</code> (smaller) or <code>400px</code> (larger)</li>
+<li>Intensity: <code>0.3</code> → Try <code>0.2</code> (subtle) or <code>0.5</code> (bright)</li>
+<li>Color: Change RGB values <code>255, 102, 0</code> (orange)</li>
+</ul>
+<hr>
+<h2 id="color-scheme">Color Scheme</h2> <h3 id="primary-colors">Primary Colors</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* Main colors used throughout */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--black</span><span style="color:#f92672">:</span> #000000      <span style="color:#75715e">/* Background */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--white</span><span style="color:#f92672">:</span> #ffffff      <span style="color:#75715e">/* Text */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--orange</span><span style="color:#f92672">:</span> #ff6600     <span style="color:#75715e">/* Accent (links, bold text, effects) */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--dark-gray</span><span style="color:#f92672">:</span> #333333  <span style="color:#75715e">/* Borders, subtle elements */</span>
+</span></span></code></pre></div><h3 id="where-to-change-colors">Where to Change Colors</h3> <p><strong>Background:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#000000</span>;  <span style="color:#75715e">/* Line ~14 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>All text:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">body</span><span style="color:#f92672">,</span> <span style="color:#f92672">p</span><span style="color:#f92672">,</span> <span style="color:#f92672">div</span><span style="color:#f92672">,</span> <span style="color:#f92672">span</span><span style="color:#f92672">,</span> <span style="color:#f92672">li</span><span style="color:#f92672">,</span> <span style="color:#f92672">td</span><span style="color:#f92672">,</span> <span style="color:#f92672">th</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span> <span style="color:#75715e">!important</span>;  <span style="color:#75715e">/* Line ~145 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Orange accent</strong> (links, bold text):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">a</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff6600</span> <span style="color:#75715e">!important</span>;  <span style="color:#75715e">/* Line ~225 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">strong</span><span style="color:#f92672">,</span> <span style="color:#f92672">b</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff6600</span> <span style="color:#75715e">!important</span>;  <span style="color:#75715e">/* Line ~148 */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Interactive effects</strong> (search for <code>#ff6600</code> and <code>rgba(255, 102, 0</code> in both files)</p>
+<hr>
+<h2 id="quick-reference-values">Quick Reference Values</h2> <h3 id="current-settings-summary">Current Settings Summary</h3> <table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Range/Strength</th>
+          <th>Speed</th>
+          <th>Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Heading Borders</strong></td>
+          <td>100px / 150px</td>
+          <td>3s</td>
+          <td><code>mouse-effects.js</code> L282-283</td>
+      </tr>
+      <tr>
+          <td><strong>Footer Border</strong></td>
+          <td>100px / 10px</td>
+          <td>3s</td>
+          <td><code>mouse-effects.js</code> L380-381</td>
+      </tr>
+      <tr>
+          <td><strong>Footer Icons</strong></td>
+          <td>150px / 15px</td>
+          <td>3s</td>
+          <td><code>mouse-effects.js</code> L479-480</td>
+      </tr>
+      <tr>
+          <td><strong>Bold Text Magnetic</strong></td>
+          <td>20px / 3px</td>
+          <td>3s</td>
+          <td><code>mouse-effects.js</code> L197-198</td>
+      </tr>
+      <tr>
+          <td><strong>Spotlight Size</strong></td>
+          <td>1000px</td>
+          <td>3s</td>
+          <td><code>custom.css</code> L689</td>
+      </tr>
+      <tr>
+          <td><strong>Click Ripples</strong></td>
+          <td>scale(4)</td>
+          <td>0.6s</td>
+          <td><code>custom.css</code> L672</td>
+      </tr>
+      <tr>
+          <td><strong>Card Glow</strong></td>
+          <td>300px</td>
+          <td>3s</td>
+          <td><code>custom.css</code> L710</td>
+      </tr>
+      <tr>
+          <td><strong>Footer Animation</strong></td>
+          <td>30px slide</td>
+          <td>0.8s</td>
+          <td><code>custom.css</code> L336-337</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="font-sizes">Font Sizes</h3> <table>
+  <thead>
+      <tr>
+          <th>Element</th>
+          <th>Size</th>
+          <th>Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Base text</td>
+          <td>0.9em</td>
+          <td><code>custom.css</code> L15</td>
+      </tr>
+      <tr>
+          <td>H1 (regular)</td>
+          <td>1.5em</td>
+          <td><code>custom.css</code> L27</td>
+      </tr>
+      <tr>
+          <td>H1 (article pages)</td>
+          <td>3em</td>
+          <td><code>custom.css</code> L42</td>
+      </tr>
+      <tr>
+          <td>H2</td>
+          <td>1.8em</td>
+          <td><code>custom.css</code> L64</td>
+      </tr>
+      <tr>
+          <td>H3</td>
+          <td>1.4em</td>
+          <td><code>custom.css</code> L85</td>
+      </tr>
+      <tr>
+          <td>H4</td>
+          <td>1.1em</td>
+          <td><code>custom.css</code> L106</td>
+      </tr>
+      <tr>
+          <td>Navigation</td>
+          <td>1em</td>
+          <td><code>custom.css</code> L310</td>
+      </tr>
+      <tr>
+          <td>Footer icons</td>
+          <td>25px</td>
+          <td><code>custom.css</code> L398</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="spacing">Spacing</h3> <table>
+  <thead>
+      <tr>
+          <th>Element</th>
+          <th>Top</th>
+          <th>Bottom</th>
+          <th>Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>H1</td>
+          <td>0</td>
+          <td>1em</td>
+          <td><code>custom.css</code> L28-30</td>
+      </tr>
+      <tr>
+          <td>H2</td>
+          <td>2em</td>
+          <td>1em</td>
+          <td><code>custom.css</code> L65-66</td>
+      </tr>
+      <tr>
+          <td>H3</td>
+          <td>1.5em</td>
+          <td>0.75em</td>
+          <td><code>custom.css</code> L86-87</td>
+      </tr>
+      <tr>
+          <td>H4</td>
+          <td>0</td>
+          <td>0</td>
+          <td><code>custom.css</code> L107-108</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="tips-for-customization">Tips for Customization</h2> <ol>
+<li><strong>Make one change at a time</strong> - Easier to see what each adjustment does</li>
+<li><strong>Test locally first</strong> - Use <code>hugo serve -D</code> before pushing to GitHub</li>
+<li><strong>Keep backups</strong> - Commit working versions before major changes</li>
+<li><strong>Browser refresh</strong> - Hard refresh (Cmd+Shift+R / Ctrl+Shift+F5) to see CSS changes</li>
+<li><strong>Mobile testing</strong> - Check how changes look on different screen sizes</li>
+<li><strong>Match values</strong> - Keep related effects using similar range/strength for consistency</li>
+</ol>
+<hr>
+<h2 id="common-customizations">Common Customizations</h2> <h3 id="make-everything-fastersnappier">Make Everything Faster/Snappier</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* custom.css Line 11 */</span>
+</span></span><span style="display:flex;"><span>:<span style="color:#a6e22e">root</span> {
+</span></span><span style="display:flex;"><span>  --transition-speed: <span style="color:#ae81ff">0.5</span><span style="color:#66d9ef">s</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="reduce-all-mouse-effects">Reduce All Mouse Effects</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// mouse-effects.js - Reduce all range values by 50%
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">repelRange</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;        <span style="color:#75715e">// was 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">magneticRange</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;     <span style="color:#75715e">// was 20
+</span></span></span></code></pre></div><h3 id="change-accent-color-to-blue">Change Accent Color to Blue</h3> <p>Find and replace throughout both files:</p>
+<ul>
+<li><code>#ff6600</code> → <code>#0099ff</code></li>
+<li><code>rgba(255, 102, 0</code> → <code>rgba(0, 153, 255</code></li>
+</ul>
+<h3 id="make-text-larger">Make Text Larger</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* custom.css Line 15 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>; <span style="color:#75715e">/* was 0.9em */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="disable-all-mouse-effects">Disable All Mouse Effects</h3> <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// mouse-effects.js Lines 13-19
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CONFIG</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">spotlightEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">rippleEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">glowEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">tiltEffect</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">boldTextGlow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">borderRepel</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><hr>
+<p><strong>Last Updated:</strong> November 16, 2025</p>
+<p>For questions or issues, refer to the main <a href="setup-guide.md">setup guide</a>  or check the Hugo documentation.</p>
+
+
+        <footer class="custom-footer">
+  <div class="footer-content">
+    
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/work/">Work</a>
+    </div>
+    
+    
+    <div class="footer-social">
+      <a href="https://github.com/traversable-dale" target="_blank" rel="noopener">
+        <img src="/images/icons/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.instagram.com/traversable_dale" target="_blank" rel="noopener">
+        <img src="/images/icons/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://linkedin.com/in/john-syzonenko/" target="_blank" rel="noopener">
+        <img src="/images/icons/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
