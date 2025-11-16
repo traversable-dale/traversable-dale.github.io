@@ -4,10 +4,7 @@ date: 2025-10-31
 draft: false
 ---
 
-<br>
-
-**Creative Technologist** based in **NYC** specializing in **interactive** **multimedia** **installations** for **museums**, **exhibitions**, and **experiential** **spaces**.
-
+## **Creative** **Technologist** based in NYC <br> specializing in **interactive** **multimedia** **installations** <br> for **exhibitions** and **experiential** **spaces**.
 
 ---
 

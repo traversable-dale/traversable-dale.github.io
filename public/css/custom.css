@@ -14,17 +14,69 @@ body {
 }
 
 /* ============================================
+   HEADING HIERARCHY
+   Clear size and spacing differences
+   ============================================ */
+
+/* H1 - TITLE (Large, no extra spacing) */
+h1, article h1, .terminal h1 {
+  font-size: 2.5em !important; /* LARGE */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.2;
+  color: #ffffff !important;
+}
+
+/* H2 - HEADING 1 (Pretty big, with spacing) */
+h2, article h2, .terminal h2 {
+  font-size: 1.8em !important; /* PRETTY BIG */
+  margin-top: 2em !important; /* Space above */
+  margin-bottom: 1em !important; /* Space below */
+  line-height: 1.3;
+  color: #ffffff !important;
+}
+
+/* H3 - HEADING 2 (Big enough, with spacing) */
+h3, article h3, .terminal h3 {
+  font-size: 1.4em !important; /* BIG ENOUGH */
+  margin-top: 1.5em !important; /* Space above */
+  margin-bottom: 0.75em !important; /* Space below */
+  line-height: 1.3;
+  color: #ffffff !important;
+}
+
+/* H4 - HEADING 3 (Modest, no extra spacing) */
+h4, article h4, .terminal h4 {
+  font-size: 1.1em !important; /* MODEST - close to base text */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.4;
+  color: #ffffff !important;
+}
+
+/* H5 and H6 - if you need them */
+h5, article h5, .terminal h5 {
+  font-size: 1em !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  color: #ffffff !important;
+}
+
+h6, article h6, .terminal h6 {
+  font-size: 0.9em !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  color: #ffffff !important;
+}
+
+/* ============================================
    FORCE ALL TEXT TO BE WHITE
    Makes sure everything is readable on black
    ============================================ */
 
-body, p, div, span, li, td, th, h1, h2, h3, h4, h5, h6 {
+body, p, div, span, li, td, th {
   color: #ffffff !important;
 }
-
-
-
-
 
 strong, b {
   color: #ff6600 !important; /* Default ORANGE, turns white on hover */
@@ -43,28 +95,16 @@ em, i {
   color: #ffffff !important;
 }
 
-
-
-
-
 /* ============================================
    OVERRIDE THEME'S GRAY COLOR
    Force terminal elements to be pure white
    ============================================ */
 
 .terminal blockquote, 
-.terminal h1, 
-.terminal h2, 
-.terminal h3, 
-.terminal h4, 
-.terminal h5, 
-.terminal h6, 
 .terminal .logo,
 .terminal table td {
   color: #ffffff !important; /* PURE WHITE INSTEAD OF THEME'S GRAY */
 }
-
-
 
 /* ============================================
    NEON ORANGE HYPERLINKS
@@ -77,8 +117,16 @@ a {
 }
 
 a:hover {
-  color: #ff8833 !important; /* LIGHTER ORANGE ON HOVER */
-  text-decoration: underline;
+  color: #000000 !important; /* BLACK TEXT ON HOVER */
+  background-color: #ff6600 !important; /* ORANGE BACKGROUND */
+  text-decoration: none;
+  padding: 0 0.2em; /* Small padding for background */
+}
+
+/* Remove link hover background from project grid */
+.project-item a:hover {
+  background-color: transparent !important;
+  padding: 0; /* Remove padding too since there's no background */
 }
 
 /* ============================================
@@ -130,25 +178,6 @@ img + em {
   color: #ffffff !important; /* BRIGHT WHITE FOR CAPTIONS */
   margin-top: 0.5em; /* SPACE ABOVE CAPTION */
   margin-bottom: 2em; /* SPACE BELOW CAPTION */
-}
-
-/* ============================================
-   HEADING SIZES AND SPACING
-   Controls h2 and h3 header sizes
-   ============================================ */
-
-article h2,
-h2 {
-  margin-top: 2em; /* SPACE ABOVE H2 HEADERS */
-  margin-bottom: 0.5em; /* SPACE BELOW H2 HEADERS */
-  font-size: 1.4em; /* H2 SIZE - bigger number = bigger header */
-}
-
-article h3,
-h3 {
-  margin-top: 1.5em; /* SPACE ABOVE H3 HEADERS */
-  margin-bottom: 0.5em; /* SPACE BELOW H3 HEADERS */
-  font-size: 1.1em; /* H3 SIZE - smaller than h2 */
 }
 
 /* ============================================
@@ -264,7 +293,7 @@ pre, code {
    - Make all text smaller: Change body font-size to 0.8em or 0.75em
    - Change link color: Change the #ff6600 values in the hyperlinks section
    - Adjust table spacing: Change the padding values in table td
-   - Make headings bigger: Increase the font-size in h2 and h3
+   - Make headings bigger: Increase the font-size in h1, h2, h3, h4
    
    ============================================ */
 
@@ -282,21 +311,6 @@ pre, code {
   .intro-columns {
     grid-template-columns: 1fr; /* Stack on mobile */
   }
-}
-
-
-/* Link hover - change text to black instead of lighter orange */
-a:hover {
-  color: #000000 !important; /* BLACK TEXT ON HOVER */
-  background-color: #ff6600 !important; /* ORANGE BACKGROUND */
-  text-decoration: none;
-  padding: 0 0.2em; /* Small padding for background */
-}
-
-/* Remove link hover background from project grid */
-.project-item a:hover {
-  background-color: transparent !important;
-  padding: 0; /* Remove padding too since there's no background */
 }
 
 
