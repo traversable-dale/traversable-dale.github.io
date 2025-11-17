@@ -27,19 +27,6 @@ draft: false
   <br>
 
   #
-</div>
-
-<div class="mobile-only">
-
-  ### Hi! I'm John.
-  <br>
-
-  #### I am a **Creative Technologist** based in NYC, specializing in **interactive** **multimedia** **installations** for **exhibitions** and **experiential** **spaces**. <br>
-  <br>
-
-  #### I help translate **creative** **concepts** into **working** **systems**, and bridge the gap between the **creative** and the **technical**.
-</div>
-
 
 <div class="intro-columns">
   <div>
@@ -60,6 +47,21 @@ draft: false
     <strong>Show</strong> <strong>Control</strong>
   </div>
 </div>
+</div>
+
+<div class="mobile-only">
+
+  ### Hi! I'm John.
+  <br>
+
+  #### I am a **Creative Technologist** based in NYC, specializing in **interactive** **multimedia** **installations** for **exhibitions** and **experiential** **spaces**. <br>
+  <br>
+
+  #### I help translate **creative** **concepts** into **working** **systems**, and bridge the gap between the **creative** and the **technical**.
+</div>
+
+
+
 
 #
 <br>
@@ -69,9 +71,3 @@ draft: false
 <br>
 
 **JOHN@JOHNSYZONENKO.COM**
-
-
-
-
-
-
