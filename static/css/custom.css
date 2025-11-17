@@ -895,3 +895,108 @@ strong.mouse-near span, b.mouse-near span {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
 }
+
+/* ============================================
+   MOBILE OPTIMIZATION
+   Responsive adjustments for screens 768px and below
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Slightly larger base font on mobile for readability */
+  body {
+    font-size: 0.95em;
+  }
+  
+  /* Scale down headings for mobile */
+  h1, .terminal h1, article h1, .page-title {
+    font-size: 2em !important; /* Down from 3em */
+    line-height: 1.2 !important;
+    margin-bottom: 0.75em !important;
+  }
+  
+  h2, article h2, .terminal h2 {
+    font-size: 1.5em !important; /* Down from 1.8em */
+    margin-top: 1.5em !important;
+  }
+  
+  h3, article h3, .terminal h3 {
+    font-size: 1.2em !important; /* Down from 1.4em */
+    margin-top: 1.2em !important;
+  }
+  
+  h4, article h4, .terminal h4 {
+    font-size: 1.05em !important;
+  }
+  
+  /* Scale down navigation */
+  .terminal-nav {
+    padding: 0.3em 0;
+    font-size: 0.85em;
+  }
+  
+  .terminal-menu a,
+  .terminal-nav a {
+    font-size: 0.9em !important;
+    padding: 0.25em 0.75em !important;
+  }
+  
+  .terminal-logo, .terminal-prompt {
+    font-size: 0.9em !important;
+  }
+  
+  /* Breadcrumb navigation - smaller and scrollable */
+  .breadcrumb-nav,
+  .terminal-prompt {
+    font-size: 0.75em;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Tables - smaller text and horizontal scroll */
+  article table,
+  table {
+    font-size: 0.75em;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  article table td,
+  table td {
+    padding: 0.4em 0.3em !important;
+  }
+  
+  /* Code blocks */
+  pre, code {
+    font-size: 0.85em;
+  }
+  
+  /* Disable mouse effects on mobile */
+  .project-item::before {
+    display: none; /* No glow effect */
+  }
+  
+  .spotlight-overlay {
+    display: none; /* No spotlight */
+  }
+  
+  .ripple {
+    display: none; /* No ripples */
+  }
+  
+  /* Disable tilt transforms */
+  .project-item {
+    transform: none !important;
+  }
+  
+  /* Simplify bold text - no transforms */
+  strong, b {
+    transform: none !important;
+  }
+  
+  strong span, b span {
+    transform: none !important;
+  }
+  
+  /* Footer already has mobile styling at line 434-445 */
+  /* No changes needed - keeping original responsive footer */
+}

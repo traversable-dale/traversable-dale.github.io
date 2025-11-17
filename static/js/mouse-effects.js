@@ -1,45 +1,63 @@
 // tiltStrength | line 156
 
+// ============================================
+// MOBILE DETECTION
+// Automatically detect mobile/touch devices
+// ============================================
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+    || ('ontouchstart' in window) 
+    || (navigator.maxTouchPoints > 0);
+};
 
+const IS_MOBILE = isMobile();
 
+// Log for debugging
+if (IS_MOBILE) {
+  console.log('Mobile/Touch device detected - mouse effects disabled');
+} else {
+  console.log('Desktop device - mouse effects enabled');
+}
 
 // ============================================
 // MOUSE EFFECTS CONFIGURATION
-// Change true to false to disable any effect
+// Effects automatically disabled on mobile devices
 // ============================================
 const CONFIG = {
-  spotlightEffect: true,   // Dims everything except where mouse is
-  rippleEffect: true,      // Click to create ripples
-  glowEffect: true,        // Cards glow where you hover
-  tiltEffect: true,        // Cards tilt in 3D on hover
-  boldTextGlow: true,      // Bold text glows when mouse is near
-  borderRepel: true,       // Border characters push away from mouse
+  spotlightEffect: !IS_MOBILE,   // Disabled on mobile
+  rippleEffect: !IS_MOBILE,      // Disabled on mobile
+  glowEffect: !IS_MOBILE,        // Disabled on mobile
+  tiltEffect: !IS_MOBILE,        // Disabled on mobile
+  boldTextGlow: !IS_MOBILE,      // Disabled on mobile
+  borderRepel: !IS_MOBILE,       // Disabled on mobile
   tiltStrength: 30
 };
 
 // ============================================
-// MOUSE TRACKING
+// MOUSE TRACKING (Desktop only)
 // ============================================
 let mouseX = 0;
 let mouseY = 0;
 
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
+if (!IS_MOBILE) {
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+}
 
 // ============================================
 // INITIALIZE - Add required HTML elements
 // ============================================
 function initMouseEffects() {
-  // Add spotlight overlay if it doesn't exist
-  if (!document.querySelector('.spotlight-overlay')) {
+  // Add spotlight overlay if it doesn't exist (desktop only)
+  if (!IS_MOBILE && !document.querySelector('.spotlight-overlay')) {
     const spotlight = document.createElement('div');
     spotlight.className = 'spotlight-overlay';
     document.body.appendChild(spotlight);
   }
   
-  // Initialize all effects
+  // Initialize all effects (automatically skipped on mobile via CONFIG)
   if (CONFIG.spotlightEffect) initSpotlight();
   if (CONFIG.rippleEffect) initRipples();
   if (CONFIG.glowEffect) initGlow();
@@ -47,7 +65,7 @@ function initMouseEffects() {
   if (CONFIG.boldTextGlow) initBoldTextGlow();
   if (CONFIG.borderRepel) initBorderRepel();
   initFooterAnimation(); // Always initialize footer animation
-  initFooterIconRepel(); // Initialize footer icon repel effect
+  initFooterIconRepel(); // Initialize footer icon repel effect  
   initFooterBorder(); // Initialize footer interactive border
 }
 
