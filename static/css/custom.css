@@ -913,7 +913,7 @@ strong.mouse-near span, b.mouse-near span {
     line-height: 1.2 !important;
     margin-top: 2em !important; /* Increased from 1em to clear border */
     margin-bottom: 0.75em !important;
-    padding-bottom: 2em !important; /* Add bottom padding for mobile */
+    padding-bottom: 1em !important; /* Reduced from 2em */
   }
   
   h2, article h2, .terminal h2 {
@@ -954,20 +954,23 @@ strong.mouse-near span, b.mouse-near span {
     text-align: left !important;
   }
   
-  /* Breadcrumb navigation - smaller and scrollable */
+  /* Breadcrumb navigation - smaller and wrap text */
   .breadcrumb-nav,
   .terminal-prompt {
     font-size: 0.75em;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    white-space: normal !important; /* Allow wrapping */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   
-  /* Tables - smaller text and horizontal scroll */
+  /* Tables - full width on mobile */
   article table,
   table {
     font-size: 0.75em;
-    display: block;
-    overflow-x: auto;
+    width: 100% !important; /* Full width */
+    max-width: 100% !important;
+    display: table !important; /* Override to table for full width */
+    overflow-x: visible;
   }
   
   article table td,
