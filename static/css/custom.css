@@ -913,6 +913,7 @@ strong.mouse-near span, b.mouse-near span {
     line-height: 1.2 !important;
     margin-top: 2em !important; /* Increased from 1em to clear border */
     margin-bottom: 0.75em !important;
+    padding-bottom: 2em !important; /* Add bottom padding for mobile */
   }
   
   h2, article h2, .terminal h2 {

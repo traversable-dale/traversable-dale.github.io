@@ -63,7 +63,10 @@ function initMouseEffects() {
   if (CONFIG.glowEffect) initGlow();
   if (CONFIG.tiltEffect) initTilt();
   if (CONFIG.boldTextGlow) initBoldTextGlow();
-  if (CONFIG.borderRepel) initBorderRepel();
+  
+  // ALWAYS initialize borders (but only add repel effect on desktop)
+  initBorderRepel();
+  
   initFooterAnimation(); // Always initialize footer animation
   initFooterIconRepel(); // Initialize footer icon repel effect  
   initFooterBorder(); // Initialize footer interactive border
@@ -406,56 +409,58 @@ function initBorderRepel() {
     }, 250); // Debounce resize events
   });
   
-  // Mouse move handler for repel effect
+  // Mouse move handler for repel effect (DESKTOP ONLY)
   // We query the characters each time to catch any newly created ones
-  document.addEventListener('mousemove', (e) => {
-    // Get all border characters (including newly created ones after resize)
-    const borderChars = document.querySelectorAll('.repel-border span');
+  if (!IS_MOBILE) {
+    document.addEventListener('mousemove', (e) => {
+      // Get all border characters (including newly created ones after resize)
+      const borderChars = document.querySelectorAll('.repel-border span');
+      
+      borderChars.forEach(span => {
+        const rect = span.getBoundingClientRect();
+        const charCenterX = rect.left + rect.width / 2;
+        const charCenterY = rect.top + rect.height / 2;
+        
+        // Calculate distance from character to mouse
+        const deltaX = charCenterX - e.clientX;
+        const deltaY = charCenterY - e.clientY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+        
+        if (distance < repelRange) {
+          // Calculate repel strength (stronger when closer)
+          const pushStrength = (1 - distance / repelRange) * repelStrength;
+          
+          // Normalize direction vector
+          const dirX = deltaX / distance;
+          const dirY = deltaY / distance;
+          
+          // Calculate how much to move the character (push AWAY from mouse)
+          const moveX = dirX * pushStrength;
+          const moveY = dirY * pushStrength;
+          
+          // Apply the repel transform
+          span.style.transform = `translate(${moveX}px, ${moveY}px)`;
+          
+          // Optional: Make characters turn orange when repelled
+          span.style.color = '#ff6600';
+        } else {
+          // Reset position and color when mouse is far
+          span.style.transform = 'translate(0, 0)';
+          span.style.color = '';
+        }
+      });
+    });
     
-    borderChars.forEach(span => {
-      const rect = span.getBoundingClientRect();
-      const charCenterX = rect.left + rect.width / 2;
-      const charCenterY = rect.top + rect.height / 2;
-      
-      // Calculate distance from character to mouse
-      const deltaX = charCenterX - e.clientX;
-      const deltaY = charCenterY - e.clientY;
-      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-      
-      if (distance < repelRange) {
-        // Calculate repel strength (stronger when closer)
-        const pushStrength = (1 - distance / repelRange) * repelStrength;
-        
-        // Normalize direction vector
-        const dirX = deltaX / distance;
-        const dirY = deltaY / distance;
-        
-        // Calculate how much to move the character (push AWAY from mouse)
-        const moveX = dirX * pushStrength;
-        const moveY = dirY * pushStrength;
-        
-        // Apply the repel transform
-        span.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        
-        // Optional: Make characters turn orange when repelled
-        span.style.color = '#ff6600';
-      } else {
-        // Reset position and color when mouse is far
+    // Reset all characters when mouse leaves the page
+    document.addEventListener('mouseleave', () => {
+      // Re-query to catch any newly created characters
+      const borderChars = document.querySelectorAll('.repel-border span');
+      borderChars.forEach(span => {
         span.style.transform = 'translate(0, 0)';
         span.style.color = '';
-      }
+      });
     });
-  });
-  
-  // Reset all characters when mouse leaves the page
-  document.addEventListener('mouseleave', () => {
-    // Re-query to catch any newly created characters
-    const borderChars = document.querySelectorAll('.repel-border span');
-    borderChars.forEach(span => {
-      span.style.transform = 'translate(0, 0)';
-      span.style.color = '';
-    });
-  });
+  }
 }
 
 // ============================================
@@ -548,55 +553,57 @@ function initFooterBorder() {
     }, 250); // Debounce resize events
   });
   
-  // Mouse move handler for repel effect
-  document.addEventListener('mousemove', (e) => {
-    // Re-query footer border characters to catch newly created ones after resize
-    const borderChars = borderWrapper.querySelectorAll('span');
+  // Mouse move handler for repel effect (DESKTOP ONLY)
+  if (!IS_MOBILE) {
+    document.addEventListener('mousemove', (e) => {
+      // Re-query footer border characters to catch newly created ones after resize
+      const borderChars = borderWrapper.querySelectorAll('span');
+      
+      borderChars.forEach(span => {
+        const rect = span.getBoundingClientRect();
+        const charCenterX = rect.left + rect.width / 2;
+        const charCenterY = rect.top + rect.height / 2;
+        
+        // Calculate distance from character to mouse
+        const deltaX = charCenterX - e.clientX;
+        const deltaY = charCenterY - e.clientY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+        
+        if (distance < repelRange) {
+          // Calculate repel strength (stronger when closer)
+          const pushStrength = (1 - distance / repelRange) * repelStrength;
+          
+          // Normalize direction vector
+          const dirX = deltaX / distance;
+          const dirY = deltaY / distance;
+          
+          // Calculate how much to move the character (push AWAY from mouse)
+          const moveX = dirX * pushStrength;
+          const moveY = dirY * pushStrength;
+          
+          // Apply the repel transform
+          span.style.transform = `translate(${moveX}px, ${moveY}px)`;
+          
+          // Make characters turn orange when repelled
+          span.style.color = '#ff6600';
+        } else {
+          // Reset position and color when mouse is far
+          span.style.transform = 'translate(0, 0)';
+          span.style.color = '';
+        }
+      });
+    });
     
-    borderChars.forEach(span => {
-      const rect = span.getBoundingClientRect();
-      const charCenterX = rect.left + rect.width / 2;
-      const charCenterY = rect.top + rect.height / 2;
-      
-      // Calculate distance from character to mouse
-      const deltaX = charCenterX - e.clientX;
-      const deltaY = charCenterY - e.clientY;
-      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-      
-      if (distance < repelRange) {
-        // Calculate repel strength (stronger when closer)
-        const pushStrength = (1 - distance / repelRange) * repelStrength;
-        
-        // Normalize direction vector
-        const dirX = deltaX / distance;
-        const dirY = deltaY / distance;
-        
-        // Calculate how much to move the character (push AWAY from mouse)
-        const moveX = dirX * pushStrength;
-        const moveY = dirY * pushStrength;
-        
-        // Apply the repel transform
-        span.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        
-        // Make characters turn orange when repelled
-        span.style.color = '#ff6600';
-      } else {
-        // Reset position and color when mouse is far
+    // Reset all characters when mouse leaves the page
+    document.addEventListener('mouseleave', () => {
+      // Re-query to catch newly created characters
+      const borderChars = borderWrapper.querySelectorAll('span');
+      borderChars.forEach(span => {
         span.style.transform = 'translate(0, 0)';
         span.style.color = '';
-      }
+      });
     });
-  });
-  
-  // Reset all characters when mouse leaves the page
-  document.addEventListener('mouseleave', () => {
-    // Re-query to catch newly created characters
-    const borderChars = borderWrapper.querySelectorAll('span');
-    borderChars.forEach(span => {
-      span.style.transform = 'translate(0, 0)';
-      span.style.color = '';
-    });
-  });
+  }
 }
 
 // ============================================
@@ -613,50 +620,52 @@ function initFooterIconRepel() {
   
   if (!iconLinks.length) return; // Exit if no icons found
   
-  // Mouse move handler for repel effect
-  document.addEventListener('mousemove', (e) => {
-    iconLinks.forEach(link => {
-      const rect = link.getBoundingClientRect();
-      const iconCenterX = rect.left + rect.width / 2;
-      const iconCenterY = rect.top + rect.height / 2;
-      
-      // Calculate distance from icon to mouse
-      const deltaX = iconCenterX - e.clientX;
-      const deltaY = iconCenterY - e.clientY;
-      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-      
-      if (distance < repelRange) {
-        // Calculate repel strength (stronger when closer)
-        const pushStrength = (1 - distance / repelRange) * repelStrength;
+  // Mouse move handler for repel effect (DESKTOP ONLY)
+  if (!IS_MOBILE) {
+    document.addEventListener('mousemove', (e) => {
+      iconLinks.forEach(link => {
+        const rect = link.getBoundingClientRect();
+        const iconCenterX = rect.left + rect.width / 2;
+        const iconCenterY = rect.top + rect.height / 2;
         
-        // Normalize direction vector
-        const dirX = deltaX / distance;
-        const dirY = deltaY / distance;
+        // Calculate distance from icon to mouse
+        const deltaX = iconCenterX - e.clientX;
+        const deltaY = iconCenterY - e.clientY;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
         
-        // Calculate how much to move the icon (push AWAY from mouse)
-        const moveX = dirX * pushStrength;
-        const moveY = dirY * pushStrength;
-        
-        // Apply the repel transform
-        link.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        
-        // Add glow class when near
-        link.classList.add('icon-near');
-      } else {
-        // Reset position and remove glow when mouse is far
+        if (distance < repelRange) {
+          // Calculate repel strength (stronger when closer)
+          const pushStrength = (1 - distance / repelRange) * repelStrength;
+          
+          // Normalize direction vector
+          const dirX = deltaX / distance;
+          const dirY = deltaY / distance;
+          
+          // Calculate how much to move the icon (push AWAY from mouse)
+          const moveX = dirX * pushStrength;
+          const moveY = dirY * pushStrength;
+          
+          // Apply the repel transform
+          link.style.transform = `translate(${moveX}px, ${moveY}px)`;
+          
+          // Add glow class when near
+          link.classList.add('icon-near');
+        } else {
+          // Reset position and remove glow when mouse is far
+          link.style.transform = 'translate(0, 0)';
+          link.classList.remove('icon-near');
+        }
+      });
+    });
+    
+    // Reset all icons when mouse leaves the page
+    document.addEventListener('mouseleave', () => {
+      iconLinks.forEach(link => {
         link.style.transform = 'translate(0, 0)';
         link.classList.remove('icon-near');
-      }
+      });
     });
-  });
-  
-  // Reset all icons when mouse leaves the page
-  document.addEventListener('mouseleave', () => {
-    iconLinks.forEach(link => {
-      link.style.transform = 'translate(0, 0)';
-      link.classList.remove('icon-near');
-    });
-  });
+  }
 }
 
 // ============================================

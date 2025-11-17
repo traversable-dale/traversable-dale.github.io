@@ -911,12 +911,21 @@ strong.mouse-near span, b.mouse-near span {
   h1, .terminal h1, article h1, .page-title {
     font-size: 2em !important; /* Down from 3em */
     line-height: 1.2 !important;
+    margin-top: 2em !important; /* Increased from 1em to clear border */
     margin-bottom: 0.75em !important;
+    padding-bottom: 2em !important; /* Add bottom padding for mobile */
   }
   
   h2, article h2, .terminal h2 {
     font-size: 1.5em !important; /* Down from 1.8em */
     margin-top: 1.5em !important;
+  }
+  
+  /* Minimize space around intro paragraph on homepage */
+  h1 + p,
+  article h1 + p {
+    margin-top: 0.5em !important;
+    margin-bottom: 1em !important;
   }
   
   h3, article h3, .terminal h3 {
@@ -928,20 +937,21 @@ strong.mouse-near span, b.mouse-near span {
     font-size: 1.05em !important;
   }
   
-  /* Scale down navigation */
+  /* Keep navigation same size as links and left-aligned */
   .terminal-nav {
     padding: 0.3em 0;
-    font-size: 0.85em;
+    text-align: left !important;
   }
   
   .terminal-menu a,
   .terminal-nav a {
-    font-size: 0.9em !important;
+    font-size: 1em !important; /* Same size as desktop */
     padding: 0.25em 0.75em !important;
   }
   
   .terminal-logo, .terminal-prompt {
-    font-size: 0.9em !important;
+    font-size: 1em !important; /* Same size as menu links */
+    text-align: left !important;
   }
   
   /* Breadcrumb navigation - smaller and scrollable */
@@ -968,6 +978,16 @@ strong.mouse-near span, b.mouse-near span {
   /* Code blocks */
   pre, code {
     font-size: 0.85em;
+  }
+  
+  /* Keep project grid as 2 columns on mobile */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* Override to keep 2 columns */
+    gap: 1.5em; /* Slightly tighter gap */
+  }
+  
+  .projects-grid img {
+    max-width: 100%;
   }
   
   /* Disable mouse effects on mobile */
@@ -998,5 +1018,36 @@ strong.mouse-near span, b.mouse-near span {
   }
   
   /* Footer already has mobile styling at line 434-445 */
-  /* No changes needed - keeping original responsive footer */
+  /* Override to keep footer links horizontal with proper alignment */
+  .footer-content {
+    flex-direction: row !important; /* Keep horizontal */
+    justify-content: space-between !important; /* Space between nav and icons */
+    align-items: center;
+  }
+  
+  .footer-nav {
+    flex-direction: row !important; /* Keep horizontal */
+    gap: 1em;
+    text-align: left; /* Left align */
+  }
+  
+  .footer-social {
+    text-align: right; /* Right align icons */
+  }
+  
+  /* Center all borders and footer border */
+  .repel-border,
+  .footer-border-wrapper {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Add spacing to list items on mobile */
+  article ul li,
+  article ol li,
+  ul li,
+  ol li {
+    margin-bottom: 2em; /* Extra space between bullets */
+  }
 }
