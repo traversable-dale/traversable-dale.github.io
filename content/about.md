@@ -6,7 +6,7 @@ draft: false
 
 <br>
 
-![John Syzonenko](/images/about/john-photo.png)
+![John Syzonenko](/images/about/john-photo-1.jpeg)
 
 
 
