@@ -901,7 +901,25 @@ strong.mouse-near span, b.mouse-near span {
    Responsive adjustments for screens 768px and below
    ============================================ */
 
+/* Desktop-only content - hidden on mobile */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
 @media (max-width: 768px) {
+  /* Show mobile content, hide desktop content */
+  .mobile-only {
+    display: block !important;
+  }
+  
+  .desktop-only {
+    display: none !important;
+  }
+  
   /* Slightly larger base font on mobile for readability */
   body {
     font-size: 0.95em;
@@ -913,7 +931,7 @@ strong.mouse-near span, b.mouse-near span {
     line-height: 1.2 !important;
     margin-top: 2em !important; /* Increased from 1em to clear border */
     margin-bottom: 0.75em !important;
-    padding-bottom: 1em !important; /* Reduced from 2em */
+    padding-bottom: 0.01em !important; /* Minimal padding */
   }
   
   h2, article h2, .terminal h2 {
@@ -1026,16 +1044,20 @@ strong.mouse-near span, b.mouse-near span {
     flex-direction: row !important; /* Keep horizontal */
     justify-content: space-between !important; /* Space between nav and icons */
     align-items: center;
+    padding-left: 0 !important; /* Remove left padding */
+    padding-right: 0 !important; /* Remove right padding */
   }
   
   .footer-nav {
     flex-direction: row !important; /* Keep horizontal */
     gap: 1em;
     text-align: left; /* Left align */
+    padding-left: 0 !important; /* No extra padding */
   }
   
   .footer-social {
     text-align: right; /* Right align icons */
+    padding-right: 0 !important; /* No extra padding */
   }
   
   /* Center all borders and footer border */

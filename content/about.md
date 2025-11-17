@@ -4,28 +4,50 @@ date: 2025-10-31
 draft: false
 ---
 
-
-<br>
-<br>
-
 ![John Syzonenko](/images/about/john-photo.png)
 
 ## Hi! I'm John.
-#
 
-<br>
+<div class="desktop-only">
 
-#### I am a **Creative Technologist** based in NYC. 
-#### I specialize in **interactive** **multimedia** **installations** <br>
-#### for **exhibitions** and **experiential** **spaces**. <br>
-<br>
 
-#### I help translate **creative** **concepts** into **working** **systems**, <br>
-#### and bridge the gap between the **creative** and the **technical**.
+  #
 
-<br>
+  <br>
 
-#
+  #### I am a **Creative Technologist** based in NYC. 
+  #### I specialize in **interactive** **multimedia** **installations** <br>
+  #### for **exhibitions** and **experiential** **spaces**. <br>
+  <br>
+
+  #### I help translate **creative** **concepts** into **working** **systems**, <br>
+  #### and bridge the gap between the **creative** and the **technical**.
+
+  <br>
+
+  #
+</div>
+
+<div class="mobile-only">
+
+  #
+
+  <br>
+
+  #### I am a **Creative Technologist** based in NYC, specializing in **interactive** **multimedia** **installations** for **exhibitions** and **experiential** **spaces**. <br>
+  <br>
+
+  #### I help translate **creative** **concepts** into **working** **systems**, and bridge the gap between the **creative** and the **technical**.
+
+  <br>
+
+  #
+
+  <br>
+
+  **Skills:** Interactive Tech, Motion Graphics, Editing + Animation, Immersive Installations, Playback Systems, Interactive Visuals, Pre-vizualisations, Back-of-House GUIs, Show Control
+</div>
+
 
 <div class="intro-columns">
   <div>
@@ -47,20 +69,17 @@ draft: false
   </div>
 </div>
 
-
-
-
-
-
-
-
+#
 <br>
 
-#### If you've got a project, let's talk about it!
+### If you've got a project, let's talk about it!
 
 <br>
 
 **JOHN@JOHNSYZONENKO.COM**
+
+
+
 
 
 
