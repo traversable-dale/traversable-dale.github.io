@@ -2,7 +2,6 @@
 
 // ============================================
 // MOBILE DETECTION
-// Automatically detect mobile/touch devices
 // ============================================
 const isMobile = () => {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
@@ -12,26 +11,37 @@ const isMobile = () => {
 
 const IS_MOBILE = isMobile();
 
-// Log for debugging
-if (IS_MOBILE) {
-  console.log('Mobile/Touch device detected - mouse effects disabled');
-} else {
-  console.log('Desktop device - mouse effects enabled');
-}
-
 // ============================================
-// MOUSE EFFECTS CONFIGURATION
-// Effects automatically disabled on mobile devices
+// DESKTOP EFFECTS CONFIGURATION
+// Change true/false to enable/disable each effect on desktop
+// Mobile: ALL effects automatically disabled
 // ============================================
-const CONFIG = {
-  spotlightEffect: !IS_MOBILE,   // Disabled on mobile
-  rippleEffect: !IS_MOBILE,      // Disabled on mobile
-  glowEffect: !IS_MOBILE,        // Disabled on mobile
-  tiltEffect: !IS_MOBILE,        // Disabled on mobile
-  boldTextGlow: !IS_MOBILE,      // Disabled on mobile
-  borderRepel: !IS_MOBILE,       // Disabled on mobile
-  tiltStrength: 30
+const DESKTOP_CONFIG = {
+  spotlightEffect: false,      // Spotlight dims everything except mouse area
+  rippleEffect: false,         // Click ripples
+  glowEffect: true,           // Card glow on hover
+  tiltEffect: false,           // 3D card tilt
+  boldTextGlow: true,         // Bold text magnetic glow
+  borderRepel: true,          // Heading borders repel
+  footerBorderRepel: true,    // Footer border repels
+  footerIconRepel: false,      // Footer icons repel
+  tiltStrength: 30            // Tilt intensity (0-50)
 };
+
+// Apply mobile override - all effects off on mobile
+const CONFIG = {
+  spotlightEffect: !IS_MOBILE && DESKTOP_CONFIG.spotlightEffect,
+  rippleEffect: !IS_MOBILE && DESKTOP_CONFIG.rippleEffect,
+  glowEffect: !IS_MOBILE && DESKTOP_CONFIG.glowEffect,
+  tiltEffect: !IS_MOBILE && DESKTOP_CONFIG.tiltEffect,
+  boldTextGlow: !IS_MOBILE && DESKTOP_CONFIG.boldTextGlow,
+  borderRepel: !IS_MOBILE && DESKTOP_CONFIG.borderRepel,
+  footerBorderRepel: !IS_MOBILE && DESKTOP_CONFIG.footerBorderRepel,
+  footerIconRepel: !IS_MOBILE && DESKTOP_CONFIG.footerIconRepel,
+  tiltStrength: DESKTOP_CONFIG.tiltStrength
+};
+
+console.log(IS_MOBILE ? 'Mobile - all effects disabled' : 'Desktop - effects:', CONFIG);
 
 // ============================================
 // MOUSE TRACKING (Desktop only)
@@ -46,30 +56,32 @@ if (!IS_MOBILE) {
   });
 }
 
+
+
+
 // ============================================
 // INITIALIZE - Add required HTML elements
 // ============================================
 function initMouseEffects() {
-  // Add spotlight overlay if it doesn't exist (desktop only)
   if (!IS_MOBILE && !document.querySelector('.spotlight-overlay')) {
     const spotlight = document.createElement('div');
     spotlight.className = 'spotlight-overlay';
     document.body.appendChild(spotlight);
   }
   
-  // Initialize all effects (automatically skipped on mobile via CONFIG)
   if (CONFIG.spotlightEffect) initSpotlight();
   if (CONFIG.rippleEffect) initRipples();
   if (CONFIG.glowEffect) initGlow();
   if (CONFIG.tiltEffect) initTilt();
   if (CONFIG.boldTextGlow) initBoldTextGlow();
   
-  // ALWAYS initialize borders (but only add repel effect on desktop)
+  // Borders always render, repel effect controlled by config
   initBorderRepel();
   
-  initFooterAnimation(); // Always initialize footer animation
-  initFooterIconRepel(); // Initialize footer icon repel effect  
-  initFooterBorder(); // Initialize footer interactive border
+  initFooterAnimation();
+  
+  if (CONFIG.footerIconRepel) initFooterIconRepel();
+  if (CONFIG.footerBorderRepel) initFooterBorder();
 }
 
 // ============================================
@@ -193,18 +205,22 @@ function initTilt() {
   });
 }
 
+
 // ============================================
 // BOLD TEXT MAGNETIC GRAVITY EFFECT
 // Each character is individually pulled toward mouse like magnets
 // ============================================
 function initBoldTextGlow() {
   const boldElements = document.querySelectorAll('strong, b');
-  const magneticRange = 20; // ADJUST THIS - max distance for magnetic effect (pixels)
-  const magneticStrength = 3; // ADJUST THIS - how strong the pull is (0.1 = subtle, 0.5 = strong)
+  const magneticRange = 175; // ADJUST THIS - max distance for magnetic effect (pixels)
+  const magneticStrength = 0.2; // ADJUST THIS - how strong the pull is (0.1 = subtle, 0.5 = strong)
   
-  // Get transition speed from CSS variable (fallback to 1s if not set)
+  // Add buffer zone for glow (larger than magnetic range)
+  const glowRange = magneticRange + 50; // Glow activates from further away
+  
+  // Get transition speed from CSS variable (fallback to 3s if not set)
   const transitionSpeed = getComputedStyle(document.documentElement)
-    .getPropertyValue('--transition-speed').trim() || '1s';
+    .getPropertyValue('--transition-speed').trim() || '3s';
   
   // Split each bold element into individual character spans
   boldElements.forEach(bold => {
@@ -220,7 +236,8 @@ function initBoldTextGlow() {
       // Preserve spaces by using a non-breaking space
       span.textContent = char === ' ' ? '\u00A0' : char;
       span.style.display = 'inline-block';
-      span.style.transition = `transform ${transitionSpeed} ease-out`;
+      // CRITICAL FIX: Include ALL transitions in inline style
+      span.style.transition = `transform ${transitionSpeed} ease-out, color ${transitionSpeed} ease-in-out, text-shadow ${transitionSpeed} ease-in-out`;
       span.style.position = 'relative';
       bold.appendChild(span);
     });
@@ -232,53 +249,49 @@ function initBoldTextGlow() {
   // Get all character spans
   const characterSpans = document.querySelectorAll('strong span, b span');
   
+  // Track which elements currently have glow
+  const glowingElements = new Set();
+  
   document.addEventListener('mousemove', (e) => {
-    let anyCharacterNear = false;
-    
-    characterSpans.forEach(span => {
-      const rect = span.getBoundingClientRect();
-      const charCenterX = rect.left + rect.width / 2;
-      const charCenterY = rect.top + rect.height / 2;
-      
-      // Calculate distance and direction from character to mouse
-      const deltaX = e.clientX - charCenterX;
-      const deltaY = e.clientY - charCenterY;
-      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-      
-      if (distance < magneticRange) {
-        // Calculate magnetic pull strength (stronger when closer)
-        const pullStrength = (1 - distance / magneticRange) * magneticStrength;
-        
-        // Calculate how much to move the character
-        const moveX = deltaX * pullStrength;
-        const moveY = deltaY * pullStrength;
-        
-        // Apply the magnetic pull transform to this character
-        span.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        
-        anyCharacterNear = true;
-      } else {
-        // Reset position when mouse is far
-        span.style.transform = 'translate(0, 0)';
-      }
-    });
-    
-    // Apply glow effect to parent bold elements if any character is near
+    // Check each bold element for proximity
     boldElements.forEach(bold => {
-      const hasNearChar = Array.from(bold.querySelectorAll('span')).some(span => {
+      const spans = bold.querySelectorAll('span');
+      let minDistance = Infinity;
+      
+      // Find the closest character in this bold element
+      spans.forEach(span => {
         const rect = span.getBoundingClientRect();
         const charCenterX = rect.left + rect.width / 2;
         const charCenterY = rect.top + rect.height / 2;
+        
         const deltaX = e.clientX - charCenterX;
         const deltaY = e.clientY - charCenterY;
         const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-        return distance < magneticRange;
+        
+        minDistance = Math.min(minDistance, distance);
+        
+        // Apply magnetic effect
+        if (distance < magneticRange) {
+          const pullStrength = (1 - distance / magneticRange) * magneticStrength;
+          const moveX = deltaX * pullStrength;
+          const moveY = deltaY * pullStrength;
+          span.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        } else {
+          span.style.transform = 'translate(0, 0)';
+        }
       });
       
-      if (hasNearChar) {
-        bold.classList.add('mouse-near');
+      // Apply or remove glow based on closest character
+      if (minDistance < glowRange) {
+        if (!glowingElements.has(bold)) {
+          bold.classList.add('mouse-near');
+          glowingElements.add(bold);
+        }
       } else {
-        bold.classList.remove('mouse-near');
+        if (glowingElements.has(bold)) {
+          bold.classList.remove('mouse-near');
+          glowingElements.delete(bold);
+        }
       }
     });
   });
@@ -291,8 +304,12 @@ function initBoldTextGlow() {
     boldElements.forEach(bold => {
       bold.classList.remove('mouse-near');
     });
+    glowingElements.clear();
   });
 }
+
+
+
 
 // ============================================
 // BORDER REPEL EFFECT
@@ -506,7 +523,7 @@ function initFooterBorder() {
   
   // Calculate number of characters needed for full width
   const footerWidth = footer.offsetWidth;
-  const charCount = Math.floor(footerWidth / charWidth);
+  const charCount = Math.floor(footerWidth * 1.05 / charWidth);
   
   // Create individual span for each = character
   for (let i = 0; i < charCount; i++) {

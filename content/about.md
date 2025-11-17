@@ -4,6 +4,8 @@ date: 2025-10-31
 draft: false
 ---
 
+<br>
+
 ![John Syzonenko](/images/about/john-photo.png)
 
 

@@ -4,13 +4,29 @@ date: 2025-10-31
 draft: false
 ---
 
-#
+<div class="desktop-only">
+  
+  #
+  <div class="desktop-fullscreen">
 
-## I am a **Creative** **Technologist** based in NYC <br> specializing in **interactive** **multimedia** **installations** <br> for **exhibitions** and **experiential** **spaces**.
-<br>
 
-# 
-<br>
+
+  ## **John** **Syzonenko** is a **Creative** **Technologist** based in **NYC** <br> specializing in **interactive** **multimedia** **installations**.
+
+  </div>
+
+  #
+</div>
+
+
+
+<div class="mobile-only">
+
+  ## John Syzonenko is a **Creative** **Technologist** based in NYC <br> specializing in **interactive** **multimedia** **installations** <br> for **exhibitions** and **experiential** **spaces**.
+
+</div>
+
+
 
 
 

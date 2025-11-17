@@ -30,6 +30,13 @@ h1, .terminal h1 {
   display: block !important;
 }
 
+/* Hide the theme's underline (you have a custom border already) */
+h1::after, 
+.terminal h1::after,
+article h1::after {
+  display: none !important;
+}
+
 /* H1 titles on article/project pages - automatically styled larger */
 article h1 {
   font-size: 3em !important; /* EXTRA LARGE for page titles */
@@ -184,22 +191,58 @@ body, p, div, span, li, td, th {
   color: #ffffff !important;
 }
 
-strong, b {
-  color: #ff6600 !important; /* Default ORANGE, turns white on hover */
-  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out;
-}
-
 em, i {
   color: #ffffff !important;
-}
-
-.terminal strong, .terminal b {
-  color: #ff6600 !important;
 }
 
 .terminal em, .terminal i {
   color: #ffffff !important;
 }
+
+/* ============================================
+   BOLD TEXT - BASE STYLES AND MAGNETIC GLOW EFFECT
+   White by default, orange with glow when mouse is near
+   ============================================ */
+
+/* Base bold text styling - before JavaScript splits into spans */
+strong, b {
+  color: #ffffff !important;
+  display: inline-block;
+  position: relative;
+}
+
+.terminal strong, .terminal b {
+  color: #ffffff !important;
+  display: inline-block;
+  position: relative;
+}
+
+
+
+/* Character spans - created by JavaScript for magnetic effect */
+strong span, b span, .terminal strong span, .terminal b span {
+  display: inline-block !important;
+  position: relative !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 0px rgba(255, 102, 0, 0) !important;
+  
+  /* VERY SLOW transitions to make it obvious */
+  transition: color 3s ease-in-out !important,
+              text-shadow 3s ease-in-out !important,
+              transform 3s ease-out !important;
+}
+
+/* When mouse is near - glow activates (ORANGE) */
+strong.mouse-near span, b.mouse-near span, .terminal strong.mouse-near span, .terminal b.mouse-near span {
+  color: #ff6600 !important;
+  text-shadow: 0 0 20px rgba(255, 102, 0, 0.8) !important,
+               0 0 40px rgba(255, 102, 0, 0.5) !important,
+               0 0 60px rgba(255, 102, 0, 0.3) !important;
+}
+
+
+
+
 
 /* ============================================
    OVERRIDE THEME'S GRAY COLOR
@@ -209,8 +252,12 @@ em, i {
 .terminal blockquote, 
 .terminal .logo,
 .terminal table td {
-  color: #ffffff !important; /* PURE WHITE INSTEAD OF THEME'S GRAY */
+  color: #ffffff !important;
 }
+
+
+
+
 
 /* ============================================
    NEON ORANGE HYPERLINKS
@@ -303,225 +350,6 @@ img + em {
 }
 
 /* ============================================
-   HEADER NAVIGATION LINKS STYLING
-   Control font size, spacing, and appearance
-   ============================================ */
-
-/* Navigation links in the header */
-.terminal-menu a,
-.terminal-nav a {
-  font-size: 1em !important; /* CHANGE THIS - default size */
-  font-weight: 400 !important; /* CHANGE THIS - 400=normal, 600=semi-bold, 700=bold */
-  letter-spacing: 0.05em !important; /* CHANGE THIS - spacing between letters */
-  text-transform: none !important; /* CHANGE THIS - 'uppercase' for ALL CAPS, 'none' for normal */
-  padding: 0.5em 1em !important; /* CHANGE THIS - space around each link */
-}
-
-/* Hover state for navigation */
-.terminal-menu a:hover,
-.terminal-nav a:hover {
-  color: #000000 !important;
-  background-color: #ff6600 !important;
-}
-
-/* ============================================
-   CUSTOM FOOTER
-   Black footer with navigation and social icons
-   ============================================ */
-
-.custom-footer {
-  background-color: #000000; /* BLACK BACKGROUND */
-  border-top: none; /* Remove flat border - we'll add interactive one */
-  padding: 0; /* Remove padding, will add to content */
-  padding-top: 2em; /* Space above the border */
-  margin-top: 4em;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  position: relative;
-}
-
-/* Container for the interactive footer border */
-.footer-border-wrapper {
-  width: 100%;
-  overflow: visible;
-  padding: 20px 0;
-  margin-bottom: 2em; /* Space below border */
-}
-
-/* Animation when footer becomes visible */
-.custom-footer.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2em 2em 2em; /* Added bottom padding */
-}
-
-/* Footer Navigation Links */
-.footer-nav {
-  display: flex;
-  gap: 2em; /* SPACE BETWEEN LINKS */
-}
-
-.footer-nav a {
-  color: #ffffff !important;
-  text-decoration: none;
-  font-size: 0.9em; /* FOOTER LINK SIZE */
-  padding: 0 0.2em; /* Add padding by default - prevents jitter */
-  background-color: transparent; /* Transparent by default */
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-.footer-nav a:hover {
-  color: #000000 !important; /* Black text on hover */
-  background-color: #ff6600 !important; /* Orange background */
-  /* Padding stays the same - no jitter! */
-}
-
-/* Footer Social Icons */
-.footer-social {
-  display: flex;
-  gap: 1.5em; /* SPACE BETWEEN ICONS */
-  align-items: center;
-}
-
-.footer-social a {
-  display: inline-block; /* Changed from block to inline-block */
-  line-height: 0; /* Removes extra spacing around images */
-  transition: opacity 0.3s ease, transform var(--transition-speed) ease-out;
-  position: relative; /* Required for transform */
-  padding: 0 !important; /* Override global link padding for icons */
-  background-color: transparent !important; /* Never show background on icons */
-}
-
-.footer-social a:hover {
-  background-color: transparent !important; /* Keep transparent */
-  padding: 0 !important; /* Keep no padding */
-  color: inherit !important; /* Don't change color */
-}
-
-/* Glow effect when mouse is near */
-.footer-social a.icon-near {
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
-}
-
-.footer-social img {
-  width: 25px; /* ICON SIZE - ADJUST THIS (can go as small as you want!) */
-  height: 25px;
-  display: block;
-  object-fit: contain; /* Prevents stretching/blurring */
-  image-rendering: -webkit-optimize-contrast; /* Sharper rendering */
-  image-rendering: crisp-edges;
-  filter: brightness(1); /* Base brightness */
-  transition: filter 0.3s ease;
-}
-
-/* Icons glow brighter when near mouse */
-.footer-social a.icon-near img {
-  filter: brightness(1.3);
-}
-
-/* Responsive: Stack footer on mobile */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 2em;
-    text-align: center;
-  }
-  
-  .footer-nav {
-    flex-direction: column;
-    gap: 1em;
-  }
-}
-
-/* ============================================
-   INTERACTIVE HEADER BORDER (the === lines)
-   ============================================ */
-
-/* Hide the original CSS-generated borders when repel effect is active */
-.border-repelled::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Ensure headings with repel borders don't clip the animated characters */
-.border-repelled {
-  overflow: visible !important;
-}
-
-/* Style the new JavaScript-generated repel borders */
-.repel-border {
-  color: #ffffff;
-  font-family: monospace;
-  font-size: 1em;
-  user-select: none;
-  pointer-events: none;
-  overflow: visible !important; /* Allow characters to move outside bounds */
-  padding: 20px 0; /* Add vertical padding to give space for movement */
-  width: 100% !important; /* Ensure full width */
-  max-width: 100% !important;
-  box-sizing: border-box;
-  display: block !important;
-}
-
-.repel-border span {
-  color: #ffffff;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Target the header border elements (for non-repel hover effect) */
-.terminal-nav::after,
-h1::after,
-h2::after,
-.terminal h1::after,
-.terminal h2::after {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Make header borders glow orange on hover (when not using repel effect) */
-.terminal-nav:hover::after,
-h1:hover::after,
-h2:hover::after,
-.terminal h1:hover::after,
-.terminal h2:hover::after {
-  color: #ff6600 !important;
-  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
-}
-
-/* Alternative: Animate the border on page load */
-@keyframes border-pulse {
-  0%, 100% { 
-    opacity: 0.5;
-    text-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
-  }
-  50% { 
-    opacity: 1;
-    text-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
-  }
-}
-
-/* Uncomment to make borders pulse constantly */
-/*
-.terminal-nav::after,
-h1::after,
-h2::after,
-.terminal h1::after,
-.terminal h2:hover::after {
-  animation: border-pulse 3s ease-in-out infinite;
-}
-*/
-
-/* ============================================
    FOOTER STYLING
    The bottom of the page
    ============================================ */
@@ -529,6 +357,71 @@ h2::after,
 .footer {
   color: #ffffff !important; /* BRIGHT WHITE FOOTER TEXT */
   font-size: 0.85em; /* SMALLER FOOTER TEXT */
+  padding: 4em 0 !important; /* EXTRA VERTICAL PADDING - adjust as needed */
+  margin-top: 3em !important; /* EXTRA SPACE ABOVE FOOTER */
+}
+
+/* Footer content layout - flexbox horizontal */
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Space nav on left, icons on right */
+  align-items: center;
+  width: 100%;
+  padding: 2em 0; /* Increased from 0.5em */
+}
+
+/* Footer navigation - horizontal list */
+.footer-nav {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.footer-nav a {
+  color: #ff6600 !important;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.footer-nav a:hover {
+  color: #000000 !important;
+  background-color: #ff6600 !important;
+}
+
+/* Footer social icons - right-aligned */
+.footer-social {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.footer-social a {
+  color: #ff6600 !important;
+  font-size: 1.2em;
+  padding: 0.2em;
+}
+
+.footer-social a:hover {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+/* ============================================
+   DOT BORDERS - Center alignment
+   Centers the dotted border lines
+   ============================================ */
+
+.repel-border,
+.footer-border-wrapper,
+.border-wrapper,
+hr {
+  text-align: left !important;
+  margin-left: 0em !important;
+  margin-right: 0em !important;
+  display: block !important;
+  width: 105% !important; /* Full width */
+  max-width: 110% !important; /* Override any theme limits */
+  overflow: visible !important; /* Allow dots to extend */
 }
 
 /* ============================================
@@ -540,7 +433,6 @@ pre, code {
   background-color: #1a1a1a; /* VERY DARK GRAY FOR CODE BACKGROUND */
   border-color: #333; /* DARK BORDER AROUND CODE */
 }
-
 
 /* ============================================
    PROJECT GRID ON HOME PAGE
@@ -584,50 +476,11 @@ pre, code {
   margin-top: 0.5em;
 }
 
-/* RESPONSIVE: STACK ON MOBILE */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr; /* 1 COLUMN ON MOBILE */
-  }
-  
-  .projects-grid img {
-    max-width: 100%; /* FULL WIDTH ON MOBILE */
-  }
-}
-
-
 /* ============================================
-   QUICK REFERENCE FOR COLORS
-   ============================================
-   
-   Black: #000000
-   White: #ffffff
-   Dark Gray: #333333
-   Medium Gray: #666666
-   Light Gray: #999999
-   Neon Orange: #ff6600
-   Bright Red: #ff0000
-   Bright Green: #00ff00
-   Bright Blue: #0099ff
-   Bright Purple: #9933ff
-   Bright Yellow: #ffff00
-   
+   THREE-COLUMN INTRO TEXT
+   Used on about page
    ============================================ */
 
-/* ============================================
-   HOW TO ADJUST THINGS:
-   
-   - Make all text bigger: Change body font-size to 1em or 1.1em
-   - Make all text smaller: Change body font-size to 0.8em or 0.75em
-   - Change link color: Change the #ff6600 values in the hyperlinks section
-   - Adjust table spacing: Change the padding values in table td
-   - Make headings bigger: Increase the font-size in h1, h2, h3, h4
-   
-   ============================================ */
-
-
-
-/* Three-column intro text */
 .intro-columns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 COLUMNS */
@@ -635,14 +488,11 @@ pre, code {
   margin: 2em 0;
 }
 
-@media (max-width: 768px) {
-  .intro-columns {
-    grid-template-columns: 1fr; /* Stack on mobile */
-  }
-}
+/* ============================================
+   TEXT SELECTION COLOR
+   Change the blue highlight color
+   ============================================ */
 
-
-/* Change text selection color (blue highlight) */
 ::selection {
   background-color: #ff6600; /* ORANGE BACKGROUND */
   color: #000000; /* BLACK TEXT */
@@ -652,7 +502,6 @@ pre, code {
   background-color: #ff6600;
   color: #000000;
 }
-
 
 /* ============================================
    INTERACTIVE MOUSE EFFECTS
@@ -679,10 +528,6 @@ pre, code {
   transform: translate(-50%, -50%);
 }
 
-/* Alternative ripple colors - uncomment to use */
-/* .ripple { background: rgba(255, 255, 255, 0.5); } */ /* WHITE RIPPLES */
-/* .ripple { background: rgba(0, 153, 255, 0.6); } */ /* BLUE RIPPLES */
-
 /* SPOTLIGHT EFFECT */
 .spotlight-overlay {
   position: fixed;
@@ -706,12 +551,6 @@ pre, code {
 }
 
 /* CARD GLOW EFFECT FOR PROJECT ITEMS */
-/* .project-item { */
-/*  position: relative;
-  overflow: hidden;
-} 
-*/
-
 .project-item::before {
   content: '';
   position: absolute;
@@ -745,60 +584,7 @@ pre, code {
 .project-item {
   transform-style: preserve-3d;
   transition: transform var(--transition-speed) ease-out;
-}
-
-/* Ensure images don't break during tilt */
-.projects-grid img {
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-/* BOLD TEXT PROXIMITY GLOW */
-strong, b {
-  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-out;
   position: relative;
-  display: inline-block; /* Required for transform to work */
-  transform-origin: center center;
-}
-
-/* Make sure character spans inherit orange by default */
-strong span, b span {
-  color: #ff6600 !important; /* Default ORANGE */
-  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out;
-}
-
-/* Active state - added by JavaScript when mouse is near */
-strong.mouse-near, b.mouse-near {
-  color: #ffffff !important; /* BRIGHT WHITE when mouse is near */
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
-}
-
-/* Make sure character spans inherit the white color and glow from parent */
-strong.mouse-near span, b.mouse-near span {
-  color: #ffffff !important;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
-}
-
-/* Terminal bold text gets special treatment */
-.terminal strong.mouse-near, .terminal b.mouse-near {
-  color: #ffffff !important;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
-}
-
-.terminal strong.mouse-near span, .terminal b.mouse-near span {
-  color: #ffffff !important;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
-}
-
-/* Terminal bold text also needs inline-block for physics */
-.terminal strong, .terminal b {
-  display: inline-block;
-  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-out;
-}
-
-.terminal strong span, .terminal b span {
-  color: #ff6600 !important; /* Default ORANGE for terminal too */
-  transition: color var(--transition-speed) ease-in-out, text-shadow var(--transition-speed) ease-in-out;
 }
 
 /* Ensure images don't break during tilt */
@@ -806,64 +592,6 @@ strong.mouse-near span, b.mouse-near span {
   backface-visibility: hidden;
   transform: translateZ(0);
 }
-
-/* ============================================
-   CONFIGURATION OPTIONS
-   Adjust these values to customize effects
-   ============================================ */
-
-/* GLOBAL TRANSITION SPEED CONTROL */
-/* Change --transition-speed at the top of this file in :root { }
-   This controls ALL effect transitions:
-   - Spotlight fade in/out
-   - Card glow fade in/out
-   - Bold text color change
-   - Bold text magnetic movement
-   - 3D tilt speed
-   
-   Recommended values:
-   - 0.3s = Fast/snappy
-   - 0.5s = Quick but smooth
-   - 1s = Current setting (balanced)
-   - 1.5s = Slow/dramatic
-   - 2s = Very slow/floaty
-*/
-
-/* TRANSITION SPEED CONTROLS */
-/* All effects now use the global --transition-speed variable */
-
-/* RIPPLE CUSTOMIZATION */
-/* Change ripple size: increase the 4 in scale(4) for bigger ripples */
-/* Change ripple speed: increase 0.6s for slower, decrease for faster */
-/* Change ripple color: modify the rgba() color values above */
-
-/* SPOTLIGHT CUSTOMIZATION */
-/* Change spotlight size: modify 1000px in the radial-gradient */
-/* Change darkness: modify 0.7 in rgba(0, 0, 0, 0.7) - higher = darker */
-/* Change fade speed: controlled by --transition-speed */
-
-/* GLOW CUSTOMIZATION */
-/* Change glow size: modify 300px width/height */
-/* Change glow color: modify rgba(255, 102, 0, 0.3) */
-/* Change glow intensity: modify the 0.3 alpha value - higher = brighter */
-/* Change fade speed: controlled by --transition-speed */
-
-/* TILT CUSTOMIZATION */
-/* Change tilt speed: controlled by --transition-speed */
-/* Change tilt amount: see JavaScript section below */
-
-/* BOLD TEXT GLOW CUSTOMIZATION */
-/* Change glow color: modify #ffffff in strong.mouse-near span */
-/* Change glow intensity: modify the rgba values in text-shadow */
-/* Change magnetic range: modify magneticRange in JavaScript (default: 30px) */
-/* Change magnetic strength: modify magneticStrength in JavaScript (default: 1.5) */
-/* Change transition speed: controlled by --transition-speed */
-
-
-/* ============================================
-   CUSTOM CURSOR STYLING
-   Orange vertical bar cursor
-   ============================================ */
 
 /* ============================================
    CUSTOM CURSOR STYLING
@@ -910,7 +638,21 @@ strong.mouse-near span, b.mouse-near span {
   display: block;
 }
 
+.desktop-fullscreen {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the h2 vertically */
+  padding: 0em 0;
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
+  .desktop-fullscreen {
+    min-height: auto;
+    padding: 1em 0;
+  }
+  
   /* Show mobile content, hide desktop content */
   .mobile-only {
     display: block !important;
@@ -1011,6 +753,11 @@ strong.mouse-near span, b.mouse-near span {
     max-width: 100%;
   }
   
+  /* Three-column intro becomes single column */
+  .intro-columns {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+  
   /* Disable mouse effects on mobile */
   .project-item::before {
     display: none; /* No glow effect */
@@ -1038,8 +785,7 @@ strong.mouse-near span, b.mouse-near span {
     transform: none !important;
   }
   
-  /* Footer already has mobile styling at line 434-445 */
-  /* Override to keep footer links horizontal with proper alignment */
+  /* Footer stays horizontal on mobile */
   .footer-content {
     flex-direction: row !important; /* Keep horizontal */
     justify-content: space-between !important; /* Space between nav and icons */
@@ -1060,14 +806,6 @@ strong.mouse-near span, b.mouse-near span {
     padding-right: 0 !important; /* No extra padding */
   }
   
-  /* Center all borders and footer border */
-  .repel-border,
-  .footer-border-wrapper {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  
   /* Add spacing to list items on mobile */
   article ul li,
   article ol li,
@@ -1076,3 +814,48 @@ strong.mouse-near span, b.mouse-near span {
     margin-bottom: 2em; /* Extra space between bullets */
   }
 }
+
+/* ============================================
+   CONFIGURATION OPTIONS & NOTES
+   ============================================ */
+
+/* GLOBAL TRANSITION SPEED CONTROL */
+/* Change --transition-speed at the top in :root { }
+   This controls ALL effect transitions:
+   - Spotlight fade in/out
+   - Card glow fade in/out
+   - Bold text color change
+   - Bold text magnetic movement
+   - Bold text glow effect
+   - 3D tilt speed
+   
+   Recommended values:
+   - 0.5s = Fast/snappy
+   - 1s = Quick but smooth
+   - 1.5s = Slow/dramatic
+   - 2s = Very slow/floaty
+   - 3s = Current setting (very dramatic)
+*/
+
+/* RIPPLE CUSTOMIZATION */
+/* Change ripple size: increase the 4 in scale(4) for bigger ripples */
+/* Change ripple speed: increase 0.6s for slower, decrease for faster */
+/* Change ripple color: modify rgba(255, 102, 0, 0.6) */
+
+/* SPOTLIGHT CUSTOMIZATION */
+/* Change spotlight size: modify 1000px in the radial-gradient */
+/* Change darkness: modify 0.7 in rgba(0, 0, 0, 0.7) - higher = darker */
+
+/* GLOW CUSTOMIZATION */
+/* Change glow size: modify 300px width/height */
+/* Change glow color: modify rgba(255, 102, 0, 0.3) */
+/* Change glow intensity: modify the 0.3 alpha value - higher = brighter */
+
+/* TILT CUSTOMIZATION */
+/* Change tilt amount: modify tiltStrength in JavaScript */
+
+/* BOLD TEXT GLOW CUSTOMIZATION */
+/* Change glow color: modify color values in strong.mouse-near span */
+/* Change glow intensity: modify the rgba values in text-shadow */
+/* Change magnetic range: modify magneticRange in JavaScript (default: 175px) */
+/* Change magnetic strength: modify magneticStrength in JavaScript (default: 0.1) */
