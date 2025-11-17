@@ -6,10 +6,11 @@ draft: false
 
 ![John Syzonenko](/images/about/john-photo.png)
 
-## Hi! I'm John.
+
 
 <div class="desktop-only">
 
+  ## Hi! I'm John.
 
   #
 
@@ -30,22 +31,13 @@ draft: false
 
 <div class="mobile-only">
 
-  #
-
+  ### Hi! I'm John.
   <br>
 
   #### I am a **Creative Technologist** based in NYC, specializing in **interactive** **multimedia** **installations** for **exhibitions** and **experiential** **spaces**. <br>
   <br>
 
   #### I help translate **creative** **concepts** into **working** **systems**, and bridge the gap between the **creative** and the **technical**.
-
-  <br>
-
-  #
-
-  <br>
-
-  **Skills:** Interactive Tech, Motion Graphics, Editing + Animation, Immersive Installations, Playback Systems, Interactive Visuals, Pre-vizualisations, Back-of-House GUIs, Show Control
 </div>
 
 
