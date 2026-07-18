@@ -1,0 +1,32 @@
+{{- /*
+  Lottie animation shortcode for the console theme.
+
+  Usage:
+    {{< lottie src="/gatin.json" >}}
+    {{< lottie src="/gatin.json" mode="scrub" height="360px" >}}
+    {{< lottie src="/gatin.json" mode="play" loop="true" >}}
+
+  Params:
+    src    (required) path to the Lottie .json (place it in /static, reference with a leading /)
+    mode   "play" (default) = play once/loop on scroll into view; "scrub" = scrub with scroll
+    loop   "true"/"false"   (play mode only; default false)
+    height CSS height for the container (default 300px)
+    class  extra CSS classes
+
+  Note: for rendered clips / image2lottie frame sequences, use {{< frameseq >}}
+  instead — the SVG renderer flickers on 400+ image layers.
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- if not $src -}}
+  {{- errorf "shortcode lottie: missing required 'src' param at %s" .Position -}}
+{{- else -}}
+  {{- $mode := .Get "mode" | default "play" -}}
+  {{- $loop := .Get "loop" | default "false" -}}
+  {{- $height := .Get "height" | default "300px" -}}
+  {{- $class := .Get "class" | default "" -}}
+  <div class="lottie-scroll {{ $class }}"
+       style="width:100%;height:{{ $height }};"
+       data-lottie-src="{{ $src | relURL }}"
+       data-lottie-mode="{{ $mode }}"
+       data-lottie-loop="{{ $loop }}"></div>
+{{- end -}}

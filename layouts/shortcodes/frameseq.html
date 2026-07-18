@@ -1,0 +1,44 @@
+{{- /*
+  Canvas frame-sequence scroll scrubber (for rendered clips / image2lottie WebP
+  sequences). Preloads a folder of frames and draws the current one to a
+  <canvas> based on scroll position — sharp, flicker-free, scroll-synced.
+
+  Usage:
+    {{< frameseq dir="/lottie/cat-frames" count="423" >}}
+    {{< frameseq dir="/lottie/cat-frames" count="423" sticky="false" height="480px" >}}
+
+  Params:
+    dir    (required) folder under /static holding the frames (leading /)
+    count  (required) number of frames
+    pad    zero-padding width of the frame index (default 3 -> frame_000)
+    ext    frame file extension (default webp)
+    sticky "true" (default) pins the canvas full-height and scrubs as you scroll
+           past; "false" scrubs inline as the box crosses the viewport
+    track  scroll distance for a full play-through in sticky mode (default 300vh)
+    height canvas height in inline mode (default 70vh)
+    class  extra CSS classes
+*/ -}}
+{{- $dir := .Get "dir" -}}
+{{- $count := .Get "count" -}}
+{{- if or (not $dir) (not $count) -}}
+  {{- errorf "shortcode frameseq: 'dir' and 'count' are required at %s" .Position -}}
+{{- else -}}
+  {{- $pad := .Get "pad" | default "3" -}}
+  {{- $ext := .Get "ext" | default "webp" -}}
+  {{- $sticky := ne (.Get "sticky" | default "true") "false" -}}
+  {{- $track := .Get "track" | default "300vh" -}}
+  {{- $height := .Get "height" | default "70vh" -}}
+  {{- $class := .Get "class" | default "" -}}
+  {{- $attrs := printf `data-frame-dir="%s" data-frame-count="%s" data-frame-pad="%s" data-frame-ext="%s"` ($dir | relURL) $count $pad $ext -}}
+  {{- if $sticky -}}
+    <div class="frame-scrub-track" style="position:relative;height:{{ $track }};">
+      <div class="frame-scrub {{ $class }}" style="position:sticky;top:0;height:100vh;width:100%;" {{ $attrs | safeHTMLAttr }}>
+        <canvas style="display:block;"></canvas>
+      </div>
+    </div>
+  {{- else -}}
+    <div class="frame-scrub {{ $class }}" style="width:100%;height:{{ $height }};" {{ $attrs | safeHTMLAttr }}>
+      <canvas style="display:block;"></canvas>
+    </div>
+  {{- end -}}
+{{- end -}}

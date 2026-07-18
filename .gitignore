@@ -1,0 +1,8 @@
+# Local reference clones (Hinode, mod-lottie, template) + working assets — not part of the site
+dev/
+
+# macOS cruft
+.DS_Store
+
+# Hugo build lock
+.hugo_build.lock

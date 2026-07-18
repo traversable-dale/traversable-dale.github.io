@@ -21,3 +21,14 @@
     </div>
   </div>
 </footer>
+
+{{- /* Load the Lottie player only on pages that use the {{< lottie >}} shortcode */ -}}
+{{- if .HasShortcode "lottie" }}
+  <script src="{{ "js/lottie_light.min.js" | relURL }}"></script>
+  <script src="{{ "js/lottie-scroll.js" | relURL }}"></script>
+{{- end }}
+
+{{- /* Load the canvas frame-scrubber only on pages that use {{< frameseq >}} */ -}}
+{{- if .HasShortcode "frameseq" }}
+  <script src="{{ "js/frame-scrub.js" | relURL }}"></script>
+{{- end }}
