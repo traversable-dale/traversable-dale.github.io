@@ -1,10 +1,17 @@
-# Scroll Animations Setup for Hugo Site
+---
+title: "Scroll Animations Setup"
+date: 2026-07-18
+draft: false
+summary: "Setup for the lottie and frameseq shortcodes"
+resource_group: "hugo"
+tags: ["hugo", "shortcodes", "lottie", "frame-sequence", "canvas", "scroll", "animation", "performance"]
+---
 
 How to add **scroll-triggered animations** to the site — both vector Lottie
 animations and canvas frame-sequence scrubbers (the pin-and-scroll "shiny cat"
 effect). Built directly on the `hugo-theme-console` theme, no Hinode needed.
 
-## 📁 Files Included
+## Files Included
 
 1. **`layouts/shortcodes/lottie.html`** — `{{</* lottie */>}}` shortcode (vector animations)
 2. **`layouts/shortcodes/frameseq.html`** — `{{</* frameseq */>}}` shortcode (frame sequences / rendered clips)
@@ -13,7 +20,7 @@ effect). Built directly on the `hugo-theme-console` theme, no Hinode needed.
 5. **`static/js/frame-scrub.js`** — canvas frame-sequence scrubber
 6. **`layouts/partials/footer.html`** — lazy-loads the scripts per page
 
-## 🧠 First: pick the right tool
+## First: pick the right tool
 
 There are two very different kinds of "Lottie," and using the wrong one is what
 causes flickering/garbled playback.
@@ -23,12 +30,12 @@ causes flickering/garbled playback.
 | **Vector** (shapes exported from After Effects via Bodymovin) | `{{</* lottie */>}}` | Small, crisp, scales infinitely |
 | **A rendered clip** (3D render, video, `image2lottie` export) | `{{</* frameseq */>}}` | It's really a frame sequence — canvas draws each frame with zero flicker |
 
-> ⚠️ **The image2lottie trap:** its **"Lottie JSON"** export is *not* a vector
+> **The image2lottie trap:** its **"Lottie JSON"** export is *not* a vector
 > animation — it's 400+ full-frame images stacked as layers (a flipbook). The
 > Lottie SVG renderer flickers badly on it. **Do not use the JSON.** Export the
 > **WebP Sequence** ("high quality frames") instead and feed it to `frameseq`.
 
-## 🚀 Vector Lottie — `{{</* lottie */>}}`
+## Vector Lottie — `{{</* lottie */>}}`
 
 ### Step 1: Export from After Effects
 Use the **Bodymovin** plugin (or LottieFiles) to export a `.json`. Keep it to
@@ -51,7 +58,7 @@ static/
 **Params:** `src` (required), `mode` (`play` | `scrub`), `loop` (`true`/`false`),
 `height`, `class`.
 
-## 🐱 Frame sequence — `{{</* frameseq */>}}` (the pin-and-scroll effect)
+## Frame sequence — `{{</* frameseq */>}}` (the pin-and-scroll effect)
 
 ### Step 1: Get the frames
 Export a **WebP Sequence** from image2lottie (or any numbered image sequence),
@@ -122,7 +129,7 @@ done
 Then pass it as `dir-small`. The resolution is chosen once on load (never
 swapped mid-session, which would re-download every frame).
 
-## 🧪 Testing
+## Testing
 
 1. Run `hugo serve -D` (the `-D` shows draft pages)
 2. Open the lab page, e.g. `http://localhost:1313/lab/scroll-scrub/`
@@ -131,13 +138,13 @@ swapped mid-session, which would re-download every frame).
 The scripts only load on pages that actually use a shortcode (guarded by
 `.HasShortcode` in `footer.html`), so other pages stay lightweight.
 
-## ⚙️ Tuning the scrub feel
+## Tuning the scrub feel
 
 - **Scrub speed** → change `track` (e.g. `track="500vh"` = slower, more frames per scroll).
 - **Frame quality** → re-export a higher-quality WebP Sequence and replace the folder; no code change.
 - **Size** → each frame ≈ a few KB; ~400 frames ≈ 3 MB total. Keep clips short.
 
-## 📱 Mobile notes
+## Mobile notes
 
 - **Always pass `dir-small`.** A 640px set is ~¼ the pixels to decode per draw
   and roughly half the bytes — this is the single biggest smoothness win.
@@ -149,7 +156,7 @@ The scripts only load on pages that actually use a shortcode (guarded by
 - ~400 frames ≈ 3 MB full-res / ~1.7 MB at 640px. Fine on Wi-Fi, heavier on
   cellular — keep clips short and frame counts modest.
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Flickering / garbled frames
 You're feeding an `image2lottie` **JSON flipbook** to the Lottie SVG player.
@@ -168,10 +175,9 @@ Check the page isn't `draft: true` — the GitHub Actions build runs `hugo --min
 - Verify `frame-scrub.js` / `lottie-scroll.js` is present in the page (it's only
   injected when the matching shortcode is used).
 
-## 🔧 Hugo Theme Compatibility
+## Hugo Theme Compatibility
 
 Built for the `hugo-theme-console` theme. The scripts are injected via the
 overridable `layouts/partials/footer.html`. If you change themes, make sure the
 footer (or an equivalent end-of-`<body>` hook) still renders.
 
-Enjoy the scroll! 🐱✨

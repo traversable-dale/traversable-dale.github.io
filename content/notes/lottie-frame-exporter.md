@@ -1,4 +1,11 @@
-# NOTE 071826 — Lottie, Frame Sequences, and a TouchDesigner Exporter
+---
+title: "Lottie, Frame Sequences, and a TouchDesigner Exporter"
+date: 2026-07-18
+draft: false
+summary: "Evaluating Lottie as an export format for TouchDesigner output"
+resource_group: "research"
+tags: ["lottie", "frame-sequence", "touchdesigner", "webp", "animation", "research", "performance"]
+---
 
 **Date:** 2026-07-18
 **Context:** Investigating how to export scroll-animation assets from TouchDesigner
@@ -130,9 +137,9 @@ most valuable thing it can do beyond automating file shuffling.
 
 ## 6. Findings from the actual TD export
 
-Source: `dev/lottie/export_moviefile_out.txt` (network export of
-`/project1/moviefile_out`), pointing at
-`TD-MISC/3D_Lottie_test/exports/img/Test-1/`.
+Source: a network export of the project's `moviefile_out` node, writing a PNG
+image sequence to a local scratch folder outside the site repo. Paths below are
+referred to as `<export-dir>`; substitute your own.
 
 ### Capture is native — no scripting required
 
@@ -187,7 +194,7 @@ Same 423 frames, same 1280×720, both on disk as of 2026-07-18:
 
 | Location | Format | Size |
 |---|---|---|
-| `TD-MISC/3D_Lottie_test/exports/img/Test-1/` | PNG | **288 MB** |
+| `<export-dir>/` (raw TD output) | PNG | **288 MB** |
 | `static/lottie/cat-frames/` | WebP | **2.9 MB** |
 
 ~99% reduction, ~6.6 KB/frame, visually equivalent. The conversion step is not a
@@ -196,8 +203,8 @@ shippable at all.** 288 MB of PNG is not a website.
 
 ### What this reveals about the current pipeline
 
-Frame counts and dimensions match exactly, and `dev/lottie/image2lottie-animation.json`
-is present — so the path that produced the cat frames was:
+Frame counts and dimensions match exactly, and an `image2lottie` animation JSON
+is present in the scratch folder — so the path that produced the cat frames was:
 
 ```
 TD → 423 PNG → image2lottie → WebP sequence → Hugo
@@ -230,28 +237,29 @@ Two output modes behind one capture front-end:
 
 Same status parameters and capture wiring for both.
 
-### TD patterns to reuse (from project-goose-interactive)
+### TouchDesigner patterns to reuse
 
-Verified working references in that repo:
+Four patterns from prior recorder work carry over directly:
 
-- **`src/record/recording_ext.py`** — idempotent `SetupParameters()` guarded on
-  `customPages`; `OpenFile` / `CloseFile` / `Pause` / `Resume` lifecycle;
-  `_AttachIfActive()` for late-join after `reinitextensions`; fire-and-forget
-  `subprocess.Popen` post-processing (`_KickOffParquetConversion`) — the direct
-  model for kicking off WebP conversion without blocking the cook.
-- **`src/video/video_writer.py`** — drives a Movie File Out TOP: pushes resolved
-  paths onto `movie_out.par.file`, toggles `.par.record` / `.par.pause`, reads an
-  **Info CHOP** (`movie_info`) for `total_frames_written`. Its module docstring
-  documents the required network setup — follow that format.
-- **`src/config/exec/parexec_config.py`** — Parameter Execute: `onPulse` forwards
-  to `OnPulse(par)` for Record/Play/Convert pulses; `onValueChange` for
-  re-reading movie info when file selection changes.
-- **`src/config/exec/chopexec_reset.py`** — CHOP Execute `onOffToOn` firing
-  conversion off `total_frames_written` or a timer's `done` channel. Note its
-  `run('…', fromOP=me, delayFrames=1)` idiom — **required here**, since a
-  recording cannot be stopped from inside its own cook.
+- **Recorder extension** — an idempotent `SetupParameters()` guarded on
+  `customPages` so re-initialization is safe; an explicit `OpenFile` /
+  `CloseFile` / `Pause` / `Resume` lifecycle; a re-attach step so the extension
+  survives `reinitextensions` mid-session; and fire-and-forget
+  `subprocess.Popen` post-processing. That last one is the direct model for
+  kicking off WebP conversion without blocking the cook.
+- **Movie File Out driver** — push resolved paths onto `movie_out.par.file`,
+  toggle `.par.record` / `.par.pause`, and read an **Info CHOP** for
+  `total_frames_written`. Document the required network setup in the module
+  docstring; the wiring is not discoverable from the code alone.
+- **Parameter Execute DAT** — `onPulse` forwards to a single `OnPulse(par)`
+  dispatch for Record/Play/Convert pulses; `onValueChange` re-reads movie info
+  when the file selection changes.
+- **CHOP Execute DAT** — `onOffToOn` fires conversion off `total_frames_written`
+  or a timer's `done` channel. Use the `run('…', fromOP=me, delayFrames=1)`
+  idiom — **required here**, since a recording cannot be stopped from inside its
+  own cook.
 - Read-only status params via `par.readOnly = True`, fed by an Info CHOP on the
-  source movie (same as `movie_info`).
+  source movie.
 
 ### Build order
 

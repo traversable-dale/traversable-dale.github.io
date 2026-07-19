@@ -1,10 +1,11 @@
 ---
-title: "Setup Guide"
+title: "Hugo and GitHub Pages: Complete Setup"
 date: 2025-10-31
 draft: false
+summary: "Site setup from Hugo install through automated deployment"
+resource_group: "hugo"
+tags: ["hugo", "github-pages", "deployment", "git", "static-site", "theming"]
 ---
-
-# Hugo + GitHub Pages Complete Setup Guide
 
 **How this website was built - A complete guide for building your own portfolio site for free**
 
@@ -576,14 +577,14 @@ gh auth login
 **Common causes and solutions:**
 
 1. **Images in wrong folder**
-   - ❌ `content/images/photo.jpg`
-   - ✅ `static/images/photo.jpg`
+   - Incorrect: `content/images/photo.jpg`
+   - Correct: `static/images/photo.jpg`
    - Hugo only serves files from `static/` folder
 
 2. **Wrong path in markdown**
-   - ❌ `![Image](images/photo.jpg)` - missing leading slash
-   - ❌ `![Image](static/images/photo.jpg)` - don't include "static"
-   - ✅ `![Image](/images/photo.jpg)` - starts with /
+   - Incorrect: `![Image](images/photo.jpg)` — missing leading slash
+   - Incorrect: `![Image](static/images/photo.jpg)` — do not include "static"
+   - Correct: `![Image](/images/photo.jpg)` — starts with `/`
 
 3. **Images not committed to Git**
    ```bash
@@ -766,15 +767,15 @@ git submodule update --init --recursive  # Load submodules
 ### GitHub Pages Limitations
 
 **Free tier:**
-- ✅ Public repos get free Pages
-- ❌ Private repos don't (unless GitHub Pro)
-- ✅ Custom domains supported
-- ✅ HTTPS automatically provided
-- ❌ No server-side processing (static only)
-- ✅ Unlimited bandwidth
+- Yes — public repos get free Pages
+- No — private repos require GitHub Pro
+- Yes — custom domains supported
+- Yes — HTTPS provided automatically
+- No — no server-side processing (static only)
+- Yes — unlimited bandwidth
 
 **Pro tier ($4/month):**
-- ✅ Private repo with Pages
+- Yes — private repo with Pages
 - Website is still publicly accessible
 - Only source code is hidden
 

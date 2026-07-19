@@ -1,8 +1,15 @@
 # Local reference clones (Hinode, mod-lottie, template) + working assets — not part of the site
 dev/
 
+# Private working notes and reference material — never published, never pushed
+ref/
+
 # macOS cruft
 .DS_Store
 
 # Hugo build lock
 .hugo_build.lock
+
+# Hugo build output — CI rebuilds this from source on every push,
+# so the committed copy was never what got served. Never edit it by hand.
+public/

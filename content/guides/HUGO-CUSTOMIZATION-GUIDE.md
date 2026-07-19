@@ -1,4 +1,11 @@
-# Website Customization Guide
+---
+title: "Site Customization Reference"
+date: 2026-07-18
+draft: false
+summary: "Where the site styles are defined and how to change them"
+resource_group: "hugo"
+tags: ["hugo", "css", "theming", "typography", "layout", "mouse-effects"]
+---
 
 A quick reference for customizing your Hugo portfolio site with interactive mouse effects.
 

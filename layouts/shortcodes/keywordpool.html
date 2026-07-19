@@ -1,0 +1,20 @@
+{{- /*
+  keywordpool — a clickable pool of every keyword used across the resource
+  pages, with the full resource list below it, filtered on selection.
+
+  Usage:  {{< keywordpool >}}
+          {{< keywordpool collapsed="true" >}}
+
+  Params:
+    collapsed  — start behind a toggle button (default false here; the
+                 /resources/ embed passes true).
+
+  On this page nothing is listed until a term is selected, which is what makes
+  it read as an index rather than a duplicate of /resources/.
+
+  Requires: static/js/keyword-pool.js (lazy-loaded from layouts/partials/footer.html)
+*/ -}}
+
+{{- $collapsed := eq (.Get "collapsed" | default "false") "true" -}}
+{{ partial "keyword-pool.html" (dict "collapsed" $collapsed "unfiltered" "none") }}
+{{ partial "resource-groups.html" .Page }}

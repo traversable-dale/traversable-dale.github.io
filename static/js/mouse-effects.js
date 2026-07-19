@@ -210,8 +210,11 @@ function initTilt() {
 // BOLD TEXT MAGNETIC GRAVITY EFFECT
 // Each character is individually pulled toward mouse like magnets
 // ============================================
-function initBoldTextGlow() {
-  const boldElements = document.querySelectorAll('strong, b');
+// Accepts a selector so other components (e.g. the /lab/keywords/ pool) can
+// reuse the exact same physics instead of reimplementing it.
+function initBoldTextGlow(selector = 'strong, b') {
+  const boldElements = document.querySelectorAll(selector);
+  if (!boldElements.length) return;
   const magneticRange = 175; // ADJUST THIS - max distance for magnetic effect (pixels)
   const magneticStrength = 0.2; // ADJUST THIS - how strong the pull is (0.1 = subtle, 0.5 = strong)
   
@@ -246,8 +249,10 @@ function initBoldTextGlow() {
     bold.classList.add('magnetized');
   });
   
-  // Get all character spans
-  const characterSpans = document.querySelectorAll('strong span, b span');
+  // Get all character spans (derived from the selector this call was given)
+  const characterSpans = document.querySelectorAll(
+    selector.split(',').map(s => `${s.trim()} span`).join(', ')
+  );
   
   // Track which elements currently have glow
   const glowingElements = new Set();

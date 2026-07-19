@@ -1,0 +1,3034 @@
+{
+  "project---xrpl-apex-2025": {
+    "slug": "project---xrpl-apex-2025",
+    "url": "https://www.johnsyzonenko.com/project---xrpl-apex-2025",
+    "meta_title": "Project - XRPL APEX 2025",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nXRP Ledger Apex 2025\n\nRole: Creative Technologist\n\nClient: Invisible North\n\nAssociated:Studio Dave Tennent\n\n\u200dTeam: Dave Tennent, Trevor Grove\n\nLocation: Raffles Convention Center, Singapore\n\n\u200dDate: June 2025\n\nProject Description\n\n\"Hosted by Ripple, Apex 2025 is the official global community summit that unites developers, innovators, businesses, and investors for an exciting three-day celebration of blockchain technology and the incredible world of the XRP Ledger.\" - XRP Ledger Apex Website\n\nWorking alongside Dave Tennent and Trevor Grove, we created a multi-kiosk touchscreen experience for the XRP Ledger Apex conference in Singapore.\n\nWe translated Invisible North\u2019s creative brief into a responsive system that invited users to explore a curated set of topics, express preferences, and receive a personalized persona.\n\nThe experience concluded with on-site pin that guests could wear with pride. We also facilitated a follow-up email featuring tailored content based on their preferences.\n\nBuilt using TouchDesigner and deployed with real-time interactivity, the system blended playfulness with data collection to drive deeper audience engagement.\n\nSpecial thanks to Dave and Sanaz, the entire CT team in Singapore, and Trevor Grove and the Invisible North team for all of the production work behind the scenes!\u200d\n\nTouchdesigner\n\ntouchscreen\n\nkiosk\n\nInteractive\n\nProject Highlights\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Invisible North",
+        "url": "https://studiodave.io/?fbclid=PAZXh0bgNhZW0CMTEAAab2G4R1rP99TqxkW0G8T1Wo41vljCtK3Vi49NRfup-g1nAw0hrsy0hirD4_aem_k_uIVdlifhBIDtdisNxBpg"
+      },
+      {
+        "text": "tudio Dave Tennent",
+        "url": "https://studiodave.io/?fbclid=PAZXh0bgNhZW0CMTEAAab2G4R1rP99TqxkW0G8T1Wo41vljCtK3Vi49NRfup-g1nAw0hrsy0hirD4_aem_k_uIVdlifhBIDtdisNxBpg"
+      },
+      {
+        "text": "\u200d",
+        "url": "https://www.vacationland.club/cam-vokey-resume"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "touchscreen",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "kiosk",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Interactive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6896530705a08de320aa17e1_XRPL-Learning-Exp-COMP-2-lowbr-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6896530705a08de320aa17e1_XRPL-Learning-Exp-COMP-2-lowbr-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---camata": {
+    "slug": "project---camata",
+    "url": "https://www.johnsyzonenko.com/project---camata",
+    "meta_title": "Project - Elementa",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nCamata\n\nRole: Creative Technologist\n\nClient:Pierre Huyghe Studio\n\nAssociated:Pixels Pixels, Cadmos\n\n\u200dTeam: Anne-So Tisseyre, Valentin Giillet, Pablo Verdugo, Pedro Roca, Paola Ravagni, and Pamela Valenzuela\n\nLocation: Marian Goodman Gallery NYC, Global\n\n\u200dDate: 2023 - 2025\n\nProject Description\n\nCamata is \"a self-directed film operated by a learning machine, a manifestation of an inhuman entity enacted upon by a set of robotic operators, performing a final rite of passage on a human skeleton found unburied in the Atacama Desert.\" - Marian Goodman Gallery\n\n\"Camata\u2019s live footage is the result of autonomous cameras decisions and is edited in real time. Sensors in the exhibition space capture a live human presence, disrupting its linearity.\" - MGG\n\nMy role in this project was to develop the back-end system responsible for real-time editing. I also worked on custom programming for on-site sensors that respond to human presence, enabling interaction between audience and system.\n\nSpecial thanks to the PH Studio team for the camaraderie and guidance, Cadmos for the AV installation, Ivaylo Getov for support, and Tommy Martinez for connecting me to this project!\u200d\n\nTouchdesigner\n\nir sensors\n\nReal-time\n\nINTERACTIVE\n\nProject Highlights\n\nPhotograph: Marian Goodman Gallery / NY Times (2025)\n\nPhotograph: Installation of Camata (2024) at the Punta della Dogana in Venice (Ivar Hagendoorn)\n\nCeiling mounted sensor housed within golden sphere\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Pierre Huyghe Studio",
+        "url": "https://studiodave.io/?fbclid=PAZXh0bgNhZW0CMTEAAab2G4R1rP99TqxkW0G8T1Wo41vljCtK3Vi49NRfup-g1nAw0hrsy0hirD4_aem_k_uIVdlifhBIDtdisNxBpg"
+      },
+      {
+        "text": "\u200d",
+        "url": "https://www.vacationland.club/cam-vokey-resume"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "ir sensors",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Real-time",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INTERACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---goethe-institut": {
+    "slug": "project---goethe-institut",
+    "url": "https://www.johnsyzonenko.com/project---goethe-institut",
+    "meta_title": "Project - Goethe Institut",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nCRYPTO SIRENAS\n\nProjection Installation for The Goethe-Institut NY\n\nUnion Square, NYC\n\nFebruary, 2025\n\nProject Description\n\n'The Goethe-Institut New York is pleased to present the first New York institutional exhibition featuring a temporary collective with Berlin-based artists Anna Ehrenstein and Sunny Pfalzer, and San Salvador-based artists Lucy Tomasino and Alexa Evangelista, in collaboration with Web-3 researcher, Josh Davila.'\n\nIn December 2024, I began working with curator Zach Feldman to design a projector configuration for a retractable curved projection screen. Using floorplans of the space, and screen design from architect Chloe Munkenbeck, I designed a configuration that favored brightness, pixel density, and cost.\n\nIn February 2025, I led a team to install four ceiling-mounted projectors, and completed the projection mapping onto the 8.5m curved projection surface.\n\nIn addition to this, I programmed a custom back-of-house GUI in TouchDesigner to control content playback and system events. The content is being fed through MadMapper via NDI, and split to each projector with SDI-HDMI micro convertors.\n\nThank you to Zach Feldman for curating and producing the show, as well as Seth Scoville + Charlie Gangemi for projector installation assistance. Special thanks to Max Levin for connecting the dots, and Cam Vokey for pre-production support.\n\nTouchdesigner\n\nMadMapper\n\nVectorworks\n\nImmersive Designer Pro\n\nProjection Mapping\n\nTechnical Direction\n\nImmersive\n\nInstallation\n\nProject Highlights\n\nBack-of-house GUI for playback control - made in TouchDesigner\n\nProjection designs made with Vectorworks + Immersive Designer Pro\n\nProjection mapping timelapse\n\nFinal installation\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "The Goethe-Institut New York",
+        "url": "https://www.goethe.de/ins/us/en/sta/ney/ver.cfm?event_id=26362812"
+      },
+      {
+        "text": "Zach Feldman",
+        "url": "https://www.zach-feldman.com/about/bio.html"
+      },
+      {
+        "text": "Chloe Munkenbeck",
+        "url": "https://chloemunkenbeck.cargo.site/"
+      },
+      {
+        "text": "Seth Scoville",
+        "url": "https://www.johnsyzonenko.com/#https://www.instagram.com/aquaengineer.media/"
+      },
+      {
+        "text": "Charlie Gangemi",
+        "url": "https://www.instagram.com/zavoli.headless/?__d=1%3Futm_source%3Dig_embed"
+      },
+      {
+        "text": "Max Levin",
+        "url": "https://maxlevin.me/"
+      },
+      {
+        "text": "Cam Vokey",
+        "url": "https://vacationland.club/cam-vokey"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "MadMapper",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Vectorworks",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive Designer Pro",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Projection Mapping",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Technical Direction",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Installation",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67b7bcb4a018a8c538673579_GOETHE-FINAL-wide-pan_1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67b7bcb4a018a8c538673579_GOETHE-FINAL-wide-pan_1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67b76e1535a42be5eabf8f02_GOETHE-mapping-TL-loop-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67b76e1535a42be5eabf8f02_GOETHE-mapping-TL-loop-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67b7bc88acc8631e3bb34bca_GOETHE-FINAL-wide-static_1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67b7bc88acc8631e3bb34bca_GOETHE-FINAL-wide-static_1-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---kodansha-house": {
+    "slug": "project---kodansha-house",
+    "url": "https://www.johnsyzonenko.com/project---kodansha-house",
+    "meta_title": "Project - Kodansha House",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nKodansha House\n\nRole: Creative Technologist\n\nClient:Studio Dave Tennent\n\nAssociated:Ghost Corporeal, Livesight, Hornet\n\n\u200dTeam: Dave Tennent, Cam Vokey, Ashur Rayis\n\nLocation:45 Grand Street, SoHo, NYC\n\nDate: October 2024\n\nProject Description\n\nThis project was an immersive pop-up located on Grand Street in SoHo, inspired by manga-media cult classics Akira + Attack on Titan.\n\nOur team was asked to create 2 timeline-based video booths replicating moments from the Kodansha-produced anime classics.\n\n\u200d\n\nI was responsible for replicating the compositions for both booths in TouchDesigner, as well as creating 2 functional GUIs for back-of-house monitoring and control. In addition to this, I was involved in the interactive development, installation, and monitoring of this project.\n\nSpecial thanks to Susan Linns, Jeff Nash, Cam Vokey, Ashur Rayis, Dave Tennent, and many more who made this project happen!\u200d\n\nTouchdesigner\n\nNODE RED\n\nFFMPEG\n\nNDI\n\nBRAINBOX\n\nImmersive\n\nINTERACTIVE\n\nINSTALLATION\n\nProject Highlights\n\n\"Akira Slide\" capture countdown - real-time NDI overlay\n\nEmbedded NDI camera for \"Akira Slide\" closeup\n\n\"Akira Slide\" Getaway sequence\n\n\"Akira Slide\" center, left, right, and floor projection mapping + control\n\n\"Titan's Fury\" confidence monitor + NDI PTZ camera\n\n\"Titan's Fury\" center projection mapping + control\n\nBack-of-house GUI monitor + control surface for both installations\n\n\"Titan's Fury\"\n\nDeliverable\n\n\"Akira Slide\" Deliverable\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Studio Dave Tennent",
+        "url": "https://studiodave.io/?fbclid=PAZXh0bgNhZW0CMTEAAab2G4R1rP99TqxkW0G8T1Wo41vljCtK3Vi49NRfup-g1nAw0hrsy0hirD4_aem_k_uIVdlifhBIDtdisNxBpg"
+      },
+      {
+        "text": "Susan Linns",
+        "url": "https://www.susanlinssdesign.com/"
+      },
+      {
+        "text": "Jeff Nash",
+        "url": "https://www.jeffnashnyc.com/"
+      },
+      {
+        "text": "Cam Vokey,",
+        "url": "https://www.vacationland.club/cam-vokey-resume"
+      },
+      {
+        "text": "Dave Tennent",
+        "url": "https://studiodave.io/"
+      },
+      {
+        "text": "\u200d",
+        "url": "https://www.vacationland.club/cam-vokey-resume"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "NODE\u00a0RED",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "FFMPEG",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "NDI",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "BRAINBOX",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INTERACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATION",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6777357882ef5fb863e50bae_e691ab38-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6777357882ef5fb863e50bae_e691ab38-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67773581920e7eb04065887b_863f29dc-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67773581920e7eb04065887b_863f29dc-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---fantastic-flora": {
+    "slug": "project---fantastic-flora",
+    "url": "https://www.johnsyzonenko.com/project---fantastic-flora",
+    "meta_title": "Project - Fantastic Flora",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nFantastic Flora\n\nRole: Creative Technologist\n\nClient:Shaker Mountain, Lowres\n\n\u200dTeam: Shreya Patel, Design + Fabrication\n\nLocation:Lebanon Springs, NY\n\nDate: September 2024\n\nProject Description\n\nThis project was an immersive installation made for the very last edition of Shaker Mountain- a 'smart house and techno in a family-and-friends setting on 250 acres of tree-topped mountain land' [Resident Advisor]\n\nI was involved in technical direction, integration, and installation of this project, working directly with designer + lead fabricator Shreya Patel.\n\nThis project began with a question \"what would you want to see at a music festival?\" Shreya imagined something that people could sit underneath and enjoy a moment of peace within a hectic festival atmosphere.\n\nWe began thinking of a large suspended flower, similar to a conch shell, where holding your ear up to it would allow you to hear the ocean- instead you would hear the calls and chirps of tropical birds from a rainforest far away.\n\nSpecial thanks to Andrew Giugno / Lowres, and Nikki Cohen for throwing such a legendary party in the woods!\n\n\u200d\n\nLIGHTING\n\nAUDIO\n\nWLED\n\nArduino\n\nImmersive\n\nINSTALLATION\n\nProject Highlights\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Shaker Mountain",
+        "url": "https://ra.co/promoters/80563"
+      },
+      {
+        "text": "Shreya Patel.",
+        "url": "https://www.behance.net/shreyapatel119"
+      },
+      {
+        "text": "Andrew Giugno",
+        "url": "https://www.linkedin.com/in/andrewgiugno"
+      },
+      {
+        "text": "Lowres",
+        "url": "https://lowres.co/"
+      },
+      {
+        "text": "Nikki Cohen",
+        "url": "https://www.nikki-cohen.com/about"
+      },
+      {
+        "text": "\u200d",
+        "url": "https://www.nikki-cohen.com/about"
+      },
+      {
+        "text": "LIGHTING",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "AUDIO",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "WLED",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Arduino",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATION",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677814436d7d6f5a6faad8a3_FANTASTIC-FLORA-select-3-couple-day-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677814436d7d6f5a6faad8a3_FANTASTIC-FLORA-select-3-couple-day-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6778139623363b57438b23ab_FANTASTIC-FLORA-select-1-couple-night-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6778139623363b57438b23ab_FANTASTIC-FLORA-select-1-couple-night-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67781dc752b0e0c1898cb72d_FANTASTIC-FLORA-select-2-touch-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67781dc752b0e0c1898cb72d_FANTASTIC-FLORA-select-2-touch-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6778148e2fee2790e5d7fe95_FANTASTIC-FLORA-select-4-IG-day-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6778148e2fee2790e5d7fe95_FANTASTIC-FLORA-select-4-IG-day-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---elementa": {
+    "slug": "project---elementa",
+    "url": "https://www.johnsyzonenko.com/project---elementa",
+    "meta_title": "Project - Elementa",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nElementa\n\n@ The Gallery\n\nRole: TouchDesigner\n\nClient:Moustrappe Media\n\nAssociated:Studio Dave Tennent\n\n\u200dTeam: Dave Tennent, Luke Hildreth\n\nLocation: Downtown LA\n\n\u200dDate: Summer 2024\n\nProject Description\n\n\"The Gallery, Downtown\u2019s immersive new fine-dining spot, takes you on a visual and culinary journey through the elements.\" - TimeOut\n\nOur team was asked to create a TouchDesigner system for an immersive dining experience. Using TouchDesigner and real-time hand and object tracking, we developed multiple interactive states for the various elements of the show.\n\nDriven by the incredible creative and technical team at Mousetrappe Media, all of the creative direction and content was provided- we just had to make it work!\n\nUsing Dave's YOLO tracking module in TouchDesigner, Luke and I developed the interactive GLSL visuals for Aether, Air, Earth, Water, and Fire. Since our whole team was working remotely, we built each module in a way that could be easily integrated into the overall show control system.\n\nSpecial thanks to the Mousetrappe team on the ground in LA who made this project happen! (Photograph: Michael Juliano for Time Out)\u200d\n\nTouchdesigner\n\nRemote\n\nImmersive\n\nINTERACTIVE\n\nProject Highlights\n\nPhotograph: Wally Skalij / Los Angeles Times\n\nPhotograph: Stage and Cinema\n\nThe \"Earth\" table interaction - Photograph: Stage and Cinema\n\nPhotograph: Stage and Cinema\n\nThe \"Air\" table interaction - Photograph: Michael Juliano for Time Out\n\nThe \"Fire\" table interaction - Photograph: Michael Juliano for Time Out\n\nThe \u201cAether\u201d dessert - Photograph: Eater / The Gallery\n\nThe \u201cAether\u201d table interaction - Photograph: LA Times\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Moustrappe Media",
+        "url": "https://studiodave.io/?fbclid=PAZXh0bgNhZW0CMTEAAab2G4R1rP99TqxkW0G8T1Wo41vljCtK3Vi49NRfup-g1nAw0hrsy0hirD4_aem_k_uIVdlifhBIDtdisNxBpg"
+      },
+      {
+        "text": "\u200d",
+        "url": "https://www.vacationland.club/cam-vokey-resume"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Remote",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INTERACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---blue-paradox": {
+    "slug": "project---blue-paradox",
+    "url": "https://www.johnsyzonenko.com/project---blue-paradox",
+    "meta_title": "Project - Blue Paradox",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nThe Blue Paradox\n\nRole: Creative Technologist\u200d\u200d\n\n\u200dTeam: Sean Leo, Cam Vokey, Dave Tennent, Trevor Grove\n\nLocation:Museum of Science and Industry, Chicago\n\n\u200dDate: March-July 2023, Ongoing\n\nProject Description\n\nThe Blue Paradox is an immersive exhibition at the Griffin Museum of Science and Industry in Chicago, IL.\n\nMuch of what\u2019s publicly available can be found on the museum\u2019s page, which provides a window into the experience.\n\nThe exhibition was a major collaborative effort involving designers, programmers, and production crews, and it remains one of the most memorable installations I\u2019ve had the chance to work on. It was a massive team effort, and one I\u2019m proud to have been a part of.\n\nPhotos were taken on-site by Ben Bauer on his nice camera, or myself with my fuzzy camera.\n\nTouchDesigner\n\nAfter Effects\n\nArduino\n\nPython\n\nImmersive\n\nInteractive\n\nEducational\n\nSCreenConnect\n\nGitHUB\n\nProject Highlights\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Griffin Museum of Science and Industry",
+        "url": "https://www.msichicago.org/explore/whats-here/exhibits/blue-paradox/"
+      },
+      {
+        "text": "museum\u2019s page",
+        "url": "https://www.msichicago.org/explore/whats-here/exhibits/blue-paradox"
+      },
+      {
+        "text": "TouchDesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Arduino",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Python",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Interactive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Educational",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "SCreenConnect",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "GitHUB",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---miro": {
+    "slug": "project---miro",
+    "url": "https://www.johnsyzonenko.com/project---miro",
+    "meta_title": "Project - Miro Canvas 24",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nMiro Canvas '24\n\nRole: Creative Technologist\n\nClient:Livesight\n\n\u200dTeam: Cam Vokey, Creative Technologist\n\nLocation:SPYSCAPE, NYC\n\nDate: October 2024\n\nProject Description\n\nFor this project, I worked with Cam Vokey to setup and monitor the product demo room for Miro's annual Canvas conference.\n\nThe demo room contained a custom wraparound desk which housed ten Mac Minis locked in kiosk mode. The staff wanted guests to be able to use the kiosks, log into their accounts, and access their Miro boards without accessing the desktop.\n\nIn addition to the kiosks, there were four in-house projectors mounted in the space. We used MadMappper to blend and color correct, and used QLab to drive playback.\n\n\u200d\n\nI was involved with installation, troubleshooting, and on-site production.\n\nSpecial thanks to Ben Baur and Livesight!\n\nMad mapper\n\nqlab\n\nProjection mapping\n\nImmersive\n\nINTERACTIVE\n\nINSTALLATION\n\nProject Highlights\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Cam Vokey",
+        "url": "https://www.vacationland.club/cam-vokey-resume"
+      },
+      {
+        "text": "Ben Baur",
+        "url": "https://benbauerproductions.com/"
+      },
+      {
+        "text": "Livesight",
+        "url": "https://www.livesight.nyc/"
+      },
+      {
+        "text": "Mad mapper",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "qlab",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Projection mapping",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INTERACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATION",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677708aa390c1849e7da97c2_MIRO-SIZZLE-V3_30mb-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677708aa390c1849e7da97c2_MIRO-SIZZLE-V3_30mb-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project---ion-media": {
+    "slug": "project---ion-media",
+    "url": "https://www.johnsyzonenko.com/project---ion-media",
+    "meta_title": "Project - Ion Media",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nIon Media Fan Connection Zone\n\nRole: Creative Technologist\n\nClient:Chemistry Creative\n\nAssociated Partners: Civic Entertainment, Ion Media\n\n\u200dTeam: Charlie Gangemi, Lake Heckaman, MPC, Pablo Gnecco\n\nLocation:Vanderbilt Hall, Grand Central Station, NYC\n\nDate: October 2024\n\nProject Description\n\nThis project was an immersive pop-up located inside the iconic Vanderbilt Hall in Grand Central Station, produced by Civic Entertainment and Chemistry Creative for Ion Media.\n\nI was involved in content management, interactive development, and installation.\n\nAt the entrance to the Ion Fan Connection zone, there was a large video wall displaying clips from the television program FBI- mixed with live-feed surveillance cameras that were hidden around the activation. Guests could see themselves on the screen as they entered Vanderbilt Hall.\n\nLocated behind the FBI activation was an interactive goalie booth set up for the National Women's Soccer League, where guests could test their skills against a friend. Guests had the chance to pick their favorite NWSL team, which was selected through a Node Red browser operated by an Ion brand ambassador.\n\nWhen a goal was made, a set of 2D LiDAR sensors would activate an animation sequence, triggering a huge celebration!\n\nSpecial thanks to Lake Heckaman for LiDAR integration, and Pablo Gnecco + MPC for production coordination.\u200d\n\nTouchdesigner\n\nNODE RED\n\nNDI\n\nLiDAR\n\nImmersive\n\nINTERACTIVE\n\nINSTALLATION\n\nProject Highlights\n\nVanderbilt Hall Venue walkthrough\n\nNational Women's Soccer League Interactive goal booth - 2D LiDAR sensors provided by Lake Heckaman\n\nBack of house TouchDesigner GUI\n\nFBI multi-screen video array + surveillance camera feeds\n\nBack-of-house TouchDesigner GUI\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Civic Entertainment",
+        "url": "https://www.civic-us.com"
+      },
+      {
+        "text": "Chemistry Creative",
+        "url": "https://www.chemcreative.com/"
+      },
+      {
+        "text": "Ion Media",
+        "url": "https://iontelevision.com"
+      },
+      {
+        "text": "Lake Heckaman",
+        "url": "https://www.susanlinssdesign.com/"
+      },
+      {
+        "text": "Pablo Gnecco",
+        "url": "https://yopablo.studio/"
+      },
+      {
+        "text": "MPC",
+        "url": "https://www.matthewpattersoncurry.com/"
+      },
+      {
+        "text": "\u200d",
+        "url": "https://www.matthewpattersoncurry.com/"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "NODE\u00a0RED",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "NDI",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LiDAR",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INTERACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATION",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677743e9978a64e038fc0f18_ION_hyperlapse_1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677743e9978a64e038fc0f18_ION_hyperlapse_1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677744c9e6eeb2b64cc65f64_ION_WNSL-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F677744c9e6eeb2b64cc65f64_ION_WNSL-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6777440083792e5320df56fa_ION_FBI-sizzle_1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F6777440083792e5320df56fa_ION_FBI-sizzle_1-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project-inter-nyc": {
+    "slug": "project-inter-nyc",
+    "url": "https://www.johnsyzonenko.com/project-inter-nyc",
+    "meta_title": "Project - INTER nyc",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nINTER_\n\nCreative Technologist for Chemistry Creative\n\nSoho / Chinatown, NYC\n\n2021 - 2023\n\nProject Description\n\nINTER_ is a 2-story interactive and immersive space located within the Historic National City Bank of New York, from creator Pete Sax, with the incredible team at Chemistry Creative.\n\nMy role as lead Creative Technologist included pre-production, development, and installation of the interactive tech and video components throughout the space.\n\nI was also involved in creative development, and provided concept art and pre-visualization for key installations throughout the pre-production process.\n\nThe space contains dozens of projectors and 4k displays with hundreds of feet of video and data cabling, as well as a handful of large LED walls with unique pixel map configurations. Servers were configured by-hand during pre-production and installed on-site with a fiber network throughout the building.\n\n\u200d\n\nAs visitors move through the space,, there are a number of interactive moments that utilize live-camera feedback- unbeknownst to visitors at the time, these interactions are temporarily recorded and used to create generative art on display in the final room.\n\nIntegration with scenic, lighting, audio, production crew, and in-house staff was crucial throughout this project. Cheers to everyone involved!\n\nDave Tandem (Interconnected),Jonathan Masterson,Georgios Cherouvim,Beau Burrows,Brian Snigur,Seth Scoville,Nicholas Motyka,(Intersensory),Charlie Gangemi,Tommy Martinez(Internal / Interplanetary), Taliesin Gilkes-Bower (Cymatic Well),Andrew Giugno,Julian Baeza Hochmuth(Lighting), Danny Taylor,MPC,Oliver Chapoy,Henrik von Sivers,Danush Dopierala (Audio), Lovejoy Paradise,Kasey Burgess,May Ghadanfar,Pablo Gnecco,Anthony Montalbano(Production + Direction), Mal Mal,Hozi,Patrick A. Moore, Marta Kaminska,Robert Scoville,Mark Musters,Hillary Ure\u00f1a,Hannah K. Hollis, Simon Fernandez, Jin Pak, Anthony Azcona, many more scenic artists and fabrication specialists.\n\nTouchDesigner\n\nAfter Effects\n\nBlender\n\nunreal engine\n\nArduino\n\nlidar\n\nPython\n\nImmersive\n\nInteractive\n\nconcept art\n\nGithub\n\nSCreenConnect\n\nProject Highlights\n\nhttps://jonathanmasterson.com/\n\n\u200dJonathan Masterson\n\nhttps://ch3.gr/work/vfx/\n\n\u200dGeorgios Cherouvim\n\nhttps://www.matthewpattersoncurry.com/\n\n\u200dMPC\n\nhttps://www.bryansnigur.com/\n\n\u200dBrian Snigur\n\nhttps://lowres.co/\n\n\u200dAndrew Giugno\n\nhttps://www.mayghadanfar.com/\n\n\u200dMay Ghadanfar\n\nhttps://yopablo.studio/\n\n\u200dPablo Gnecco\n\nhttps://www.linkedin.com/in/kasey-burgess/\n\n\u200dKasey Burgess\n\nhttps://www.linkedin.com/in/anthony-montalbano-35a979162/\n\n\u200dAnthony Montalbano\n\nhttps://www.instagram.com/jules.b.h/?hl=en\n\n\u200dJulian Baeza Hochmuth\n\nhttps://www.instagram.com/picturesbyrobots/?hl=en\n\n\u200dDave Tandem\n\nhttps://www.futurewife.tv/\n\n\u200dBeau Burrows\n\nTaliesin Gilkes-Bower\n\n\u200dTommy Martinez\n\n\u200dOliver Chapoy\n\n\u200dDanny Taylor\n\nhttps://www.instagram.com/malcolmnyc/?hl=en\n\nMarta Kaminska\n\nhttps://www.instagram.com/hhoozzii/?hl=en\n\nHozi\n\nMarta Kaminska\n\nhttps://m.imdb.com/name/nm14411966/\n\nMARTA KAMINSKA\n\nMarta Kaminska\n\nhttps://marta-kaminska.squarespace.com/\n\nhttp://www.hannahkhollis.com/\n\nHannah K. Hollis\n\nPatrick A. Moore\n\nOnce guests are checked in for their experience, they are invited to wait in the orientation room.\n\nThis room acts as a holding chamber for timed groups, as well as an introductory film which guides visitors through a range of emotions and abstract thoughts.\n\nThere are 2x hidden NDI cameras in this room which capture preliminary interactions from guests.\n\nIntroductory film playing on a large LED wall at the start of the experience\n\nLED mesh screen opposite main wall\n\nAfter the conclusion of the introductory film, visitors head up a mirrored escalator.\n\nOn either side of the up-escalator, there is a built-in structure of angled mirrors and LED tubes. There are 3x ultrawide displays and an NDI camera hidden behind 2-way mirror panels. There is an additional NDI camera mounted on the ceiling at the far end of the 2nd floor, angled down the escalator.\n\nThe displays shine through the 2-way mirrors and appear within the mirror tunnel, while the camera feed is recorded and fed back into the system.\n\n3x hidden displays and 2x NDI cameras were embedded into the structure\n\nVideo showing guests moving up the escalator past screens and hidden cameras\n\n360 Projection pre-visualization for creative development- made with TouchDesigner\n\nOnce upstairs, guests enter a large ovular room with 360 degree audio and projections and LiDAR tracking.\n\nI used TouchDesigner to create pre-visualization tools for creative development, as well as a unique visual sequence that was used as a part of the show.\n\nInteractive 'Idle' state development- made with TouchDesigner\n\nCustom visual sequence during a live show- made in TouchDesigner with Nicolas Motyka\n\nUpon exiting the projection space, visitors move through a psychedelic garden full of lights and color. There are 6x Arduino units and ultrasonic sensors which control lights and sounds.\n\nWi-fi Arduino module and diagram of arch interaction\n\nThe 'Cymatic Well' (originally conceptualized by Taliesin Gilkes-Bower) is a large steel pan filled with water that can be controlled through saudio fequencies. I worked with a small team to prototype controllers and . After some iteration, we ended with 3 crystal balls that use a laser sensor- similar to the track ball of a computer mouse- and allow guests to control sound and play the pan like a large instrument.\n\nThere is a large transducer attached to the bottom of the well, which is controlled by an Ableton Live session. The vibration from this transducer creates a number of distinct resonant patterns in the water, which are visible on the surface. Due to the nature of cymatics and the shape of the vessel, only specific frequencies would create patterns on the water. Throughout development, I worked with Tommy Martinez to find the frequencies that would produce a pattern. Sound supervision was coordinated by Oliver Chapoy and MPC, with speaker installation by Danny Taylor.\n\nThere are also a number of unique visual interactions that are triggered based on specific user participation and are displayed on the large LED wall behind the well.\n\nGuests can turn the crystal balls to control the lights and sounds-\n\nDistinct patterns emerge in the water with certain frequencies.\n\nLive demo with three users - 'ohm' state activated\n\nMulti-color LED demo and visuals from pre-production\n\nOnce visitors are finished on the 2nd floor, they descend another escalator into a dark, rocky cavern.\n\nAfter turning the corner and reaching the end of a long corridor, guests are invited to explore the walls of the chamber and look for motion activated control points. These control points work like a large organ, and play various ground-shaking tones when activated.\n\nIn the center of the room there is a volcano structure. Here, guests are invited to 'release' something into the fire. Inside the structure there is a hidden Leap motion controller, which allows users to affect the audio around the room, while their hand appears in the LED wall in front of them.\n\nAtop the LED wall there is an Azure sensor which reveals a glowing magma character when activated.\n\nCentral chamber - showing LED mesh (center) and 'The Crucible' (right)\n\nProcess photos for leap motion placement- Crucible structure completed by Marta Kaminska\n\nInteractive walkthrough- immersive rock corridor opens to main chamber with hidden hand sensors\n\nDemo of Leap motion hand sensor and Crucible interaction\n\n'Interconnected'\n\nThe final gallery replays the interactions of each user's experience, covered in all-white tiles and containing 10x large 4k displays. Each display is linked to a camera feed from a specific interaction, and sources recordings from the past 2 hours.\n\nOn either side of the room there is a large horizontal display containing all of the interactions that are playing in the room at that time. When a user steps in front of the frame, the image morphs into a live-camera feed, creating an infinite tunnel.\n\nOverview of interaction recordings sourced throughout any given day\n\nLive camera feedback - activated by motion on the 2x large, mirrored displays on either end of the gallery\n\nInteractions recorded throughout the day are cycled through the generative system.\n\n'The Wave'\n\nThe heart of the installation is a series of interactive \"time portals,\" each representing a different historical era. These portals are equipped with motion sensors, touchscreens, and augmented reality interfaces, allowing visitors to step into different time periods and explore them in an engaging and informative way.\n\nThe Portholes\n\nOur team has meticulously choreographed the installation process to ensure that every element seamlessly fits into the overarching narrative. We've worked closely with artists, historians, and technologists to guarantee that every aspect, from lighting and sound to digital displays and physical artifacts, complements one another perfectly.\n\nCommunal Action Wall\n\nOur team has meticulously choreographed the installation process to ensure that every element seamlessly fits into the overarching narrative. We've worked closely with artists, historians, and technologists to guarantee that every aspect, from lighting and sound to digital displays and physical artifacts, complements one another perfectly.\n\nLobby + Misc\n\nUpon entering and exiting the building, visitors can walk around a rectangular lobby area.\n\nOn the back wall there is a large TV mosaic with a unique arrangement of TVs. We worked to provide a cost-effective solution and provide preliminary content.\n\nGuests can turn the crystal balls to control the lights and sounds.\n\nDistinct patterns emerge in the water when activated with various pre-determined frequencies.\n\nSound waves can be visualized as they ripple through the water.\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Pete Sax",
+        "url": "https://www.linkedin.com/in/peter-sax-b425416b"
+      },
+      {
+        "text": "Chemistry Creative.",
+        "url": "https://www.chemcreative.com/"
+      },
+      {
+        "text": "Dave Tandem",
+        "url": "https://www.instagram.com/picturesbyrobots/?hl=en"
+      },
+      {
+        "text": "Jonathan Masterson,",
+        "url": "https://jonathanmasterson.com/"
+      },
+      {
+        "text": "Georgios Cherouvim,",
+        "url": "https://ch3.gr/work/vfx/"
+      },
+      {
+        "text": "Beau Burrows,",
+        "url": "https://www.futurewife.tv/"
+      },
+      {
+        "text": "Brian Snigur,",
+        "url": "https://www.bryansnigur.com/"
+      },
+      {
+        "text": "Seth Scoville,",
+        "url": "https://www.instagram.com/arkhamengineer/?hl=en"
+      },
+      {
+        "text": "Nicholas Motyka,",
+        "url": "https://www.instagram.com/akytom/?hl=en"
+      },
+      {
+        "text": "Charlie Gangemi,",
+        "url": "https://www.instagram.com/zavoli.headless/"
+      },
+      {
+        "text": "Tommy Martinez",
+        "url": "https://thomasjohnmartinez.com/"
+      },
+      {
+        "text": "Taliesin Gilkes-Bower",
+        "url": "https://www.realmsmanifest.com/"
+      },
+      {
+        "text": "Andrew Giugno,",
+        "url": "https://lowres.co/"
+      },
+      {
+        "text": "Julian Baeza Hochmuth",
+        "url": "https://www.instagram.com/jules.b.h/?hl=en"
+      },
+      {
+        "text": "Danny Taylor,",
+        "url": "https://www.houseundermagic.com/who"
+      },
+      {
+        "text": "MPC,",
+        "url": "https://www.matthewpattersoncurry.com/"
+      },
+      {
+        "text": "Oliver Chapoy,",
+        "url": "https://www.discogs.com/artist/592920-Oliver-Chapoy"
+      },
+      {
+        "text": "Henrik von Sivers,",
+        "url": "https://www.linkedin.com/in/henrik-von-sivers-5b72579/"
+      },
+      {
+        "text": "Danush Dopierala",
+        "url": "https://www.linkedin.com/in/danush-dopierala-278a2892/"
+      },
+      {
+        "text": "Lovejoy Paradise,",
+        "url": "https://www.golovejoy.com/"
+      },
+      {
+        "text": "Kasey Burgess,",
+        "url": "https://www.linkedin.com/in/kasey-burgess/"
+      },
+      {
+        "text": "May Ghadanfar,",
+        "url": "https://www.mayghadanfar.com/"
+      },
+      {
+        "text": "Pablo Gnecco,",
+        "url": "https://yopablo.studio/"
+      },
+      {
+        "text": "Anthony Montalbano",
+        "url": "https://www.linkedin.com/in/anthony-montalbano-35a979162/"
+      },
+      {
+        "text": "Mal Mal,",
+        "url": "https://www.instagram.com/malcolmnyc/"
+      },
+      {
+        "text": "Hozi,",
+        "url": "https://www.instagram.com/hhoozzii/?hl=en"
+      },
+      {
+        "text": "Patrick A. Moore",
+        "url": "https://www.imdb.com/name/nm14411966/"
+      },
+      {
+        "text": "Marta Kaminska,",
+        "url": "https://marta-kaminska.squarespace.com/"
+      },
+      {
+        "text": "Robert Scoville,",
+        "url": "https://hihello.me/p/24b9b73b-6654-4f7e-8d9b-6c029a41da78"
+      },
+      {
+        "text": "Mark Musters,",
+        "url": "https://www.instagram.com/markmusters1/?hl=en"
+      },
+      {
+        "text": "Hillary Ure\u00f1a,",
+        "url": "https://www.instagram.com/hillarystylz/?hl=en"
+      },
+      {
+        "text": "Hannah K. Hollis,",
+        "url": "http://www.hannahkhollis.com/"
+      },
+      {
+        "text": "TouchDesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Blender",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "unreal engine",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Arduino",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "lidar",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Python",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Interactive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "concept art",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Github",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "SCreenConnect",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Jonathan Masterson",
+        "url": "https://jonathanmasterson.com/"
+      },
+      {
+        "text": "Georgios Cherouvim",
+        "url": "https://ch3.gr/work/vfx/"
+      },
+      {
+        "text": "MPC",
+        "url": "https://www.matthewpattersoncurry.com/"
+      },
+      {
+        "text": "Brian Snigur",
+        "url": "https://www.bryansnigur.com/"
+      },
+      {
+        "text": "Andrew Giugno",
+        "url": "https://lowres.co/"
+      },
+      {
+        "text": "May Ghadanfar",
+        "url": "https://www.mayghadanfar.com/"
+      },
+      {
+        "text": "Pablo Gnecco",
+        "url": "https://yopablo.studio/"
+      },
+      {
+        "text": "Kasey Burgess",
+        "url": "https://www.linkedin.com/in/kasey-burgess/"
+      },
+      {
+        "text": "Beau Burrows",
+        "url": "https://www.futurewife.tv/"
+      },
+      {
+        "text": "Oliver Chapoy",
+        "url": "https://www.discogs.com/artist/592920-Oliver-Chapoy"
+      },
+      {
+        "text": "Danny Taylor",
+        "url": "https://www.houseundermagic.com/who"
+      },
+      {
+        "text": "Marta Kaminska",
+        "url": "https://marta-kaminska.squarespace.com/"
+      },
+      {
+        "text": "Hannah K. Hollis",
+        "url": "http://www.hannahkhollis.com/"
+      },
+      {
+        "text": "Patrick A. Moore",
+        "url": "https://m.imdb.com/name/nm14411966/"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655cf12ed8524dc951e0fb08_Inter_walkthrough_floorplan_15sec-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655cf12ed8524dc951e0fb08_Inter_walkthrough_floorplan_15sec-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d2f7f84bf4e2e8a885487_intersensory-seq-3b-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d2f7f84bf4e2e8a885487_intersensory-seq-3b-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657245af77954ab45427185e_IMG_5022-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657245af77954ab45427185e_IMG_5022-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572528b87098e4ee385a707_IMG_5025-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572528b87098e4ee385a707_IMG_5025-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d4c33af23e357b28802f1_intersensory-previz-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d4c33af23e357b28802f1_intersensory-previz-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657252adce00c458032330ad_IMG_4610-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657252adce00c458032330ad_IMG_4610-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65737a8d1b57b7891835fa8f_IMG_5030 2-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65737a8d1b57b7891835fa8f_IMG_5030 2-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657252bd4eaa1c48ee578a23_IMG_5031-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657252bd4eaa1c48ee578a23_IMG_5031-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6573339654319d982ceffba8_Arches-diagram-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6573339654319d982ceffba8_Arches-diagram-1-transcode.webm"
+      },
+      {
+        "text": "Taliesin Gilkes-Bower)",
+        "url": "https://www.realmsmanifest.com/"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655c1b06051a330a2465de84_discs_V2_1a-2-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655c1b06051a330a2465de84_discs_V2_1a-2-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d4910adf791217adc12ab_cymatic-rings-1a-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d4910adf791217adc12ab_cymatic-rings-1a-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65724f1e00cb82a87a719fe6_IMG_5034-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65724f1e00cb82a87a719fe6_IMG_5034-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655c13b1f9b26a92acf398ef_INTER_PRIMO-SIZZLE-CYMATIC-WATER-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655c13b1f9b26a92acf398ef_INTER_PRIMO-SIZZLE-CYMATIC-WATER-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657253b0587f846fd4b32135_IMG_6367-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657253b0587f846fd4b32135_IMG_6367-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65724fe84c6e2916c2b158b6_IMG_5035-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65724fe84c6e2916c2b158b6_IMG_5035-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657250223d80351450026091_IMG_5035 2-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657250223d80351450026091_IMG_5035 2-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657254bdc7e42a185777982f_IMG_5035 3-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657254bdc7e42a185777982f_IMG_5035 3-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572558b4eaa1c48ee59759f_IMG_5035 4-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572558b4eaa1c48ee59759f_IMG_5035 4-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572559ce1fa298235e26fb1_IMG_5035 5-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572559ce1fa298235e26fb1_IMG_5035 5-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572575376ac835e1aff134e_IMG_5035 6-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572575376ac835e1aff134e_IMG_5035 6-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572570e1d2e86fed203010f_IMG_5036-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6572570e1d2e86fed203010f_IMG_5036-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d5b37a36fa130cf3c3a8a_interconnected-comp-2b-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d5b37a36fa130cf3c3a8a_interconnected-comp-2b-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657258f708213b709d2244bf_IMG_2946-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657258f708213b709d2244bf_IMG_2946-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65725a0042fe2b41794542f7_IMG_4995-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/65725a0042fe2b41794542f7_IMG_4995-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657259f46a604478b5f93f16_IMG_4932-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/657259f46a604478b5f93f16_IMG_4932-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655c1639c470ce4503c0bce7_IC_out_02d-3-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655c1639c470ce4503c0bce7_IC_out_02d-3-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e77687b37d60de8b44221_Blue_Paradox-2.jpeg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e7767acafea3ad26d22a8_BPMSI_RM1_00_floor.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e7c9e7b1a00f16f91c7b3_BP-porthole-1_upscayl_4x_realesrgan-x4plus.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e77671a26a2df2f484efe_BPMSI_RM5B_114_wide.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/653ad63a8cba679bcb79defd_BP-MSI-BBP-106-jpg.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e81028ffdc57a5974c76f_BP-MSI-BBP-112-half.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "project-nike-air-soho": {
+    "slug": "project-nike-air-soho",
+    "url": "https://www.johnsyzonenko.com/project-nike-air-soho",
+    "meta_title": "Project - Nike Air SoHo",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nNIKE AIR SOHO\n\nCreative Technologist for Chemistry Creative\n\nSoHo, NYC\n\nFebruary, 2020\n\nProject Description\n\nThis project was the first large-scale multi-media TouchDesigenr installation of my career, thanks to the incredible team at Chemistry Creative\n\nThis installation was part of Nike's Air Max campaign, located on the ground floor of the Nike flagship store in SoHo.\n\nI was involved in pre-production, content creation, interactive development, and installation of this project, working under Lovejoy Paradise. TouchDesigner legend Vincent Houz\u00e9 also joined the project to focus on sensor placement and interaction.\n\nWhen the box is idle, the Nike logo is displayed with a looping animation of clouds that I made in Blender. Once a guest steps inside the interactive zone, the clouds change color and a series of inspirational quotes appear on the screen.\n\nUnfortunately, this installation took place in February of 2020, so it was only open to the public for a few weeks before the Covid-19 lockdown began. Such is life I suppose!\n\nTouchdesigner\n\nAfter Effects\n\nBLENDER\n\nREALSENSE\n\nLED Stage\n\nImmersive\n\nINTERACTIVE\n\nINSTALLATION\n\nProject Highlights\n\nSimple setup for dynamic volumetric clouds in Blender.\n\nPrevisualization in TouchDesigner\n\nFinal interactive walkthrough\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Chemistry Creative",
+        "url": "https://www.chemcreative.com/"
+      },
+      {
+        "text": "Lovejoy Paradise",
+        "url": "https://www.golovejoy.com/"
+      },
+      {
+        "text": "Vincent Houz\u00e9",
+        "url": "https://vincenthouze.com/"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "BLENDER",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "REALSENSE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LED\u00a0Stage",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INTERACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATION",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6566606f72c21f163481052f_03_clouds_01a_short_loop-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6566606f72c21f163481052f_03_clouds_01a_short_loop-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656660b3ae7c3cc734d38aae_clouds_02a_perspective-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656660b3ae7c3cc734d38aae_clouds_02a_perspective-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656662b11fab36d9c4b221f7_IMG_5388-1-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656662b11fab36d9c4b221f7_IMG_5388-1-1-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project-ledger": {
+    "slug": "project-ledger",
+    "url": "https://www.johnsyzonenko.com/project-ledger",
+    "meta_title": "Project - Ledger",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nLEDGER OP3N\n\nCreative Technologist, V2 for Chemistry Creative\n\nMoonlight Studios, NYC\n\nNFT.NYC 2022\n\nProject Description\n\nThe Ledger Open was an event held at Moonlight Studios during NYC's NFT week 2022.\n\nThe amazing team at Chemistry Creative built and installed a number of unique display mounts and a variety of other scenic elements. I assisted in installation and was responsible for the content management, as well as the interactive hero moment at the front of the room.\n\n\u200d\n\nWhen visitors approach the podium, there is an orange acrylic cube with a Ledger Nano suspended inside. Before the guest approaches, screens throughout the entire room are displaying an idle animation.\n\nOnce the guest touches the product (think Indiana Jones), the idle animation changes, and a new takeover animation floods the room. Working with Charlie Gangemi, we used TouchDesigner, a small pressure sensor, and hidden Arduino unit to achieve this effect.\n\nThroughout the room there are a number of other displays with looping content provided by the client, as well as a large 'TV room' with a mosaic of displays suspended around and above the guest. I assisted in rigging and cabling this structure as well.\n\nTouchdesigner\n\nAfter Effects\n\nARDUINO\n\nPRESSURE SENSOR\n\nImmersive\n\nINTERACTIVE\n\nINSTALLATION\n\nProject Highlights\n\nPhotos courtesy of TXG / Jam3 / Chemistry Creative\n\nThe video above shows the hero moment interaction whenever a guest picks up the acrylic product display.\n\n24-screen mosaic display + LED wall (pre-production + installation)\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Chemistry Creative",
+        "url": "https://www.chemcreative.com/"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "ARDUINO",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PRESSURE\u00a0SENSOR",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INTERACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATION",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6568c60eb3ea504c6f1592cc_IMG_1011-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6568c60eb3ea504c6f1592cc_IMG_1011-1-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project-diesel": {
+    "slug": "project-diesel",
+    "url": "https://www.johnsyzonenko.com/project-diesel",
+    "meta_title": "Project - Diesel",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nDIESEL SOUND OF THE BRAVE\n\nCreative Technologist, V2 for Chemistry Creative\n\nBrooklyn, NYC\n\nSeptember, 2022\n\nProject Description\n\nThe Diesel Sound of the Brave launch party was an event at Elsewhere in Brooklyn, intended for influencers and celebrities to celebrate the joy of fragrance. The Sound of the Brave!\n\nI was involved in pre-production, pre-visualization, content creation, and installation for the event- part of the incredible team at Chemistry Creative, with stage design by Pete Sax, and V1 operations by Greg Zifcak\n\nThe main event was a stage design that included 2x LED walls and 8x large displays on either side of the stage. Throughout the night, DJs and performers would take the stage with a variety of Diesel fragrance content playing in the background.\n\nThere were also a number of smaller activations around the room, including a LED wall phot booth with a variety of backgrounds to choose from.\n\nTouchdesigner\n\nAfter Effects\n\nLED STAGE\n\nPRESSURE SENSOR\n\nPrevisualization\n\nLIVE PERFORMANCE\n\nImmersive\n\nINSTALLATION\n\nProject Highlights\n\nPrevisuzlization for photobooth- made with TouchDesigner\n\nPrevisuzlization for main stage- made with TouchDesigner\n\nPhoto Credit: Jason Crowley / BFA / TXG / Chemistry Creative\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Chemistry Creative,",
+        "url": "https://www.chemcreative.com/"
+      },
+      {
+        "text": "Greg Zifcak",
+        "url": "https://www.gzifcak.net/"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LED\u00a0STAGE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PRESSURE\u00a0SENSOR",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Previsualization",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LIVE\u00a0PERFORMANCE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATION",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d275caf545515de156ed1_DIESEL-BOOTH-previs-01-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d275caf545515de156ed1_DIESEL-BOOTH-previs-01-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d268a5880d16cfe594544_DIESEL-STAGE-previs-INGREDIENTS-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/655d268a5880d16cfe594544_DIESEL-STAGE-previs-INGREDIENTS-1-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project-shaker-mountain": {
+    "slug": "project-shaker-mountain",
+    "url": "https://www.johnsyzonenko.com/project-shaker-mountain",
+    "meta_title": "Project - Shaker Mountain",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nJOHN SYZONENKO\n\nHomeWorkAboutContact\n\nRIDE\n\nSTAY\n\nEAT\n\nEXPLORE\n\nPROJECTS\n\nNo items found.\n\nCreative Technology\n\nEDUCATIONAL\n\nLIVE PERFORMANCE\n\nCOMMERCIAL\n\nPERSONAL\n\nABOUT\n\nCONTACT\n\nSOCIALS\n\nGet Started\n\nPAGE 1\n\nPAGE 2\n\nPAGE 3\n\nPAGE 4\n\nDo More\n\nPAGE 5\n\nPAGE 6\n\nPAGE 7\n\nPAGE 8\n\nExtra Info\n\nPAGE 7\n\nPAGE 8\n\nPAGE 9\n\nPAGE 10\n\nButton ONE\n\nButton TWO\n\nBUTTON THREE\n\nSHAKER MOUNTAIN\n\nProject Description\n\nLaser Projections + Content for Low-Res\n\nAdirondacks, NY\n\nMay 2023\n\nShaker Mountain is a music festival in the Adirondacks of upstate New York that takes place every summer- created by Andrew Giugno a.k.a. Lowres\n\nIn 2023, I was invited to control the laser that would shine over the main camping area of the festival. I developed a variety of short looping animations that would play throughout the weekend. Using a combination of After Effects and MadMapper, the process was satisfying and fun.\n\nCapturing a laser on camera never really does it justice, so you will just have imagine it looked even cooler than this!\n\nMadmapper\n\nAfter Effects\n\nLasers\n\nImmersive\n\nProject Highlights\n\nCredit / annieforrest.world\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Home",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects-archive"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "RIDE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "STAY",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "EAT",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "EXPLORE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Creative Technology",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "EDUCATIONAL",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LIVE\u00a0PERFORMANCE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "COMMERCIAL",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "CONTACT",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "SOCIALS",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 1",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 2",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 3",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 4",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 5",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 6",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 7",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 8",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 9",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "PAGE 10",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Button ONE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Button TWO",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "BUTTON\u00a0THREE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Lowres",
+        "url": "https://lowres.co/"
+      },
+      {
+        "text": "Madmapper",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Lasers",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "annieforrest.world",
+        "url": "https://www.annieforrest.world/"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567ad3ce8b7d5ab03b23e5a_IMG_8599-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567ad3ce8b7d5ab03b23e5a_IMG_8599-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567adb669444bb51e2545e1_IMG_8597-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567adb669444bb51e2545e1_IMG_8597-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567ace1662534ed16f9a701_IMG_8653-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567ace1662534ed16f9a701_IMG_8653-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567ad5b227e194c482f3545_IMG_8648-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6567ad5b227e194c482f3545_IMG_8648-1-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6553b64651c8601c266978b9_Arrow%20Right.svg",
+        "alt": ""
+      }
+    ]
+  },
+  "project-thought-patterns": {
+    "slug": "project-thought-patterns",
+    "url": "https://www.johnsyzonenko.com/project-thought-patterns",
+    "meta_title": "Project - Thought Patterns",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nTHOUGHT PATTERNS\n\nLive Generative Visuals + Video Editor for Chemistry Creative\n\nBrooklyn, NYC\n\n2020 - 2021\n\nProject Description\n\nThought Patterns is a live music performance and interview series created by Pete Sax- forged by the creativity and passion of a small, dedicated team including Nicolas Motyka, Sydney MacDonald, Christopher Robinson, Danny Taylor, Charlie Gangemi, Monty, Danny Ballester, Kevin Condor, myself, and all of the individual artists and bands involved.\n\n\u200d\n\nUsing the studio space at Chemistry Creative in Brooklyn, I collaborated with the team to orchestrate and capture over a dozen live performance videos, each boasting its own unique flair.\n\nWorking in TouchDesigner, After Effects, and Blender- I created generative, audio-reactive visuals for each performance, which would be projected or displayed on a large LED stage.\n\nTouchDesigner was also used to control display surfaces and adjust visuals on the fly- which is endlessly rewarding in a live scenario!\n\nI would also edit and publish videos weekly alongside Director Nicolas Motyka, and eventually managed the virtual production and sound design for the Thought Patterns short film 'Tether Tear'\n\nThought Patterns was born out of deep pandemic isolation in an effort to connect through music, and we were so incredibly lucky to have a space to work and explore our creativity.\n\nTouchdesigner\n\nAfter Effects\n\nPremeire Pro\n\nLED STAGE\n\nLIVE CAMERA FEEDBACK\n\nVirtual production\n\nLIVE PERFORMANCE\n\nImmersive\n\nAUDIOREACTIVE\n\nProject Highlights\n\n'The Wave'\n\nThe heart of the installation is a series of interactive \"time portals,\" each representing a different historical era. These portals are equipped with motion sensors, touchscreens, and augmented reality interfaces, allowing visitors to step into different time periods and explore them in an engaging and informative way.\n\nThe Portholes\n\nOur team has meticulously choreographed the installation process to ensure that every element seamlessly fits into the overarching narrative. We've worked closely with artists, historians, and technologists to guarantee that every aspect, from lighting and sound to digital displays and physical artifacts, complements one another perfectly.\n\nCommunal Action Wall\n\nOur team has meticulously choreographed the installation process to ensure that every element seamlessly fits into the overarching narrative. We've worked closely with artists, historians, and technologists to guarantee that every aspect, from lighting and sound to digital displays and physical artifacts, complements one another perfectly.\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Chemistry Creative",
+        "url": "https://www.chemcreative.com/"
+      },
+      {
+        "text": "Touchdesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Premeire Pro",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LED\u00a0STAGE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LIVE\u00a0CAMERA\u00a0FEEDBACK",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Virtual production",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LIVE\u00a0PERFORMANCE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "AUDIOREACTIVE",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube.com/embed/HesXkWsP2l0?rel=0&controls=0&autoplay=0&mute=0&start=5"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube.com/embed/uRuc60Vw3AY?rel=0&controls=0&autoplay=0&mute=0&start=5"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube.com/embed/3AyY-Mb0he8?rel=0&controls=0&autoplay=0&mute=0&start=5"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube.com/embed/U6-oCR0V6LA?rel=0&controls=0&autoplay=0&mute=0&start=8"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube.com/embed/Oup-BoT4dRM?rel=0&controls=0&autoplay=0&mute=0&start=0"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube.com/embed/hi_JRaoxNOM?rel=0&controls=0&autoplay=0&mute=0&start=0"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e77687b37d60de8b44221_Blue_Paradox-2.jpeg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e7767acafea3ad26d22a8_BPMSI_RM1_00_floor.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e7c9e7b1a00f16f91c7b3_BP-porthole-1_upscayl_4x_realesrgan-x4plus.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e77671a26a2df2f484efe_BPMSI_RM5B_114_wide.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/653ad63a8cba679bcb79defd_BP-MSI-BBP-106-jpg.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e81028ffdc57a5974c76f_BP-MSI-BBP-112-half.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "project-yo-yo-ma": {
+    "slug": "project-yo-yo-ma",
+    "url": "https://www.johnsyzonenko.com/project-yo-yo-ma",
+    "meta_title": "Project - Yo-Yo-Ma",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nSPIEGEL IM SPIEGEL\n\nRole: Video Designer\n\nClient:Sound Postings, Yo-Yo Ma\u200d\n\n\u200dTeam: Sophie Shakleton, Creative Producer\n\nLocation:Global\n\nDate: 2022 - Present\n\nProject Description\n\nSpiegel im Spiegel is a musical piece by Estonian composer Arvo P\u00e4rt. The name roughly translates to \"Mirror within a mirror\"\n\nMy involvement in this project began in 2022 through Zion Jackson and THE OFFICE performing arts + film, and has continued under Sophie Shakleton and Sound Postings.\n\nMy responsibilities have included researching, arranging, and experimenting with images- as well as timeline editing and final video delivery. The video itself is designed to accompany the live musical performance and could be modified for a variety of audiences around the world.\n\nWe began with images of our universe from the Hubble and James Webb telescopes, paying special attention to the visuals connections that emerge between the macro and micro world.\n\nSoon after the first event in Paris, we began preparing an evolution of the sequence for another event in the Smokey Mountains of Tennessee. This sequence includes images from photographer Austin Mann, and aimed to connect deeply with the specific region of the performance.\n\nThe project continues to evolve with new sequences that speak to the geographic location of each performance, and has now been performed all around the world!\n\nPremeire Pro\n\nAfter Effects\n\nImmersive\n\nEducational\n\nProject Highlights\n\nPerformance Locations\n\n2022Paris, France\n\n2023Smokey Mountains, TN, USA\n\nUN Headquarters, NYC, USA\n\nCERN, Geneva, Switzerland\n\n2024Davos, Switzerland\n\nPhiladelphia, PA\n\nFlorida, USA\n\nCharleston, NC, USA\n\nArizona, USA\n\nTexas, USA\n\nOklahoma, USA\n\nChicago, USA\n\nWashington D.C., USA\n\nBoston, USA\n\nSan Francisco, USA\n\nLos Angeles, USA\n\nLondon, UK\n\nReykjav\u00edk, Iceland\n\nStockholm, Sweden\n\nPhoto credit: UN Partnerships/Pier Paolo Cito\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Austin Mann",
+        "url": "https://www.austinmann.com/"
+      },
+      {
+        "text": "Premeire Pro",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Educational",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube-nocookie.com/embed/yschtLxehA0?rel=0&controls=1&autoplay=0&mute=0&start=2730"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube-nocookie.com/embed/kVRBfDHSy2w?rel=0&controls=1&autoplay=0&mute=0&start=0"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://www.youtube-nocookie.com/embed/B3f9dv7kP-I?rel=0&controls=1&autoplay=0&mute=0&start=1239"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "project-incarceration-nations": {
+    "slug": "project-incarceration-nations",
+    "url": "https://www.johnsyzonenko.com/project-incarceration-nations",
+    "meta_title": "Project - Incarceration Nations",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nIncarceration Nations: A Global Docuseries\n\nAnimator, Video Editor, VFX for Chemistry Creative\n\nGlobal\n\n2020 - 2022\n\nProject Description\n\nIncarceration Nations: A Global Docuseries is a mixed-media series about global mass incarceration- narrated entirely by those who have lived incarceration around the world, from England to El Salvador, Argentina to the USA, Brazil and Lebanon to South Africa and Sierra Leone.\n\nThe ten episodes of Incarceration Nations expose an international crisis while also focusing on solutions, showcasing the work of INN justice partners from one continent to another.\n\nIdeal for classrooms, panel discussions, policymaker film screenings and more, Incarceration Nations is a powerful education about one of the greatest human\u2014and civil\u2014rights catastrophes of our time.\n\nI was heavily involved in this project, working with Director Dr. Baz Dreisinger to create an educational series from the hours of interview footage an B-roll she has gathered over years of travels to prisons around the world.\n\nThis project would not have been possible without coordination by Sydney MacDonald, select illustrations by Matthew Wilson, assembly and editing by Nicolas Motyka- as well as the dozens of individuals who have shared their stories.\n\nIn 2021, the series was selected by the Tribeca Film festival, and has since been seen by thousands of people around the world in prisons, classrooms, museums, and community centers.\n\nThere is also an education guide available that includes graphics and information from the series.\n\nPremeire Pro\n\nAfter Effects\n\nTouchDesigner\n\nAbleton\n\nVirtual Reality\n\nEducational\n\nVisual Effects\n\nConcept Art\n\nSound Design\n\nProject Highlights\n\n'Virtual Reality'\n\nEarly on in the project, I developed an animation workflow using Virtual Reality painting using AnimVR.\n\nThis allowed us to explore abstract ideas through juxtaposition and dream-like sequences.\n\nIn combination with Interview and B-roll footage, I used these virtual reality animations to bridge the gaps of footage we had, while providing a unique visual identity to the entire series.\n\n'Sound Design'\n\nWhile Sound Design is not my primary focus as a creative, this project gave me an opportunity to explore the possibilities that sound provides.\n\nIn order to ground audience members in the unique geographic location of any given interview, I sampled public field recordings and ambient music from each country's region.\n\nSound mixing was ultimately completed by audio wizard and producer, Danny Taylor- which created a dream-like sense of time and place for each interview.\n\nTraversable Dale \u00b7 INN-EDUCATION-SOUNDSCAPE-JOHN\n\nTraversable Dale \u00b7 INN-EDUCATION-SOUNDSCAPE-IVAN\n\nTraversable Dale \u00b7 INN-EDUCATION-SOUNDSCAPE-ALMAR\n\nTraversable Dale \u00b7 INN-SOUNDSCAPE-SANTOS\n\nTraversable Dale \u00b7 INN-SOUNDSCAPE-AHMAD\n\n'Visual Effects'\n\nSimilar to sound design, we knew that it would be important to create a sense of place for audience members as the series moves from country to country.\n\nUsing a combination of B-roll captured at the time of the interviews, aerial and satellite images, and found footage from the streets of any given city, I created a number of visual sequences in TouchDesigner to compliment the animation sequences.\n\nEach sequence has a dissociative quality, with places blending between one another, as well as a depth map which resembles the view of our world through computer vision.\n\nThese sequences allude to the dissociative reality of returning to society after being locked away, as well as the dehumanization of individuals and society through the eyes of the system.\n\n'Infographics'\n\nThroughout the series there are a number of infographics and informational cards to inform the audience on some key facts about mass incarceration.\n\nFor these sequences I used a combination of After Effects, TouchDesigner, Procreate, and Photoshop.\n\nHand illustrations were created by Matthew Wilson and are used throughout the series.\n\n'The Wave'\n\nThe heart of the installation is a series of interactive \"time portals,\" each representing a different historical era. These portals are equipped with motion sensors, touchscreens, and augmented reality interfaces, allowing visitors to step into different time periods and explore them in an engaging and informative way.\n\nThe Portholes\n\nOur team has meticulously choreographed the installation process to ensure that every element seamlessly fits into the overarching narrative. We've worked closely with artists, historians, and technologists to guarantee that every aspect, from lighting and sound to digital displays and physical artifacts, complements one another perfectly.\n\nCommunal Action Wall\n\nOur team has meticulously choreographed the installation process to ensure that every element seamlessly fits into the overarching narrative. We've worked closely with artists, historians, and technologists to guarantee that every aspect, from lighting and sound to digital displays and physical artifacts, complements one another perfectly.\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "Premeire Pro",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "TouchDesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Ableton",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Virtual Reality",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Educational",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Visual Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Concept Art",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Sound Design",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569f34f65c9bfab8ac86fbb_00-INTRO-outro-comp-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569f34f65c9bfab8ac86fbb_00-INTRO-outro-comp-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569124e938f0c44daf146ad_ANIM-vast world-1b-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569124e938f0c44daf146ad_ANIM-vast world-1b-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569f3912dbb680bd9d57605_00-INTRO-punishment-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569f3912dbb680bd9d57605_00-INTRO-punishment-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a005a9c52e3d1dae649f5_08-WOD-R5b-vr-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a005a9c52e3d1dae649f5_08-WOD-R5b-vr-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569f6454f895a415daa1618_Subjects-all-fades_1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569f6454f895a415daa1618_Subjects-all-fades_1-transcode.webm"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1679360385&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      },
+      {
+        "text": "Traversable Dale",
+        "url": "https://soundcloud.com/headless_dale"
+      },
+      {
+        "text": "INN-EDUCATION-SOUNDSCAPE-JOHN",
+        "url": "https://soundcloud.com/headless_dale/inn-education-soundscape-john"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1679360406&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      },
+      {
+        "text": "INN-EDUCATION-SOUNDSCAPE-IVAN",
+        "url": "https://soundcloud.com/headless_dale/inn-education-soundscape-ivan"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1679360409&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      },
+      {
+        "text": "INN-EDUCATION-SOUNDSCAPE-ALMAR",
+        "url": "https://soundcloud.com/headless_dale/inn-education-soundscape-almar"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1679367060&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      },
+      {
+        "text": "INN-SOUNDSCAPE-SANTOS",
+        "url": "https://soundcloud.com/headless_dale/inn-soundscape-santos"
+      },
+      {
+        "text": "[embed:iframe]",
+        "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1679368083&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      },
+      {
+        "text": "INN-SOUNDSCAPE-AHMAD",
+        "url": "https://soundcloud.com/headless_dale/inn-soundscape-ahmad"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569ff09240ebce0a8c9824f_02_EDUCATION_R7_Ivan-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6569ff09240ebce0a8c9824f_02_EDUCATION_R7_Ivan-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a001b876c9dde22b0bfaf_02_EDUCATION_R7_craig-seq-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a001b876c9dde22b0bfaf_02_EDUCATION_R7_craig-seq-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a003d0b6499af726c1631_06-HNH-R9-Santos-Map-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a003d0b6499af726c1631_06-HNH-R9-Santos-Map-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a049f9f872fdcb8a38ec6_06-HNH-R9-family-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a049f9f872fdcb8a38ec6_06-HNH-R9-family-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a0492e24032f4846c029d_03_WOMEN_R5-blender-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a0492e24032f4846c029d_03_WOMEN_R5-blender-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a048c756ee0b0e58b131a_03_WOMEN_R5-blender-2-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a048c756ee0b0e58b131a_03_WOMEN_R5-blender-2-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a04f59667d9a55927c8a2_03_WOMEN_R5-infographic-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a04f59667d9a55927c8a2_03_WOMEN_R5-infographic-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a04fa4ef8d80317dfa1c2_06-TCTTP-R4-infographic-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a04fa4ef8d80317dfa1c2_06-TCTTP-R4-infographic-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a12e3d785d3f4a56553a4_IN-Waiting-For-Trail-infographics-5-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a12e3d785d3f4a56553a4_IN-Waiting-For-Trail-infographics-5-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a05072e79ee994efd0149_IN-Waiting-For-Trail-infographics-1-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a05072e79ee994efd0149_IN-Waiting-For-Trail-infographics-1-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a050ec795ef18b8a809e8_IN-Waiting-For-Trail-infographics-2-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a050ec795ef18b8a809e8_IN-Waiting-For-Trail-infographics-2-transcode.webm"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a051679c379a228f02026_IN-Waiting-For-Trail-infographics-3-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/656a051679c379a228f02026_IN-Waiting-For-Trail-infographics-3-transcode.webm"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e77687b37d60de8b44221_Blue_Paradox-2.jpeg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e7767acafea3ad26d22a8_BPMSI_RM1_00_floor.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e7c9e7b1a00f16f91c7b3_BP-porthole-1_upscayl_4x_realesrgan-x4plus.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e77671a26a2df2f484efe_BPMSI_RM5B_114_wide.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/653ad63a8cba679bcb79defd_BP-MSI-BBP-106-jpg.jpg",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/654e81028ffdc57a5974c76f_BP-MSI-BBP-112-half.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "projects": {
+    "slug": "projects",
+    "url": "https://www.johnsyzonenko.com/projects",
+    "meta_title": "Selected Projects",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nWORK\n\nCreative Technology\n\nXRP Ledger Apex 2025 - Invisible North\n\nCamata - Pierre Huyghe Studio\n\nCrypto Sirenas - The Goethe-Institut NY\n\nKodansha House - SoHo, NYC\n\nFantastic Flora - Shaker Mountain 2024, Upstate NY\n\nElementa @ The Gallery - Downtown LA, CA\n\nThe Blue Paradox - Chicago, IL\n\nMiro Canvas '24 - SPYSCAPE, NYC\n\nION Media Fan Zone - Vanderbilt Hall, NYC\n\nINTER_ - SoHo, NYC\n\nNike Air SoHo - Flagship store, NYC\n\nLedger Op3n - Moonlight Studios, NYC\n\nDiesel Sound of The Brave - Elsewhere, NYC\n\nLaser Control - Shaker Mountain 2023, Upstate NY\n\nThought Patterns - Chemistry Creative, NYC\n\nIs it Okay? NFT - TouchDesigner, Foundation, NYC\n\nFilm + Animation\n\nSpiegel Im Spiegel, Yo-Yo Ma - Video Designer, Global\n\nIncarceration Nations (Series) - Animation + Sound Design\n\nTether Tear (Short Film) - Virtual Production + Sound Design\n\nThe Writing on The Wall - editing + motion graphics\n\nNEJRC: Climate Justice - Camera, Editing, + Animation\n\nBoston Art Review - Camera, Editing, + Animation\n\nMusic Videos\n\n\"Gate VI\" - Ka Baird, Camera, Editing, VFX\n\n\"Human\" - Death Habit, Animation, Editing, + VFX\n\n\"From Thin Air\" - Tristan Kasten-Krause, TouchDesigner\n\n\"Hammer\" - Death Habit, VFX\n\n\"Endless Morning\" - Thought Patterns, Animation + Editing\n\n\"Smiling & Crying\" - Death Habit, Camera\n\n\"Transmitter\" - Max Levin, Camera, Editing, VFX\n\n\"Hoot Suite\" - Max Levin, Camera, Editing, VFX\n\n\"Grown Man Hours\" - Kahiem Rivera, TouchDesigner + VFX\n\n\"Mythic Love\" - Bambara, TouchDesigner + Projections\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "XRP\u00a0Ledger Apex 2025 - Invisible North",
+        "url": "https://www.johnsyzonenko.com/project---xrpl-apex-2025"
+      },
+      {
+        "text": "Camata - Pierre Huyghe Studio",
+        "url": "https://www.johnsyzonenko.com/project---camata"
+      },
+      {
+        "text": "Crypto Sirenas - The Goethe-Institut NY",
+        "url": "https://www.johnsyzonenko.com/project---goethe-institut"
+      },
+      {
+        "text": "Kodansha House - SoHo, NYC",
+        "url": "https://www.johnsyzonenko.com/project---kodansha-house"
+      },
+      {
+        "text": "Fantastic Flora - Shaker Mountain 2024, Upstate NY",
+        "url": "https://www.johnsyzonenko.com/project---fantastic-flora"
+      },
+      {
+        "text": "Elementa @ The Gallery - Downtown LA, CA",
+        "url": "https://www.johnsyzonenko.com/project---elementa"
+      },
+      {
+        "text": "The Blue Paradox - Chicago, IL",
+        "url": "https://www.johnsyzonenko.com/project---blue-paradox"
+      },
+      {
+        "text": "Miro Canvas '24 - SPYSCAPE, NYC",
+        "url": "https://www.johnsyzonenko.com/project---miro"
+      },
+      {
+        "text": "ION\u00a0Media Fan Zone - Vanderbilt Hall, NYC",
+        "url": "https://www.johnsyzonenko.com/project---ion-media"
+      },
+      {
+        "text": "INTER_ - SoHo, NYC",
+        "url": "https://www.johnsyzonenko.com/project-inter-nyc"
+      },
+      {
+        "text": "Nike Air SoHo - Flagship store, NYC",
+        "url": "https://www.johnsyzonenko.com/project-nike-air-soho"
+      },
+      {
+        "text": "Ledger Op3n - Moonlight Studios, NYC",
+        "url": "https://www.johnsyzonenko.com/project-ledger"
+      },
+      {
+        "text": "Diesel Sound of The Brave - Elsewhere, NYC",
+        "url": "https://www.johnsyzonenko.com/project-diesel"
+      },
+      {
+        "text": "Laser Control - Shaker Mountain 2023, Upstate NY",
+        "url": "https://www.johnsyzonenko.com/project-shaker-mountain"
+      },
+      {
+        "text": "Thought Patterns - Chemistry Creative, NYC",
+        "url": "https://www.johnsyzonenko.com/project-thought-patterns"
+      },
+      {
+        "text": "Is it Okay? NFT - TouchDesigner, Foundation, NYC",
+        "url": "https://foundation.app/mint/eth/0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405/94861"
+      },
+      {
+        "text": "Spiegel Im Spiegel, Yo-Yo Ma - Video Designer, Global",
+        "url": "https://www.johnsyzonenko.com/project-yo-yo-ma"
+      },
+      {
+        "text": "Incarceration Nations (Series) - Animation + Sound Design",
+        "url": "https://www.johnsyzonenko.com/project-incarceration-nations"
+      },
+      {
+        "text": "Tether Tear (Short\u00a0Film) - Virtual Production + Sound Design",
+        "url": "https://www.imdb.com/title/tt13930974/?ref_=nm_flmg_t_3_edt"
+      },
+      {
+        "text": "The Writing on The Wall - editing + motion graphics",
+        "url": "https://vimeo.com/386728540?turnstile=0.Dl8dvZJqaKLwAPxUo5MZuaFQtTTawvWRtJH--uijOxXsFXFn6FknBfxl-IFp-pleIGqE3DHxyHURGjhpriVHww0GoIvhvB9oJTBzIPaxO6SHZJm0aKgZ54U8gK_ACXM52BA2cnrE95L2YlR1lKFGF1-wv9qUWYDoN98gVRW87IWkw1o1hkk_Q2UVxB6xSf5RPIgv3jP3FHsylpYXGDZBhwuQf0RKmNPrzqkGVZMjxPIOcPw6mcUH370W4D-_hkAB51NT8-VhLqfBk2hpbtQNVWI_Mv8mWqEN69V1h00ckSplOXwY0Yi5rdc62mYw9Hh3GctMurbZqJfQylWk0YmtrB5aEt9Ise-GdBU27ZIVXvHwKm1tOs8xFmjouPgOqFSXt8-u84gl5DB9AvUUd88BJxuGCwZzslfl4QmRRM7OW-xF4zKOnD5bfknCgfP2djJXw2AZFqBdrC66dPbN_tI5XcYvAdzL0SLuJUmsPwXxa61jIkzYeIu2uM1zlcXcc8eXFqnuGBlo7O9cj58B2m_63X7Xu91o3QMZ1fJ2RjbBqHW9ElF8lDSn9mEvLNhhj046bUzt3zNR3LHRAvWp0BK5ZV5N5JINumKwDHBRAHZ3xDYN0M3X3F5QKHHN2zCyjGIIJRzyP4LmAjWETe8t8M-BRzFaxqj4b4NL1_7bX2xMweuIyULmyEcDGmqneR4zBSnlpZEr9TQ6eh5D_yTYW1pLZw8gVLPsuXPMREmqO9zH-ar7hgeGBn2YBKdwvEGS2Ge6YGi67txBR5qrbBQESQ86H8xppIN8DCKiP0JPOfTaPJ81F7f5HCvo_oX9XLq6OQ2-ZloqGMO5-ifBsoYLSgbpkA.UsVHgJLqeHHcCf9trtpjng.877da1f0dfcd1b69be45c3b4acd15ec8ca58a7709d47509ec7d41db46cc44e35"
+      },
+      {
+        "text": "\"Gate VI\" - Ka Baird, Camera, Editing, VFX",
+        "url": "https://www.youtube.com/watch?v=_-hL8l91R6c&ab_channel=RVNGIntl."
+      },
+      {
+        "text": "\"Human\" - Death Habit, Animation, Editing, + VFX",
+        "url": "https://www.youtube.com/watch?v=IEmvehORP1s&ab_channel=DeathHabit"
+      },
+      {
+        "text": "\"From Thin Air\" - Tristan Kasten-Krause, TouchDesigner",
+        "url": "https://www.youtube.com/watch?v=knnT8h04zgc&ab_channel=Whatever%27sCleverRecords"
+      },
+      {
+        "text": "\"Hammer\" - Death Habit, VFX",
+        "url": "https://www.youtube.com/watch?v=fFp5YBLulfc&ab_channel=DeathHabit"
+      },
+      {
+        "text": "\"Endless Morning\" - Thought Patterns, Animation + Editing",
+        "url": "https://www.johnsyzonenko.com/project-thought-patterns"
+      },
+      {
+        "text": "\"Smiling & Crying\" - Death Habit, Camera",
+        "url": "https://www.youtube.com/watch?v=Wc_e-j3YRCw&ab_channel=DeathHabit"
+      },
+      {
+        "text": "\"Transmitter\" - Max Levin, Camera, Editing, VFX",
+        "url": "https://www.youtube.com/watch?v=c-CjnTlmJnQ&ab_channel=TraversableDale"
+      },
+      {
+        "text": "\"Hoot Suite\" - Max Levin, Camera, Editing, VFX",
+        "url": "https://www.youtube.com/watch?v=kH3CtaH5TZo&ab_channel=TraversableDale"
+      },
+      {
+        "text": "\"Grown Man Hours\" - Kahiem Rivera, TouchDesigner + VFX",
+        "url": "https://www.youtube.com/watch?v=yFSbskcXFzM&ab_channel=KahiemRivera"
+      },
+      {
+        "text": "\"Mythic Love\" - Bambara, TouchDesigner + Projections",
+        "url": "https://www.youtube.com/watch?v=J2HM91F0BsI&ab_channel=WHARFCATRECORDS"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": []
+  },
+  "about": {
+    "slug": "about",
+    "url": "https://www.johnsyzonenko.com/about",
+    "meta_title": "About",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nHi! I'm John\n\nI am a Creative Technologist based in NYC, specializing ininteractive multimedia installations for museums, exhibitions, and experiential spaces.\n\nI help translate creative concepts into working systems, from early technical feasibility and 3D visualization through interactive prototyping and AV system integration.\n\nWith a background in environmental science, film, and motion graphics, I bring a unique perspective to technical problem-solving. I love figuring out how things work and turning ambitious ideas into real installations.\n\nIf you've got a project, let's talk about it!\n\n\u200dJOHN@JOHNSYZONENKO.COM\n\nMy Skills\n\nTouchDesigner\n\nUnreal Engine\n\nPremiere Pro\n\nBlender\n\nAbleton\n\nAfter Effects\n\nImmersive\n\nINSTALLATIONS\n\nConcept Art\n\nDocumentary\n\nVideo Production\n\nSound Design\n\nArduino\n\nPython\n\nWebflow\n\nLuma AI\n\nTouchDesigner\n\nAfter Effects\n\nBlender\n\nUnreal Engine\n\nPremiere Pro\n\nIllustrator\n\nAbleton\n\nDavinci Resolve\n\nPhotoshop\n\nWebflow\n\nGitHUB\n\nLuma AI\n\nPython\n\nArduino\n\nLiDAR\n\nSound Design\n\nConcept Art\n\nVideo Production\n\nDocumentary\n\nImmersive\n\nINSTALLATIONS\n\nCreative Direction\n\nTouchDesigner\n\nAfter Effects\n\nBlender\n\nUnreal Engine\n\nPremiere Pro\n\nIllustrator\n\nAbleton\n\nDavinci Resolve\n\nPhotoshop\n\nWebflow\n\nGitHUB\n\nLuma AI\n\nPython\n\nArduino\n\nLiDAR\n\nSound Design\n\nConcept Art\n\nVideo Production\n\nDocumentary\n\nImmersive\n\nINSTALLATIONS\n\nCreative Direction\n\nTouchDesigner\n\nAfter Effects\n\nBlender\n\nUnreal Engine\n\nPremiere Pro\n\nIllustrator\n\nAbleton\n\nDavinci Resolve\n\nPhotoshop\n\nWebflow\n\nGitHUB\n\nLuma AI\n\nPython\n\nArduino\n\nLiDAR\n\nSound Design\n\nConcept Art\n\nVideo Production\n\nDocumentary\n\nImmersive\n\nINSTALLATIONS\n\nCreative Direction\n\nExperience\n\n2023: The Blue Paradox, TouchDesigner + Installation, Radical Media, MSI Chicago\n\n2024: Miro Canvas '24, Projection mapping + interactive kiosks, Livesight\n\n2024: Kodansha House SoHo, Interactive Photo Booth, Hornet Animation, Ghost Corporeal\n\n2024: Ion Media in Vanderbilt Hall, TouchDesigner, CCTV video wall, Chemistry Creative\n\n2024: Verizon BoD Conference, Creative Technologist, WAVDWGS\n\n2024: Untitled Installation, TouchDesigner Programming, Pierre Huyghe Studio\n\n2024: Untitled Interactive Project, TouchDesigner Development, Mousetrappe Media\n\n2024: UPS Mother's Day, LED truck + Interactive Map, Bravo Media\n\n2024: Reddit CES, Support Technician, Ghost Corporeal\n\nCreative Technologist\n\n2022: Spiegel im Spiegel, UNESCO Grand Auditorium, Paris, France\n\n2023: Spiegel im Spiegel, Smokey Mountains, USA\n\n2023: Spiegel im Spiegel, United Nations, USA\n\n2024: Spiegel im Spiegel, London, UK\n\n2024: Spiegel im Spiegel, Reykjav\u00edk, Iceland\n\n2024: Spiegel im Spiegel, Stockholm, Sweden\n\n2024: Spiegel im Spiegel, Spring Tour, 10 cities, USA\n\n2024: Spiegel im Spiegel, Davos, Switzerland\n\nVideo Designer, Yo-Yo Ma\n\n2022: INTER_, immersive experience, NYC, TouchDesigner\n\n2022: Diesel Sound of the Brave, Elsewhere NYC\n\n2022: Ledger Op3n, NYC, TouchDesigner\n\n2021: Thought Patterns, generative visual engineer, TouchDesigner\n\n2021: Endless Morning, video editing, sound design, generative visuals, TouchDesigner\n\n2020: Incarceration Nations: A Global Docuseries, VR animation, Editing, Sound Design\n\n2019: Nike Air SoHo, NYC, TouchDesigner\n\n2019:Chemistry Creative Website development, Webflow, Wix\n\n2019: Project Documentation + Social Media, Videography, Motion graphics\n\nHead of Digital, Chemistry Creative\n\n2024: Gate IV, Ka Baird\n\n2023: Grown Man Hours, Kahiem Rivera\n\n2022: Hammer, Death Habit\n\n2022: Human, Death Habit\n\n2021: Smiling & Crying, Death Habit\n\n2021: Mythic Love, Bambara\n\n\u200d2021: From Thin Air, Tristen Kasten Krause\n\nMusic Videos\n\n2018: Climate Justice in the City of Boston, Documentary Thesis, NEJRC, Boston MA\n\n2018: Lab Assistant, Social Science Environmental Health Research Institute, Boston MA\n\n2018: Video Editing + Motion Graphics Instructor (Instructor of the Year), CCTV, Cambridge MA\n\n2015-2016: Environmental Educator, Change is Simple, Beverly MA\n\n2015: Educational Content Creator, Change is Simple, Beverly MA\n\nScience / Educational\n\n2018: Graduated with a focus on Documentary Film, Northeastern University, Boston MA\n\nEnvironmental Science, B.S.\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "TouchDesigner",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Unreal Engine",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Premiere Pro",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Blender",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Ableton",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "After Effects",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Immersive",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "INSTALLATIONS",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Concept Art",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Documentary",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Video Production",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Sound Design",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Arduino",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Python",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Webflow",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Luma AI",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Illustrator",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Davinci Resolve",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Photoshop",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "GitHUB",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "LiDAR",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "ImmersiveINSTALLATIONS",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Creative Direction",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "Radical Media",
+        "url": "https://www.radicalmedia.com/"
+      },
+      {
+        "text": "MSI\u00a0Chicago",
+        "url": "https://www.msichicago.org/explore/whats-here/exhibits/blue-paradox"
+      },
+      {
+        "text": "Livesight",
+        "url": "https://www.livesight.nyc/"
+      },
+      {
+        "text": "Hornet Animation",
+        "url": "https://www.hellohornet.com/"
+      },
+      {
+        "text": "Ghost Corporeal",
+        "url": "https://www.ghostcorporeal.com/"
+      },
+      {
+        "text": "Chemistry Creative",
+        "url": "https://www.chemcreative.com/"
+      },
+      {
+        "text": "WAVDWGS",
+        "url": "https://www.wavdwgs.com/"
+      },
+      {
+        "text": "Pierre Huyghe Studio",
+        "url": "https://www.hauserwirth.com/artists/2839-pierre-huyghe/"
+      },
+      {
+        "text": "Mousetrappe Media",
+        "url": "https://www.mousetrappe.com/"
+      },
+      {
+        "text": "Bravo Media",
+        "url": "https://www.bravomedia.com/"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/653ac48b50257afbc2881954_john.png",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/653ab43248ba3ff86d96b9c8_signature-3d.png",
+        "alt": ""
+      }
+    ]
+  },
+  "contact": {
+    "slug": "contact",
+    "url": "https://www.johnsyzonenko.com/contact",
+    "meta_title": "Contact",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nSay hi!\n\nLet's work together!\n\nJOHN@JOHNSYZONENKO.COM\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6578d417a1c0531b0e7951ff_transmitter-1.png",
+        "alt": ""
+      }
+    ]
+  },
+  "home": {
+    "slug": "home",
+    "url": "https://www.johnsyzonenko.com/",
+    "meta_title": "Home",
+    "text": "Work\n\nABOUT\n\nJOHN SYZONENKO\n\nJOHN\n\nSYZONENKO\n\nJOHN\n\nSYZONENKO\n\nTHE BLUE PARADOX\nImmersive, Interactive, and Educational Exhibition about the Global Ocean Plastic Crisis for Radical Media- made with TouchDesigner\n\nCAMATA\nCustom back-end system for managing playback and\n\nenvironmental sensors for a traveling gallery installation.\n\nCRYPTO SIRENAS\nImmersive projection design + installation for collaborative group show, presented at The Goethe-Institut NY - made with TouchDesigner + MadMapper\n\nKODANSHA HOUSE\nImmersive Interactive Photo Booth for Kodansha House SoHo pop-up\n\nBuilt in TouchDesigner with Studio Dave Tennent, Ghost Corporeal, and Hornet\n\nSPIEGEL IM SPIEGEL\nCustom Visuals to Accompany Yo-Yo Ma's live performances around the World\n\nFANTASTIC FLORA\nImmersive Art Installation for outdoor summer music festival Shaker Mountain\n\nLebanon Springs, NY 2024\n\nINCARCERATION NATIONS:\n\nA GLOBAL DOCUSERIES\n10-Part Docuseries regarding Global Intersections of Mass Incarceration for Incarcerations Nations Network with Chemistry Creative - Animations created in Virtual Reality\n\nSay hi!\n\nLet's work together!\n\nJOHN@JOHNSYZONENKO.COM\n\nContactAboutWork\n\nJOHN SYZONENKO\n\nLinkedInInstagram\n\nJohn Syzonenko\n\npages\nWorkAboutContact\n\nSocial Networks\nInstagramLinkedInYouTube",
+    "links": [
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/projects"
+      },
+      {
+        "text": "ABOUT",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "JOHN\u00a0SYZONENKO",
+        "url": "https://www.johnsyzonenko.com/"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67e82e6c888006cd08651cd5_2025-REEL-WEB-transcode.mp4"
+      },
+      {
+        "text": "[embed:source]",
+        "url": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af%2F67e82e6c888006cd08651cd5_2025-REEL-WEB-transcode.webm"
+      },
+      {
+        "text": "THE\u00a0BLUE\u00a0PARADOX",
+        "url": "https://www.johnsyzonenko.com/project---blue-paradox"
+      },
+      {
+        "text": "CAMATA",
+        "url": "https://www.johnsyzonenko.com/project---camata"
+      },
+      {
+        "text": "CRYPTO\u00a0SIRENAS",
+        "url": "https://www.johnsyzonenko.com/project---goethe-institut"
+      },
+      {
+        "text": "KODANSHA\u00a0HOUSE",
+        "url": "https://www.johnsyzonenko.com/project---kodansha-house"
+      },
+      {
+        "text": "SPIEGEL\u00a0IM\u00a0SPIEGEL",
+        "url": "https://www.johnsyzonenko.com/project-yo-yo-ma"
+      },
+      {
+        "text": "FANTASTIC\u00a0FLORA",
+        "url": "https://www.johnsyzonenko.com/project---fantastic-flora"
+      },
+      {
+        "text": "INCARCERATION\u00a0NATIONS:A\u00a0GLOBAL\u00a0DOCUSERIES",
+        "url": "https://www.johnsyzonenko.com/project-incarceration-nations"
+      },
+      {
+        "text": "",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "",
+        "url": "https://github.com/traversable-dale"
+      },
+      {
+        "text": "Contact",
+        "url": "https://www.johnsyzonenko.com/contact"
+      },
+      {
+        "text": "About",
+        "url": "https://www.johnsyzonenko.com/about"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john-syzonenko/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/traversable_dale"
+      },
+      {
+        "text": "Work",
+        "url": "https://www.johnsyzonenko.com/#"
+      },
+      {
+        "text": "About",
+        "url": "https://university.webflow.com/"
+      },
+      {
+        "text": "Contact",
+        "url": "https://university.webflow.com/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://university.webflow.com/"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://university.webflow.com/"
+      },
+      {
+        "text": "YouTube",
+        "url": "https://university.webflow.com/"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6553a283b3f4f19ec4a7a4f8_ring-1a.png",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6553a28324f6baede5f5dff9_ring-1b.png",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6553a283c1ed762c23bbb696_ring-1c.png",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6553a28365b2b40eb5ef6d78_ring-1d.png",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6553a283369218ff9148102e_ring-1e.png",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6553a283cacaf05a3acf046a_ring-1f.png",
+        "alt": ""
+      },
+      {
+        "src": "https://cdn.prod.website-files.com/65393df462f65c6a459ba2af/6578d417a1c0531b0e7951ff_transmitter-1.png",
+        "alt": ""
+      }
+    ]
+  }
+}

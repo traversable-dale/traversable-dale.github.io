@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CONTROLLED KEYWORD VOCABULARY
+#
+# This is the single source of truth for `tags:` on resource pages.
+#
+# WHEN ADDING A RESOURCE PAGE:
+#   1. Pick tags from the list below and put them in the page's front matter.
+#   2. If no existing term fits, add it here first, then use it.
+#   3. Do not invent variants. "hugo" not "Hugo" not "hugo-site".
+#
+# Any tag used on a page but missing from this file raises a build warning
+# (see layouts/resources/list.html). Run `hugo` and read the WARN lines.
+#
+# Terms are lowercase and hyphenated. The gloss is shown on /lab/keywords/.
+# ─────────────────────────────────────────────────────────────────────────────
+
+keywords:
+  # --- Site platform and build ---
+  hugo: "The static site generator this site is built with."
+  github-pages: "Static hosting and deployment for the built site."
+  shortcodes: "Reusable Hugo template snippets callable from markdown."
+  static-site: "Pre-rendered sites with no server-side runtime."
+  deployment: "Publishing the built site to its host."
+  theming: "Adapting the theme's look and structure."
+  layout: "Page structure and template organization."
+  typography: "Type scale, weight, and heading treatment."
+
+  # --- Front-end technique ---
+  css: "Stylesheets and visual styling."
+  javascript: "Client-side behavior."
+  canvas: "The HTML canvas element, used for frame-sequence playback."
+  animation: "Motion of any kind, vector or raster."
+  scroll: "Scroll-position-driven behavior."
+  mouse-effects: "Cursor-driven interaction: spotlight, ripple, magnetic text."
+  performance: "Payload size, load time, and runtime cost."
+  accessibility: "Reduced motion, contrast, keyboard and screen-reader support."
+
+  # --- Animation pipeline ---
+  lottie: "JSON vector animation format, originally from After Effects."
+  frame-sequence: "An ordered set of raster frames scrubbed as animation."
+  webp: "Compressed raster format used for frame sequences."
+  touchdesigner: "Node-based visual programming environment used for rendering."
+
+  # --- Tooling and system ---
+  git: "Version control."
+  gitignore: "Excluding files from version control."
+  version-control: "Repository history and branching practice."
+  large-files: "Handling binary assets that do not belong in Git."
+  macos: "Mac-specific system configuration."
+  terminal: "Command-line environment."
+  shell: "Shell configuration and scripting."
+  dotfiles: "User-level config files such as .gitconfig."
+  configuration: "Setting up tools and environments."
+
+  # --- Document kind ---
+  research: "Investigation with findings, including dead ends."
+  troubleshooting: "Diagnosing and fixing a specific failure."

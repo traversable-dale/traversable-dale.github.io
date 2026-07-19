@@ -1,0 +1,41 @@
+{{- /*
+  Renders every resource page, grouped by `resource_group`.
+
+  Shared by /resources/ (layouts/resources/list.html) and the {{< keywordpool >}}
+  shortcode, so both pages filter identical markup and the JS has one code path.
+
+  One line per entry: link, one-line summary, date. Summaries are written short
+  in front matter precisely so they sit inline here — a list of orange links
+  stacked on the left with white text running off to the right scans far faster
+  than a stack of paragraphs.
+
+  Each entry carries `data-tags` so static/js/keyword-pool.js can filter without
+  a second data source. Tag chips are deliberately not rendered per entry; the
+  keyword pool at the top of the page is the filtering UI.
+
+  Group order and names come from data/resource_groups.yaml.
+*/ -}}
+
+{{- range site.Data.resource_groups.groups -}}
+  {{- $name := .name -}}
+  {{- $blurb := .blurb -}}
+  {{- $pages := where (where site.RegularPages "Params.resource_group" .key) "Params.private" "!=" true -}}
+  {{- with $pages }}
+  <section class="resource-group" data-group="{{ $name }}">
+    <h2>{{ $name }}</h2>
+    <p class="resource-group-blurb">{{ $blurb }}</p>
+
+    <ul class="resource-list">
+    {{- range sort . "Date" "desc" }}
+      <li class="resource-entry" data-tags="{{ delimit .Params.tags " " }}">
+        <a class="resource-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- with .Params.summary }}
+        <span class="resource-summary">{{ . }}</span>
+        {{- end }}
+        <span class="resource-date">{{ .Date.Format "Jan. 2, 2006" }}</span>
+      </li>
+    {{- end }}
+    </ul>
+  </section>
+  {{- end -}}
+{{- end -}}

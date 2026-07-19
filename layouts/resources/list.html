@@ -1,0 +1,44 @@
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+<br/>
+{{ .Content }}
+
+{{/* ------------------------------------------------------------------------
+     Build-time metadata validation.
+
+     Runs here (rather than in the shared partial) so it fires exactly once.
+     Catches the three ways a resource page can go wrong silently:
+       - a tag that is not in data/keywords.yaml (case drift, invented terms)
+       - a resource_group with no matching group in data/resource_groups.yaml
+       - a resource_group with no tags at all
+     Read the WARN lines after `hugo`. Note `hugo --quiet` suppresses them.
+     ------------------------------------------------------------------------ */}}
+{{ $vocab := slice }}
+{{ range $term, $gloss := site.Data.keywords.keywords }}
+  {{ $vocab = $vocab | append $term }}
+{{ end }}
+{{ $groupKeys := slice }}
+{{ range site.Data.resource_groups.groups }}
+  {{ $groupKeys = $groupKeys | append .key }}
+{{ end }}
+{{ range site.RegularPages }}
+  {{ $page := . }}
+  {{ with .Params.resource_group }}
+    {{ if not (in $groupKeys .) }}
+      {{ warnf "resource_group %q on %s has no matching group in data/resource_groups.yaml — page will not appear on /resources/" . $page.File.Path }}
+    {{ end }}
+    {{ range $page.Params.tags }}
+      {{ if not (in $vocab .) }}
+        {{ warnf "keyword %q on %s is not in data/keywords.yaml" . $page.File.Path }}
+      {{ end }}
+    {{ end }}
+    {{ if not $page.Params.tags }}
+      {{ warnf "%s has a resource_group but no tags — it will be missing from the keyword index" $page.File.Path }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ partial "keyword-pool.html" (dict "collapsed" true "unfiltered" "all") }}
+{{ partial "resource-groups.html" . }}
+
+{{ end }}

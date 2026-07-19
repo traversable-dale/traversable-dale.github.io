@@ -1,0 +1,57 @@
+{{- /*
+  Keyword pool UI + build-time keyword index.
+
+  Params (dict):
+    collapsed  — bool. Start collapsed behind a toggle button.
+    unfiltered — "all" shows every entry when nothing is selected (/resources/),
+                 "none" shows nothing until a term is picked (/lab/keywords/).
+
+  The index is built from page metadata; there is no scraping and no external
+  library. Glosses come from data/keywords.yaml.
+*/ -}}
+
+{{- $collapsed := .collapsed | default false -}}
+{{- $unfiltered := .unfiltered | default "all" -}}
+
+{{- /* site.Data, not hugo.Data: hugo.Data does not exist in the older Hugo that
+       CI installs, where it would silently yield an empty vocabulary. */ -}}
+{{- $gloss := site.Data.keywords.keywords -}}
+{{- $index := dict -}}
+
+{{- range site.RegularPages -}}
+  {{- if and .Params.resource_group (ne .Params.private true) -}}
+    {{- range .Params.tags -}}
+      {{- $existing := index $index . | default 0 -}}
+      {{- $index = merge $index (dict . (add $existing 1)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $terms := slice -}}
+{{- range $term, $count := $index -}}
+  {{- $terms = $terms | append (dict
+      "term" $term
+      "gloss" (index $gloss $term | default "")
+      "count" $count) -}}
+{{- end -}}
+
+<div class="keyword-pool-wrap"
+     data-collapsed="{{ $collapsed }}"
+     data-unfiltered="{{ $unfiltered }}">
+
+  <div class="keyword-pool-bar">
+    <button type="button" class="keyword-toggle" aria-expanded="{{ if $collapsed }}false{{ else }}true{{ end }}" aria-controls="keyword-pool">
+      Browse by keyword
+    </button>
+    <span class="keyword-pool-status" id="keyword-pool-status" role="status" aria-live="polite"></span>
+    <button type="button" class="keyword-clear" hidden>Clear filter</button>
+  </div>
+
+  <div class="keyword-pool" id="keyword-pool" aria-label="Keyword cloud"{{ if $collapsed }} hidden{{ end }}></div>
+</div>
+
+{{- /* safeJS is required: Go's html/template treats a <script> body as JS
+       context and would otherwise re-encode the JSON as a quoted string. */ -}}
+<script type="application/json" id="keyword-data">
+  {{- $terms | jsonify | safeJS -}}
+</script>

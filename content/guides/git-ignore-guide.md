@@ -1,4 +1,11 @@
-# Git Ignore & File Tracking Guide
+---
+title: "Git Ignore and File Tracking"
+date: 2026-07-18
+draft: false
+summary: "Diagnosing .gitignore problems and untracking committed files"
+resource_group: "system"
+tags: ["git", "gitignore", "version-control", "large-files", "troubleshooting"]
+---
 
 A quick reference for managing `.gitignore`, viewing tracked files, and handling large assets in Git.
 

@@ -1,0 +1,19 @@
+# Resource groups, in display order.
+#
+# `key` must match the `resource_group` value in a page's front matter.
+# Adding a group here makes it render on /resources/ and /lab/keywords/.
+# A page whose resource_group matches nothing here raises a build warning.
+
+groups:
+  - key: hugo
+    name: "Hugo Notes"
+    blurb: "Building and tweaking this site."
+  - key: system
+    name: "System Notes"
+    blurb: "Local environment and tooling configuration."
+  - key: research
+    name: "Research and Notes"
+    blurb: "Longer-form technical investigation."
+  - key: experiment
+    name: "Experiments"
+    blurb: "Working prototype pages."

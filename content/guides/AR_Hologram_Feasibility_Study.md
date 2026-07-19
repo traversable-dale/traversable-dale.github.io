@@ -1,4 +1,10 @@
-# AR Hologram Greeting Card: Technical Feasibility Study
+---
+title: "AR Hologram Greeting Card: Technical Feasibility Study"
+date: 2025-11-15
+draft: true
+# UNPUBLISHED. Client deliverable containing rate-card and budget figures.
+# Do not set draft:false without redacting all pricing and the client framing.
+---
 
 **Prepared by:** John Syzonenko
 **Date:** November 15, 2025  

@@ -33,3 +33,9 @@
 {{- if .HasShortcode "frameseq" }}
   <script src="{{ "js/frame-scrub.js" | relURL }}"></script>
 {{- end }}
+
+{{- /* Load the keyword pool where it appears: via the {{< keywordpool >}}
+       shortcode, or embedded directly by layouts/resources/list.html. */ -}}
+{{- if or (.HasShortcode "keywordpool") (eq .Section "resources") }}
+  <script src="{{ "js/keyword-pool.js" | relURL }}"></script>
+{{- end }}

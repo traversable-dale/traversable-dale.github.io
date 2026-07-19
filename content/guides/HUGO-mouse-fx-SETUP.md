@@ -1,12 +1,19 @@
-# Mouse Effects Setup for Hugo Site
+---
+title: "Mouse Effects Setup"
+date: 2026-07-18
+draft: false
+summary: "Installing the cursor and bold-text effects"
+resource_group: "hugo"
+tags: ["hugo", "css", "javascript", "mouse-effects", "animation", "theming"]
+---
 
-## 📁 Files Included
+## Files Included
 
 1. **custom.css** - Your updated stylesheet with mouse effect styles
 2. **mouse-effects.js** - JavaScript to power the effects
 3. **SETUP.md** - This file
 
-## 🚀 Installation Steps
+## Installation Steps
 
 ### Step 1: Update CSS
 Replace your existing `static/css/custom.css` (or wherever your CSS lives) with the updated `custom.css` file.
@@ -57,9 +64,9 @@ Add this HTML element to your base template (`layouts/_default/baseof.html`), ri
 
 **Note:** The JavaScript will automatically create this element if it doesn't exist, but adding it manually ensures it's there from the start.
 
-## ⚙️ Configuration
+## Configuration
 
-### Global Transition Speed Control 🎛️
+### Global Transition Speed Control
 
 **NEW:** All effects now use a single global speed variable! 
 
@@ -72,15 +79,15 @@ At the very top of `custom.css`, you'll find:
 ```
 
 This controls:
-- ✅ Spotlight fade in/out
-- ✅ Card glow fade in/out
-- ✅ Bold text color change
-- ✅ Bold text magnetic movement
-- ✅ 3D tilt speed
+- Spotlight fade in/out
+- Card glow fade in/out
+- Bold text color change
+- Bold text magnetic movement
+- 3D tilt speed
 
 **Recommended values:**
 - `0.5s` = Fast/snappy
-- `1s` = Current setting (balanced) ⭐
+- `1s` = Current setting (balanced)
 - `1.5s` = Slow/dramatic
 - `2s` = Very slow/floaty
 
@@ -178,7 +185,7 @@ const magneticStrength = 1.5; // How strong the pull is
 
 **Magnetic Strength:**
 - `0.5` = Subtle, gentle pull
-- `1.5` = Current setting (noticeable) ⭐
+- `1.5` = Current setting (noticeable)
 - `2.5` = Strong, dramatic pull
 - `4.0` = Very aggressive magnetic effect
 
@@ -198,7 +205,7 @@ strong.mouse-near span, b.mouse-near span {
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 1. Run your Hugo server: `hugo server`
 2. Visit your homepage at `http://localhost:1313`
@@ -209,7 +216,7 @@ strong.mouse-near span, b.mouse-near span {
    - **Tilt:** Move mouse over project cards slowly
    - **Bold Text Magnetic:** Move cursor near bold text (within 30px)
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Effects not working at all
 - Check browser console (F12) for JavaScript errors
@@ -244,7 +251,7 @@ strong.mouse-near span, b.mouse-near span {
 - Change `--transition-speed` variable at the top of `custom.css`
 - This controls all effect speeds globally
 
-## 🎨 Effect Details
+## Effect Details
 
 ### Current Configuration:
 - **Spotlight:** 1000px radius, only on images and bold text
@@ -267,7 +274,7 @@ The magnetic effect splits each bold text element into individual character `<sp
 - Changes color from orange → white when within range
 - All transitions use the global speed variable
 
-## 🔧 Hugo Theme Compatibility
+## Hugo Theme Compatibility
 
 This works with the hugo-theme-console you're using. The effects target:
 - `.project-item` - Your project grid items
@@ -277,7 +284,7 @@ This works with the hugo-theme-console you're using. The effects target:
 
 If you change themes, you may need to update these selectors.
 
-## 💡 Tips
+## Tips
 
 - Start with all effects enabled and disable ones you don't like
 - The glow and tilt effects work best together on project cards
@@ -288,7 +295,7 @@ If you change themes, you may need to update these selectors.
 - For more dramatic effects, try `--transition-speed: 1.5s` or `2s`
 - For snappier effects, try `--transition-speed: 0.5s`
 
-## 📝 Advanced Customization
+## Advanced Customization
 
 ### Multiple Ripples Per Click
 In `mouse-effects.js`, uncomment these lines in `initRipples()`:
@@ -306,14 +313,13 @@ Add custom CSS classes to specific project items and override the glow color.
 ### Custom Magnetic Fields
 You can create different magnetic strengths for different text elements by adding custom classes and JavaScript targeting.
 
-## 🎯 What's New in This Version
+## What's New in This Version
 
-- ✨ Global transition speed control via CSS variable
-- ✨ Per-character magnetic physics for bold text
-- ✨ Bold text color changes from orange → white on hover
-- ✨ Spotlight now 1000px (much larger)
-- ✨ All transitions synchronized to 1s by default
-- ✨ Improved spacing preservation in bold text
-- ✨ Better text-shadow glow effects
+- Global transition speed control via CSS variable
+- Per-character magnetic physics for bold text
+- Bold text color changes from orange → white on hover
+- Spotlight now 1000px (much larger)
+- All transitions synchronized to 1s by default
+- Improved spacing preservation in bold text
+- Better text-shadow glow effects
 
-Enjoy your interactive portfolio! 🎨✨

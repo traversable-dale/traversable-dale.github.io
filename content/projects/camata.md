@@ -7,7 +7,7 @@ draft: false
 | | |
 |---|---|
 | **Role** | Creative Technologist |
-| **Client** | [Pierre Huyghe Studio](https://studiodave.io/) |
+| **Client** | Pierre Huyghe Studio |
 | **Associated** | [Pixels Pixels](https://ivaylogetov.com/), [Cadmos](https://cadmos.fr/) |
 | **Team** | Anne-So Tisseyre, Valentin Giillet, Pablo Verdugo, Pedro Roca, Paola Ravagni, Pamela Valenzuela |
 | **Location** | [Marian Goodman Gallery](https://www.mariangoodman.com/) NYC, Global |

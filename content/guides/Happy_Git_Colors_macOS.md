@@ -1,11 +1,18 @@
-# 🌈 Happy Git Colors on macOS
+---
+title: "Readable Git Colors on macOS"
+date: 2026-07-18
+draft: false
+summary: "Installing current Git and enabling color output"
+resource_group: "system"
+tags: ["git", "macos", "terminal", "shell", "configuration", "dotfiles"]
+---
 
 A quick and readable guide to make Git colorful, helpful, and friendly
 on a new Mac.
 
 ------------------------------------------------------------------------
 
-## 🧩 1. Install or Update Git
+## 1. Install or Update Git
 
 Most Macs come with Apple's old Git. Install the latest Homebrew
 version:
@@ -32,7 +39,7 @@ exec zsh -l
 
 ------------------------------------------------------------------------
 
-## 🎨 2. Enable Color in Git
+## 2. Enable Color in Git
 
 Open your global Git config:
 
@@ -81,7 +88,7 @@ Or manually edit `~/.gitconfig`. Add the following:
 
 ------------------------------------------------------------------------
 
-## ⚙️ 3. Fix Missing Colors in `less`
+## 3. Fix Missing Colors in `less`
 
 By default, `less` can strip color codes. Fix it with:
 
@@ -93,7 +100,7 @@ This ensures Git passes colors through properly.
 
 ------------------------------------------------------------------------
 
-## 🧪 4. Test Your Setup
+## 4. Test Your Setup
 
 Go inside any Git repo and run:
 
@@ -110,7 +117,7 @@ git log --oneline --decorate --graph --color
 
 ------------------------------------------------------------------------
 
-## 💡 5. Add Color-Friendly Aliases
+## 5. Add Color-Friendly Aliases
 
 Optional, but super useful:
 
@@ -123,7 +130,7 @@ Now you can use `git lg` for quick colorful logs.
 
 ------------------------------------------------------------------------
 
-## 🧯 6. Troubleshooting
+## 6. Troubleshooting
 
 If something still looks plain:
 
@@ -148,7 +155,7 @@ If something still looks plain:
 
 ------------------------------------------------------------------------
 
-## ✅ 7. Where to Find `.gitconfig`
+## 7. Where to Find `.gitconfig`
 
 -   Global file: `~/.gitconfig`
 -   System-wide file (less used): `/opt/homebrew/etc/gitconfig`
@@ -162,4 +169,3 @@ git config --global --edit
 
 ------------------------------------------------------------------------
 
-✨ Enjoy your **happy Git colors** --- life's too short for gray diffs!
