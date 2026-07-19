@@ -71,6 +71,9 @@ static/
 ```markdown
 {{</* frameseq dir="/lottie/cat-frames" count="423" */>}}                          <!-- sticky/pinned scrub (default) -->
 {{</* frameseq dir="/lottie/cat-frames" count="423" sticky="false" height="480px" */>}}  <!-- inline scrub -->
+
+<!-- recommended: add a low-res set for phones -->
+{{</* frameseq dir="/lottie/cat-frames" dir-small="/lottie/cat-frames-sm" count="423" */>}}
 ```
 
 **Params:**
@@ -79,12 +82,45 @@ static/
 |-------|---------|---------|
 | `dir` | — (required) | Folder under `/static` holding the frames |
 | `count` | — (required) | Number of frames |
+| `dir-small` | — | Lower-resolution frame folder used on narrow screens. **This is the main mobile-smoothness lever** |
+| `small-max` | `768` | Viewport width (px) at or below which `dir-small` is used |
 | `sticky` | `true` | `true` pins the canvas full-height and scrubs as you scroll past; `false` scrubs inline |
 | `track` | `300vh` | Scroll distance for a full play-through in sticky mode — **raise for slower scrub, lower for faster** |
 | `height` | `70vh` | Canvas height in inline mode |
+| `label` | `loading` | Text shown while frames download |
 | `pad` | `3` | Zero-padding of the frame index (`frame_000`) |
 | `ext` | `webp` | Frame file extension |
 | `class` | — | Extra CSS classes |
+
+### Loading behaviour
+
+Frame sequences are heavy, so the shortcode handles the wait for you:
+
+- The canvas stays hidden behind a **`loading … NN%`** indicator until every
+  frame has downloaded, then fades in.
+- In **sticky mode the page won't scroll past the pinned animation** while it's
+  still loading — so you never scroll through an empty box and miss the
+  animation entirely.
+
+### Making a low-res set for phones
+
+Serving 1280×720 frames to a 390px-wide phone means decoding 4× more pixels than
+the screen can show — that's what makes mobile scrubbing choppy. Generate a
+640px-wide set alongside the full one:
+
+```bash
+brew install webp   # provides cwebp / dwebp
+
+mkdir -p static/lottie/cat-frames-sm
+for f in static/lottie/cat-frames/frame_*.webp; do
+  base=$(basename "$f" .webp)
+  dwebp -quiet "$f" -o /tmp/t.png
+  cwebp -quiet -resize 640 0 -q 80 /tmp/t.png -o "static/lottie/cat-frames-sm/$base.webp"
+done
+```
+
+Then pass it as `dir-small`. The resolution is chosen once on load (never
+swapped mid-session, which would re-download every frame).
 
 ## 🧪 Testing
 
@@ -103,10 +139,15 @@ The scripts only load on pages that actually use a shortcode (guarded by
 
 ## 📱 Mobile notes
 
-- The canvas is high-DPI aware (`devicePixelRatio`), so it stays sharp on Retina/phones.
+- **Always pass `dir-small`.** A 640px set is ~¼ the pixels to decode per draw
+  and roughly half the bytes — this is the single biggest smoothness win.
+- `devicePixelRatio` is capped at **2**, so a 3× phone doesn't push 9× the
+  pixels on every draw.
+- The canvas uses an opaque context (`alpha: false`), letting the compositor
+  skip blending.
 - Sticky scrubbing works on iOS/Android Safari & Chrome.
-- ~400 frames = ~3 MB of downloads; fine on Wi-Fi, heavier on cellular. For a
-  hero animation, keep the frame count modest and the clip short.
+- ~400 frames ≈ 3 MB full-res / ~1.7 MB at 640px. Fine on Wi-Fi, heavier on
+  cellular — keep clips short and frame counts modest.
 
 ## 🐛 Troubleshooting
 

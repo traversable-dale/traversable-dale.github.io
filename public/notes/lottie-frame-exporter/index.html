@@ -1,0 +1,111 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>John Syzonenko/notes/lottie-frame-exporter/</title><meta name=description content="Creative Technologist specializing in immersive installations"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><link rel=stylesheet href=https://traversable-dale.github.io/hugo-theme-console/css/terminal-0.7.4.min.css><link rel=stylesheet href=https://traversable-dale.github.io/hugo-theme-console/css/animate-4.1.1.min.css><link rel=stylesheet href=https://traversable-dale.github.io/hugo-theme-console/css/console.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><meta property="og:title" content><meta property="og:description" content="Creative Technologist specializing in immersive installations"><meta property="og:type" content="article"><meta property="og:url" content="https://traversable-dale.github.io/notes/lottie-frame-exporter/"><meta name=twitter:title content><meta name=twitter:description content="NOTE 071826 — Lottie, Frame Sequences, and a TouchDesigner Exporter Date: 2026-07-18
+Context: Investigating how to export scroll-animation assets from TouchDesigner
+for this Hugo site, after prototyping the {{< lottie >}} and {{< frameseq >}}
+shortcodes.
+Outcome: Lottie is the wrong target for TD output. Build a frame-sequence
+exporter instead. The conversion script — not the TD capture — is the part that
+carries the value.
+
+1. What Lottie actually is A JSON scene graph, originally the Bodymovin export format from After Effects."><link rel=stylesheet href=/css/custom.css><script src=/js/mouse-effects.js></script></head><body class=terminal><div class=container><div class=terminal-nav><header class=terminal-logo><div class="logo terminal-prompt"><a href=https://traversable-dale.github.io/ class=no-style>John Syzonenko</a>:~#
+<a href=https://traversable-dale.github.io/notes>notes</a>/<a href=https://traversable-dale.github.io/notes/lottie-frame-exporter>lottie-frame-exporter</a>/</div></header><nav class=terminal-menu><ul vocab="https://schema.org/" typeof="BreadcrumbList"><li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href=https://traversable-dale.github.io/><span property="name">Home</span></a>
+<meta property="position" content="1"></li><li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href=https://traversable-dale.github.io/about/><span property="name">About</span></a>
+<meta property="position" content="2"></li><li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href=https://traversable-dale.github.io/work/><span property="name">Work</span></a>
+<meta property="position" content="3"></li><li property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href=https://traversable-dale.github.io/resources/><span property="name">Resources</span></a>
+<meta property="position" content="4"></li></ul></nav></div></div><div class=container><h1></h1><h1 id=note-071826--lottie-frame-sequences-and-a-touchdesigner-exporter>NOTE 071826 — Lottie, Frame Sequences, and a TouchDesigner Exporter</h1><p><strong>Date:</strong> 2026-07-18
+<strong>Context:</strong> Investigating how to export scroll-animation assets from TouchDesigner
+for this Hugo site, after prototyping the <code>{{&lt; lottie >}}</code> and <code>{{&lt; frameseq >}}</code>
+shortcodes.</p><p><strong>Outcome:</strong> Lottie is the wrong target for TD output. Build a frame-sequence
+exporter instead. The conversion script — not the TD capture — is the part that
+carries the value.</p><hr><h2 id=1-what-lottie-actually-is>1. What Lottie actually is</h2><p>A JSON scene graph, originally the Bodymovin export format from After Effects.</p><pre tabindex=0><code>layers[] → each layer has:
+  ks:       transform (position, scale, rotation, opacity) — keyframed
+  shapes[]: bezier paths, fills, strokes, gradients, trim paths
+  masks, track mattes, parenting, precomps
+</code></pre><p>Two properties define it:</p><ul><li><strong>Vector.</strong> Paths are 2D cubic beziers stored as vertex arrays with in/out
+tangent pairs. Resolution-independent, tiny file size.</li><li><strong>Sparsely keyframed.</strong> Animation is <code>{t, s, i/o}</code> keyframes with easing
+curves, not per-frame samples. A 10-second animation might be 8 keyframes.
+The renderer interpolates at display framerate.</li></ul><h2 id=2-what-the-various-lottie-converters-are-doing>2. What the various &ldquo;Lottie converters&rdquo; are doing</h2><p>Three different operations all marketed as conversion:</p><table><thead><tr><th>Tool</th><th>What it does</th><th>Result</th></tr></thead><tbody><tr><td><strong>Bodymovin (AE → Lottie)</strong></td><td>Real transcoding. AE shape layers already <em>are</em> keyframed vector beziers; Lottie is nearly the same model serialized.</td><td>Near 1:1. Works well.</td></tr><tr><td><strong>image2lottie / png2lottie / gif2lottie</strong></td><td>Not converting. Wraps each raster frame in an image layer and base64-embeds it.</td><td>A ZIP-with-a-manifest in a Lottie costume. <strong>This is the flicker case.</strong></td></tr><tr><td><strong>Raster tracing (potrace, vectorizers)</strong></td><td>Genuine raster→vector.</td><td>Works on flat logos/line art. Fails on photographic, gradient, or 3D content.</td></tr></tbody></table><p><strong>Why frame-by-frame tracing can&rsquo;t work even in principle:</strong> tracing each frame
+independently produces no temporal coherence. Frame 5&rsquo;s paths have no
+correspondence to frame 6&rsquo;s — different vertex counts, different topology — so
+there is nothing to keyframe between. The output is a <em>vector</em> flipbook: N
+discrete path sets, larger and slower than the raster flipbook it replaced.</p><h2 id=3-why-touchdesigner-cant-export-lottie>3. Why TouchDesigner can&rsquo;t export Lottie</h2><p>The accurate statement is not &ldquo;it&rsquo;s impossible&rdquo; — it&rsquo;s <strong>&ldquo;nothing you&rsquo;d want to
+render in TD has a vector representation to export.&rdquo;</strong> The barrier is which data
+you start from, plus economics. Not physics.</p><p>TD holds two very different kinds of data:</p><ul><li><strong>TOPs are pixels.</strong> Rasterization is one-way. No vector to recover. This is
+where &ldquo;can&rsquo;t&rdquo; is genuinely true, and it&rsquo;s where all our output lives.</li><li><strong>SOPs and CHOPs are not.</strong> A Bezier SOP has real control points. CHOP channels
+<em>are</em> keyframe data. That is the raw material Lottie is made of.</li></ul><p>So a <strong>SOP + CHOP → Lottie exporter is writable.</strong> No one appears to have shipped
+a good one, but it&rsquo;s a real project, not a contradiction. Friction is ordinary
+engineering:</p><ul><li>SOP curves are 3D, Lottie is flat — everything goes through a camera projection</li><li>Lottie&rsquo;s paint model is painter&rsquo;s-algorithm 2D: no lighting, no depth sort, no
+textures; gradients limited to linear/radial</li><li>CHOPs give per-frame samples; Lottie wants sparse keyframes with easing. Baking
+one keyframe per frame works but bloats</li><li>Bezier tangent conventions and normalization differ enough to be fiddly</li></ul><p><strong>Why it&rsquo;s still not worth building:</strong> what survives that pipeline is flat 2D
+vector animation driven by curve geometry — and for <em>that</em>, After Effects, Rive,
+and Figma are all better authoring tools with native Lottie export. The exporter
+would be substantial work to make TD mediocre at something others do well, while
+doing nothing for what TD is actually good at (rendered, shaded, generative,
+particle, 3D).</p><h3 id=the-key-equivalence>The key equivalence</h3><p>A PNG-sequence-to-Lottie and a raw frame sequence <strong>are the same content.</strong> The
+Lottie wrapper adds a JSON envelope, ~33% base64 inflation, and an N-layer scene
+graph the SVG renderer walks every tick. The frame sequence is that payload with
+the wrapper removed. Nothing is lost, because there was never vector data in a
+TD render to lose.</p><hr><h2 id=4-the-animation-landscape--scrubbed-vs-played>4. The animation landscape — scrubbed vs. played</h2><table><thead><tr><th>Approach</th><th>Best for</th><th>Cost</th></tr></thead><tbody><tr><td><strong>Vector Lottie</strong></td><td>UI motion, icons, logos</td><td>Tiny; requires vector authoring — TD can&rsquo;t feed it</td></tr><tr><td><strong>Frame sequence + canvas</strong></td><td>Scroll-<strong>scrubbed</strong> rendered clips</td><td>Frame-exact, no flicker; heavy payload, all-frames preload</td></tr><tr><td><strong>Video (webm/mp4)</strong></td><td><strong>Play</strong>-on-view, longer clips</td><td>10–50× smaller than frames; scrubbing unreliable</td></tr><tr><td><strong>WebGL / shader</strong></td><td>Interactive, infinite</td><td>Real-time, no payload; separate authoring path</td></tr></tbody></table><p>Video looks like the obvious win until you try to scrub it — browsers won&rsquo;t seek
+frame-accurately and iOS adds restrictions. <strong>That limitation is the entire reason
+scrollytelling uses frame sequences.</strong></p><p>Conclusion: for scroll-scrubbed TD output, the frame sequence is correct and there
+is no better option. For play-on-view animation not tied to scroll position, WebM
+is dramatically cheaper — and Movie File Out writes it natively with no conversion
+step. Hence a two-mode exporter.</p><hr><h2 id=5-whats-already-built-on-the-hugo-site>5. What&rsquo;s already built on the Hugo site</h2><ul><li><strong><code>{{&lt; lottie >}}</code></strong> — <code>layouts/shortcodes/lottie.html</code> + <code>static/js/lottie-scroll.js</code><ul><li>self-hosted <code>static/js/lottie_light.min.js</code>. For <strong>vector</strong> Lottie only
+(AE/Bodymovin origin). Modes: play-on-view / scrub / loop.</li></ul></li><li><strong><code>{{&lt; frameseq >}}</code></strong> — <code>layouts/shortcodes/frameseq.html</code> +
+<code>static/js/frame-scrub.js</code>. Sticky 300vh track, canvas pinned at 100vh, scroll
+position → frame index, <code>requestAnimationFrame</code>-throttled, letterboxed to
+preserve aspect. Live test at <code>content/lab/scroll-scrub.md</code>.</li></ul><p>Scripts load lazily from <code>layouts/partials/footer.html</code> via <code>.HasShortcode</code>.</p><h3 id=constraint-the-exporter-must-respect>Constraint the exporter must respect</h3><p><code>static/js/frame-scrub.js</code> (lines 49–60) <strong>preloads every frame eagerly</strong> on page
+load. At 2.9 MB that&rsquo;s fine. At 4K, or 900 frames, it is not. Output resolution ×
+frame count is a budget — the exporter should enforce and report it. That is the
+most valuable thing it can do beyond automating file shuffling.</p><hr><h2 id=6-findings-from-the-actual-td-export>6. Findings from the actual TD export</h2><p>Source: <code>dev/lottie/export_moviefile_out.txt</code> (network export of
+<code>/project1/moviefile_out</code>), pointing at
+<code>TD-MISC/3D_Lottie_test/exports/img/Test-1/</code>.</p><h3 id=capture-is-native--no-scripting-required>Capture is native — no scripting required</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#e6db74>&#34;type&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> <span style=color:#e6db74>&#34;imagesequence&#34;</span><span style=color:#960050;background-color:#1e0010>,</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;imagefiletype&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> <span style=color:#e6db74>&#34;png&#34;</span>
+</span></span></code></pre></div><p>Movie File Out writes image sequences natively. Frame numbering comes from the
+file parameter expression:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#e6db74>&#39;/…/Test-1.png&#39;</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;TDout&#39;</span> <span style=color:#f92672>+</span> me<span style=color:#f92672>.</span>fileSuffix
+</span></span></code></pre></div><p><code>me.fileSuffix</code> appends the per-frame index. <strong>The capture half of the component
+is parameter wiring, not code.</strong></p><h3 id=gotcha-1--the-fps-expression-is-dormant>Gotcha 1 — the fps expression is dormant</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#e6db74>&#34;fps&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> { <span style=color:#f92672>&#34;val&#34;</span>: <span style=color:#ae81ff>30.0</span>, <span style=color:#f92672>&#34;expr&#34;</span>: <span style=color:#e6db74>&#34;me.time.rate&#34;</span>, <span style=color:#f92672>&#34;mode&#34;</span>: <span style=color:#e6db74>&#34;CONSTANT&#34;</span> }
+</span></span></code></pre></div><p>The expression is written but mode is <code>CONSTANT</code>, so it is inert — hardcoded to
+30 regardless of timeline rate. If tracking <code>me.time.rate</code> was the intent, mode
+must be <code>EXPRESSION</code>. Decide deliberately either way: <strong>fps has to land in the
+manifest</strong> for the scrubber to know playback duration.</p><h3 id=gotcha-2--filenames-are-not-zero-padded>Gotcha 2 — filenames are not zero-padded</h3><pre tabindex=0><code>Test-1.pngTDout.0.0.png
+Test-1.pngTDout.0.1.png
+Test-1.pngTDout.0.10.png
+Test-1.pngTDout.0.100.png
+</code></pre><p>That&rsquo;s <code>me.fileSuffix</code>&rsquo;s native form, and it&rsquo;s a trap:</p><ul><li><strong>Lexical sort scrambles frame order</strong> — 1, 10, 100, 101… before 2. The
+conversion script must parse the trailing integer and sort <strong>numerically</strong>.
+Never <code>sorted(glob(...))</code>.</li><li><code>frame-scrub.js</code> (lines 40–44) builds URLs as <code>frame_%03d.webp</code>, so
+<strong>renumbering to a padded scheme is mandatory</strong>, not cosmetic.</li></ul><p>This is the most likely source of a silent, baffling bug in this pipeline.</p><h3 id=the-number-that-justifies-the-component>The number that justifies the component</h3><p>Same 423 frames, same 1280×720, both on disk as of 2026-07-18:</p><table><thead><tr><th>Location</th><th>Format</th><th>Size</th></tr></thead><tbody><tr><td><code>TD-MISC/3D_Lottie_test/exports/img/Test-1/</code></td><td>PNG</td><td><strong>288 MB</strong></td></tr><tr><td><code>static/lottie/cat-frames/</code></td><td>WebP</td><td><strong>2.9 MB</strong></td></tr></tbody></table><p>~99% reduction, ~6.6 KB/frame, visually equivalent. The conversion step is not a
+convenience wrapper around the native export — <strong>it is what makes the output
+shippable at all.</strong> 288 MB of PNG is not a website.</p><h3 id=what-this-reveals-about-the-current-pipeline>What this reveals about the current pipeline</h3><p>Frame counts and dimensions match exactly, and <code>dev/lottie/image2lottie-animation.json</code>
+is present — so the path that produced the cat frames was:</p><pre tabindex=0><code>TD → 423 PNG → image2lottie → WebP sequence → Hugo
+</code></pre><p><strong>image2lottie is currently in the pipeline as a WebP converter</strong> — routing
+through a tool whose actual output was rejected, to reach a byproduct we can
+produce directly.</p><p>Target:</p><pre tabindex=0><code>TD → 423 PNG → convert script → padded WebP + manifest → Hugo
+</code></pre><p>Same destination, one fewer third-party dependency. And the manifest (count, fps,
+dimensions) stops being hand-transcribed: <code>count="423"</code> is currently typed by hand
+into the shortcode and <strong>silently breaks if a re-render changes the frame count.</strong></p><hr><h2 id=7-proposed-component--frameseq_exporter>7. Proposed component — <code>frameseq_exporter</code></h2><p>Two output modes behind one capture front-end:</p><ul><li><strong><code>frames</code></strong> — PNG capture → WebP conversion → padded rename → manifest, for
+<code>{{&lt; frameseq >}}</code>. Scroll-scrubbed.</li><li><strong><code>video</code></strong> — Movie File Out writes WebM directly, no conversion step. Needs a
+small play-on-view shortcode that does not exist yet.</li></ul><p>Same status parameters and capture wiring for both.</p><h3 id=td-patterns-to-reuse-from-project-goose-interactive>TD patterns to reuse (from project-goose-interactive)</h3><p>Verified working references in that repo:</p><ul><li><strong><code>src/record/recording_ext.py</code></strong> — idempotent <code>SetupParameters()</code> guarded on
+<code>customPages</code>; <code>OpenFile</code> / <code>CloseFile</code> / <code>Pause</code> / <code>Resume</code> lifecycle;
+<code>_AttachIfActive()</code> for late-join after <code>reinitextensions</code>; fire-and-forget
+<code>subprocess.Popen</code> post-processing (<code>_KickOffParquetConversion</code>) — the direct
+model for kicking off WebP conversion without blocking the cook.</li><li><strong><code>src/video/video_writer.py</code></strong> — drives a Movie File Out TOP: pushes resolved
+paths onto <code>movie_out.par.file</code>, toggles <code>.par.record</code> / <code>.par.pause</code>, reads an
+<strong>Info CHOP</strong> (<code>movie_info</code>) for <code>total_frames_written</code>. Its module docstring
+documents the required network setup — follow that format.</li><li><strong><code>src/config/exec/parexec_config.py</code></strong> — Parameter Execute: <code>onPulse</code> forwards
+to <code>OnPulse(par)</code> for Record/Play/Convert pulses; <code>onValueChange</code> for
+re-reading movie info when file selection changes.</li><li><strong><code>src/config/exec/chopexec_reset.py</code></strong> — CHOP Execute <code>onOffToOn</code> firing
+conversion off <code>total_frames_written</code> or a timer&rsquo;s <code>done</code> channel. Note its
+<code>run('…', fromOP=me, delayFrames=1)</code> idiom — <strong>required here</strong>, since a
+recording cannot be stopped from inside its own cook.</li><li>Read-only status params via <code>par.readOnly = True</code>, fed by an Info CHOP on the
+source movie (same as <code>movie_info</code>).</li></ul><h3 id=build-order>Build order</h3><ol><li><strong>Conversion script first</strong> — numeric sort, renumber to <code>frame_%03d</code>, WebP
+encode, write manifest. Testable immediately against the existing 288 MB
+<code>Test-1/</code> folder. This is the piece with real logic.</li><li><strong>Extension wrapper second</strong> — mostly parameter plumbing on top.</li></ol><h3 id=open-items>Open items</h3><ul><li>Confirm whether Movie File Out can write WebP directly (it reads WebP; writing
+is believed unsupported, which is <em>why</em> the conversion script exists). Verify
+before designing around it.</li><li>Decide the fps <code>CONSTANT</code> vs <code>EXPRESSION</code> question above.</li><li>Define the resolution × frame-count budget the exporter enforces.</li><li><code>{{&lt; frameseq >}}</code> should read the manifest rather than take a hand-typed
+<code>count</code>.</li></ul><footer class=custom-footer><div class=footer-content><div class=footer-nav><a href=/>Home</a>
+<a href=/about/>About</a>
+<a href=/work/>Work</a>
+<a href=/resources/>Resources</a></div><div class=footer-social><a href=https://github.com/traversable-dale target=_blank rel=noopener><img src=/images/icons/github.png alt=GitHub>
+</a><a href=https://www.instagram.com/traversable_dale target=_blank rel=noopener><img src=/images/icons/instagram.png alt=Instagram>
+</a><a href=https://linkedin.com/in/john-syzonenko/ target=_blank rel=noopener><img src=/images/icons/linkedin.png alt=LinkedIn></a></div></div></footer></div></body></html>

@@ -5,15 +5,17 @@ Lottie flipbook).&lt;/p&gt;
 &lt;p&gt;Scroll down to reach the cat, then keep scrolling to spin it.&lt;/p&gt;
 &lt;div style="height:60vh"&gt;&lt;/div&gt;
 &lt;div class="frame-scrub-track" style="position:relative;height:300vh;"&gt;
- &lt;div class="frame-scrub " style="position:sticky;top:0;height:100vh;width:100%;" data-frame-dir="/lottie/cat-frames" data-frame-count="423" data-frame-pad="3" data-frame-ext="webp"&gt;
+ &lt;div class="frame-scrub " style="position:sticky;top:0;height:100vh;width:100%;" data-frame-dir="/lottie/cat-frames" data-frame-count="423" data-frame-pad="3" data-frame-ext="webp" data-frame-small-max="768" data-frame-lock="true" data-frame-dir-small="/lottie/cat-frames-sm"&gt;
  &lt;canvas style="display:block;"&gt;&lt;/canvas&gt;
+ &lt;div class="frame-scrub-loader"&gt;&lt;span class="frame-scrub-loader-text"&gt;loading&lt;/span&gt;&lt;span class="frame-scrub-dots"&gt;&lt;i&gt;.&lt;/i&gt;&lt;i&gt;.&lt;/i&gt;&lt;i&gt;.&lt;/i&gt;&lt;/span&gt; &lt;span class="frame-scrub-pct"&gt;0%&lt;/span&gt;&lt;/div&gt;
  &lt;/div&gt;
  &lt;/div&gt;
 &lt;div style="height:40vh; display:flex; align-items:center; justify-content:center;"&gt;
  &lt;em&gt;&amp;darr; that was sticky/pinned scrubbing &amp;mdash; below is inline mode &amp;darr;&lt;/em&gt;
 &lt;/div&gt;
-&lt;h3 id="inline-mode-scrubs-as-the-box-crosses-the-viewport"&gt;Inline mode (scrubs as the box crosses the viewport)&lt;/h3&gt; &lt;div class="frame-scrub " style="width:100%;height:420px;" data-frame-dir="/lottie/cat-frames" data-frame-count="423" data-frame-pad="3" data-frame-ext="webp"&gt;
+&lt;h3 id="inline-mode-scrubs-as-the-box-crosses-the-viewport"&gt;Inline mode (scrubs as the box crosses the viewport)&lt;/h3&gt; &lt;div class="frame-scrub " style="width:100%;height:420px;" data-frame-dir="/lottie/cat-frames" data-frame-count="423" data-frame-pad="3" data-frame-ext="webp" data-frame-small-max="768" data-frame-lock="false" data-frame-dir-small="/lottie/cat-frames-sm"&gt;
  &lt;canvas style="display:block;"&gt;&lt;/canvas&gt;
+ &lt;div class="frame-scrub-loader"&gt;&lt;span class="frame-scrub-loader-text"&gt;loading&lt;/span&gt;&lt;span class="frame-scrub-dots"&gt;&lt;i&gt;.&lt;/i&gt;&lt;i&gt;.&lt;/i&gt;&lt;i&gt;.&lt;/i&gt;&lt;/span&gt; &lt;span class="frame-scrub-pct"&gt;0%&lt;/span&gt;&lt;/div&gt;
  &lt;/div&gt;
 &lt;div style="height:60vh"&gt;&lt;/div&gt;</description></item><item><title>About</title><link>https://traversable-dale.github.io/about/</link><pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate><guid>https://traversable-dale.github.io/about/</guid><description>&lt;br&gt;
 &lt;p&gt;&lt;img src="https://traversable-dale.github.io/images/about/john-photo-1.jpeg" alt="John Syzonenko" class="img-responsive"&gt; &lt;/p&gt;
@@ -508,7 +510,27 @@ effect). Built directly on the &lt;code&gt;hugo-theme-console&lt;/code&gt; theme
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;layouts/partials/footer.html&lt;/code&gt;&lt;/strong&gt; — lazy-loads the scripts per page&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="-first-pick-the-right-tool"&gt;🧠 First: pick the right tool&lt;/h2&gt; &lt;p&gt;There are two very different kinds of &amp;ldquo;Lottie,&amp;rdquo; and using the wrong one is what
-causes flickering/garbled playback.&lt;/p&gt;</description></item><item><title>404 - Page Not Found</title><link>https://traversable-dale.github.io/404/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://traversable-dale.github.io/404/</guid><description>&lt;h2 id="looks-like-youve-wandered-off-the-path"&gt;Looks like you&amp;rsquo;ve wandered off the path&lt;/h2&gt; &lt;p&gt;The page you&amp;rsquo;re looking for doesn&amp;rsquo;t exist. Maybe try:&lt;/p&gt;
+causes flickering/garbled playback.&lt;/p&gt;</description></item><item><title/><link>https://traversable-dale.github.io/notes/lottie-frame-exporter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://traversable-dale.github.io/notes/lottie-frame-exporter/</guid><description>&lt;h1 id="note-071826--lottie-frame-sequences-and-a-touchdesigner-exporter"&gt;NOTE 071826 — Lottie, Frame Sequences, and a TouchDesigner Exporter&lt;/h1&gt; &lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; 2026-07-18
+&lt;strong&gt;Context:&lt;/strong&gt; Investigating how to export scroll-animation assets from TouchDesigner
+for this Hugo site, after prototyping the &lt;code&gt;{{&amp;lt; lottie &amp;gt;}}&lt;/code&gt; and &lt;code&gt;{{&amp;lt; frameseq &amp;gt;}}&lt;/code&gt;
+shortcodes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Outcome:&lt;/strong&gt; Lottie is the wrong target for TD output. Build a frame-sequence
+exporter instead. The conversion script — not the TD capture — is the part that
+carries the value.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-what-lottie-actually-is"&gt;1. What Lottie actually is&lt;/h2&gt; &lt;p&gt;A JSON scene graph, originally the Bodymovin export format from After Effects.&lt;/p&gt;</description></item><item><title/><link>https://traversable-dale.github.io/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://traversable-dale.github.io/resources/</guid><description>&lt;h1 id="resources"&gt;Resources&lt;/h1&gt; &lt;p&gt;Guides, research notes, and experiments from building this site. Mostly written
+so future-me remembers why something works the way it does.&lt;/p&gt;
+&lt;h2 id="-guides"&gt;📘 Guides&lt;/h2&gt; &lt;p&gt;Step-by-step setup docs for features running on this site.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://traversable-dale.github.io/guides/hugo-scroll-animations-setup/"&gt;Scroll Animations Setup&lt;/a&gt; — Lottie and canvas frame-sequence scrubbers; the pin-and-scroll effect&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://traversable-dale.github.io/guides/hugo-mouse-fx-setup/"&gt;Mouse Effects Setup&lt;/a&gt; — spotlight, ripples, card glow, magnetic bold text&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://traversable-dale.github.io/guides/hugo-customization-guide/"&gt;Website Customization Guide&lt;/a&gt; — quick reference for theming and layout tweaks&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://traversable-dale.github.io/guides/hhugo_github_pages_complete_guide/"&gt;Hugo + GitHub Pages Complete Guide&lt;/a&gt; — full build-and-deploy walkthrough&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://traversable-dale.github.io/guides/git-ignore-guide/"&gt;Git Ignore &amp;amp; File Tracking Guide&lt;/a&gt; — what to track, what to leave alone&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://traversable-dale.github.io/guides/happy_git_colors_macos/"&gt;Happy Git Colors on macOS&lt;/a&gt; — terminal color setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="-notes--research"&gt;🔬 Notes &amp;amp; Research&lt;/h2&gt; &lt;p&gt;Longer-form investigation. Findings, dead ends, and the reasoning behind
+technical decisions.&lt;/p&gt;</description></item><item><title>404 - Page Not Found</title><link>https://traversable-dale.github.io/404/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://traversable-dale.github.io/404/</guid><description>&lt;h2 id="looks-like-youve-wandered-off-the-path"&gt;Looks like you&amp;rsquo;ve wandered off the path&lt;/h2&gt; &lt;p&gt;The page you&amp;rsquo;re looking for doesn&amp;rsquo;t exist. Maybe try:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://traversable-dale.github.io/"&gt;Home&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://traversable-dale.github.io/work"&gt;Work&lt;/a&gt; &lt;/li&gt;

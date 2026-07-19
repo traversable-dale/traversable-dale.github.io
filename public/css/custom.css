@@ -859,3 +859,186 @@ pre, code {
 /* Change glow intensity: modify the rgba values in text-shadow */
 /* Change magnetic range: modify magneticRange in JavaScript (default: 175px) */
 /* Change magnetic strength: modify magneticStrength in JavaScript (default: 0.1) */
+
+/* ============================================
+   CODE READABILITY FIX (guides / notes pages)
+   ------------------------------------------
+   The console theme sets `pre code { background: var(--block-background-color) }`
+   which resolves to WHITE, and `.terminal code { color: var(--font-color) }`
+   which is white in dark mode — producing white-on-white (invisible) code
+   blocks and dark-on-dark inline code. These rules win on specificity and
+   restore a readable terminal palette.
+   ============================================ */
+
+/* --- Inline code: orange chip on near-black --- */
+.terminal code,
+code {
+  background-color: #16161a;
+  color: #ff9550;                    /* warm accent, high contrast on black */
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+  white-space: nowrap;               /* don't split `{{< lottie >}}` across lines */
+}
+
+/* The theme decorates inline code with literal backticks. The chip above
+   already reads as code, so the backticks are just noise — drop them. */
+code::before,
+code::after {
+  content: "";
+}
+
+/* --- Fenced code blocks: dark panel, light grey text ---
+   !important is required: Hugo's Chroma highlighter writes inline
+   `style="background-color:#272822"` on <pre>, which would otherwise make
+   highlighted blocks a different colour than plain ones. Syntax colours still
+   apply, since those live on the child <span> elements. */
+pre {
+  background-color: #0d0d0f !important;
+  border: 1px solid #333;
+  color: #e6e6e6 !important;
+  padding: 1em;
+  overflow-x: auto;                  /* long lines scroll, page never does */
+}
+
+/* The theme forces the inner <code> back to the page background — undo it.
+   Higher specificity than `pre code` in terminal.css. */
+.terminal pre code,
+pre code {
+  background-color: transparent;
+  color: #e6e6e6;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  white-space: pre;                  /* undo the inline-code nowrap: blocks keep their newlines */
+}
+
+/* Chroma/Hugo syntax wrapper, if highlighting is ever enabled */
+.highlight,
+.highlight pre,
+pre.chroma {
+  background-color: #0d0d0f;
+  color: #e6e6e6;
+}
+
+/* Drop the theme's decorative backticks inside fenced blocks only */
+pre code::before,
+pre code::after {
+  content: "";
+}
+
+/* --- Selection stays readable over code --- */
+code::selection,
+pre::selection,
+pre code::selection,
+code::-moz-selection,
+pre::-moz-selection,
+pre code::-moz-selection {
+  background-color: #ff6600;
+  color: #000000;
+}
+
+/* --- Tables in guides: readable borders on black --- */
+table th,
+table td {
+  border-color: #444;
+}
+table tbody td:first-child {
+  color: #e6e6e6;                    /* theme greys this out to near-invisible */
+}
+
+/* --- Blockquote callouts (used for warnings in guides) --- */
+blockquote {
+  color: #cfcfcf;
+}
+
+/* ============================================
+   FRAME-SEQUENCE SCRUBBER ({{< frameseq >}})
+   Loading state + canvas presentation
+   ============================================ */
+
+.frame-scrub {
+  position: relative;
+  background-color: #000;
+}
+
+/* Canvas stays hidden until every frame is in, then fades up */
+.frame-scrub canvas {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.frame-scrub.is-ready canvas {
+  opacity: 1;
+}
+
+/* --- "loading ..." indicator --- */
+.frame-scrub-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15em;
+  font-family: var(--mono-font-stack, monospace);
+  font-size: 1em;
+  letter-spacing: 0.08em;
+  /* !important: the global `div, span { color:#fff !important }` rule above
+     would otherwise flatten the loader to white. */
+  color: #ff9550 !important;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.frame-scrub.is-ready .frame-scrub-loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.frame-scrub-pct {
+  color: #7a7a7a !important;
+}
+
+.frame-scrub-loader-text,
+.frame-scrub-dots i {
+  color: #ff9550 !important;
+}
+
+/* Classic three-dot cycle */
+.frame-scrub-dots i {
+  font-style: normal;
+  opacity: 0;
+  animation: frameScrubDots 1.4s infinite;
+}
+.frame-scrub-dots i:nth-child(2) { animation-delay: 0.2s; }
+.frame-scrub-dots i:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes frameScrubDots {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Respect reduced-motion preferences: hold the dots steady */
+@media (prefers-reduced-motion: reduce) {
+  .frame-scrub-dots i {
+    animation: none;
+    opacity: 1;
+  }
+  .frame-scrub canvas,
+  .frame-scrub-loader {
+    transition: none;
+  }
+}
+
+/* ============================================
+   EMPTY TITLE HEADING
+   Pages authored without front matter (the guides/notes) still get an
+   `<h1>{{ .Title }}</h1>` from the theme's single.html, which renders empty
+   and leaves a stray decorated gap above the real markdown title.
+   ============================================ */
+
+h1:empty,
+article h1:empty,
+.terminal h1:empty {
+  display: none !important;
+}

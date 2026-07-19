@@ -21,6 +21,10 @@ enableEmoji = true
   name = "Work"
   url = "/work/"
 
+[[params.navlinks]]
+  name = "Resources"
+  url = "/resources/"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

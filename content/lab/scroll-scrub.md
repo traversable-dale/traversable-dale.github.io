@@ -15,7 +15,7 @@ Scroll down to reach the cat, then keep scrolling to spin it.
 
 <div style="height:60vh"></div>
 
-{{< frameseq dir="/lottie/cat-frames" count="423" >}}
+{{< frameseq dir="/lottie/cat-frames" dir-small="/lottie/cat-frames-sm" count="423" >}}
 
 <div style="height:40vh; display:flex; align-items:center; justify-content:center;">
   <em>&darr; that was sticky/pinned scrubbing &mdash; below is inline mode &darr;</em>
@@ -23,6 +23,6 @@ Scroll down to reach the cat, then keep scrolling to spin it.
 
 ### Inline mode (scrubs as the box crosses the viewport)
 
-{{< frameseq dir="/lottie/cat-frames" count="423" sticky="false" height="420px" >}}
+{{< frameseq dir="/lottie/cat-frames" dir-small="/lottie/cat-frames-sm" count="423" sticky="false" height="420px" >}}
 
 <div style="height:60vh"></div>

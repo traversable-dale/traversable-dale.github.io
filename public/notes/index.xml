@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on John Syzonenko</title><link>https://traversable-dale.github.io/notes/</link><description>Recent content in Notes on John Syzonenko</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://traversable-dale.github.io/notes/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://traversable-dale.github.io/notes/lottie-frame-exporter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://traversable-dale.github.io/notes/lottie-frame-exporter/</guid><description>&lt;h1 id="note-071826--lottie-frame-sequences-and-a-touchdesigner-exporter"&gt;NOTE 071826 — Lottie, Frame Sequences, and a TouchDesigner Exporter&lt;/h1&gt; &lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; 2026-07-18
+&lt;strong&gt;Context:&lt;/strong&gt; Investigating how to export scroll-animation assets from TouchDesigner
+for this Hugo site, after prototyping the &lt;code&gt;{{&amp;lt; lottie &amp;gt;}}&lt;/code&gt; and &lt;code&gt;{{&amp;lt; frameseq &amp;gt;}}&lt;/code&gt;
+shortcodes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Outcome:&lt;/strong&gt; Lottie is the wrong target for TD output. Build a frame-sequence
+exporter instead. The conversion script — not the TD capture — is the part that
+carries the value.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-what-lottie-actually-is"&gt;1. What Lottie actually is&lt;/h2&gt; &lt;p&gt;A JSON scene graph, originally the Bodymovin export format from After Effects.&lt;/p&gt;</description></item></channel></rss>
